@@ -98,7 +98,7 @@ with our community.
   [reaction] instead?
 
   [Code of Conduct]: code-of-conduct.md
-  [Discord channel]: https://discord.gg/FDgcZuH7
+  [Discord channel]: https://discord.gg/hqXRNq9CjT
   [reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
 
 ### Licensing of contributions

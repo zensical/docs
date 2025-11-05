@@ -51,7 +51,7 @@ including:
 - Email communication
 
   [Zensical GitHub]: https://github.com/zensical
-  [Discord channel]: https://discord.gg/FDgcZuH7
+  [Discord channel]: https://discord.gg/hqXRNq9CjT
   [Zensical Spark]: https://zensical.org/spark
 
 All the above platforms are considered part of the Zensical community and are

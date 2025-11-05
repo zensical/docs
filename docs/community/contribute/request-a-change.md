@@ -74,7 +74,7 @@ them in the change request.__[^1]
     but we mean the same. When you include the search terms and related links
     in your change request, you help us to adjust and improve the documentation.
 
-  [Discord channel]: https://discord.gg/FDgcZuH7
+  [Discord channel]: https://discord.gg/hqXRNq9CjT
 
 ## Issue template
 

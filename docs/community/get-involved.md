@@ -37,7 +37,7 @@ Zensical users. Here, you can:
 
 [Join the conversation][Discord channel]{ .md-button .md-button--primary }
 
-  [Discord channel]: https://discord.gg/FDgcZuH7
+  [Discord channel]: https://discord.gg/hqXRNq9CjT
 
 ## Zensical Spark
 

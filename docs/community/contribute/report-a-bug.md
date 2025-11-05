@@ -70,7 +70,7 @@ __You can ask for help on our [Discord channel] if you run into problems.__
   [theme.custom_dir]: ../../customization.md#configuring-overrides
   [extra_css]: ../../customization.md#additional-css
   [extra_javascript]: ../../customization.md#additional-javascript
-  [Discord channel]: https://discord.gg/FDgcZuH7
+  [Discord channel]: https://discord.gg/hqXRNq9CjT
   [StackOverflow]: https://stackoverflow.com
 
 ### Search for solutions
