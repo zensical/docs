@@ -90,7 +90,6 @@ install Zensical with `uv`, use:
 
     ```
     uv init
-    source .venv/bin/activate
     uv add zensical
     ```
 
@@ -98,7 +97,6 @@ install Zensical with `uv`, use:
 
     ```
     uv init
-    .venv\Scripts\activate
     uv add zensical
     ```
 
@@ -106,7 +104,6 @@ install Zensical with `uv`, use:
 
     ```
     uv init
-    source .venv/bin/activate
     uv add zensical
     ```
 
