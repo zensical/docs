@@ -46,7 +46,7 @@ jobs:
         run: zensical build
 
       - name: Install Wrangler
-        run: npm install -g @cloudflare/wrangler
+        run: npm install -g wrangler
 
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3
