@@ -25,10 +25,10 @@ contact_links:
     about: >
       Something is not working? Report a bug
 
-  - name: https://github.com/zensical/zensical/issues/new?template=02-request-a-change.yml
-    url: https://github.com/zensical/zensical/issues
+  - name: Request a change
+    url: https://github.com/zensical/zensical/issues/new?template=02-request-a-change.yml
     about: >
-      Want to submit an improvement? Propose a change or feature request
+      Want to submit an idea? Propose a change or feature request
 
   - name: Ask a question
     url: https://discord.gg/FDgcZuH7
