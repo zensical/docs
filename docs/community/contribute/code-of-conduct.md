@@ -2,13 +2,13 @@
 icon: lucide/heart-handshake
 ---
 
-# Code of Conduct
+# Code of conduct
 
 The following is our Code of Conduct, which we expect all users in the Zensical
 community to adhere to. Please make sure to thoroughly read and understand these
 guidelines before engaging with our community.
 
-## Our Pledge
+## Our pledge
 
 In the interest of fostering an open and welcoming environment, we pledge to
 make participation in our project and our community a harassment-free
@@ -74,7 +74,7 @@ our [contribution guidelines] and this Code of Conduct.
 We take any violations seriously and will take appropriate action in response to
 uphold these values. Any instance of abusive, harassing, or otherwise
 unacceptable behavior may be reported by contacting the Zensical team privately
-at community@zensical.org.
+at contact@zensical.org.
 
 Additionally, if we witness behavior that violates this Code of Conduct
 ourselves, whether directed at a community member or at the maintainers, we
