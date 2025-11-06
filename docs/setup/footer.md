@@ -46,7 +46,7 @@ configuration with:
 
     ``` toml
     [[project.extra.social]]
-    icon = "fontawesome/brands/x"
+    icon = "fontawesome/brands/x-twitter"
     link = "https://x.com/zensical"
     ```
 
@@ -55,7 +55,7 @@ configuration with:
     ``` yaml
     extra:
       social:
-        - icon: fontawesome/brands/x
+        - icon: fontawesome/brands/x-twitter
           link: https://x.com/zensical
     ```
 
