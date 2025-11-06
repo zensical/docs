@@ -17,12 +17,14 @@ _You can learn more about how both projects interconnect with each other [here].
 
 ## Installation
 
-Zensical is written in Rust and Python, and is published as a [Python package].
+Zensical is written in Rust and Python, and is published as a [Python package] as well as on [conda-forge].
 We  recommend to use a Python _virtual environment_ when installing [with
-`pip`][with-pip] or [with `uv`][with-uv]. Both options automatically install all
-necessary dependencies alongside Zensical.
+`pip`][with-pip] or [with `uv`][with-uv].
+If you are using the conda ecosystem, we recommend installing Zensical [with `pixi`][with-pixi].
+All abovementioned options automatically install all necessary dependencies alongside Zensical.
 
 [Python package]: https://pypi.org/project/zensical
+[conda-forge]: https://prefix.dev/channels/conda-forge/packages/zensical
 
 !!! note "Prerequisites"
     You need to have Python and a Python package manager installed on your
@@ -107,3 +109,30 @@ install Zensical with `uv`, use:
     uv add zensical
     ```
 
+### Installing with pixi { data-toc-label="with pixi" }
+
+If you are using the conda ecosystem, you might have come across the [`pixi`][pixi] package manager.
+To install Zensical with `pixi`, use:
+
+[pixi]: https://pixi.sh
+
+=== ":material-apple: macOS"
+
+    ```
+    pixi init
+    pixi add zensical
+    ```
+
+=== ":fontawesome-brands-windows: Windows"
+
+    ```
+    pixi init
+    pixi add zensical
+    ```
+
+=== ":material-linux: Linux"
+
+    ```
+    pixi init
+    pixi add zensical
+    ```
