@@ -51,6 +51,29 @@ installed Zensical:
 
 [stick to previous versions]: https://docs.astral.sh/uv/concepts/projects/sync/#upgrading-locked-package-versions
 
+=== "with `pixi`"
+
+    With an existing lock file, pixi will stick to previous versions until you
+    explicitly upgrade them. Run the following, replacing `<version>` with the
+    version you want to upgrade to.
+
+    ```
+    pixi add zensical==<version>
+    ```
+
+    If you want to upgrade to the latest available version of zensical, run:
+
+    ```
+    pixi upgrade zensical
+    ```
+
+    To show the currently installed version, use:
+
+    ```
+    pixi list zensical
+    ```
+
+
 ## Versioning
 
 Zensical follows [semantic versioning] and currently uses **0.0.x versioning**
