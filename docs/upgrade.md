@@ -30,7 +30,7 @@ installed Zensical:
     To show the currently installed version, use:
 
     ```
-    pip show mkdocs-material
+    pip show zensical
     ```
 
 === "with `uv`"
@@ -46,7 +46,7 @@ installed Zensical:
     To show the currently installed version, use:
 
     ```
-    uv pip show mkdocs-material
+    uv pip show zensical
     ```
 
 [stick to previous versions]: https://docs.astral.sh/uv/concepts/projects/sync/#upgrading-locked-package-versions
