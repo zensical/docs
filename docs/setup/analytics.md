@@ -122,7 +122,7 @@ Since the feedback widget sends data to a third-party service, it is, of course,
 natively integrated with the [cookie consent] feature. If the user doesn't
 accept the `analytics` cookie, the feedback widget is not shown.
 
-This feature is uses [Google Analytics][analytics], which is why `provider` and
+This feature uses [Google Analytics][analytics], which is why `provider` and
 `property` are also required. However, it's also possible to provide a [custom
 feedback integration].
 
