@@ -278,9 +278,9 @@ Markdown or the configuration, which is explained in more detail in the
 
     ``` toml
     [project.markdown_extensions.pymdownx.emoji]
-    emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+    emoji_index = "zensical.extensions.emoji.twemoji"
     emoji_generator = "zensical.extensions.emoji.to_svg"
-    options = { custom_icons = "overrides/.icons }
+    options = { custom_icons = "overrides/.icons" }
     ```
 
 === "`mkdocs.yml`"
