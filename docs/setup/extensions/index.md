@@ -101,7 +101,7 @@ extensions are active in your project:
     [project.markdown_extensions.pymdownx.arithmatex]
     generic = true
     [project.markdown_extensions.pymdownx.betterem]
-    smart_enable = all
+    smart_enable = "all"
     [project.markdown_extensions.pymdownx.caret]
     [project.markdown_extensions.pymdownx.details]
     [project.markdown_extensions.pymdownx.emoji]
