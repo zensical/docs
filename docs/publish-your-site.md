@@ -126,9 +126,6 @@ build:
     # Copy build output to ReadTheDocs expected location
     - mkdir -p _readthedocs
     - cp -r site/ _readthedocs/html/
-
-submodules:
-  include: all
 ```
 
 Once you push to your main branch, you can find all the documentation builds on RTD at `https://app.readthedocs.org/projects/<repository_name>/builds`
