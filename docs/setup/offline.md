@@ -8,7 +8,7 @@ tags:
 # Offline usage
 
 In order to build documentation and either offer it as a download or ship it
-with your product, Zensica can ensure that [site search] works even when
+with your product, Zensical can ensure that [site search] works even when
 accessed from the file system.
 
 ## Configuration
