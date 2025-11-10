@@ -109,3 +109,26 @@ Your documentation is now published under `<username>.gitlab.io/<repository>`.
   [site_dir]: setup/basics.md#site_dir
   [default branch]: https://docs.gitlab.com/ee/user/project/repository/branches/default.html
 
+## ReadTheDocs (RTD)
+If you want Read the Docs to build and host your Zensical site, it works nicely — Read the Docs can either run a normal Sphinx/MkDocs-style build or completely run any build command you provide and host the resulting static HTML. Start by [importing your repository (via GitHub/GitLab/Bitbucket)](tps://docs.readthedocs.com/platform/stable/intro/add-project.html) and then tell Read the Docs how to build your site with a [.readthedocs.yaml](https://docs.readthedocs.com/platform/stable/config-file/v2.html) file. This YAML file tells RTD to create a Python environment, install Zensical, build the site, and copy the generated site into the directory RTD serves (_readthedocs/html/). Below is an example:
+
+```yaml
+version: 2
+
+build:
+  os: ubuntu-22.04
+  tools:
+    python: "3.12"
+  commands:
+    - pip install --upgrade pip
+    - pip install zensical
+    - zensical build --clean   # build into 'site' (default for zensical)
+    # Copy build output to ReadTheDocs expected location
+    - mkdir -p _readthedocs
+    - cp -r site/ _readthedocs/html/
+
+submodules:
+  include: all
+```
+
+Once you push to your main branch, you can find all the documentation builds on RTD at `https://app.readthedocs.org/projects/<repository_name>/builds`
