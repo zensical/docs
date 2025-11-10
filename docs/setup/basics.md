@@ -68,7 +68,7 @@ matches the look and feel of Material for MkDocs, while the `modern` theme
 provides a fresh new design.
 
 In case you're coming from [Material for MkDocs] and want to keep its look and
-feel, or customized your site based on its appearance, you can switch to the
+feel, or customize your site based on its appearance, you can switch to the
 `classic` theme variant:
 
 === "`zensical.toml`"
