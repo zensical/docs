@@ -40,7 +40,7 @@ not need for additional configuration.
 
 When search highlighting is enabled and a user clicks on a search result,
 Zensical will highlight all occurrences after following the link.
-Add the following lines to `mkdocs.yml`:
+Add the following lines to your configuration:
 
 === "`zensical.toml`"
 

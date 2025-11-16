@@ -47,7 +47,7 @@ See additional configuration options:
 
 Each of the supported admonition types has a distinct icon, which can be changed
 to any icon bundled with the theme, or even a [custom icon]. Add the following
-lines to `mkdocs.yml`:
+lines to your configuration:
 
 === "`zensical.toml`"
 

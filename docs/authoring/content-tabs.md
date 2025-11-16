@@ -96,7 +96,7 @@ function with the following lines:
 
 When enabled, all content tabs across the whole documentation site will be
 linked and switch to the same label when the user clicks on a tab. Add the
-following lines to `mkdocs.yml`:
+following lines to your configuration:
 
 === "`zensical.toml`"
 

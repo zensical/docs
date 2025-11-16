@@ -92,7 +92,7 @@ configuration:
 ### Site icons
 
 Most icons you see on your site, such as navigation icons, can also be changed. For example,
-to change the navigation arrows in the footer, add the following lines to `mkdocs.yml`:
+to change the navigation arrows in the footer, add the following lines to your configuration:
 
 === "`zensical.toml`"
     ``` toml

@@ -573,7 +573,7 @@ that section (or the section index page).
 
 When section index pages are enabled, documents can be directly attached to
 sections, which is particularly useful for providing overview pages. Add the
-following lines to `mkdocs.yml`:
+following lines to your configuration:
 
 === "`zensical.toml`"
 
