@@ -90,7 +90,7 @@ element with a special syntax. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.abbr]
+    [project.markdown_extensions.attr_list]
     ```
 
 === "`mkdocs.yml`"
