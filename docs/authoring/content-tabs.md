@@ -21,8 +21,8 @@ following lines to your configuration file:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.superfences]
-    [project.markdown_extensions.tabbed]
+    [project.markdown_extensions.pymdownx.superfences]
+    [project.markdown_extensions.pymdownx.tabbed]
     alternate_style = true
     ```
 
