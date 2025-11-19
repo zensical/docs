@@ -28,7 +28,7 @@ well as to invite contributions and feedback from the user community at critical
 points in time.
 
   [public roadmap]: https://zensical.org/about/roadmap/
-  [public backlog]: https://github.com/zensical/backlog
+  [public backlog]: https://github.com/orgs/zensical/projects/2
 
 ## Change requests and the backlog
 
