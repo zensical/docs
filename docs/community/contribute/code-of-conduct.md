@@ -74,7 +74,7 @@ our [contribution guidelines] and this Code of Conduct.
 We take any violations seriously and will take appropriate action in response to
 uphold these values. Any instance of abusive, harassing, or otherwise
 unacceptable behavior may be reported by contacting the Zensical team privately
-at contact@zensical.org.
+at hello@zensical.org.
 
 Additionally, if we witness behavior that violates this Code of Conduct
 ourselves, whether directed at a community member or at the maintainers, we
