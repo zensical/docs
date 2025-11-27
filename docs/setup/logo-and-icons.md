@@ -26,14 +26,14 @@ file:
 === "`zensical.toml`"
     ``` toml
     [project.theme]
-    logo = "assets/logo.png"
+    logo = "images/logo.png"
     ```
 
 === "`mkdocs.yml`"
 
     ``` yaml
     theme:
-      logo: assets/logo.png
+      logo: images/logo.png
     ```
 
 To set the logo to use one of the bundled icons, [find a suitable icon] and add
