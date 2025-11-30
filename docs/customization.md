@@ -116,7 +116,7 @@ the `docs` directory:
     })
     ```
 
-  [instant navigation]: setup/setting-up-navigation.md#instant-navigation
+  [instant navigation]: setup/navigation.md#instant-navigation
   [RxJS Observable]: https://rxjs.dev/api/index/class/Observable
 
 ## Extending the theme
