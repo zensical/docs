@@ -110,3 +110,18 @@ Your documentation is now published under `<username>.gitlab.io/<repository>`.
   [site_dir]: setup/basics.md#site_dir
   [default branch]: https://docs.gitlab.com/ee/user/project/repository/branches/default.html
 
+## CloudFlare pages
+
+With Github Action, CloudFlare does not work and we have to manually update the configuration  
+
+here are the steps to take 
+- connect CF to your Github repo
+- update build command
+- update build output
+
+```bash
+
+Build command: pip install zensical && zensical build --clean
+Build output: site
+Root directory:
+```
