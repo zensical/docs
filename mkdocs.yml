@@ -202,6 +202,7 @@ nav:
       - setup/extensions/index.md
       - Markdown: setup/extensions/python-markdown.md
       - Markdown Extensions: setup/extensions/python-markdown-extensions.md
+      - mkdocstrings: setup/extensions/mkdocstrings.md
   - Authoring:
     - Markdown: authoring/markdown.md
     - Front matter: authoring/frontmatter.md
