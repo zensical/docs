@@ -119,7 +119,7 @@ the `docs` directory:
   [instant navigation]: setup/navigation.md#instant-navigation
   [RxJS Observable]: https://rxjs.dev/api/index/class/Observable
 
-### Modules, `async`, `defer`
+#### Modules, `async`, `defer`
 
 Is you want to import code as a [JavaScript module], you can simply make sure
 that the file has the `.mjs` extension or you can explicitly specify that it is
@@ -128,7 +128,7 @@ to be loaded as a module:
 [JavaScript module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 === "`zensical.toml`"
-    ```toml
+    ``` toml
     [[project.extra_javascript]]
     path = "javascripts/extra.js"
     type = "module"
@@ -149,7 +149,7 @@ script tag to further influence how the JavaScript is loaded. For example, for
 the `async` case:
 
 === "`zensical.toml`"
-    ```toml
+    ``` toml
     [[project.extra_javascript]]
     path = "javascripts/extra.js"
     async = true
