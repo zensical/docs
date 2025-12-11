@@ -119,6 +119,57 @@ the `docs` directory:
   [instant navigation]: setup/navigation.md#instant-navigation
   [RxJS Observable]: https://rxjs.dev/api/index/class/Observable
 
+#### Modules, `async`, `defer`
+
+Is you want to import code as a [JavaScript module], you can simply make sure
+that the file has the `.mjs` extension or you can explicitly specify that it is
+to be loaded as a module:
+
+[JavaScript module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+
+=== "`zensical.toml`"
+    ``` toml
+    [[project.extra_javascript]]
+    path = "javascripts/extra.js"
+    type = "module"
+    ```
+
+=== "`mkdocs.yml`"
+    ``` yaml
+    extra_javascript:
+      - path: javascripts/extra.js
+        type: module
+    ```
+
+This configuration will result in a `type="module"` attribute being added to the
+`<script>` tag for the extra JavaScript.
+
+Likewise, you can add [`defer`][defer] and [`async`][async] attributes to the
+script tag to further influence how the JavaScript is loaded. For example, for
+the `async` case:
+
+=== "`zensical.toml`"
+    ``` toml
+    [[project.extra_javascript]]
+    path = "javascripts/extra.js"
+    async = true
+    ```
+
+=== "`mkdocs.yml`"
+    ``` yaml
+    extra_javascript:
+      - path: javascripts/extra.js
+        async: true
+    ```
+
+  [defer]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer
+  [async]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#async
+
+Note that Zensical will auto-detect modules by looking at the file extension
+only when the `extra_javascript` element is plain text. That means that if you
+want to load a module using `async`, you also need to specify the `type`
+attribute.
+
 ## Extending the theme
 
 !!! info "Template caching"
