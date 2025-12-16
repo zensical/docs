@@ -228,6 +228,7 @@ nav:
       - Bug reports: community/contribute/report-a-bug.md
       - Documentation: community/contribute/report-a-docs-issue.md
       - Change requests: community/contribute/request-a-change.md
+      - Pull requests: community/contribute/pull-requests.md
       - Code of conduct: community/contribute/code-of-conduct.md
     - Guides:
       - Reproductions: community/guides/create-a-reproduction.md

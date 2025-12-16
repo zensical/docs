@@ -61,22 +61,12 @@ from the community of its users. Our open approach allows you to:
 * __Create change requests__ to help ensure that Zensical covers common use cases
   and delivers maximum user value.
 
+* __Contribute code__ in response to an issue by creating a pull request that
+  fixes a bug, introduces a new feature, or improves performance or code
+  quality.
+
 * __Help improve the documentation__ to ensure it is consistent, understandable,
   and that readers can find the information they are looking for.
 
   [How to contribute][community guidelines]{ .md-button .md-button--primary }
   [community guidelines]: contribute/index.md
-
-## Pull requests
-
-__We're currently not accepting pull requests__
-
-Zensical is evolving quickly, with significant changes happening regularly.
-Until our APIs reach stability, we are pausing acceptance of pull requests
-to focus on core development. In the meantime, we welcome your contributions
-through [reporting bugs], filing [change requests], or pointing out any
-[documentation issues].
-
-[reporting bugs]: contribute/report-a-bug.md
-[change requests]: contribute/request-a-change.md
-[documentation issues]: contribute/report-a-docs-issue.md

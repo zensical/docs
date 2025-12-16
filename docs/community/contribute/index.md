@@ -11,6 +11,8 @@ guidelines, we can help you much faster.
 
 In this section, we guide you through our processes.
 
+## Create an Issue
+
 <div class="grid cards" markdown>
 
 -   :material-bug-outline: &nbsp;
@@ -60,9 +62,28 @@ In this section, we guide you through our processes.
 
 </div>
 
+## Contribute
+
+<div class="grid cards" markdown>
+
+  -   :lucide-git-pull-request-create: &nbsp;
+      __Want to contribute to the code?__
+
+      ---
+
+      Contribute to the development of Zensical by making a pull request.
+
+      ---
+
+      :octicons-arrow-right-24: [Make a pull request][make a pull request]
+
+
+</div>
+
   [report a bug]: report-a-bug.md
   [report a docs issue]: report-a-docs-issue.md
   [request a change]: request-a-change.md
+  [make a pull request]: pull-request.md
 
 ## Checklist
 

@@ -1,10 +1,13 @@
+---
+icon: lucide/git-pull-request-create
+---
 # Pull Requests
 
 
 The process and requirements we describe below serve as important guardrails
 that are essential to running an Open Source project and help us prevent wasted
-effort and ensure the integrity of the codebase. This is more important than 
-ever as the number of attacks on Open Source projects by malicious actors and 
+effort and ensure the integrity of the codebase. This is more important than
+ever as the number of attacks on Open Source projects by malicious actors and
 the amount of AI slop both increase.
 
 ## Before you start
@@ -47,7 +50,7 @@ are minimal and focused on the intended changes.
   [editorconfig]: https://editorconfig.org/
   [by default]: https://editorconfig.org/#pre-installed
   [requires a plugin]: https://editorconfig.org/#download
-  
+
 ## Verified commits
 
 To ensure the integrity of our projects, we require [verified commits] that are  cryptographically signed. For this to work, you need to install the _public_ key of a keypair into your GitHub account. Follow the instructions on GitHub for using [gpg], [ssh], [s/mime] keypairs.
@@ -84,7 +87,7 @@ Origin (DCO), and that you are authorized to submit it on their behalf.
 AI-assisted coding can be useful but the unreflected inclusion of AI-generated
 code can also do great harm. By signing off on commits, you attest that you have
 either written all the code yourself or have thoroughly reviewed and fully
-understood any generated code. 
+understood any generated code.
 
 Code contributions that contain obviously AI-generated code that you cannot
 fully explain to us will be rejected. We must ensure, after all, that the
@@ -112,7 +115,7 @@ us. We also [require sign-off] with every commit of the [Developer Certificate
 of Origin].
 
   [linked to an issue]: #before-you-start
-  [require sign-off]: #developer-certificate-of-origin  
+  [require sign-off]: #developer-certificate-of-origin
   [Developer Certificate of Origin]: https://developercertificate.org
 
 Please note that summaries of commits accepted into the master branch are
