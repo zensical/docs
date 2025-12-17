@@ -103,30 +103,16 @@ popular choices:
 - :fontawesome-brands-gitkraken: – `fontawesome/brands/gitkraken`
 - :fontawesome-brands-bitbucket: – `fontawesome/brands/bitbucket`
 
-### Code actions
+### Content actions
 
-If the [repository URL] points to a valid [GitHub], [GitLab] or [Bitbucket]
-repository, Zensical provides a setting called `edit_uri`, which
-resolves to the subfolder where your documentation is hosted.
+Zensical can display code action buttons that allow a reader to navigate to the
+source code of the current page in a hosted repository such as GitHub. It can display a view button to just show the page source as well as an edit button to directly edit the content within the Git hoster's web interface. See the top of this page for an example of what this
+looks like.
 
-If your default branch is called `main`, change the setting to:
-
-=== "`zensical.toml`"
-
-    ``` toml
-    [project]
-    edit_uri = "edit/main/docs/"
-    ```
-
-=== "`mkdocs.yml`"
-
-    ``` yaml
-    edit_uri: edit/main/docs/
-    ```
-
-After making sure that `edit_uri` is correctly configured, buttons for code
-actions can be added. Two types of code actions are supported: `edit` and `view`
-(GitHub only):
+If [`repo_url`][repo_url] points to a [GitHub] repository, Zensical will automatically
+derive the corresponding URLs for the view and edit buttons. In this case, all you
+need to do is to turn on the `content.action.edit` and/or `content.action.view`
+features:
 
 === "`zensical.toml`"
 
@@ -147,6 +133,32 @@ actions can be added. Two types of code actions are supported: `edit` and `view`
         - content.action.view  # View source of this page
     ```
 
+#### `edit_uri`
+
+If Zensical does not derive the correct URLs, you can also configure the
+`edit_url` manually. Paths configured here will be appended to the `repo_url`.
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project]
+    edit_uri = "edit/main/docs/"
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    edit_uri: edit/main/docs/
+    ```
+
+!!! tip "Docs in a different repository"
+    If your project and its docs reside in different directories, you can make
+    the `edit_url` an absolute URL, so it does not rely on `repo_url` to form
+    a valid URL. The `repo_url` would point to your project repository,
+    `edit_url` to  the documentation repository.
+
+#### Icons
+
 The icon of the edit and view buttons can be changed with the following lines:
 
 === "`zensical.toml`"
@@ -166,7 +178,7 @@ The icon of the edit and view buttons can be changed with the following lines:
         view: material/eye
     ```
 
-  [repository URL]: #repository
+  [repo_url]: #repository
   [GitHub]: https://github.com/
   [GitLab]: https://about.gitlab.com/
   [Bitbucket]: https://bitbucket.org/
