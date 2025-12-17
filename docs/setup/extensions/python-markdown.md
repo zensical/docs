@@ -312,7 +312,7 @@ Python Markdown Extensions][Slugs]:
 
     ``` toml
     [project.markdown_extensions.toc.slugify]
-    function = "pymdownx.slugs.slugify"
+    object = "pymdownx.slugs.slugify"
     kwds = { case = "lower" }
     ```
 
