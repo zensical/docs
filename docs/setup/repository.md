@@ -135,10 +135,11 @@ features:
 
 #### `edit_uri`
 
-If you use a custom branch name or `docs_dir`, you may need to change the path
+If you use a custom branch name or `docs_dir`, you will need to change the path
 component of the URLs within the repository. Zensical allows you to set
-`edit_url` to override the default behavior. The paths configured here will be
-appended to the `repo_url`.
+`edit_url` to override the default behavior. To form the URL, Zensical
+concatenates the `repo_url`, the paths configured here, and the path of the
+Markdown file in the `docs_dir`.
 
 === "`zensical.toml`"
 
