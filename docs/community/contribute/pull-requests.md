@@ -131,8 +131,8 @@ types we support are listed in the table below. The CI job checks that:
 * The commit summary starts with lowercase and does not end with punctuation (it
   is not a full sentence), as recommended by the Conventional Commits
   specification.
-* The commit summary does not contain an issue reference. The issue reference
-  should always go into the body, and will be automatically extracted.
+* The commit summary is followed by the issue number in parentheses (with no
+  whitespace inside).
 
 <figure markdown>
 
