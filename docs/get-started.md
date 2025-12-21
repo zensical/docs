@@ -38,6 +38,15 @@ necessary dependencies alongside Zensical.
   [Python website]: https://www.python.org/
   [virtual environment]: https://realpython.com/what-is-pip
 
+!!! tip "Use with Docker"
+    If you are familiar with Docker and wish to use Zensical in a container then
+    you can use our [official Docker image]. For installation and usage
+    instructions, see the documentation on Docker Hub.
+
+
+
+[official Docker image]: https://hub.docker.com/r/zensical/zensical
+
 ### Install with pip { data-toc-label="with pip" }
 
 Zensical can be installed into a virtual environment with `pip`.
