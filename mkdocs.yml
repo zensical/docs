@@ -31,7 +31,7 @@ repo_url: https://github.com/zensical/zensical
 edit_uri: https://github.com/zensical/docs/edit/master/docs/
 
 # Copyright
-copyright: Copyright &copy; 2025 Zensical LLC
+copyright: "&copy; 2025 Zensical LLC"
 
 # Configuration
 theme:
