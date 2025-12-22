@@ -14,6 +14,8 @@ including stars and forks.
 
 ## Configuration
 
+### Repository URL
+
 In order to display a link to the repository of your project as part of your
 documentation, set `repo_url` in your configuration to the public URL of your
 repository, e.g.:
