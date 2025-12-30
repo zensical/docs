@@ -84,9 +84,8 @@ pages:
   script:
     - pip install zensical
     - zensical build --clean # (1)!
-  artifacts:
-    paths:
-      - public
+  pages:
+    publish: site
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 ```
