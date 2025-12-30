@@ -85,7 +85,7 @@ pages:
     - pip install zensical
     - zensical build --clean # (1)!
   pages:
-    publish: site
+    publish: public
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 ```
