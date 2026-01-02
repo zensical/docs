@@ -83,6 +83,8 @@ most of the features listed in the [Authoring] part of this documentation.
 
 [Authoring]: ../../authoring/markdown.md
 
+If you define other extensions or need to change options on any of the default
+extensions, you will need to configure _all_ of the extensions you are using.
 The following is the full expansion of the default configuration that you
 can use as a starting point if you want to explicitly control what Markdown
 extensions are active in your project:
@@ -160,6 +162,13 @@ extensions are active in your project:
     MkDocs, which only activates `meta`, `toc`, `tables`, and `fenced_code`
     from Python Markdown itself. If you experience problems building your
     project, turn off the defaults, as shown below.
+
+!!! note "Presets are on the roadmap"
+    We are working on a [preset mechanism] that simplifies configuration and
+    will allow you to add extensions to a set of defaults, customize extensions
+    included in the defaults, as well as remove them.
+
+  [preset mechanism]: https://zensical.org/about/roadmap/#configuration
 
 ### Disable the defaults
 
