@@ -1,5 +1,6 @@
 ---
-icon: lucide/pickaxe
+icon: lucide/drafting-compass
+title: "Version 1"
 ---
 
 # How we work
@@ -11,7 +12,7 @@ community.
 
 To achieve this goal, we have created a model of open development that goes
 beyond typical practices in Open Source and aims to create more focused and
-high-level discussions that drive the evolution of Zensical.  We also want to
+high-level discussions that drive the evolution of Zensical. We also want to
 make it easier for people to stay engaged with the project and contribute to it
 in meaningful ways. This brings a range of immediate [benefits].
 
@@ -20,7 +21,28 @@ in meaningful ways. This brings a range of immediate [benefits].
 The key elements of our model are a [public roadmap], which outlines the
 trajectory of the project, and our [public backlog], which breaks down items
 from the roadmap into actionable and achievable tasks. We manage both in
-response to input from the community.
+response to input from the community via change requests.[^integrated]
+We offer access to our design process and prioritization of implementation work
+in [Zensical Spark].
+
+[^integrated]: Since Zensical is a vertically integrated set of different projects that have
+their own repositories, we integrate all change requests into the backlog, which
+allows us to keep track of change requests across all projects.
+
+!!! note "Zensical Advancement Proposals"
+    [Zensical Advancement Proposals] (ZAPs) are where [Zensical Spark] members
+    collaborate with the Zensical team to shape what's next.
+    ZAPs exist to ensure Zensical's trajectory aligns with the real priorities
+    of organizations that depend on it in production.
+
+    As a Zensical Spark member, you're not just reviewing outcomes – [you're
+    participating directly in the design process][process], contributing context
+    from large-scale, real-world use cases, and helping turn complex challenges
+    into actionable proposals.
+
+  [process]: https://zensical.org/spark/tiers/#design-process-participation
+  [Zensical Spark]: https://zensical.org/spark/
+  [Zensical Advancement Proposals]: https://zensical.org/spark/proposals/
 
 Our process is open to a range of contributions and we put mechanisms in place to
 actively curate the information we need for decision-making and development as
@@ -29,18 +51,6 @@ points in time.
 
   [public roadmap]: https://zensical.org/about/roadmap/
   [public backlog]: https://github.com/orgs/zensical/projects/2
-
-## Change requests and the backlog
-
-Change requests are an important feature of Open Source development. Of course,
-we invite community members to submit them via our issue tracker. We promptly
-integrate all change requests into a structured, transparent process.
-
-Zensical is a vertically integrated set of systems that support different
-aspects of technical writing. It consists of a number of projects, each with its
-own repository and published releases. To provide a view of our development
-activities overall, we keep our [public backlog] separate, which we use to keep
-track of change requests across all projects.
 
 ## Process overview
 
@@ -146,7 +156,6 @@ sequenceDiagram
    pain points of people who work with it every day. We also offer private channels
    and NDAs to discuss confidential matters.
 
-  [Zensical Spark]: https://zensical.org/spark/
   [opportunities]: https://zensical.org/spark/methodology/#stage-1-opportunities
 
 6. Once we have established a thorough understanding of the opportunity space,
