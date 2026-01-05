@@ -139,7 +139,7 @@ features:
 
 If you use a custom branch name or `docs_dir`, you will need to change the path
 component of the URLs within the repository. Zensical allows you to set
-`edit_url` to override the default behavior. To form the URL, Zensical
+`edit_uri` to override the default behavior. To form the URL, Zensical
 concatenates the `repo_url`, the paths configured here, and the path of the
 Markdown file in the `docs_dir`.
 
@@ -158,9 +158,9 @@ Markdown file in the `docs_dir`.
 
 !!! tip "Docs in a different repository"
     If your project and its docs reside in different directories, you can make
-    the `edit_url` an absolute URL, so it does not rely on `repo_url` to form
+    the `edit_uri` an absolute URL, so it does not rely on `repo_url` to form
     a valid URL. The `repo_url` would point to your project repository,
-    `edit_url` to  the documentation repository.
+    `edit_uri` to  the documentation repository.
 
 #### Icons
 
