@@ -86,7 +86,6 @@ community to develop modules to support all conceivable use cases.
 
 [module system]: https://zensical.org/about/roadmap/#module-system
 [Material for MkDocs plugins]: https://squidfunk.github.io/mkdocs-material/plugins/
-[feature parity]: https://zensical.org/about/roadmap/#feature-parity
 
 ### Why do you call them "modules" and not "plugins"?
 
