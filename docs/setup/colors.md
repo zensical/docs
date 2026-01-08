@@ -388,7 +388,7 @@ custom colors, e.g., when you want to override the `primary` color:
 
 Let's say you're :fontawesome-brands-youtube:{ style="color: #EE0F0F" }
 __YouTube__, and want to set the primary color to your brand's palette. Just
-add this CSS and make sure that it is included in the `etxra_css` setting in
+add this CSS and make sure that it is included in the `extra_css` setting in
 your configuration:
 
 === "`docs/stylesheets/extra.css`"
