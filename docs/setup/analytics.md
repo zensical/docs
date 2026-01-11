@@ -273,8 +273,8 @@ used to configure the custom integration:
 === "`zensical.toml`"
     ``` toml
     [project.extra.analytics]
-    provider: custom
-    property: foobar
+    provider = "custom"
+    property = "foobar"
     ```
 === "`mkdocs.yml`"
 
