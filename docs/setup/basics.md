@@ -25,7 +25,7 @@ available settings.
 
     * In YAML, values do not need to be escaped, which can cause ambiguities if
       a value can be interpreted as different types, such as `no`, which could
-      the a string or a boolean. TOML requires all strings to be quoted.
+      be interpreted as either a string or a boolean. TOML requires all strings to be quoted.
 
 [TOML file format]: https://toml.io/
 
