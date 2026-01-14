@@ -24,8 +24,8 @@ available settings.
       whitespace is mostly a stylistic choice.
 
     * In YAML, values do not need to be escaped, which can cause ambiguities if
-      a value can be interpreted as different types, such as `no`, which would
-      be interpreted as a boolean by YAML, when it could be intended to be a string.
+      a value can be interpreted as different types, such as `no` or `off`, which would
+      both be interpreted as a boolean by YAML, when they could be intended as strings.
       TOML requires all strings to be quoted.
 
 [TOML file format]: https://toml.io/
