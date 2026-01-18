@@ -1,6 +1,5 @@
 ---
 icon: lucide/drafting-compass
-title: "Version 1"
 ---
 
 # How we work
