@@ -84,7 +84,7 @@ function with the following lines:
               case: lower
     ```
 
-    Fore more information, please [see the extension guide][slugification].
+    For more information, please [see the extension guide][slugification].
 
   [first]: #anchor-links-open-me-in-a-new-tab-
   [second]: #anchor-links--or-me-
