@@ -239,7 +239,7 @@ The following configuration options are supported:
 
 This option sets the title of the table of contents in the right navigation
 sidebar, which is normally automatically sourced from the translations for
-the [site language]. Set the title explicitly via::
+the [site language]. Set the title explicitly via:
 
 === "`zensical.toml`"
 
