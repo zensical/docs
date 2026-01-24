@@ -12,8 +12,8 @@ months, making it much more flexible and powerful.
 !!! warning "Preliminary support"
 
     The mkdocstrings integration is preliminary, which means some features are
-    not yet supported, specifically cross-references and backlinks. We're
-    working on bringing these features into Zensical.
+    not yet supported, specifically backlinks. We're working on bringing these
+    features into Zensical.
 
   [mkdocstrings]: https://mkdocstrings.github.io
   [0.0.11]: https://github.com/zensical/zensical/releases/tag/0.0.11
