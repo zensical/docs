@@ -89,5 +89,5 @@ The complete list of options can be found here:
     follow progress on these backlog items:
 
     - [Proposal: Configuration](https://github.com/zensical/backlog/issues/47)
-        - [Allow use of `..` in `docs_dir` and `site_dir`](https://github.com/zensical/backlog/issues/56)
-        - [Symbolic links pointing outside of `docs_dir`](https://github.com/zensical/backlog/issues/55)
+    - [Allow use of `..` in `docs_dir` and `site_dir`](https://github.com/zensical/backlog/issues/56)
+    - [Symbolic links pointing outside of `docs_dir`](https://github.com/zensical/backlog/issues/55)
