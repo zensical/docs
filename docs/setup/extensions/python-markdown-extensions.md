@@ -250,7 +250,7 @@ recommended due to [restrictions in licensing][Emoji index]:
 
 #### `emoji_generator`
 
-This option defines how the resolved emoji or icon shortcode is render. Note
+This option defines how the resolved emoji or icon shortcode is rendered. Note
 that icons can only be used together with the `to_svg` configuration:
 
 === "`zensical.toml`"
