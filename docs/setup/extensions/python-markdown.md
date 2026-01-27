@@ -222,7 +222,7 @@ page. Enable it via:
 
     ``` toml
     [project.markdown_extensions.toc]
-    permalink =  true
+    permalink = true
     ```
 
 === "`mkdocs.yml`"
