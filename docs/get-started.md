@@ -65,11 +65,14 @@ Zensical can be installed into a virtual environment with `pip`.
     Open up a Command Window and install Zensical by first setting up a virtual
     environment and then using `pip` to install the Zensical package into it:
 
-    ```
-    python3 -m venv .venv
+    ```ps1
+    python -m venv .venv  # (1)!
     .venv\Scripts\activate
     pip install zensical
     ```
+
+    1.  Depending on your Python installation, you may need to use a different
+        binary name such as `python3` or use `py -3`.
 
 === ":material-linux: Linux"
     Open up a terminal window and install Zensical by first setting up a virtual
