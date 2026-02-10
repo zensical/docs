@@ -102,20 +102,20 @@ install Zensical with `uv`, use:
 
     ```
     uv init
-    uv add zensical
+    uv add --dev zensical
     ```
 
 === ":fontawesome-brands-windows: Windows"
 
     ```
     uv init
-    uv add zensical
+    uv add --dev zensical
     ```
 
 === ":material-linux: Linux"
 
     ```
     uv init
-    uv add zensical
+    uv add --dev zensical
     ```
 
