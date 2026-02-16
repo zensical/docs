@@ -710,7 +710,7 @@ to your configuration:
 ### Back-to-top button
 
 A back-to-top button can be shown when the user, after scrolling down, starts
-to scroll up again. It's rendered centered and just below the header. Add the
+to scroll up again. It's rendered centered and at the bottom of the page. Add the
 following lines to your configuration:
 
 === "`zensical.toml`"
