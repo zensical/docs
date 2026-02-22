@@ -364,8 +364,10 @@ reload the site.
 
 Zensical implements colors using [CSS variables] (custom properties). If you
 want to customize the colors beyond the palette (e.g. to use your brand-specific
-colors), you can add an [additional style sheet](https://zensical.org/docs/customization/?h=additional+style+sheet%5D#additional-css) and tweak the values of the CSS
+colors), you can add an [additional style sheet] and tweak the values of the CSS
 variables.
+
+  [additional style sheet]: https://zensical.org/docs/customization#additional-css
 
 First, set the [`primary`][palette.primary] or [`accent`][palette.accent] values
 in `mkdocs.yml` to `custom`, to signal to the theme that you want to define
