@@ -116,6 +116,6 @@ install Zensical with `uv`, use:
 
     ```
     uv init
-    uv add --dev zensical
+    uv tool install zensical
     ```
 
