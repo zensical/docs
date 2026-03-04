@@ -212,6 +212,12 @@ configuration file.
     docs_dir: docs
     ```
 
+!!! warning "`docs_dir` can't be set to `.`"
+
+    This is a temporary limitation. We're working on increasing flexibility. As a workaround, please set `docs_dir` to a subdirectory, such as `docs`, and move your source files there. You can subscribe to the [backlog item] for this feature if you want to be notified when it's available.
+
+  [backlog item]: https://github.com/zensical/backlog/issues/101
+
 ### `site_dir`
 
 The `site_dir` specifies the path to the directory your site will be written to.
