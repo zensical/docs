@@ -28,7 +28,7 @@ necessary dependencies alongside Zensical.
     You need to have Python and a Python package manager installed on your
     system before you install Zensical. We recommend you follow the [Python
     Setup and Usage] instructions for your operating system provided on the
-    [Python website].  Modern Python distributions include the `pip` package
+    [Python website]. Modern Python distributions include the `pip` package
     manager, so unless you are developing Python software and use `uv`, this is
     the simplest option to install Zensical on your system.
 
@@ -43,13 +43,19 @@ necessary dependencies alongside Zensical.
     you can use our [official Docker image]. For installation and usage
     instructions, see the documentation on Docker Hub.
 
-
-
 [official Docker image]: https://hub.docker.com/r/zensical/zensical
 
 ### Install with pip { data-toc-label="with pip" }
 
-Zensical can be installed into a virtual environment with `pip`.
+Zensical can be installed into a virtual environment[^venv] with `pip`.
+
+[^venv]: A [Python virtual environment] is a folder in your project directory that
+    contains its own copy of Python and any Python packages the project needs.
+    By installing Zensical and its dependencies into a virtual environment you
+    ensure that it does not interfere with other projects on your computer that
+    also use Python.
+
+  [Python virtual environment]: https://docs.python.org/3/tutorial/venv.html
 
 === ":material-apple: macOS"
     Open up a terminal window and install Zensical by first setting up a virtual
