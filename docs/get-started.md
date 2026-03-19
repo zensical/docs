@@ -93,8 +93,10 @@ Zensical can be installed into a virtual environment with `pip`.
 ### Install with uv { data-toc-label="with uv" }
 
 If you are developing software using Python, chances are you're already using
-[`uv`][uv] as a package manager, which has become popular in recent years. To
-install Zensical with `uv`, use:
+[`uv`][uv] as a package manager, which has become popular in recent years.
+
+To install Zensical with `uv` and add it to your development dependencies in
+your `pyproject.toml`, use:
 
 [uv]: https://docs.astral.sh/uv/
 
@@ -103,6 +105,7 @@ install Zensical with `uv`, use:
     ```
     uv init
     uv add --dev zensical
+    source .venv/bin/activate
     ```
 
 === ":fontawesome-brands-windows: Windows"
@@ -110,6 +113,7 @@ install Zensical with `uv`, use:
     ```
     uv init
     uv add --dev zensical
+    .venv\Scripts\activate
     ```
 
 === ":material-linux: Linux"
@@ -117,5 +121,14 @@ install Zensical with `uv`, use:
     ```
     uv init
     uv add --dev zensical
+    source .venv/bin/activate
     ```
+
+!!! tip "Running directly with `uvx`"
+    If you just need to run Zensical quickly and don't want to create a Python
+    project, you can also run it with `uvx zensical`, which will install it into
+    a temporary virtual environment and run it from there. See the
+    [documentation on `uvx`][uvx] for details.
+
+[uvx]: https://docs.astral.sh/uv/concepts/tools/#tool-environments
 
