@@ -130,5 +130,5 @@ your `pyproject.toml`, use:
     a temporary virtual environment and run it from there. See the
     [documentation on `uvx`][uvx] for details.
 
-[uvx]: https://docs.astral.sh/uv/concepts/tools/#tool-environments
+  [uvx]: https://docs.astral.sh/uv/concepts/tools/#tool-environments
 
