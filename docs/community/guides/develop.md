@@ -4,7 +4,7 @@ icon: lucide/hammer
 
 # Set up a development environment
 
-We are providing instructions below to get and running you up if you want to
+We are providing instructions below to get you up and running if you want to
 build Zensical yourself and if you want to contribute to its development.
 
 !!! warning "Raise an issue before creating a pull request!"
