@@ -4,8 +4,8 @@ icon: lucide/hammer
 
 # Set up a development environment
 
-We are providing instructions below to get you up if you want to build Zensical
-yourself and if you want to contribute to its development.
+We are providing instructions below to get and running you up if you want to
+build Zensical yourself and if you want to contribute to its development.
 
 !!! warning "Raise an issue before creating a pull request!"
 
@@ -68,7 +68,6 @@ To build Zensical, you need to:
         ```
         git clone https://github.com/zensical/ui.git
         ln -s ../../../ui/dist zensical/python/zensical/templates
-        ln -s ui/dist zensical/python/templates
         ```
 
     === ":material-linux: Linux"
@@ -85,7 +84,7 @@ To build Zensical, you need to:
         mklink ui\dist zensical\python\zensical\templates
         ```
 
-        You need the right to create symbolic links to do this on Windows.
+        __Note:__ You need the right to create symbolic links to do this on Windows.
 
     === ":fontawesome-brands-windows: Windows (Powershell)"
 
@@ -94,7 +93,7 @@ To build Zensical, you need to:
         New-Item -Type SymbolicLink -Path zensical\python\zensical\templates -Target ui\dist
         ```
 
-        You need the right to create symbolic links to do this on Windows.
+        __Note:__ You need the right to create symbolic links to do this on Windows.
 
 ## Building Zensical
 
@@ -103,6 +102,12 @@ With these preparations out of the way, you can build Zensical by running:
 ```
 uv run maturin develop
 ```
+
+## Running Zensical
+
+To run Zensical from your project, either use `uv run zensical` or activate the
+virtual environment so you can just run `zensical`. The latter has the advantage
+that it works outside the project directory.
 
 ## Building the themes
 
@@ -114,9 +119,5 @@ npm install
 npm run build
 ```
 
-## Running Zensical
-
-To run Zensical from your project, either use `uv run zensical` or activate the
-virtual environment so you can just run `zensical`. The latter has the advantage
-that it works outside the project directory.
-
+Since the `dist` directory is symlinked into the Zensical project, the build
+artifacts will be immediately picked up by any new runs of Zensical.
