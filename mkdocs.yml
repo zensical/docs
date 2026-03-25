@@ -233,4 +233,5 @@ nav:
       - Code of conduct: community/contribute/code-of-conduct.md
     - Guides:
       - Reproductions: community/guides/create-a-reproduction.md
+      - Development: community/guides/develop.md
 
