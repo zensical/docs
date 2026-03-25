@@ -81,7 +81,7 @@ To build Zensical, you need to:
 
         ```
         git clone https://github.com/zensical/ui.git
-        mklink ui\dist zensical\python\zensical\templates
+        mklink zensical\python\zensical\templates ui\dist
         ```
 
         __Note:__ You need the permission to create symbolic links to do this on
