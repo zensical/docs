@@ -19,7 +19,7 @@ build Zensical yourself and if you want to contribute to its development.
 
 ## Prerequisites
 
-Zensical consists of a number of components, each with its own repository.
+Zensical consists of a number of projects, each with its own repository.
 Depending on which component you want to work on, you will need to install
 different development tools.
 
@@ -84,7 +84,8 @@ To build Zensical, you need to:
         mklink ui\dist zensical\python\zensical\templates
         ```
 
-        __Note:__ You need the right to create symbolic links to do this on Windows.
+        __Note:__ You need the permission to create symbolic links to do this on
+        Windows.
 
     === ":fontawesome-brands-windows: Windows (Powershell)"
 
@@ -93,7 +94,8 @@ To build Zensical, you need to:
         New-Item -Type SymbolicLink -Path zensical\python\zensical\templates -Target ui\dist
         ```
 
-        __Note:__ You need the right to create symbolic links to do this on Windows.
+        __Note:__ You need the permission to create symbolic links to do this on
+        Windows.
 
 ## Building Zensical
 
@@ -105,9 +107,13 @@ uv run maturin develop
 
 ## Running Zensical
 
-To run Zensical from your project, either use `uv run zensical` or activate the
-virtual environment so you can just run `zensical`. The latter has the advantage
-that it works outside the project directory.
+To run Zensical within its own project folder, you can use `uv run zensical`.
+Alternatively, activate the project virtual environment so you can just run
+`zensical` and run it in other directories.
+
+If you want to install your compiled version of Zensical in another project,
+activate its virtual environment and run `pip install -e
+/path/to/zensical/project`.
 
 ## Building the themes
 
