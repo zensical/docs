@@ -75,7 +75,7 @@ To build Zensical, you need to:
 
         ```
         git clone https://github.com/zensical/ui.git
-        ln -s ui/dist zensical/python/templates
+        ln -s ../../../ui/dist zensical/python/zensical/templates
         ```
 
     === ":fontawesome-brands-windows: Windows (cmd.exe)"
