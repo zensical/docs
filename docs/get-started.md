@@ -155,7 +155,7 @@ be installed using [Anaconda] or [Mamba].
 
 === ":material-apple: macOS"
     ```sh
-    conda create -n zensical python=3.14.*
+    conda create -n zensical python=3.14
     conda activate zensical
     conda install -c conda-forge zensical
     ```
@@ -168,14 +168,14 @@ be installed using [Anaconda] or [Mamba].
     equivalent Miniforge Prompt.
 
     ```ps1
-    conda create -n zensical python=3.14.*
+    conda create -n zensical python=3.14
     conda activate zensical
     conda install -c conda-forge zensical
     ```
 
 === ":material-linux: Linux"
     ```sh
-    conda create -n zensical python=3.14.*
+    conda create -n zensical python=3.14
     conda activate zensical
     conda install -c conda-forge zensical
     ```
