@@ -125,3 +125,60 @@ use `uv run` or activate the project's virtual environment manually.
   [uvtool]: https://docs.astral.sh/uv/concepts/tools/#tool-environments
 
 
+!!! tip "Other tools using PyPI"
+    There are, of course, other dependency managers and build tools in the
+    Python ecosystem that use PyPI as the repository. Installing Zensical with
+    them should be similar to the process of installing with `uv`. Refer to
+    their documentation for details.
+
+## Third-party distributions
+
+There are other distributions that make Zensical available but they may or may
+not use the official packages we distribute exclusively through PyPI. You can
+use these distributions if you have good reasons to do so but for normal use we
+recommend the installation methods above that we officially support.
+
+
+### Install with Anaconda/Mamba { data-toc-label="Anaconda/Mamba" }
+
+Zensical is available in the [conda-forge] community repository so that it can
+be installed using [Anaconda] or [Mamba].
+
+  [conda-forge]: https://conda-forge.org/
+  [Anaconda]: https://www.anaconda.com
+  [Mamba]: https://mamba.readthedocs.io
+
+!!! warning
+    We cannot provide support for distributions we do not control. If you
+    experience any issues please contact the maintainers of the packages within
+    these distributions.
+
+=== ":material-apple: macOS"
+    ```sh
+    conda create -n zensical python=3.14.*
+    conda activate zensical
+    conda install -c conda-forge zensical
+    ```
+
+=== ":fontawesome-brands-windows: Windows"
+
+    If you are using Anaconda or Mamaba, make sure that the base environment is
+    activated. If you are using Anaconda, you can just open an [Anaconda
+    Prompt]. If you installed Mamba as part of [Miniforge], there will be an
+    equivalent Miniforge Prompt.
+
+    ```ps1
+    conda create -n zensical python=3.14.*
+    conda activate zensical
+    conda install -c conda-forge zensical
+    ```
+
+=== ":material-linux: Linux"
+    ```sh
+    conda create -n zensical python=3.14.*
+    conda activate zensical
+    conda install -c conda-forge zensical
+    ```
+
+[Anaconda Prompt]: https://www.anaconda.com/docs/reference/glossary#anaconda-prompt
+[Miniforge]: https://conda-forge.org/download/
