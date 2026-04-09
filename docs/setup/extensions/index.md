@@ -100,23 +100,31 @@ extensions are enabled by default:
     [project.markdown_extensions.pymdownx.arithmatex]
     generic = true
     [project.markdown_extensions.pymdownx.betterem]
-    smart_enable = "all"
     [project.markdown_extensions.pymdownx.caret]
     [project.markdown_extensions.pymdownx.details]
     [project.markdown_extensions.pymdownx.emoji]
     emoji_generator = "zensical.extensions.emoji.to_svg"
     emoji_index = "zensical.extensions.emoji.twemoji"
     [project.markdown_extensions.pymdownx.highlight]
+    anchor_linenums = true
+    line_spans = "__span"
+    pygments_lang_class = true
     [project.markdown_extensions.pymdownx.inlinehilite]
     [project.markdown_extensions.pymdownx.keys]
+    [project.markdown_extensions.pymdownx.magiclink]
     [project.markdown_extensions.pymdownx.mark]
     [project.markdown_extensions.pymdownx.smartsymbols]
     [project.markdown_extensions.pymdownx.superfences]
+    custom_fences = [
+      { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
+    ]
     [project.markdown_extensions.pymdownx.tabbed]
     alternate_style = true
+    combine_header_slug = true
     [project.markdown_extensions.pymdownx.tasklist]
     custom_checkbox = true
     [project.markdown_extensions.pymdownx.tilde]
+
     ```
 
 === "`mkdocs.yml`"
@@ -133,21 +141,28 @@ extensions are enabled by default:
           permalink: true
       - pymdownx.arithmatex:
           generic: true
-      - pymdownx.betterem:
-          smart_enable: all
+      - pymdownx.betterem
       - pymdownx.caret
       - pymdownx.details
       - pymdownx.emoji:
           emoji_index: !!python/name:material.extensions.emoji.twemoji
           emoji_generator: !!python/name:material.extensions.emoji.to_svg
-      - pymdownx.highlight
+      - pymdownx.highlight:
+          anchor_linenums: true
+          line_spans: __span
+          pygments_lang_class: true
       - pymdownx.inlinehilite
       - pymdownx.keys
       - pymdownx.mark
       - pymdownx.smartsymbols
-      - pymdownx.superfences
+      - pymdownx.superfences:
+          custom_fences:
+            - name: mermaid
+              class: mermaid
+              format: !!python/name:pymdownx.superfences.fence_code_format
       - pymdownx.tabbed:
           alternate_style: true
+          combine_header_slug: true
       - pymdownx.tasklist:
           custom_checkbox: true
       - pymdownx.tilde
