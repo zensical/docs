@@ -150,11 +150,13 @@ be installed using [Anaconda] or [Mamba].
 
 !!! warning
     We cannot provide support for distributions we do not control. If you
-    experience any issues please contact the maintainers of the packages within
-    these distributions.
+    experience any issues please contact the maintainers of
+    [conda-forge/zensical-feedstock].
+
+  [conda-forge/zensical-feedstock]: https://github.com/conda-forge/zensical-feedstock
 
 === ":material-apple: macOS"
-    ```sh
+    ```
     conda create -n zensical python=3.14
     conda activate zensical
     conda install -c conda-forge zensical
@@ -167,14 +169,14 @@ be installed using [Anaconda] or [Mamba].
     Prompt]. If you installed Mamba as part of [Miniforge], there will be an
     equivalent Miniforge Prompt.
 
-    ```ps1
+    ```
     conda create -n zensical python=3.14
     conda activate zensical
     conda install -c conda-forge zensical
     ```
 
 === ":material-linux: Linux"
-    ```sh
+    ```
     conda create -n zensical python=3.14
     conda activate zensical
     conda install -c conda-forge zensical
