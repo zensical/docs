@@ -85,7 +85,7 @@ pages:
     - pip install zensical
     - zensical build --clean # (1)!
   pages:
-    publish: public
+    publish: site # (2)!
   rules:
     - if: '$CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCH'
 ```
@@ -94,9 +94,11 @@ pages:
     functionality will undergo revisions as we optimize the performance of
     Zensical.
 
-!!! warning "Prerequisites"
-    Make sure to change [`site_dir`][site_dir] to `public` in your
-    configuration as GitLab requires this.
+2.  The Gitlab documentation says that the SSG should adapt to Gitlab Pages,
+    which uses the folder `public` be default but it is possible to
+    [configure the default folder] as shown here.
+
+[configure the default folder]: https://docs.gitlab.com/user/project/pages/introduction/#customize-the-default-folder
 
 When a new commit is pushed to the [default branch] (e.g. `master` or `main`),
 the static site is automatically built and deployed. Push your changes to see
@@ -112,7 +114,7 @@ Your documentation is now published under `<username>.gitlab.io/<repository>`.
 ## Other
 
 We cannot document every hosting provider here. The following community guides
-describe how to deploy a Zensical site elsewhere. If you find an issue with one of these 
+describe how to deploy a Zensical site elsewhere. If you find an issue with one of these
 guides, please contact the author.
 
 * [Azure Static Web Apps with GitHub Actions](https://zensical-guides.hypercat.net/azure-static-web-app-github/)
