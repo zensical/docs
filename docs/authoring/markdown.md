@@ -18,12 +18,28 @@ Gruber's original Markdown syntax][gruber]. For the most part, it is fully compa
 with the original specification, supporting the core features like headings,
 lists, links, blockquotes, and inline formatting (e.g., bold and italics).
 
+[gruber]: https://daringfireball.net/projects/markdown/
+
+!!! note "Differences between Markdown dialects"
+    There are [differences] in how implementers of Markdown have interpreted the
+    original specification.
+
+    In particular, Python Markdown requires an indentation by four spaces (or a
+    tab) where other implementations only require two. This is relevant where
+    list items consist of more than one paragraph but also in the case of
+    admonitions, where the content needs to be indented by four spaces.
+
+    Another behavior is that Python Markdown does not start a new list when the
+    list symbol changes, for example, from "*" to "-". CommonMark, for example,
+    would [start a new list].
+
+[differences]: https://python-markdown.github.io/#differences
+[start a new list]: https://spec.commonmark.org/0.31.2/#lists
+
 Both Python Markdown itself and the [Python Markdown Extensions] that Zensical
 also supports provide extensions to the core Markdown language to cater for the
 needs of technical writers who want to produce clear, compelling, and visually
 attractive documentation.
-
-[gruber]: https://daringfireball.net/projects/markdown/
 
 Supporting the same syntax for content is a key component in our approach to
 ensure compatibility with Material for MkDocs and to then evolve Zensical from
