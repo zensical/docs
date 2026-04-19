@@ -46,6 +46,12 @@ customized following the instructions in the [setup guides].
 [publish your documentation]: ../publish-your-site.md
 [GitHub Pages]: ../publish-your-site.md#github-pages
 
+!!! note "Use in existing projects"
+    Note that the `zensical new` command will not overwrite existing files.
+    It will return with an error if a `zensical.toml` file already exists.
+    If other files to be written already exist then the command will simply
+    leave them untouched.
+
 ## Options
 
 You can run `zensical new --help` to get command-line help for the `new`
