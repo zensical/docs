@@ -506,7 +506,6 @@ as a full standalone theme.
 
     - **`mkdocs_theme.yml` is optional, even for packaged themes.** MkDocs requires it for any packaged theme; Zensical simply looks for it and uses it when present.
     - **`mkdocs_theme.yml` is also read from `custom_dir`.** MkDocs ignores it outside of packaged themes; Zensical reads it regardless, so you can include theme configuration in a local override directory too.
-    - **Inheritance is driven by `extends` in `mkdocs_theme.yml`, not by `name` in the user's config.** Your extension always declares what it extends, independent of how the user has configured their project.
 
 ### Using packaged themes
 
