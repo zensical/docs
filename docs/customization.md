@@ -537,3 +537,7 @@ configuration:
     theme:
       name: my_theme
     ```
+
+For examples of packaged themes built by the community, see [Themes].
+
+  [Themes]: community/themes.md
