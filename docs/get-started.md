@@ -132,13 +132,13 @@ use these distributions if you have good reasons to do so but for normal use we
 recommend the installation methods above that we officially support.
 
 
-### Install with Anaconda/Mamba { data-toc-label="Anaconda/Mamba" }
+### Install with conda/Mamba { data-toc-label="conda/Mamba" }
 
 Zensical is available in the [conda-forge] community repository so that it can
-be installed using [Anaconda] or [Mamba].
+be installed using [conda] or [Mamba].
 
   [conda-forge]: https://conda-forge.org/
-  [Anaconda]: https://www.anaconda.com
+  [conda]: https://docs.conda.io/en/latest/
   [Mamba]: https://mamba.readthedocs.io
 
 !!! warning
@@ -157,8 +157,8 @@ be installed using [Anaconda] or [Mamba].
 
 === ":fontawesome-brands-windows: Windows"
 
-    If you are using Anaconda or Mamaba, make sure that the base environment is
-    activated. If you are using Anaconda, you can just open an [Anaconda
+    If you are using conda or Mamba, make sure that the base environment is
+    activated. If you are using conda, you can just open an [Anaconda
     Prompt]. If you installed Mamba as part of [Miniforge], there will be an
     equivalent Miniforge Prompt.
 
