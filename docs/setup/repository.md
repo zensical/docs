@@ -73,7 +73,7 @@ _repository name_ automatically. If you wish to customize the name, set
 
 While the default repository icon is a generic git icon, it can be set to
 any icon bundled with the theme by referencing a valid icon path in
-`mkdocs.yml`:
+the config file:
 
 === "`zensical.toml`"
 
