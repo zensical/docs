@@ -41,7 +41,7 @@ Name of a Python module to load for defining variables, macros, and filters (def
 
     ``` toml
     [project.markdown_extensions.zensical.extensions.macros]
-    module_name = "docs/macros"
+    module_name = "macros"
     ```
 
 === "`mkdocs.yml`"
@@ -49,7 +49,7 @@ Name of a Python module to load for defining variables, macros, and filters (def
     ``` yaml
     markdown_extensions:
       - zensical.extensions.macros:
-          module_name: docs/macros
+          module_name: macros
     ```
 
 #### `modules`
@@ -116,7 +116,7 @@ Directory used as a Jinja2 template loader, enabling `{% include %}` tags in pag
 
     ``` toml
     [project.markdown_extensions.zensical.extensions.macros]
-    include_dir = "docs/includes"
+    include_dir = "includes"
     ```
 
 === "`mkdocs.yml`"
@@ -124,7 +124,7 @@ Directory used as a Jinja2 template loader, enabling `{% include %}` tags in pag
     ``` yaml
     markdown_extensions:
       - zensical.extensions.macros:
-          include_dir: docs/includes
+          include_dir: includes
     ```
 
 #### `render_by_default`
