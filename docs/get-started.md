@@ -38,9 +38,10 @@ necessary dependencies alongside Zensical.
   [Python website]: https://www.python.org/
 
 !!! tip "Use with Docker"
-    If you are familiar with Docker and wish to use Zensical in a container then
-    you can use our [official Docker image]. For installation and usage
-    instructions, see the documentation on Docker Hub.
+    If you want to  run Zensical in a container for previews and builds, you
+    can use our [official Docker image]. Note that it's not intended for
+    hosting the site. For installation and usage instructions, see the
+    documentation on Docker Hub.
 
 [official Docker image]: https://hub.docker.com/r/zensical/zensical
 
