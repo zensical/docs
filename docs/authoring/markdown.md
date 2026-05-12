@@ -36,6 +36,15 @@ lists, links, blockquotes, and inline formatting (e.g., bold and italics).
 [differences]: https://python-markdown.github.io/#differences
 [start a new list]: https://spec.commonmark.org/0.31.2/#lists
 
+!!! warning "README files"
+
+    `README.md` files in the `docs_dir` are converted to `index.html` just
+    as in MkDocs.  However, if both `README.md` and `index.md` are present
+    in a directory the behavior is currently undefined, so it is better
+    to avoid having both. We have a [backlog item][bl_readme] to review this.
+
+[bl_readme]: https://github.com/zensical/backlog/issues/135
+
 Both Python Markdown itself and the [Python Markdown Extensions] that Zensical
 also supports provide extensions to the core Markdown language to cater for the
 needs of technical writers who want to produce clear, compelling, and visually
