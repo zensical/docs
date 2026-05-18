@@ -185,30 +185,32 @@ nav:
       - Build: usage/build.md
   - Setup:
       - Basics: setup/basics.md
-      - Colors: setup/colors.md
-      - Fonts: setup/fonts.md
-      - Language: setup/language.md
-      - Logo and icons: setup/logo-and-icons.md
-      - Data privacy: setup/data-privacy.md
-      - Navigation: setup/navigation.md
-      - Validation: setup/validation.md
-      - Site search: setup/search.md
-      - Site analytics: setup/analytics.md
-      - Social cards: setup/social-cards.md
-      - Tags: setup/tags.md
-      - Header: setup/header.md
-      - Footer: setup/footer.md
-      - Repository: setup/repository.md
-      - Versioning: setup/versioning.md
-      - Comment system: setup/comment-system.md
-      - Offline usage: setup/offline.md
-      - Extensions:
-          - setup/extensions/index.md
-          - Markdown: setup/extensions/python-markdown.md
-          - Markdown Extensions: setup/extensions/python-markdown-extensions.md
-          - GLightbox: setup/extensions/glightbox.md
-          - Macros: setup/extensions/macros.md
-          - mkdocstrings: setup/extensions/mkdocstrings.md
+      - Theme:
+          - Colors: setup/colors.md
+          - Fonts: setup/fonts.md
+          - Language: setup/language.md
+          - Logo and icons: setup/logo-and-icons.md
+          - Header: setup/header.md
+          - Footer: setup/footer.md
+          - Repository: setup/repository.md
+      - Site settings:
+          - Data privacy: setup/data-privacy.md
+          - Navigation: setup/navigation.md
+          - Validation: setup/validation.md
+          - Site search: setup/search.md
+          - Site analytics: setup/analytics.md
+          - Social cards: setup/social-cards.md
+          - Tags: setup/tags.md
+          - Versioning: setup/versioning.md
+          - Comment system: setup/comment-system.md
+          - Offline usage: setup/offline.md
+  - Extensions:
+      - setup/extensions/index.md
+      - GLightbox: setup/extensions/glightbox.md
+      - Macros: setup/extensions/macros.md
+      - mkdocstrings: setup/extensions/mkdocstrings.md
+      - Python Markdown: setup/extensions/python-markdown.md
+      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
   - Authoring:
       - Markdown: authoring/markdown.md
       - Front matter: authoring/frontmatter.md
