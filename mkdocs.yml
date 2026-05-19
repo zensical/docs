@@ -205,7 +205,7 @@ nav:
           - Comment system: setup/comment-system.md
           - Offline usage: setup/offline.md
   - Extensions:
-      - setup/extensions/index.md
+      - About extensions: setup/extensions/about.md
       - GLightbox: setup/extensions/glightbox.md
       - Macros: setup/extensions/macros.md
       - mkdocstrings: setup/extensions/mkdocstrings.md

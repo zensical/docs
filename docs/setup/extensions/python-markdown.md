@@ -15,7 +15,7 @@ which features they need to be enabled.
     Zensical has [sensible defaults] for the Markdown extensions settings. Make
     sure to check these out before you begin to configure things manually.
 
-[sensible defaults]: index.md#default-configuration
+[sensible defaults]: about.md#default-configuration
 
 ## Supported extensions
 

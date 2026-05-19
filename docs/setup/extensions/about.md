@@ -1,21 +1,26 @@
 ---
 title: Extensions
+icon: lucide/blocks
 ---
 
-# Extensions
+# About extensions
 
 Markdown is a very small language with an [initial implementation by John
 Gruber][gruber] that has long served as the reference for Markdown
 implementations. Its minimal functionality makes it easy to learn but also
-limits what it can express. This is where Markdown extensions come in that
-extend the Markdown syntax beyond the basics.
+limits what it can express. Zensical currently uses [Python Markdown],
+which supports additional syntax elements provided by __Markdown extensions__.
+These enrich Python Markdown and make it suitable for technical writing.
 
 !!! info "We'll be moving to CommonMark soon"
 
     Zensical is being actively developed, and we're working towards a more
-    comprehensive module system that will allow us to support CommonMark and
-    components in the future. Of course, we will provide tools to automatically
+    comprehensive module system that will allow us to support [CommonMark] and
+    [components] in the future. Of course, we will provide tools to automatically
     migrate your existing content when the time comes.
+
+[CommonMark]: https://zensical.org/about/roadmap/#compatibility
+[components]: https://zensical.org/about/roadmap/#component-system
 
 ## Zensical extensions
 
