@@ -84,8 +84,6 @@ We will use work towards feature parity to road-test the module system before we
 make it generally available. Once the API can be declared stable, we invite the
 community to develop modules to support all conceivable use cases.
 
-[module system]: https://zensical.org/about/roadmap/#module-system
-[Material for MkDocs plugins]: https://squidfunk.github.io/mkdocs-material/plugins/
 
 ### Why do you call them "modules" and not "plugins"?
 
@@ -166,7 +164,6 @@ system] to replace Python Markdown, its Markdown extensions, and the Jinja
 templates.
 
   [roadmap]: https://zensical.org/about/roadmap/
-  [introducing a component system]: https://zensical.org/about/roadmap/#component-system
   [filter]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
   [test]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
   [change request]: https://zensical.org/docs/community/contribute/request-a-change/

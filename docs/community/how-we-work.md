@@ -39,7 +39,6 @@ allows us to keep track of change requests across all projects.
     from large-scale, real-world use cases, and helping turn complex challenges
     into actionable proposals.
 
-  [process]: https://zensical.org/spark/tiers/#design-process-participation
   [Zensical Spark]: https://zensical.org/spark/
   [Zensical Advancement Proposals]: https://zensical.org/spark/proposals/
 

@@ -27,7 +27,6 @@ decisions when evaluating change requests and considering them for
 implementation.
 
   [issue tracker]: https://github.com/zensical/zensical/issues
-  [how we manage change requests]: #how-we-manage-change-requests
 
 ## Before creating an issue
 

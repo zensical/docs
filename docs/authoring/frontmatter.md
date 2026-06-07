@@ -172,7 +172,6 @@ overrides] or [custom templates]. A common use case is to add metadata to the
 HTML `head`. Say you want to control whether a page is indexed by search engines
 by adding a [meta robots `nofollow` tag][nofollow].
 
-[template overrides]: ../customization.md#template-overrides
 [custom templates]: ../customization.md#custom-templates
 [nofollow]: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
 [block override]: ../customization.md#overriding-blocks

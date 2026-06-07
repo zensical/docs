@@ -44,9 +44,7 @@ automatically requested and rendered.
     sorted by update time], the [equivalent API endpoint] is used. So, make sure
     you also [create a release for GitLab repositories].
 
-  [latest release]: https://docs.github.com/en/rest/releases/releases#get-the-latest-release
   [create a release]: https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release
-  [list of tags sorted by update time]: https://docs.gitlab.com/ee/api/tags.html#list-project-repository-tags
   [equivalent API endpoint]: https://docs.gitlab.com/ee/api/releases/#get-the-latest-release
   [create a release for GitLab repositories]: https://docs.gitlab.com/ee/user/project/releases/#create-a-release
 

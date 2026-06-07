@@ -290,11 +290,9 @@ diagrams], all of which are not officially supported by Zensical. Those diagrams
 should still work as advertised by [Mermaid.js], but we don't consider them a
 good choice, mostly as they don't work well on mobile.
 
-  [pie charts]: https://mermaid.js.org/syntax/pie.html
   [gantt charts]: https://mermaid.js.org/syntax/gantt.html
   [user journeys]: https://mermaid.js.org/syntax/userJourney.html
   [git graphs]: https://mermaid.js.org/syntax/gitgraph.html
-  [requirement diagrams]: https://mermaid.js.org/syntax/requirementDiagram.html
 
 ## Customization
 

@@ -106,7 +106,6 @@ See these authoring guides for usage:
 
   [Arithmatex]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
   [Arithmatex documentation on KaTeX]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/#loading-katex
-  [MathJax]: https://www.mathjax.org/
   [KaTeX]: https://github.com/Khan/KaTeX
   [additional JavaScript]: ../../customization.md#additional-javascript
   [instant navigation]: ../navigation.md#instant-navigation
@@ -312,7 +311,6 @@ See usage:
 
   [Emoji]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
   [Emoji index]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/#default-emoji-indexes
-  [icon customization guide]: ../logo-and-icons.md#additional-icons
   [Using emojis]: ../../authoring/icons-emojis.md#use-emojis
   [Using icons]: ../../authoring/icons-emojis.md#use-icons
   [Using icons in templates]: ../../authoring/icons-emojis.md#use-icons-in-templates
@@ -814,11 +812,9 @@ See these authoring guides for usage:
 
   [Tabbed]: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
   [alternate style]: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/#alternate-style
-  [better behavior on mobile viewports]: https://x.com/squidfunk/status/1424740370596958214
   [Grouping code blocks]: ../../authoring/content-tabs.md#group-code-blocks
   [Grouping other content]: ../../authoring/content-tabs.md#group-other-content
   [Embedded content]: ../../authoring/content-tabs.md#embed-content
-  [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 
 ### Tasklist
 

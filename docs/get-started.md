@@ -12,7 +12,6 @@ MkDocs] and shares the same core design principles and philosophy – batteries 
 
 _You can learn more about how both projects interconnect with each other [here]._
 
-[Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
 [here]: https://zensical.org/about
 
 ## Installation
@@ -32,9 +31,7 @@ necessary dependencies alongside Zensical.
     manager, so unless you are developing Python software and use `uv`, this is
     the simplest option to install Zensical on your system.
 
-  [with-pip]: #install-with-pip
   [with-uv]: #install-with-uv
-  [Python Setup and Usage]: https://docs.python.org/3/using
   [Python website]: https://www.python.org/
 
 !!! tip "Use with Docker"
@@ -176,5 +173,4 @@ be installed using [conda] or [Mamba].
     conda install -c conda-forge zensical
     ```
 
-[Anaconda Prompt]: https://www.anaconda.com/docs/reference/glossary#anaconda-prompt
 [Miniforge]: https://conda-forge.org/download/

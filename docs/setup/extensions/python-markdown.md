@@ -369,7 +369,6 @@ To remove the table of contents altogether:
 
   [Table of Contents]: https://python-markdown.github.io/extensions/toc/
   [site language]: ../language.md#site-language
-  [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 
 ### Tables
 

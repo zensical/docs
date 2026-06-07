@@ -63,7 +63,6 @@ emojis]:
 
 </div>
 
-  [icons and emojis]: icons-emojis.md
 
 ### Column alignment
 

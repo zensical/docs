@@ -11,7 +11,6 @@ customizations, and much more. If you have found an inconsistency or see room
 for improvement, please follow this guide to submit an issue on our [issue
 tracker] for the documentation repository.
 
-  [issue tracker]: https://github.com/zensical/docs/issues
 
 ## Issue template
 

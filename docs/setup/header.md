@@ -56,7 +56,6 @@ block][overriding blocks], which is empty by default:
 ```
 
   [extend the theme]: ../customization.md#extending-the-theme
-  [overriding blocks]: ../customization.md#overriding-blocks
 
 #### Mark as read
 

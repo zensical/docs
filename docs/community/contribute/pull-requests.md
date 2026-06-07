@@ -48,7 +48,6 @@ and linters then this should help to make sure that the diffs in your commits
 are minimal and focused on the intended changes.
 
   [.editorconfig]: https://editorconfig.org/
-  [by default]: https://editorconfig.org/#pre-installed
   [requires a plugin]: https://editorconfig.org/#download
 
 ## Verified commits
@@ -115,7 +114,6 @@ of Origin].
 
   [linked to an issue]: #before-you-start
   [require sign-off]: #developer-certificate-of-origin
-  [Developer Certificate of Origin]: https://developercertificate.org
 
 Please note that summaries of commits accepted into the master branch are
 published in our [changelog] when we release new versions. To ensure consistent
