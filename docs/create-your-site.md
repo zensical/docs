@@ -13,13 +13,13 @@ your project to be located and enter:
 
 [installed]: get-started.md
 
-```
+``` sh
 zensical new .
 ```
 
 This creates the following structure:
 
-``` .sh
+``` text
 .
 ├─ .github/workflows
 │  └─ docs.yml

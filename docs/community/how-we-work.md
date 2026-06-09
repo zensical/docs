@@ -151,25 +151,21 @@ sequenceDiagram
    complex requirements and workflows of professional users. While public
    discussions in Open Source projects often circle around specific features and
    implementation details, we use this space to have higher-level discussions
-   about the [opportunities] we need Zensical to address, on the unmet needs and
+   about the opportunities we need Zensical to address, on the unmet needs and
    pain points of people who work with it every day. We also offer private channels
    and NDAs to discuss confidential matters.
-
-  [opportunities]: https://zensical.org/spark/methodology/#stage-1-opportunities
 
 6. Once we have established a thorough understanding of the opportunity space,
    we will produce [proposals] for possible solutions. We explore different
    approaches together with our members in Zensical Spark, to ensure that all
    options and trade-offs have been considered.
 
-  [proposals]: https://zensical.org/spark/methodology/#stage-2-proposals
+  [proposals]: https://zensical.org/spark/proposals
 
-7. From the exploration proposals we distill a [design document] that provides a
+7. From the exploration proposals we distill a design document that provides a
    clear definition of the opportunities it addresses, alternative solutions
    that were considered, details of designs, scope, and key implementation
    decisions as well as identified risks and mitigation strategies.
-
-  [design document]: https://zensical.org/spark/methodology/#stage-3-design
 
 8. We elicit feedback from members in Zensical Spark and iterate over the
    process as needed.
@@ -222,5 +218,3 @@ sequenceDiagram
 
 * Discussions within Zensical Spark organized to elicit contributions from
   groups of users with complex requirements and workflows.
-
-

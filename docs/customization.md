@@ -296,7 +296,7 @@ The `overrides` directory is also the place for adding a 404 error page, which
 can be configured as a fallback in your web server. If you set `custom_dir` to
 `overrides`, use the following layout:
 
-```
+``` text
 ├─ overrides/
 │  └─ 404.html
 └─ zensical.toml

@@ -217,7 +217,7 @@ Additional selectors can be set per-language:
 
     ``` toml
     [project.extra.annotate]
-    json: [".s2"] # (1)!
+    json = [".s2"] # (1)!
     ```
 
     1.  [`.s2`][s2] is the name of the lexeme that [Pygments] generates for

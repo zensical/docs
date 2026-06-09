@@ -103,7 +103,7 @@ Markdown extensions work in Zensical as they do in MkDocs since we use the same
 Python Markdown parser. You just need to install the Markdown extension into
 your Python (virtual) environment and [configure it].
 
-  [configure it]: https://zensical.org/docs/setup/extensions/
+  [configure it]: https://zensical.org/docs/setup/extensions/about/
 
 ### Why can I not use absolute links with Zensical?
 

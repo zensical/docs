@@ -17,7 +17,7 @@ solution until we introduce [native versioning support].
 
 We provide a fork of [mike] that you can install with `pip`:
 
-```
+``` sh
 pip install git+https://github.com/squidfunk/mike.git
 ```
 

@@ -118,7 +118,7 @@ but it's always possible to use the [Markdown in HTML] extension with literal
 
 <div class="result">
   <figure>
-    <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–" width="300" />
+    <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–" width="300" alt="blank" />
     <figcaption>Image caption</figcaption>
   </figure>
 </div>
@@ -144,7 +144,7 @@ browsers without support:
 ```
 
 <div class="result" markdown>
-  <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–" width="300" />
+  <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–" width="300" alt="blank" />
 </div>
 
   [lazy-loading]: https://caniuse.com/#feat=loading-lazy-attr

@@ -217,7 +217,7 @@ clarity, rather than automated outputs.
 ### LLM-generated issues
 
 We are seeing an increasing number of bug reports, change requests and pull
-requests generated with large language models (LLMs) that are not a carefully
+requests generated with large language models (LLMs) that are not carefully
 reviewed or edited before submitting.
 
 LLM-generated reports are often verbose, unfocused, and rarely adhere to our

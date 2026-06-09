@@ -101,7 +101,7 @@ your `pyproject.toml`, use:
 
   [uv]: https://docs.astral.sh/uv/
 
-```
+``` sh
 uv init
 uv add --dev zensical
 uv run zensical
