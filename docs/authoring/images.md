@@ -144,7 +144,7 @@ browsers without support:
 ```
 
 <div class="result" markdown>
-  <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–" width="300" alt="blank" />
+  <img src="https://dummyimage.com/600x400/f5f5f5/aaaaaa?text=–%20Image%20–" width="300" alt="placeholder image" />
 </div>
 
   [lazy-loading]: https://caniuse.com/#feat=loading-lazy-attr
