@@ -8,52 +8,73 @@ status: new
 
 # Validation
 
-Broken links are easy to miss – pages get renamed or moved, and references silently stop working. Zensical validates all internal links at build time by scanning every Markdown file and resolving all references: inline links, reference-style links, footnotes, link definitions, and anchors.
+Broken links are easy to miss – pages get renamed or moved, and references silently stop working. Zensical validates all internal links at build time by scanning every Markdown file and resolving both inline links and reference-style links. Checks include invalid link anchors.
 
 Additionally, the build can be aborted when issues are found by enabling [strict mode].
 
-??? warning "Temporary limitations"
+!!! tip "Zensical Studio"
 
-    Validation is provided on a best-effort basis. Since Python Markdown does not provide an AST, link detection relies on the same regex-based approach that Python Markdown uses internally. This is a temporary limitation – our planned migration to CommonMark will provide a proper AST, making this trivial to resolve.
+    With [Zensical Studio], we are delivering in-editor support for link
+    checking and refactorings that update links when headings change or
+    when files are renamed or moved. Catch problems like broken links as
+    you author, instead of only in a build.
 
-    __Please keep in mind__:
+    ![alt](../assets/images/studio_fix_link.webp)
 
-    - Autorefs are currently reported as [unresolved references]. We're working on a solution.
-    - Don't use nested brackets in link text, e.g. `[some[nested]](href)` or `[some[nested]][id]`.
+    Parsing in Zensical Studio is based on our own Python Markdown parser,
+    which enables a host of other improvements in the authoring experience,
+    especially navigation and refactorings. We will publish the parser as
+    Open Source in the coming months and integrate into Zensical as the new
+    basis for validation during builds.
+
+  [Zensical Studio]: https://zensical.org/studio/
+
 
 [strict mode]: #strict-mode
 [unresolved references]: #unresolved_references
 
 ## Configuration
 
-Validation is enabled by default. All checks can be individually toggled:
+Link validation is enabled by default and you can turn on checks. Note,
+however, that they are deprecated in their current form.
+
+??? warning "Temporary limitations"
+
+    Until we publish our Python Markdown parser and integrate it with Zensical,
+    validation will be on a best-effort basis. We recommend that you use
+    [Zensical Studio] to validate references directly in your editor.
+
+    __Please keep in mind__:
+
+    - Autorefs are currently reported as [unresolved references]. We're working on a solution.
+    - Don't use nested brackets in link text, e.g. `[some[nested]](href)` or `[some[nested]][id]`.
 
 === "`zensical.toml`"
 
     ``` toml
     [project.validation]
-    unresolved_references = true
-    unresolved_footnotes = true
-    unused_definitions = true
-    unused_footnotes = true
-    shadowed_definitions = true
-    shadowed_footnotes = true
     invalid_links = true
     invalid_link_anchors = true
+    unresolved_references = false
+    unresolved_footnotes = false
+    unused_definitions = false
+    unused_footnotes = false
+    shadowed_definitions = false
+    shadowed_footnotes = false
     ```
 
 === "`mkdocs.yml`"
 
     ``` yaml
     validation:
-      unresolved_references: true
-      unresolved_footnotes: true
-      unused_definitions: true
-      unused_footnotes: true
-      shadowed_definitions: true
-      shadowed_footnotes: true
       invalid_links: true
       invalid_link_anchors: true
+      unresolved_references: false
+      unresolved_footnotes: false
+      unused_definitions: false
+      unused_footnotes: false
+      shadowed_definitions: false
+      shadowed_footnotes: false
     ```
 
 Validation can also be completely disabled:
@@ -71,18 +92,96 @@ Validation can also be completely disabled:
     validation: false
     ```
 
-### Links and footnotes
+### `invalid_links`
 
-The following checks for links and footnotes are available:
+Warn when a link points to a page that does not exist.
 
-- [`unresolved_references`](#unresolved_references)
-- [`unresolved_footnotes`](#unresolved_footnotes)
-- [`unused_definitions`](#unused_definitions)
-- [`unused_footnotes`](#unused_footnotes)
-- [`shadowed_definitions`](#shadowed_definitions)
-- [`shadowed_footnotes`](#shadowed_footnotes)
-- [`invalid_links`](#invalid_links)
-- [`invalid_link_anchors`](#invalid_link_anchors)
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.validation]
+    invalid_links = true
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    validation:
+      invalid_links: true
+    ```
+
+__Example__
+
+``` markdown title="index.md"
+Oh no, [this page] does not exit.
+
+[this page]: non-existent.md
+```
+
+<div class="result" markdown>
+``` console
+$ zensical build
+...
+Warning: page does not exist
+   ╭─[ index.md:3:14 ]
+   │
+ 3 │ [this page]: non-existent.md
+   │              ───────┬───────
+   │                     ╰───────── page does not exist
+───╯
+```
+</div>
+
+---
+
+### `invalid_link_anchors`
+
+Warn when a link points to an anchor that does not exist.
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.validation]
+    invalid_link_anchors = true
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    validation:
+      invalid_link_anchors: true
+    ```
+
+__Example__
+
+``` markdown title="index.md"
+Oh no, [this section] does not exit.
+
+[this section]: page.md#non-existent
+```
+
+<div class="result" markdown>
+``` console
+$ zensical build
+...
+Warning: anchor does not exist
+   ╭─[ index.md:3:31 ]
+   │
+ 3 │ [this section]: page.md#non-existent
+   │                         ──────┬─────
+   │                               ╰─────── anchor does not exist
+───╯
+```
+</div>
+
+### Deprecated checks
+
+The following checks have been deprecated in their current form. While they do
+work in most cases, they turned out to have too many edge cases that the
+approach taken could not cover. You can still use them in your projects but be
+aware that we will replace them with functionally equivalent ones once we
+publish the Python Markdown parser and introduce the `check` command for
+Zensical.
 
 ---
 
@@ -335,88 +434,6 @@ Warning: shadowed footnote definition
 </div>
 
 ---
-
-#### `invalid_links`
-
-Warn when a link points to a page that does not exist.
-
-=== "`zensical.toml`"
-
-    ``` toml
-    [project.validation]
-    invalid_links = true
-    ```
-
-=== "`mkdocs.yml`"
-
-    ``` yaml
-    validation:
-      invalid_links: true
-    ```
-
-__Example__
-
-``` markdown title="index.md"
-Oh no, [this page] does not exit.
-
-[this page]: non-existent.md
-```
-
-<div class="result" markdown>
-``` console
-$ zensical build
-...
-Warning: page does not exist
-   ╭─[ index.md:3:14 ]
-   │
- 3 │ [this page]: non-existent.md
-   │              ───────┬───────
-   │                     ╰───────── page does not exist
-───╯
-```
-</div>
-
----
-
-#### `invalid_link_anchors`
-
-Warn when a link points to an anchor that does not exist.
-
-=== "`zensical.toml`"
-
-    ``` toml
-    [project.validation]
-    invalid_link_anchors = true
-    ```
-
-=== "`mkdocs.yml`"
-
-    ``` yaml
-    validation:
-      invalid_link_anchors: true
-    ```
-
-__Example__
-
-``` markdown title="index.md"
-Oh no, [this section] does not exit.
-
-[this section]: page.md#non-existent
-```
-
-<div class="result" markdown>
-``` console
-$ zensical build
-...
-Warning: anchor does not exist
-   ╭─[ index.md:3:31 ]
-   │
- 3 │ [this section]: page.md#non-existent
-   │                         ──────┬─────
-   │                               ╰─────── anchor does not exist
-───╯
-```
-</div>
 
 ## Usage
 
