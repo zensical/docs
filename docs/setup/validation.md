@@ -12,6 +12,7 @@ Broken links are easy to miss – pages get renamed or moved, and references sil
 
 Additionally, the build can be aborted when issues are found by enabling [strict mode].
 
+<div id="studio" markdown>
 !!! tip "Zensical Studio"
 
     With [Zensical Studio], we are delivering in-editor support for link
@@ -26,6 +27,7 @@ Additionally, the build can be aborted when issues are found by enabling [strict
     especially navigation and refactorings. We will publish the parser as
     Open Source in the coming months and integrate into Zensical as the new
     basis for validation during builds.
+</div>
 
   [Zensical Studio]: https://zensical.org/studio/
 
@@ -167,9 +169,11 @@ Warning: anchor does not exist
 
 The following checks have been deprecated in their current form. While they do
 work in most cases, they turned out to have too many edge cases that the
-approach taken could not cover. You can still use them in your projects but be
+approach taken could not cover.  You can still use them in your projects but be
 aware that we will replace them with functionally equivalent ones once we
-publish the Python Markdown parser that powers [Zensical Studio].
+publish our Python Markdown parser and integrate it with Zensical. It already
+powers [Zensical Studio](#studio), which we recommend you use to get direct
+feedback and functionality to avoid links breaking in the first place.
 
 ---
 
