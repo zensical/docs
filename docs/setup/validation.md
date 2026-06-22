@@ -35,19 +35,8 @@ Additionally, the build can be aborted when issues are found by enabling [strict
 
 ## Configuration
 
-Link validation is enabled by default and you can turn on checks. Note,
-however, that they are deprecated in their current form.
-
-??? warning "Temporary limitations"
-
-    Until we publish our Python Markdown parser and integrate it with Zensical,
-    validation will be on a best-effort basis. We recommend that you use
-    [Zensical Studio] to validate references directly in your editor.
-
-    __Please keep in mind__:
-
-    - Autorefs are currently reported as [unresolved references]. We're working on a solution.
-    - Don't use nested brackets in link text, e.g. `[some[nested]](href)` or `[some[nested]][id]`.
+Link validation is enabled by default and you can turn on other checks. Note,
+however, that these are deprecated in their current form.
 
 === "`zensical.toml`"
 
@@ -180,8 +169,7 @@ The following checks have been deprecated in their current form. While they do
 work in most cases, they turned out to have too many edge cases that the
 approach taken could not cover. You can still use them in your projects but be
 aware that we will replace them with functionally equivalent ones once we
-publish the Python Markdown parser and introduce the `check` command for
-Zensical.
+publish the Python Markdown parser that powers [Zensical Studio].
 
 ---
 
