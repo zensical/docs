@@ -52,9 +52,10 @@ automatically requested and rendered.
 
 ### Repository name
 
-Zensical will infer the source provider by examining the URL and try to set the
-_repository name_ automatically. If you wish to customize the name, set
-`repo_name` in your configuration:
+Zensical will infer the repository provider by examining the URL and set
+the repository name to it. Inferring more than the provider is not possible
+in the general case. With `repo_name`, you can override this default
+to anything you like:
 
 === "`zensical.toml`"
 
