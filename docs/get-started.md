@@ -119,11 +119,15 @@ use `uv run` or activate the project's virtual environment manually.
   [uvtool]: https://docs.astral.sh/uv/concepts/tools/#tool-environments
 
 
-!!! tip "Other tools using PyPI"
-    There are, of course, other dependency managers and build tools in the
-    Python ecosystem that use PyPI as the repository. Installing Zensical with
-    them should be similar to the process of installing with `uv`. Refer to
-    their documentation for details.
+!!! warning "Symlink mode"
+    Zensical doesn't support [uv's symlink mode] for package installation.
+    We are working on lifting this limitation by changing how themes and their
+    assets are packaged and distributed. Follow progress in these backlog items:
+
+    - https://github.com/zensical/backlog/issues/137
+    - https://github.com/zensical/backlog/issues/151
+
+  [uv's symlink mode]: https://docs.astral.sh/uv/reference/settings/#link-mode
 
 ## Third-party distributions
 
