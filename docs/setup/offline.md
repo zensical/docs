@@ -69,7 +69,7 @@ The following settings are available:
         enabled: !ENV [OFFLINE, false]
     ```
 
-#### Limitations
+## Limitations
 
 Zensical offers many interactive features, some of which will not
 work from the file system due to the restrictions of modern browsers: all
@@ -83,3 +83,41 @@ and [comment systems].
   [Site analytics]: analytics.md
   [Git repository]: repository.md
   [Comment systems]: comment-system.md
+
+### `file://` scheme support
+
+Offline mode requires Javascript code to support the `file://`
+scheme. It uses a tiny WebWorker called `iframe-worker`. This Javascript asset
+will be [fetched from unpkg.com], unless you include it as part of your own assets,
+in `extra.polyfills`:
+
+``` toml
+[project.extra]
+polyfills = ["js/iframe-worker-shim.js"]
+```
+
+or
+
+``` toml
+[[project.extra.polyfills]]
+path = "js/iframe-worker-shim.js"
+type = "text/javascript"
+async = false
+defer = false
+```
+
+Here it is assumed the asset is in a `js/` folder in your configured `docs/` directory:
+
+``` text
+.
+├── docs
+│   ├── index.md
+│   └── js
+│       └── iframe-worker-shim.js
+└── zensical.toml
+```
+
+The file name **must** contain the `iframe-worker` substring, otherwise Zensical
+will fetch it again from unpkg.com.
+
+  [fetched from unpkg.com]: https://unpkg.com/iframe-worker/shim
