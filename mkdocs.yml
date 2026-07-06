@@ -86,6 +86,7 @@ extra_css:
 plugins:
   - search
   - tags
+  - markdown-exec
 
 # Additional configuration
 extra:
@@ -208,6 +209,7 @@ nav:
       - About extensions: setup/extensions/about.md
       - GLightbox: setup/extensions/glightbox.md
       - Macros: setup/extensions/macros.md
+      - Markdown Exec: setup/extensions/markdown-exec.md
       - mkdocstrings: setup/extensions/mkdocstrings.md
       - Python Markdown: setup/extensions/python-markdown.md
       - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md

@@ -41,7 +41,7 @@ jobs:
           python-version: "3.x"
 
       - name: Install dependencies
-        run: pip install zensical
+        run: pip install zensical markdown-exec
 
       - name: Build documentation
         run: zensical build --strict
