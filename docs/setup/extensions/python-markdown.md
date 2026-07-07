@@ -25,7 +25,8 @@ supported. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.abbr]
+    [project.markdown_extensions]
+    abbr = {}
     ```
 
 === "`mkdocs.yml`"
@@ -50,7 +51,8 @@ it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.admonition]
+    [project.markdown_extensions]
+    admonition = {}
     ```
 
 === "`mkdocs.yml`"
@@ -77,7 +79,8 @@ element with a special syntax. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.attr_list]
+    [project.markdown_extensions]
+    attr_list = {}
     ```
 
 === "`mkdocs.yml`"
@@ -107,7 +110,8 @@ document. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.def_list]
+    [project.markdown_extensions]
+    def_list = {}
     ```
 
 === "`mkdocs.yml`"
@@ -130,7 +134,8 @@ rendered below all Markdown content of a document. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.footnotes]
+    [project.markdown_extensions]
+    footnotes = {}
     ```
 
 === "`mkdocs.yml`"
@@ -155,7 +160,8 @@ via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.md_in_html]
+    [project.markdown_extensions]
+    md_in_html = {}
     ```
 
 === "`mkdocs.yml`"
@@ -186,8 +192,8 @@ page. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc]
-    permalink = true
+    [project.markdown_extensions]
+    toc = { permalink = true }
     ```
 
 === "`mkdocs.yml`"
@@ -209,8 +215,8 @@ the [site language]. Set the title explicitly via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc]
-    title = "On this page"
+    [project.markdown_extensions]
+    toc = { title = "On this page" }
     ```
 
 === "`mkdocs.yml`"
@@ -234,8 +240,8 @@ or string like so:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc]
-    permalink = "⚓︎"
+    [project.markdown_extensions]
+    toc = { permalink = "⚓︎" }
     ```
 
 === "`mkdocs.yml`"
@@ -256,8 +262,8 @@ section itself:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc]
-    permalink_title = "Anchor link to this section"
+    [project.markdown_extensions]
+    toc = { permalink_title = "Anchor link to this section" }
     ```
 
 === "`mkdocs.yml`"
@@ -278,9 +284,11 @@ Python Markdown Extensions][Slugs]:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc.slugify]
-    object = "pymdownx.slugs.slugify"
-    kwds = { case = "lower" }
+    [project.markdown_extensions]
+    toc.slugify = {
+        object = "pymdownx.slugs.slugify",
+        kwds = { case = "lower" },
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -302,8 +310,8 @@ headings to decrease the length of the table of contents:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc]
-    toc_depth = 3
+    [project.markdown_extensions]
+    toc = { toc_depth = 3 }
     ```
 
 === "`mkdocs.yml`"
@@ -319,8 +327,8 @@ To remove the table of contents altogether:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.toc]
-    toc_depth = 0
+    [project.markdown_extensions]
+    toc = { toc_depth = 0 }
     ```
 
 === "`mkdocs.yml`"
@@ -345,7 +353,8 @@ simple syntax. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.tables]
+    [project.markdown_extensions]
+    tables = {}
     ```
 
 === "`mkdocs.yml`"

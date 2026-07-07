@@ -19,7 +19,8 @@ following lines to your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.attr_list]
+    [project.markdown_extensions]
+    attr_list = {}
     ```
 
 === "`mkdocs.yml`"

@@ -110,7 +110,11 @@ extensions are enabled by default:
     smartsymbols = {}
     superfences = {
         custom_fences = [
-            { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+            {
+                name = "mermaid",
+                class = "mermaid",
+                format = "pymdownx.superfences.fence_code_format",
+            },
         ],
     }
     tabbed = { alternate_style = true, combine_header_slug = true }

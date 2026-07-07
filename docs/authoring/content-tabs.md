@@ -68,9 +68,11 @@ function with the following lines:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx.tabbed.slugify]
-    object = "pymdownx.slugs.slugify"
-    kwds = { case = "lower" }
+    [project.markdown_extensions.pymdownx]
+    tabbed.slugify = {
+        object = "pymdownx.slugs.slugify",
+        kwds = { case = "lower" },
+    }
     ```
 
 === "`mkdocs.yml`"

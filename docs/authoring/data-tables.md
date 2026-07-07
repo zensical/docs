@@ -20,7 +20,8 @@ configuration file:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.tables]
+    [project.markdown_extensions]
+    tables = {}
     ```
 
 === "`mkdocs.yml`"

@@ -19,7 +19,8 @@ your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.footnotes]
+    [project.markdown_extensions]
+    footnotes = {}
     ```
 
 === "`mkdocs.yml`"

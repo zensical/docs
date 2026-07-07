@@ -60,8 +60,9 @@ to your configuration:
         "javascripts/mathjax.js",
         "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
     ]
-    [project.markdown_extensions.pymdownx.arithmatex]
-    generic = true
+
+    [project.markdown_extensions.pymdownx]
+    arithmatex = { generic = true }
     ```
 
 === "`mkdocs.yml`"
@@ -134,8 +135,8 @@ supports a subset of LaTeX syntax and can render math to HTML and SVG. To use
         "https://unpkg.com/katex@0/dist/katex.min.css"
     ]
 
-    [project.markdown_extensions.pymdownx.arithmatex]
-    generic = true
+    [project.markdown_extensions.pymdownx]
+    arithmatex = { generic = true }
     ```
 
 === "`mkdocs.yml`"
