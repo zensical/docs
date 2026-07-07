@@ -21,9 +21,10 @@ following line to your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.abbr]
-    [project.markdown_extensions.attr_list]
-    [project.markdown_extensions.pymdownx.snippets]
+    [project.markdown_extensions]
+    abbr = {}
+    attr_list = {}
+    pymdownx.snippets = {}
     ```
 
 === "`mkdocs.yml`"

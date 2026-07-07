@@ -20,13 +20,15 @@ following lines to your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx.highlight]
-    anchor_linenums = true
-    line_spans = "__span"
-    pygments_lang_class = true
-    [project.markdown_extensions.pymdownx.inlinehilite]
-    [project.markdown_extensions.pymdownx.snippets]
-    [project.markdown_extensions.pymdownx.superfences]
+    [project.markdown_extensions.pymdownx]
+    highlight = {
+        anchor_linenums = true,
+        line_spans = "__span",
+        pygments_lang_class = true,
+    }
+    inlinehilite = {}
+    snippets = {}
+    superfences = {}
     ```
 
 === "`mkdocs.yml`"

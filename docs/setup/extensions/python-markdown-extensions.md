@@ -129,9 +129,10 @@ via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx.caret]
-    [project.markdown_extensions.pymdownx.mark]
-    [project.markdown_extensions.pymdownx.tilde]
+    [project.markdown_extensions.pymdownx]
+    caret = {}
+    mark = {}
+    tilde = {}
     ```
 
 === "`mkdocs.yml`"
@@ -293,9 +294,9 @@ The [Highlight] extension adds support for syntax highlighting of code blocks
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx.highlight]
-    anchor_linenums = true
-    [project.markdown_extensions.pymdownx.superfences]
+    [project.markdown_extensions.pymdownx]
+    highlight = { anchor_linenums = true }
+    superfences = {}
     ```
 
     1. [Highlight] is used by the [SuperFences][pymdownx.superfences] extension to
@@ -470,8 +471,9 @@ which it sources its configuration. Enable it via:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx.highlight]
-    [project.markdown_extensions.pymdownx.inlinehilite]
+    [project.markdown_extensions.pymdownx]
+    highlight = {}
+    inlinehilite = {}
     ```
 
 === "`mkdocs.yml`"

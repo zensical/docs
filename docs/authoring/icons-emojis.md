@@ -19,8 +19,9 @@ shortcodes. Add the following lines to your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.attr_list]
-    [project.markdown_extensions.pymdownx.emoji]
+    [project.markdown_extensions]
+    attr_list = {}
+    pymdownx.emoji = {}
     ```
 
 === "`mkdocs.yml`"

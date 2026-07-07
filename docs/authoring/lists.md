@@ -20,9 +20,9 @@ your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.def_list]
-    [project.markdown_extensions.pymdownx.tasklist]
-    custom_checkbox = true
+    [project.markdown_extensions]
+    def_list = {}
+    pymdownx.tasklist = { custom_checkbox = true }
     ```
 
 === "`mkdocs.yml`"

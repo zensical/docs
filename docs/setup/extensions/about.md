@@ -80,42 +80,42 @@ extensions are enabled by default:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.abbr]
-    [project.markdown_extensions.admonition]
-    [project.markdown_extensions.attr_list]
-    [project.markdown_extensions.def_list]
-    [project.markdown_extensions.footnotes]
-    [project.markdown_extensions.md_in_html]
-    [project.markdown_extensions.toc]
-    permalink = true
-    [project.markdown_extensions.pymdownx.arithmatex]
-    generic = true
-    [project.markdown_extensions.pymdownx.betterem]
-    [project.markdown_extensions.pymdownx.caret]
-    [project.markdown_extensions.pymdownx.details]
-    [project.markdown_extensions.pymdownx.emoji]
-    emoji_generator = "zensical.extensions.emoji.to_svg"
-    emoji_index = "zensical.extensions.emoji.twemoji"
-    [project.markdown_extensions.pymdownx.highlight]
-    anchor_linenums = true
-    line_spans = "__span"
-    pygments_lang_class = true
-    [project.markdown_extensions.pymdownx.inlinehilite]
-    [project.markdown_extensions.pymdownx.keys]
-    [project.markdown_extensions.pymdownx.magiclink]
-    [project.markdown_extensions.pymdownx.mark]
-    [project.markdown_extensions.pymdownx.smartsymbols]
-    [project.markdown_extensions.pymdownx.superfences]
-    custom_fences = [
-      { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" }
-    ]
-    [project.markdown_extensions.pymdownx.tabbed]
-    alternate_style = true
-    combine_header_slug = true
-    [project.markdown_extensions.pymdownx.tasklist]
-    custom_checkbox = true
-    [project.markdown_extensions.pymdownx.tilde]
+    [project.markdown_extensions]
+    abbr = {}
+    admonition = {}
+    attr_list = {}
+    def_list = {}
+    footnotes = {}
+    md_in_html = {}
+    toc = { permalink = true }
 
+    [project.markdown_extensions.pymdownx]
+    arithmatex = { generic = true }
+    betterem = {}
+    caret = {}
+    details = {}
+    emoji = {
+        emoji_generator = "zensical.extensions.emoji.to_svg",
+        emoji_index = "zensical.extensions.emoji.twemoji",
+    }
+    highlight = {
+        anchor_linenums = true,
+        line_spans = "__span",
+        pygments_lang_class = true,
+    }
+    inlinehilite = {}
+    keys = {}
+    magiclink = {}
+    mark = {}
+    smartsymbols = {}
+    superfences = {
+        custom_fences = [
+            { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+        ],
+    }
+    tabbed = { alternate_style = true, combine_header_slug = true }
+    tasklist = { custom_checkbox = true }
+    tilde = {}
     ```
 
 === "`mkdocs.yml`"
