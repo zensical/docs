@@ -154,8 +154,8 @@ pages with the following configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx]
-    snippets = { auto_append = ["includes/abbreviations.md"] }
+    [project.markdown_extensions]
+    pymdownx.snippets = { auto_append = ["includes/abbreviations.md"] }
     ```
 
 === "`mkdocs.yml`"

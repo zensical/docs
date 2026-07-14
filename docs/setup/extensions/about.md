@@ -89,26 +89,26 @@ extensions are enabled by default:
     md_in_html = {}
     toc = { permalink = true }
 
-    [project.markdown_extensions.pymdownx]
-    arithmatex = { generic = true }
-    betterem = {}
-    caret = {}
-    details = {}
-    emoji = {
+    [project.markdown_extensions]
+    pymdownx.arithmatex = { generic = true }
+    pymdownx.betterem = {}
+    pymdownx.caret = {}
+    pymdownx.details = {}
+    pymdownx.emoji = {
         emoji_generator = "zensical.extensions.emoji.to_svg",
         emoji_index = "zensical.extensions.emoji.twemoji",
     }
-    highlight = {
+    pymdownx.highlight = {
         anchor_linenums = true,
         line_spans = "__span",
         pygments_lang_class = true,
     }
-    inlinehilite = {}
-    keys = {}
-    magiclink = {}
-    mark = {}
-    smartsymbols = {}
-    superfences = {
+    pymdownx.inlinehilite = {}
+    pymdownx.keys = {}
+    pymdownx.magiclink = {}
+    pymdownx.mark = {}
+    pymdownx.smartsymbols = {}
+    pymdownx.superfences = {
         custom_fences = [
             {
                 name = "mermaid",
@@ -117,9 +117,9 @@ extensions are enabled by default:
             },
         ],
     }
-    tabbed = { alternate_style = true, combine_header_slug = true }
-    tasklist = { custom_checkbox = true }
-    tilde = {}
+    pymdownx.tabbed = { alternate_style = true, combine_header_slug = true }
+    pymdownx.tasklist = { custom_checkbox = true }
+    pymdownx.tilde = {}
     ```
 
 === "`mkdocs.yml`"

@@ -18,11 +18,11 @@ configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.pymdownx]
-    caret = {}
-    keys = {}
-    mark = {}
-    tilde = {}
+    [project.markdown_extensions]
+    pymdownx.caret = {}
+    pymdownx.keys = {}
+    pymdownx.mark = {}
+    pymdownx.tilde = {}
     ```
 
 === "`mkdocs.yml`"
