@@ -30,6 +30,15 @@ The Macros extension, included with Zensical, enables [Jinja2] templating in Mar
 
   [mkdocstrings]: https://mkdocstrings.github.io
 
+!!! warning "Keep files in project folder"
+
+    Zensical watches files to able to re-build the project when they change.
+    This includes Python files containing macros and YAML files included
+    with `include_yml`. Since Zensical's security policy does not allow paths
+    outside the project folder, make sure that any files used are located
+    inside it. This includes modules installed in virtual environments,
+    which must also be created within the project folder.
+
 The following additional configuration options are supported:
 
 #### `module_name`
