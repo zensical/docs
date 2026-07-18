@@ -723,9 +723,11 @@ Markdown Extensions][Slugs]. To produce all-lowercase slugs:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tabbed.slugify = {
-        object = "pymdownx.slugs.slugify",
-        kwds = { case = "lower" },
+    pymdownx.tabbed = {
+        slugify = {
+            object = "pymdownx.slugs.slugify",
+            kwds = { case = "lower" },
+        },
     }
     ```
 
@@ -745,7 +747,9 @@ In order to retain the case of the input:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tabbed.slugify = { object = "pymdownx.slugs.slugify" }
+    pymdownx.tabbed = {
+        slugify = { object = "pymdownx.slugs.slugify" },
+    }
     ```
 
 === "`mkdocs.yml`"
