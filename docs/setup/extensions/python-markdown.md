@@ -285,9 +285,11 @@ Python Markdown Extensions][Slugs]:
 
     ``` toml
     [project.markdown_extensions]
-    toc.slugify = {
-        object = "pymdownx.slugs.slugify",
-        kwds = { case = "lower" },
+    toc = {
+        slugify = {
+            object = "pymdownx.slugs.slugify",
+            kwds = { case = "lower" },
+        },
     }
     ```
 
