@@ -89,7 +89,6 @@ extensions are enabled by default:
     md_in_html = {}
     toc = { permalink = true }
 
-    [project.markdown_extensions]
     pymdownx.arithmatex = { generic = true }
     pymdownx.betterem = {}
     pymdownx.caret = {}
