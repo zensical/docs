@@ -279,12 +279,14 @@ extensions in the setup guide.
 
         ``` toml
         [project.markdown_extensions.zensical.extensions]
-        preview.configurations = [
-            {
-                sources = { include = [...], exclude = [...] }, # (1)!
-                targets = { include = [...], exclude = [...] }, # (2)!
-            },
-        ]
+        preview = {
+            configurations = [
+                {
+                    sources = { include = [...], exclude = [...] }, # (1)!
+                    targets = { include = [...], exclude = [...] }, # (2)!
+                },
+            ],
+        }
         ```
 
     === "`mkdocs.yml`"
