@@ -11,7 +11,6 @@ Sometimes, it's desirable to group alternative content under different tabs,
 e.g. when describing how to access an API from different languages or
 environments. Zensical allows for beautiful and functional tabs, grouping code blocks and other content.
 
-
 ## Configuration
 
 This configuration enables content tabs, and allows to nest arbitrary content
@@ -40,9 +39,6 @@ See additional configuration options:
 - [SuperFences]
 - [Tabbed]
 
-  [SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
-  [Tabbed]: ../setup/extensions/python-markdown-extensions.md#tabbed
-
 ### Anchor links
 
 In order to link to content tabs and share them more easily, an anchor link is
@@ -50,12 +46,15 @@ automatically added to each content tab, which you can copy via right click or
 open in a new tab:
 
 === "Open me in a new tab ..."
+
     First tab!
 
 === "... or me ..."
+
     Second tab!
 
 === "... or even me"
+
     Third tab!
 
 You can copy the link of the tab and create a link on the same or any other
@@ -86,11 +85,6 @@ function with the following lines:
 
     For more information, please [see the extension guide][slugification].
 
-  [first]: #anchor-links-open-me-in-a-new-tab-
-  [second]: #anchor-links--or-me-
-  [third]: #anchor-links--or-even-me
-  [slugification]: ../setup/extensions/python-markdown-extensions.md#slugify
-
 ### Linked content tabs
 
 When enabled, all content tabs across the whole documentation site will be
@@ -118,8 +112,6 @@ tabs with the same label will be activated when a user clicks a content tab
 regardless of order inside a container. Moreover, this feature is fully
 integrated with [instant navigation] and persisted across page loads.
 
-  [instant navigation]: ../setup/navigation.md#instant-navigation
-
 ## Usage
 
 ### Group code blocks
@@ -128,7 +120,7 @@ Code blocks are one of the primary targets to be grouped, and can be considered
 a special case of content tabs, as tabs with a single code block are always
 rendered without horizontal spacing:
 
-``` title="Content tabs with code blocks"
+```` title="Content tabs with code blocks"
 === "C"
 
     ``` c
@@ -150,7 +142,7 @@ rendered without horizontal spacing:
       return 0;
     }
     ```
-```
+````
 
 <div class="result" markdown>
 
@@ -202,9 +194,9 @@ by nesting tabs in other blocks:
 
 === "Unordered list"
 
-    * Sed sagittis eleifend rutrum
-    * Donec vitae suscipit est
-    * Nulla tempor lobortis orci
+    - Sed sagittis eleifend rutrum
+    - Donec vitae suscipit est
+    - Nulla tempor lobortis orci
 
 === "Ordered list"
 
@@ -220,7 +212,7 @@ When [SuperFences] is enabled, content tabs can contain arbitrary nested
 content, including further content tabs, and can be nested in other blocks like
 [admonitions] or blockquotes:
 
-``` title="Content tabs in admonition"
+```` title="Content tabs in admonition"
 !!! example
 
     === "Unordered List"
@@ -238,7 +230,7 @@ content, including further content tabs, and can be nested in other blocks like
         2. Donec vitae suscipit est
         3. Nulla tempor lobortis orci
         ```
-```
+````
 
 <div class="result" markdown>
 
@@ -262,4 +254,11 @@ content, including further content tabs, and can be nested in other blocks like
 
 </div>
 
-  [admonitions]: admonitions.md
+[admonitions]: admonitions.md
+[first]: #anchor-links-open-me-in-a-new-tab-
+[instant navigation]: ../setup/navigation.md#instant-navigation
+[second]: #anchor-links--or-me-
+[slugification]: ../setup/extensions/python-markdown-extensions.md#slugify
+[SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
+[Tabbed]: ../setup/extensions/python-markdown-extensions.md#tabbed
+[third]: #anchor-links--or-even-me

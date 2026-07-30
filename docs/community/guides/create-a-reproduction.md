@@ -26,14 +26,12 @@ and only those Python packages that are relevant to the issue you are
 experiencing.  The process for setting up an environment and installing the
 latest version of Zensical is described on our [Getting started] guide.
 
-  [Getting started]: ../../get-started.md
-
 ### Create new minimal project
 
 To ensure that your reproduction does not contain any customizations you may
 have in your project, please start with a fresh Zensical project by running:
 
-```bash
+``` bash
 zensical new reproduction
 cd reproduction
 ```
@@ -72,3 +70,4 @@ lines and files, especially the `site` directory.
 
 Pack up the project directory in a `.zip` file.
 
+[Getting started]: ../../get-started.md

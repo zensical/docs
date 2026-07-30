@@ -17,7 +17,6 @@ This configuration enables the use of definition lists and tasks lists, which
 are both not part of the standard Markdown syntax. Add the following lines to
 your configuration:
 
-
 === "`zensical.toml`"
 
     ``` toml
@@ -40,9 +39,6 @@ See additional configuration options:
 - [Definition Lists]
 - [Tasklist]
 
-  [Definition Lists]: ../setup/extensions/python-markdown.md#definition-lists
-  [Tasklist]: ../setup/extensions/python-markdown-extensions.md#tasklist
-
 ## Usage
 
 ### Use unordered lists
@@ -63,13 +59,13 @@ of lists can be nested inside each other:
 
 <div class="result" markdown>
 
-- Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
-  accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh
-  lacinia sed. Aenean in finibus diam.
+-   Nulla et rhoncus turpis. Mauris ultricies elementum leo. Duis efficitur
+    accumsan nibh eu mattis. Vivamus tempus velit eros, porttitor placerat nibh
+    lacinia sed. Aenean in finibus diam.
 
-    * Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
-    * Nam vulputate tincidunt fringilla.
-    * Nullam dignissim ultrices urna non auctor.
+    - Duis mollis est eget nibh volutpat, fermentum aliquet dui mollis.
+    - Nam vulputate tincidunt fringilla.
+    - Nullam dignissim ultrices urna non auctor.
 
 </div>
 
@@ -109,9 +105,9 @@ be re-numbered when rendered:
     2.  Morbi eget dapibus felis. Vivamus venenatis porttitor tortor sit amet
         rutrum. Pellentesque aliquet quam enim, eu volutpat urna rutrum a.
 
-        1.  Mauris dictum mi lacus
-        2.  Ut sit amet placerat ante
-        3.  Suspendisse ac eros arcu
+        1. Mauris dictum mi lacus
+        2. Ut sit amet placerat ante
+        3. Suspendisse ac eros arcu
 
 </div>
 
@@ -171,13 +167,16 @@ for the definition of task lists:
 
 <div class="result" markdown>
 
-- [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
-- [ ] Vestibulum convallis sit amet nisi a tincidunt
-    * [x] In hac habitasse platea dictumst
-    * [x] In scelerisque nibh non dolor mollis congue sed et metus
-    * [ ] Praesent sed risus massa
-- [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
+-   [x] Lorem ipsum dolor sit amet, consectetur adipiscing elit
+-   [ ] Vestibulum convallis sit amet nisi a tincidunt
+    - [x] In hac habitasse platea dictumst
+    - [x] In scelerisque nibh non dolor mollis congue sed et metus
+    - [ ] Praesent sed risus massa
+-   [ ] Aenean pretium efficitur erat, donec pharetra, ligula non scelerisque
 
 </div>
 
 ---
+
+[Definition Lists]: ../setup/extensions/python-markdown.md#definition-lists
+[Tasklist]: ../setup/extensions/python-markdown-extensions.md#tasklist

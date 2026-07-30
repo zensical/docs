@@ -18,5 +18,5 @@ provide even more powerful social cards functionality for Zensical soon.
     new features in our pipeline, and what we have planned next. We'll also
     share exclusive behind-the-scenes insights and invites to workshops.
 
-  [feature parity]: https://zensical.org/compatibility/features/
-  [newsletter]: https://zensical.org/about/newsletter/
+[feature parity]: https://zensical.org/compatibility/features/
+[newsletter]: https://zensical.org/about/newsletter/

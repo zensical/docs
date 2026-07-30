@@ -11,18 +11,17 @@ the footer of any page by using [theme extension]. As an example, we'll be
 integrating [Giscus], which is Open Source, free, and uses GitHub discussions
 as a backend.
 
-  [Giscus]: https://giscus.app/
-
 ## Customization
 
 ### Giscus integration
 
 Before you can use [Giscus], you need to complete the following steps:
 
-1.  __Install the [Giscus GitHub App]__ and grant access to the repository
+1.  **Install the [Giscus GitHub App]** and grant access to the repository
     that should host comments as GitHub discussions. Note that this can be a
     repository different from your documentation.
-2.  __Visit [Giscus] and generate the snippet__ through their configuration tool
+
+2.  **Visit [Giscus] and generate the snippet** through their configuration tool
     to load the comment system. Copy the snippet for the next step. The
     resulting snippet should look similar to this:
 
@@ -91,9 +90,9 @@ and [override the `comments.html` partial][overriding partials] with:
 {% endif %}
 ```
 
-1.  This code block ensures that [Giscus] renders with a dark theme when the
-    palette is set to `slate`. Note that multiple dark themes are available,
-    so you can change it to your liking.
+1. This code block ensures that [Giscus] renders with a dark theme when the
+   palette is set to `slate`. Note that multiple dark themes are available,
+   so you can change it to your liking.
 
 Replace the highlighted line with the snippet you generated with the [Giscus]
 configuration tool in the previous step. If you copied the snippet from above,
@@ -109,7 +108,8 @@ comments: true
 ...
 ```
 
-  [Giscus GitHub App]: https://github.com/apps/giscus
-  [theme extension]: ../customization.md#extending-the-theme
-  [comments]: https://github.com/zensical/ui/blob/master/dist/partials/comments.html
-  [overriding partials]: ../customization.md#overriding-partials
+[comments]: https://github.com/zensical/ui/blob/master/dist/partials/comments.html
+[Giscus]: https://giscus.app/
+[Giscus GitHub App]: https://github.com/apps/giscus
+[overriding partials]: ../customization.md#overriding-partials
+[theme extension]: ../customization.md#extending-the-theme

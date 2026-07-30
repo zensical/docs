@@ -14,16 +14,14 @@ tailored to a wide range of cases. Like every other Open Source project, we rely
 on contributions from our community to better understand unmet needs and
 identify any issues users encounter.
 
-  [growing team]: https://zensical.org/about/team/
-
 ## Discord
 
-Our [Discord channel] is a __community-driven space__ we created for
+Our [Discord channel] is a **community-driven space** we created for
 Zensical users. Here, you can:
 
-- Ask questions and receive __real-time input__ from fellow community members
-- Share knowledge, insights, and __customization tips__
-- Exchange ideas and __collaborate with others__ who share your interests
+- Ask questions and receive **real-time input** from fellow community members
+- Share knowledge, insights, and **customization tips**
+- Exchange ideas and **collaborate with others** who share your interests
 
 !!! note "Community-driven support"
 
@@ -37,8 +35,6 @@ Zensical users. Here, you can:
 
 [Join the conversation][Discord channel]{ .md-button .md-button--primary }
 
-  [Discord channel]: https://discord.gg/hqXRNq9CjT
-
 ## Zensical Spark
 
 [Zensical Spark] is our offering for professional users – organizations and
@@ -48,25 +44,27 @@ your use of Zensical and its ecosystem.
 
 [Explore Zensical Spark][Zensical Spark]{ .md-button .md-button--primary }
 
-  [Zensical Spark]: https://zensical.org/spark/
-
 ## How to contribute
 
 As Open Source software, Zensical benefits from different kinds of contributions
 from the community of its users. Our open approach allows you to:
 
-* __Report issues__ that are tracked in our issue tracker. Our [growing team]
+- **Report issues** that are tracked in our issue tracker. Our [growing team]
   allows us to triage and resolve issues in a timely fashion.
 
-* __Create change requests__ to help ensure that Zensical covers common use cases
+- **Create change requests** to help ensure that Zensical covers common use cases
   and delivers maximum user value.
 
-* __Contribute code__ in response to an issue by creating a pull request that
+- **Contribute code** in response to an issue by creating a pull request that
   fixes a bug, introduces a new feature, or improves performance or code
   quality.
 
-* __Help improve the documentation__ to ensure it is consistent, understandable,
+- **Help improve the documentation** to ensure it is consistent, understandable,
   and that readers can find the information they are looking for.
 
-  [How to contribute][community guidelines]{ .md-button .md-button--primary }
-  [community guidelines]: contribute/index.md
+[How to contribute][community guidelines]{ .md-button .md-button--primary }
+
+[community guidelines]: contribute/index.md
+[Discord channel]: https://discord.gg/hqXRNq9CjT
+[growing team]: https://zensical.org/about/team/
+[Zensical Spark]: https://zensical.org/spark/

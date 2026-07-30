@@ -33,10 +33,7 @@ See additional configuration options:
 
 - [Footnotes]
 
-  [Footnotes]: ../setup/extensions/python-markdown.md#footnotes
-
 ### Footnote tooltips
-
 
 Zensical can render footnotes as inline tooltips, so the user can read the
 footnote without leaving the context of the document. Footnote tooltips can be
@@ -59,7 +56,7 @@ enabled with:
         - content.footnote.tooltips
     ```
 
-__Footnote tooltips are enabled on our documentation__, so to try it out, you
+**Footnote tooltips are enabled on our documentation**, so to try it out, you
 can just hover or focus any footnote on this page or any other page of our
 documentation.
 
@@ -102,8 +99,6 @@ Short footnotes can be written on the same line:
 
 </div>
 
-  [^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-
 #### on multiple lines
 
 Paragraphs can be written on the next line and must be indented by four spaces:
@@ -121,7 +116,7 @@ Paragraphs can be written on the next line and must be indented by four spaces:
 
 </div>
 
-[^2]:
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
-    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus
-    auctor massa, nec semper lorem quam in massa.
+[^1]: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+[^2]: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
+
+[Footnotes]: ../setup/extensions/python-markdown.md#footnotes

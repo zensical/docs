@@ -21,12 +21,14 @@ documentation, set `repo_url` in your configuration to the public URL of your
 repository, e.g.:
 
 === "`zensical.toml`"
+
     ``` toml
     [project]
     repo_url = "https://github.com/zensical/zensical"
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     repo_url: https://github.com/zensical/zensical
     ```
@@ -35,20 +37,6 @@ The link to the repository will be rendered next to the search bar on big
 screens. Additionally, for public repositories hosted on [GitHub] or [GitLab],
 the latest release tag[^1], as well as the number of stars and forks, are
 automatically requested and rendered.
-
-  [^1]:
-    Unfortunately, GitHub only provides an API endpoint to obtain the [latest
-    release] - not the latest tag. Thus, make sure to [create a release] (not
-    pre-release) for the latest tag you want to display next to the number of
-    stars and forks. For GitLab, although it is possible to get a [list of tags
-    sorted by update time], the [equivalent API endpoint] is used. So, make sure
-    you also [create a release for GitLab repositories].
-
-  [latest release]: https://docs.github.com/en/rest/releases/releases#get-the-latest-release
-  [create a release]: https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release
-  [list of tags sorted by update time]: https://docs.gitlab.com/ee/api/tags.html#list-project-repository-tags
-  [equivalent API endpoint]: https://docs.gitlab.com/ee/api/releases/#get-the-latest-release
-  [create a release for GitLab repositories]: https://docs.gitlab.com/ee/user/project/releases/#create-a-release
 
 ### Repository name
 
@@ -93,8 +81,6 @@ the configuration:
 
 You can use icons from any of the [available icon sets] or use one of these
 popular choices:
-
-  [available icon sets]: ../authoring/icons-emojis.md#included-icon-sets
 
 - :fontawesome-brands-git: – `fontawesome/brands/git`
 - :fontawesome-brands-git-alt: – `fontawesome/brands/git-alt`
@@ -156,6 +142,7 @@ Markdown file in the `docs_dir`.
     ```
 
 !!! tip "Docs in a different repository"
+
     If your project and its docs reside in different directories, you can make
     the `edit_uri` an absolute URL, so it does not rely on `repo_url` to form
     a valid URL. The `repo_url` would point to your project repository,
@@ -182,6 +169,14 @@ The icon of the edit and view buttons can be changed with the following lines:
         view: material/eye
     ```
 
-  [repo_url]: #repository
-  [GitHub]: https://github.com/
-  [GitLab]: https://about.gitlab.com/
+[^1]: Unfortunately, GitHub only provides an API endpoint to obtain the [latest release] - not the latest tag. Thus, make sure to [create a release] (not pre-release) for the latest tag you want to display next to the number of stars and forks. For GitLab, although it is possible to get a [list of tags sorted by update time], the [equivalent API endpoint] is used. So, make sure you also [create a release for GitLab repositories].
+
+[available icon sets]: ../authoring/icons-emojis.md#included-icon-sets
+[create a release]: https://docs.github.com/en/repositories/releasing-projects-on-github/managing-releases-in-a-repository#creating-a-release
+[create a release for GitLab repositories]: https://docs.gitlab.com/ee/user/project/releases/#create-a-release
+[equivalent API endpoint]: https://docs.gitlab.com/ee/api/releases/#get-the-latest-release
+[GitHub]: https://github.com/
+[GitLab]: https://about.gitlab.com/
+[latest release]: https://docs.github.com/en/rest/releases/releases#get-the-latest-release
+[list of tags sorted by update time]: https://docs.gitlab.com/ee/api/tags.html#list-project-repository-tags
+[repo_url]: #repository

@@ -52,8 +52,6 @@ icon: lucide/braces
 ...
 ```
 
-[included icon sets]: icons-emojis.md#included-icon-sets
-
 ## Page status
 
 A status can be assigned to each page, which is then displayed as part of the
@@ -76,8 +74,8 @@ adding the following to your configuration::
     ```
 
 The identifier can only include alphanumeric characters, as well as dashes
- and underscores. For example, if you have a status `Recently added`, you can
- set `new` as an identifier:
+and underscores. For example, if you have a status `Recently added`, you can
+set `new` as an identifier:
 
 === "`zensical.toml`"
 
@@ -85,6 +83,7 @@ The identifier can only include alphanumeric characters, as well as dashes
     [project.extra.status]
     new = "Recently added"
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -115,17 +114,12 @@ You can define a custom page status this way but if you want it to
 have an icon other than the default one you need to also configure
 that in your [`extra.css`][extra_css].
 
-[extra_css]: ../customization.md#additional-css
-
 ## Page template
 
 You can use the `template` metadata attribute to set a [custom template] for a
 page, which will be used instead of the default `main.html`. Note that you need
 to place the template you want to use in your [overrides directory], which needs
 to be configured before you can use it.
-
-[custom template]: ../customization.md#custom-templates
-[overrides directory]: ../customization.md#configuring-overrides
 
 For example, to apply the `my_homepage.html` template to the page:
 
@@ -157,11 +151,7 @@ hide:
 See the section on [hiding sidebars] in the navigation setup guide for more
 details.
 
-[hiding sidebars]: ../setup/navigation.md#hide-the-sidebars
-
 For more information about controlling search, see the [setup guide for search].
-
-  [setup guide for search]: ../setup/search.md
 
 ## Customization
 
@@ -171,11 +161,6 @@ You can add further custom data to the front matter and use it in your [template
 overrides] or [custom templates]. A common use case is to add metadata to the
 HTML `head`. Say you want to control whether a page is indexed by search engines
 by adding a [meta robots `nofollow` tag][nofollow].
-
-[template overrides]: ../customization.md#template-overrides
-[custom templates]: ../customization.md#custom-templates
-[nofollow]: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
-[block override]: ../customization.md#overriding-blocks
 
 The first thing you would need to do is to copy `main.html` to your [overrides
 directory] and add a [block override] for the `extrahead` block that adds a
@@ -213,4 +198,14 @@ blog plugin also make extensive use of page metadata. As Zensical approaches
 [feature parity] with Material for MkDocs, we will be adding modules that
 implement equivalent functionality and that make use of metadata.
 
+[block override]: ../customization.md#overriding-blocks
+[custom template]: ../customization.md#custom-templates
+[custom templates]: ../customization.md#custom-templates
+[extra_css]: ../customization.md#additional-css
 [feature parity]: https://zensical.org/about/roadmap/#feature-parity
+[hiding sidebars]: ../setup/navigation.md#hide-the-sidebars
+[included icon sets]: icons-emojis.md#included-icon-sets
+[nofollow]: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+[overrides directory]: ../customization.md#configuring-overrides
+[setup guide for search]: ../setup/search.md
+[template overrides]: ../customization.md#template-overrides

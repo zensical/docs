@@ -39,10 +39,6 @@ See additional configuration options:
 - [Details]
 - [SuperFences]
 
-  [Admonition]: ../setup/extensions/python-markdown.md#admonition
-  [Details]: ../setup/extensions/python-markdown-extensions.md#details
-  [SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
-
 ### Admonition icons
 
 Each of the supported admonition types has a distinct icon, which can be changed
@@ -75,7 +71,6 @@ lines to your configuration:
             example = "octicons/beaker-16"
             quote = "octicons/quote-16"
             ```
-
 
         === ":fontawesome-brands-font-awesome: FontAwesome"
 
@@ -126,7 +121,6 @@ lines to your configuration:
                   quote: octicons/quote-16
             ```
 
-
         === ":fontawesome-brands-font-awesome: FontAwesome"
 
             ``` yaml
@@ -146,8 +140,6 @@ lines to your configuration:
                   example: fontawesome/solid/flask
                   quote: fontawesome/solid/quote-left
             ```
-
-  [custom icon]: ../setup/logo-and-icons.md#additional-icons
 
 ## Usage
 
@@ -172,8 +164,6 @@ the next line, indented by four spaces:
     massa, nec semper lorem quam in massa.
 
 </div>
-
-  [type qualifier]: #supported-types
 
 ### Change the title
 
@@ -231,6 +221,7 @@ can use your existing admonitions and indent the desired ones:
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
         nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
         massa, nec semper lorem quam in massa.
+
 </div>
 
 ### Remove the title
@@ -256,9 +247,6 @@ not work for [collapsible blocks]:
     massa, nec semper lorem quam in massa.
 
 </div>
-
-  [changing the title]: #change-the-title
-  [collapsible blocks]: #collapsible-blocks
 
 ### Collapsible blocks
 
@@ -350,7 +338,7 @@ only the `inline` modifier:
 
     Use `inline` to align to the left (right for rtl languages).
 
-__Important__: admonitions that use the `inline` modifiers _must_ be declared
+**Important**: admonitions that use the `inline` modifiers _must_ be declared
 prior to the content block you want to place them beside. If there's
 insufficient space to render the admonition next to the block, the admonition
 will stretch to the full width of the viewport, e.g., on mobile viewports.
@@ -443,3 +431,10 @@ The following admonition types are available in Zensical. The default is `note`.
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
+[Admonition]: ../setup/extensions/python-markdown.md#admonition
+[changing the title]: #change-the-title
+[collapsible blocks]: #collapsible-blocks
+[custom icon]: ../setup/logo-and-icons.md#additional-icons
+[Details]: ../setup/extensions/python-markdown-extensions.md#details
+[SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
+[type qualifier]: #supported-types

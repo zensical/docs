@@ -9,8 +9,6 @@ status: new
 
 [Markdown Exec] executes code blocks in your Markdown files at build time and renders their output in place of the code, instead of just displaying it. It supports Python, shell (`bash`, `sh`, `console`), Pyodide, and directory trees (`tree`), and can render results as Markdown or raw HTML.
 
-[Markdown Exec]: https://pawamoy.github.io/markdown-exec/
-
 !!! warning "Executes arbitrary code at build time"
 
     Markdown Exec runs the code in your fenced code blocks when the site is
@@ -23,13 +21,13 @@ Markdown Exec is not included with Zensical by default, so it needs to be instal
 
 === "with `pip`"
 
-    ```sh
+    ``` sh
     pip install "markdown-exec[ansi]"
     ```
 
 === "with `uv`"
 
-    ```sh
+    ``` sh
     uv add "markdown-exec[ansi]"
     ```
 
@@ -39,19 +37,15 @@ The `ansi` extra adds the pieces needed to render ANSI colors in HTML code block
 
 Markdown Exec relies on the [SuperFences] extension, which is [enabled by default] in Zensical. Configure Markdown Exec as a plugin:
 
-[SuperFences]: python-markdown-extensions.md#superfences
-[enabled by default]: about.md#default-configuration
-
-
 === "`zensical.toml`"
 
-    ```toml
+    ``` toml
     [project.plugins.markdown-exec]
     ```
 
 === "`mkdocs.yml`"
 
-    ```yaml
+    ``` yaml
     plugins:
       - markdown-exec
     ```
@@ -62,7 +56,7 @@ Enabling it via the plugin, rather than by hand-listing custom fences under `pym
 
 Add the `exec="on"` option to a fenced code block to run it and render its output instead of the source:
 
-````markdown
+```` markdown
 ```python exec="on"
 print("Hello Markdown!")
 ```
@@ -70,7 +64,7 @@ print("Hello Markdown!")
 
 The `exec` option is true for any value except `0`, `no`, `off`, and `false` (case insensitive). To run every code block of a given language without adding `exec="on"` to each one, set the `MARKDOWN_EXEC_AUTO` environment variable before building the site:
 
-```sh
+``` sh
 MARKDOWN_EXEC_AUTO=python,bash
 ```
 
@@ -80,7 +74,7 @@ By default, printed output is treated as Markdown and rendered accordingly. Set 
 
 To render both the code and its output, add the `source` option:
 
-````markdown
+```` markdown
 ```python exec="on" source="above"
 print("I'm the result!")
 ```
@@ -88,19 +82,13 @@ print("I'm the result!")
 
 Accepted values are `above`, `below`, `tabbed-left`, `tabbed-right`, `block`, and `console`. The tabbed and block styles depend on the [Tabbed] and [Markdown in HTML] extensions, both of which are on by default in Zensical.
 
-[Tabbed]: python-markdown-extensions.md#tabbed
-[Markdown in HTML]: python-markdown.md#markdown-in-html
-
 ### Interactive code blocks
 
 Markdown Exec can generate interactive Python code blocks that can be edited and executed by the readers of your documentation. These code blocks are not executed at build time: they run on your reader's devices, client-side. The editing capabilities are provided thanks to the [Ace] editor. The Python code runs on the client device thanks to [Pyodide].
 
-[Ace]: https://ace.c9.io/
-[Pyodide]: https://pyodide.org/en/stable/
-
 To create such interactive Python code blocks, create `pyodide` fences:
 
-````md
+```` md
 ```pyodide
 print("Hello world!")
 ```
@@ -108,7 +96,7 @@ print("Hello world!")
 
 This example will generate the following interactive code block. Try editing the code, then running it with ++ctrl+enter++ or by clicking "Run" in the top-right corner.
 
-```pyodide
+``` pyodide
 print("Hello world!")
 ```
 
@@ -123,3 +111,11 @@ Markdown Exec has additional options for naming and prefixing generated HTML ids
 - [Python usage](https://pawamoy.github.io/markdown-exec/usage/python/)
 - [Shell usage](https://pawamoy.github.io/markdown-exec/usage/shell/)
 - [Gallery of examples](https://pawamoy.github.io/markdown-exec/gallery/)
+
+[Ace]: https://ace.c9.io/
+[enabled by default]: about.md#default-configuration
+[Markdown Exec]: https://pawamoy.github.io/markdown-exec/
+[Markdown in HTML]: python-markdown.md#markdown-in-html
+[Pyodide]: https://pyodide.org/en/stable/
+[SuperFences]: python-markdown-extensions.md#superfences
+[Tabbed]: python-markdown-extensions.md#tabbed

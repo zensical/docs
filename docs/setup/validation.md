@@ -13,6 +13,7 @@ Broken links are easy to miss – pages get renamed or moved, and references sil
 Additionally, the build can be aborted when issues are found by enabling [strict mode].
 
 <div id="studio" markdown>
+
 !!! tip "Zensical Studio"
 
     With [Zensical Studio], we are delivering in-editor support for link
@@ -27,13 +28,8 @@ Additionally, the build can be aborted when issues are found by enabling [strict
     especially navigation and refactorings. We will publish the parser as
     Open Source in the coming months and integrate into Zensical as the new
     basis for validation during builds.
+
 </div>
-
-  [Zensical Studio]: https://zensical.org/studio/
-
-
-[strict mode]: #strict-mode
-[unresolved references]: #unresolved_references
 
 ## Configuration
 
@@ -101,7 +97,7 @@ Warn when a link points to a page that does not exist.
       invalid_links: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 Oh no, [this page] does not exit.
@@ -110,6 +106,7 @@ Oh no, [this page] does not exit.
 ```
 
 <div class="result" markdown>
+
 ``` console
 $ zensical build
 ...
@@ -121,6 +118,7 @@ Warning: page does not exist
    │                     ╰───────── page does not exist
 ───╯
 ```
+
 </div>
 
 ---
@@ -143,7 +141,7 @@ Warn when a link points to an anchor that does not exist.
       invalid_link_anchors: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 Oh no, [this section] does not exit.
@@ -152,6 +150,7 @@ Oh no, [this section] does not exit.
 ```
 
 <div class="result" markdown>
+
 ``` console
 $ zensical build
 ...
@@ -163,6 +162,7 @@ Warning: anchor does not exist
    │                               ╰─────── anchor does not exist
 ───╯
 ```
+
 </div>
 
 ### Deprecated checks
@@ -195,7 +195,7 @@ Warn when a link or image reference has no matching definition.
       unresolved_references: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 This is an [unresolved reference][id].
@@ -237,7 +237,7 @@ Warn when a footnote reference has no matching definition.
       unresolved_footnotes: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 This is an unresolved footnote[^id].
@@ -279,13 +279,14 @@ Warn when a link definition is never referenced.
       unused_definitions: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 [id]: https://example.com
 ```
 
 <div class="result" markdown>
+
 ``` console
 $ zensical build
 ...
@@ -297,6 +298,7 @@ Warning: unused link definition
    │   ╰── unused link definition
 ───╯
 ```
+
 </div>
 
 ---
@@ -319,13 +321,14 @@ Warn when a footnote definition is never referenced.
       unused_footnotes: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 [^id]: This footnote is never referenced.
 ```
 
 <div class="result" markdown>
+
 ``` console
 $ zensical build
 ...
@@ -337,6 +340,7 @@ Warning: unused footnote definition
    │    ╰── unused footnote definition
 ───╯
 ```
+
 </div>
 
 ---
@@ -359,7 +363,7 @@ Warn when a link definition is declared more than once.
       shadowed_definitions: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 This [reference][id] has two definitions.
@@ -369,6 +373,7 @@ This [reference][id] has two definitions.
 ```
 
 <div class="result" markdown>
+
 ``` console
 $ zensical build
 ...
@@ -380,6 +385,7 @@ Warning: shadowed link definition
    │   ╰── shadowed link definition
 ───╯
 ```
+
 </div>
 
 ---
@@ -402,7 +408,7 @@ Warn when a footnote definition is declared more than once.
       shadowed_footnotes: true
     ```
 
-__Example__
+**Example**
 
 ``` markdown title="index.md"
 This footnote[^id] has two definitions.
@@ -412,6 +418,7 @@ This footnote[^id] has two definitions.
 ```
 
 <div class="result" markdown>
+
 ``` console
 $ zensical build
 ...
@@ -423,6 +430,7 @@ Warning: shadowed footnote definition
    │    ╰── shadowed footnote definition
 ───╯
 ```
+
 </div>
 
 ---
@@ -472,3 +480,6 @@ Aborted because --strict flag is set
 </div>
 
 The build is aborted after reporting all issues, and the exit code is set to `1` to indicate failure. This can be useful in CI/CD pipelines to ensure that all links are valid before deploying the site.
+
+[strict mode]: #strict-mode
+[Zensical Studio]: https://zensical.org/studio/

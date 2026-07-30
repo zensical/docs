@@ -62,22 +62,21 @@ configuration with:
 The following properties are available for each link:
 
 `social.icon`
+
 :   This property must contain a valid path to any [icon bundled with the theme],
     or the build will not succeed. Some popular choices:
 
-    * :fontawesome-brands-github: – `fontawesome/brands/github`
-    * :fontawesome-brands-gitlab: – `fontawesome/brands/gitlab`
-    * :fontawesome-brands-x-twitter: – `fontawesome/brands/x-twitter`
-    * :fontawesome-brands-mastodon: – `fontawesome/brands/mastodon`
+    - :fontawesome-brands-github: – `fontawesome/brands/github`
+    - :fontawesome-brands-gitlab: – `fontawesome/brands/gitlab`
+    - :fontawesome-brands-x-twitter: – `fontawesome/brands/x-twitter`
+    - :fontawesome-brands-mastodon: – `fontawesome/brands/mastodon`
       <small>automatically adds [`rel=me`][rel=me]</small>
-    * :fontawesome-brands-docker: – `fontawesome/brands/docker`
-    * :fontawesome-brands-facebook: – `fontawesome/brands/facebook`
-    * :fontawesome-brands-instagram: – `fontawesome/brands/instagram`
-    * :fontawesome-brands-linkedin: – `fontawesome/brands/linkedin`
-    * :fontawesome-brands-slack: – `fontawesome/brands/slack`
-    * :fontawesome-brands-discord: – `fontawesome/brands/discord`
-
-[icon bundled with the theme]: ../authoring/icons-emojis.md
+    - :fontawesome-brands-docker: – `fontawesome/brands/docker`
+    - :fontawesome-brands-facebook: – `fontawesome/brands/facebook`
+    - :fontawesome-brands-instagram: – `fontawesome/brands/instagram`
+    - :fontawesome-brands-linkedin: – `fontawesome/brands/linkedin`
+    - :fontawesome-brands-slack: – `fontawesome/brands/slack`
+    - :fontawesome-brands-discord: – `fontawesome/brands/discord`
 
 `social.link`
 
@@ -87,6 +86,7 @@ The following properties are available for each link:
     add this:
 
     === "`zensical.toml`"
+
         ``` toml
         [[project.extra.social]]
         icon = "fontawesome/solid/paper-plane"
@@ -94,6 +94,7 @@ The following properties are available for each link:
         ```
 
     === "`mkdocs.yml`"
+
         ``` yaml
         extra:
           social:
@@ -108,6 +109,7 @@ The following properties are available for each link:
     name from the link, if available.
 
     === "`zensical.toml`"
+
         ``` toml
         [[project.extra.social]]
         icon = "fontawesome/brands/x"
@@ -116,6 +118,7 @@ The following properties are available for each link:
         ```
 
     === "`mkdocs.yml`"
+
         ``` yaml
         extra:
           social:
@@ -123,8 +126,6 @@ The following properties are available for each link:
               link: https://fosstodon.org/@squidfunk
               name: Zensical on Mastodon
         ```
-
-  [rel=me]: https://docs.joinmastodon.org/user/profile/#verification
 
 ### Copyright notice
 
@@ -166,7 +167,7 @@ generated. The notice can be removed with the following option:
 
 !!! info "Please read this before removing the generator notice"
 
-    The subtle __Made with Zensical__ hint in the footer is a great way to
+    The subtle **Made with Zensical** hint in the footer is a great way to
     spread the word about Zensical. We offer Zensical as Free and Open Source
     software under the permissive MIT license. This is one of the ways you can
     help ensure that the Zensical community grows and thrives, ultimately
@@ -181,7 +182,6 @@ with the front matter `hide` property. Use this when the content of the page
 that is adjacent to the current page is not really related. Add the following
 lines at the top of a Markdown file:
 
-
 ``` yaml
 ---
 hide:
@@ -191,3 +191,6 @@ hide:
 # Page title
 ...
 ```
+
+[icon bundled with the theme]: ../authoring/icons-emojis.md
+[rel=me]: https://docs.joinmastodon.org/user/profile/#verification

@@ -5,14 +5,13 @@ icon: lucide/message-circle-question-mark
 # Frequently asked questions
 
 !!! tip "Question not answered...?"
+
     We would like to thank all users who have got in touch with us and shared
     the questions they have about Zensical and about moving from Material for
     MkDocs to Zensical. If you find that you have questions that should be
     covered here, feel free to reach out to us at
     [hello@zensical.org](mailto:hello@zensical.org) or post the question on
     the [quick-thoughts] channel on Discord.
-
-  [quick-thoughts]: https://discord.com/channels/1289187620659789824/1435275497549598770
 
 ## Troubleshooting
 
@@ -29,17 +28,12 @@ features that are already implemented. Our [feature parity] page provides a
 breakdown of our progress towards feature parity and we have additional pages
 covering:
 
-* [Command-line options]
-* [Template overrides] (also applies to custom templates)
-* [Third-party plugins]
+- [Command-line options]
+- [Template overrides] (also applies to custom templates)
+- [Third-party plugins]
 
 We have not made any changes to the HTML structure, so your CSS and JavaScript
 customization will continue to work.
-
-  [command-line options]: https://zensical.org/compatibility/cli/
-  [template overrides]: https://zensical.org/compatibility/overrides/
-  [third-party plugins]: https://zensical.org/compatibility/plugins/
-  [feature parity]: https://zensical.org/compatibility/features/
 
 ### Should I convert my `mkdocs.yml` to `zensical.toml`?
 
@@ -84,9 +78,6 @@ We will use work towards feature parity to road-test the module system before we
 make it generally available. Once the API can be declared stable, we invite the
 community to develop modules to support all conceivable use cases.
 
-[module system]: https://zensical.org/about/roadmap/#module-system
-[Material for MkDocs plugins]: https://squidfunk.github.io/mkdocs-material/plugins/
-
 ### Why do you call them "modules" and not "plugins"?
 
 The name "plugin" suggests that something is "plugged into" an otherwise
@@ -102,8 +93,6 @@ to improve performance.
 Markdown extensions work in Zensical as they do in MkDocs since we use the same
 Python Markdown parser. You just need to install the Markdown extension into
 your Python (virtual) environment and [configure it].
-
-  [configure it]: https://zensical.org/docs/setup/extensions/about/
 
 ### Why can I not use absolute links with Zensical?
 
@@ -131,8 +120,6 @@ We are committed to [supporting Material for MkDocs][support-mkm] for at least
 12 months after the release of Zensical on November 5th, 2025.
 We expect to reach feature parity with Material for MkDocs within these 12 months.
 
-  [support-mkm]: https://github.com/squidfunk/mkdocs-material/issues/8523
-
 ### How long will you support reading `mkdocs.yml` files?
 
 Indefinitely. We plan to move the functionality that is required only for
@@ -151,8 +138,6 @@ author variants of the Zensical theme. This will make it easier for you to build
 new theme variants and use them for your projects or share them with the
 community.
 
-  [component system]: https://zensical.org/about/roadmap/#component-system
-
 ### I am having problems with template overrides that use Python functions.
 
 MiniJinja does not support calling Python functions as it is built entirely in
@@ -164,12 +149,6 @@ via a [change request].
 In our [roadmap], we already describe how we will be [introducing a component
 system] to replace Python Markdown, its Markdown extensions, and the Jinja
 templates.
-
-  [roadmap]: https://zensical.org/about/roadmap/
-  [introducing a component system]: https://zensical.org/about/roadmap/#component-system
-  [filter]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
-  [test]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
-  [change request]: https://zensical.org/docs/community/contribute/request-a-change/
 
 ### Will you support symbolic links?
 
@@ -196,9 +175,7 @@ to. We are not currently planning to use any other distribution channels as
 supporting more would bind resources we need to work towards feature parity and
 implement our roadmap.
 
-  [PyPI]: https://pypi.org/
-
-###  If Zensical is written in Rust, why can't I `cargo install` it?
+### If Zensical is written in Rust, why can't I `cargo install` it?
 
 Since we have a large number of users currently using Material for MkDocs, we
 need to offer them a migration path to Zensical. Supporting existing content
@@ -217,15 +194,12 @@ sites of unlimited complexity, with unlimited teams, and unlimited numbers of
 users. There is no Insiders program like Material for MkDocs had that ties the
 release of features to funding goals, nor is there an open core model.
 
-###  Does Zensical Spark mean Zensical is not Open Source?
+### Does Zensical Spark mean Zensical is not Open Source?
 
 All software we publish is Open Source.[^infra] Zensical Spark is an optional
 offering for organizations to get direct support and training as well as to take
 part in the early phases of our design process to make sure all requirements are
 met.
-
-[^infra]: This does not include code we use only internally, e.g., to manage
-    infrastructure.
 
 Zensical Spark allows us to sustain the pace of development of Zensical, which
 benefits the whole community. Everyone can engage with the project, view bug
@@ -258,8 +232,6 @@ get started with, that supports you and your projects throughout different
 lifecycle stages, and adapts to projects of any scale and complexity by being
 modular and scalable.
 
-  [vision]: https://zensical.org/about/vision/
-
 This combination of attributes is unique in the market, where there is all too
 often a choice to make between ease of adoption and use on the one hand, and
 capabilities on the other. We do not accept that this is a necessary tradeoff.
@@ -291,9 +263,6 @@ you to connect with others who may have similar needs and see if what you want
 can already be achieved. Once ready, you or someone else should submit a change
 request on GitHub to trigger our process.
 
-[process for requesting changes]: https://zensical.org/docs/community/contribute/request-a-change/
-[backlog]: https://github.com/orgs/zensical/projects/2/views/1
-
 ## Other questions
 
 ### Why is Zensical not as fast as I had hoped?
@@ -314,11 +283,8 @@ visions for its future and that development had stalled, making it an increasing
 supply chain risk. We have written two blog articles that outline why there was
 no way forward based on MkDocs:
 
-* [Transforming Material for MkDocs][1]
-* [Zensical – A modern static site generator built by the Material for MkDocs team][2]
-
-[1]: https://squidfunk.github.io/mkdocs-material/blog/2024/08/19/how-were-transforming-material-for-mkdocs/
-[2]: https://squidfunk.github.io/mkdocs-material/blog/2025/11/05/zensical/
+- [Transforming Material for MkDocs][1]
+- [Zensical – A modern static site generator built by the Material for MkDocs team][2]
 
 ### Why did you build another SSG when there are so many?
 
@@ -355,14 +321,14 @@ us to re-imagine what a static site generator should look like today.
 
 ### What, exactly, are the technical limitations of MkDocs?
 
-__Performance__: MkDocs, like almost all other SSGs, has a linear build process that
+**Performance**: MkDocs, like almost all other SSGs, has a linear build process that
 makes it difficult to parallelize. Improving its performance is practically
 impossible without breaking all existing plugins and extensions.
 Zensical already offers much faster re-builds thanks to its differential builds and
 caching, and in the coming months we will unlock even more performance
 improvements as we work through our roadmap.
 
-__Modularity__: in MkDocs, the Markdown parser, templating, the output format, and
+**Modularity**: in MkDocs, the Markdown parser, templating, the output format, and
 other design decisions are baked into the SSG code. Zensical, in contrast, has a
 generic underlying runtime that has nothing, per se, to do with generating
 static sites from Markdown files. This means that we can model the Zensical SSG
@@ -372,14 +338,10 @@ as a set of independent, interchangeable modules.
 
 Yes. You can subscribe to the [backlog item] to track progress.
 
-[backlog item]: https://github.com/zensical/backlog/issues/25
-
 ### How can I get a cool homepage like zensical.org?
 
 You can [define a custom template] and configure it in the metadata of the
 homepage Markdown file. What content you put on the page is up to you.
-
-  [define a custom template]: https://zensical.org/docs/customization/#custom-templates
 
 ### Can I use `zensical serve` in production?
 
@@ -395,8 +357,6 @@ by far the most popular version control system with a market share of more than
 90% [according to a 2022 StackOverflow study]. Zensical is modular, so
 we or a third party can provide support for other version control systems in the
 future.
-
-[according to a 2022 StackOverflow study]: https://survey.stackoverflow.co/2022/#technology-version-control
 
 ### Can we get better error reporting?
 
@@ -415,5 +375,31 @@ We will evaluate available tools when the time comes but we currently focus on
 work on the module system and the component system, which will make integrating
 diagramming tools much easier.
 
-  [Mermaid]: https://www.mermaidchart.com
-  [Kroki]: https://kroki.io/
+[^infra]: This does not include code we use only internally, e.g., to manage infrastructure.
+
+[1]: https://squidfunk.github.io/mkdocs-material/blog/2024/08/19/how-were-transforming-material-for-mkdocs/
+[2]: https://squidfunk.github.io/mkdocs-material/blog/2025/11/05/zensical/
+[according to a 2022 StackOverflow study]: https://survey.stackoverflow.co/2022/#technology-version-control
+[backlog]: https://github.com/orgs/zensical/projects/2/views/1
+[backlog item]: https://github.com/zensical/backlog/issues/25
+[change request]: https://zensical.org/docs/community/contribute/request-a-change/
+[command-line options]: https://zensical.org/compatibility/cli/
+[component system]: https://zensical.org/about/roadmap/#component-system
+[configure it]: https://zensical.org/docs/setup/extensions/about/
+[define a custom template]: https://zensical.org/docs/customization/#custom-templates
+[feature parity]: https://zensical.org/compatibility/features/
+[filter]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
+[introducing a component system]: https://zensical.org/about/roadmap/#component-system
+[Kroki]: https://kroki.io/
+[Material for MkDocs plugins]: https://squidfunk.github.io/mkdocs-material/plugins/
+[Mermaid]: https://www.mermaidchart.com
+[module system]: https://zensical.org/about/roadmap/#module-system
+[process for requesting changes]: https://zensical.org/docs/community/contribute/request-a-change/
+[PyPI]: https://pypi.org/
+[quick-thoughts]: https://discord.com/channels/1289187620659789824/1435275497549598770
+[roadmap]: https://zensical.org/about/roadmap/
+[support-mkm]: https://github.com/squidfunk/mkdocs-material/issues/8523
+[template overrides]: https://zensical.org/compatibility/overrides/
+[test]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
+[third-party plugins]: https://zensical.org/compatibility/plugins/
+[vision]: https://zensical.org/about/vision/

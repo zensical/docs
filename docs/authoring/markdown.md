@@ -18,9 +18,8 @@ Gruber's original Markdown syntax][gruber]. For the most part, it is fully compa
 with the original specification, supporting the core features like headings,
 lists, links, blockquotes, and inline formatting (e.g., bold and italics).
 
-[gruber]: https://daringfireball.net/projects/markdown/
-
 !!! note "Differences between Markdown dialects"
+
     There are [differences] in how implementers of Markdown have interpreted the
     original specification.
 
@@ -33,17 +32,12 @@ lists, links, blockquotes, and inline formatting (e.g., bold and italics).
     list symbol changes, for example, from "*" to "-". CommonMark, for example,
     would [start a new list].
 
-[differences]: https://python-markdown.github.io/#differences
-[start a new list]: https://spec.commonmark.org/0.31.2/#lists
-
 !!! warning "README files"
 
     `README.md` files in the `docs_dir` are converted to `index.html` just
     as in MkDocs.  However, if both `README.md` and `index.md` are present
     in a directory the behavior is currently undefined, so it is better
     to avoid having both. We have a [backlog item][bl_readme] to review this.
-
-[bl_readme]: https://github.com/zensical/backlog/issues/135
 
 Both Python Markdown itself and the [Python Markdown Extensions] that Zensical
 also supports provide extensions to the core Markdown language to cater for the
@@ -54,12 +48,8 @@ Supporting the same syntax for content is a key component in our approach to
 ensure compatibility with Material for MkDocs and to then evolve Zensical from
 that point of departure. See [our roadmap] and [compatibility pages] for details.
 
-[Python Markdown]: https://python-markdown.github.io/
-[Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
-[our roadmap]: https://zensical.org/about/roadmap/
-[compatibility pages]: https://zensical.org/compatibility/
-
 !!! info "Future development"
+
     We are currently actively exploring the possibility of adding support for
     [CommonMark] with GitHub-flavored Markdown extensions as well as extended
     authoring options using a component system.
@@ -72,15 +62,11 @@ that point of departure. See [our roadmap] and [compatibility pages] for details
     to CommonMark when Zensical's support for it has matured and when your team
     is ready to migrate.
 
-[CommonMark]: https://commonmark.org/
-
 ## Learning Markdown
 
 The [original description of Markdown][gruber] by John Gruber is still a good
 starting point if you are unfamiliar with Markdown syntax. The [Markdown Guide]
 is another great resource.
-
-[Markdown Guide]: https://www.markdownguide.org/
 
 ## Linking between pages
 
@@ -89,8 +75,6 @@ Markdown files instead of linking to the HTML that will be produced. Zensical
 will translate them to the correct links to the target. Crucially, it will
 produce the correct link to an HTML file or a link ending with a directory if
 [`use_directory_urls`][dirurls] is being used.
-
-[dirurls]: ../setup/basics.md#use_directory_urls
 
 In the future, Zensical will support output formats other than HTML and when
 this happens, links that point to the Markdown pages will still work, while
@@ -125,4 +109,15 @@ fallback.
     We're currently redesigning navigation, and will address this issue as part of that work. [ZAP 001] outlines behavior of page titles and their use cases. In particular, we are looking to preserve markup in the title, which MkDocs
     strips out. Any re-design will include migration paths that avoid costly re-work.
 
-  [ZAP 001]: https://zensical.org/spark/proposals/zap-001-page-titles/
+[bl_readme]: https://github.com/zensical/backlog/issues/135
+[CommonMark]: https://commonmark.org/
+[compatibility pages]: https://zensical.org/compatibility/
+[differences]: https://python-markdown.github.io/#differences
+[dirurls]: ../setup/basics.md#use_directory_urls
+[gruber]: https://daringfireball.net/projects/markdown/
+[Markdown Guide]: https://www.markdownguide.org/
+[our roadmap]: https://zensical.org/about/roadmap/
+[Python Markdown]: https://python-markdown.github.io/
+[Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
+[start a new list]: https://spec.commonmark.org/0.31.2/#lists
+[ZAP 001]: https://zensical.org/spark/proposals/zap-001-page-titles/

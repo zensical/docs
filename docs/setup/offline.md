@@ -37,9 +37,6 @@ the following lines to your configuration:
     `plugins` is a carry-over from Material for MkDocs and will be automatically
     replaced in a future version.
 
-  [site search]: search.md
-  [site directory]: basics.md#site_dir
-
 The following settings are available:
 
 `config.enabled`
@@ -58,9 +55,6 @@ The following settings are available:
     working towards [feature parity] and will be providing a more
     comprehensive system for managing [variants] in due course.
 
-  [feature parity]: https://zensical.org/compatibility/features/
-  [variants]: https://zensical.org/about/roadmap/#configuration
-
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -78,11 +72,6 @@ features that use the `fetch` API will error.
 Thus, when building for offline usage, make sure to disable the following
 configuration settings: [instant navigation], [site analytics], [git repository],
 and [comment systems].
-
-  [instant navigation]: navigation.md#instant-navigation
-  [Site analytics]: analytics.md
-  [Git repository]: repository.md
-  [Comment systems]: comment-system.md
 
 ### `file://` scheme support
 
@@ -120,4 +109,12 @@ Here it is assumed the asset is in a `js/` folder in your configured `docs/` dir
 The file name **must** contain the `iframe-worker` substring, otherwise Zensical
 will fetch it again from unpkg.com.
 
-  [fetched from unpkg.com]: https://unpkg.com/iframe-worker/shim
+[Comment systems]: comment-system.md
+[feature parity]: https://zensical.org/compatibility/features/
+[fetched from unpkg.com]: https://unpkg.com/iframe-worker/shim
+[Git repository]: repository.md
+[instant navigation]: navigation.md#instant-navigation
+[Site analytics]: analytics.md
+[site directory]: basics.md#site_dir
+[site search]: search.md
+[variants]: https://zensical.org/about/roadmap/#configuration

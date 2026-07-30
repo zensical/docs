@@ -12,8 +12,6 @@ since it directly integrates with [Google Fonts]. Alternatively, fonts can be
 custom-loaded if self-hosting is preferred for data privacy reasons or if
 another destination should be used.
 
-  [Google Fonts]: https://fonts.google.com
-
 ## Configuration
 
 ### Regular font
@@ -23,12 +21,14 @@ everything that does not need to be monospaced. It can be set to any
 valid [Google Font][Google Fonts] via your configuration:
 
 === "`zensical.toml`"
+
     ``` toml
     [project.theme]
     font.text = "Inter"
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     theme:
       font:
@@ -42,18 +42,19 @@ Just like the regular font, it can be set to any valid [Google Font]
 [Google Fonts] via your configuration:
 
 === "`zensical.toml`"
+
     ``` toml
     [project.theme]
     font.code = "JetBrains Mono"
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     theme:
       font:
         code: JetBrains Mono
     ```
-
 
 ### Autoloading
 
@@ -62,18 +63,18 @@ to adhere to [data privacy] regulations, and fall back to system fonts, add the
 following lines to your configuration:
 
 === "`zensical.toml`"
+
     ``` toml
     [project.theme]
     font = false
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     theme:
       font: false
     ```
-
-  [data privacy]: https://developers.google.com/fonts/faq/privacy
 
 ## Customization
 
@@ -93,6 +94,7 @@ corresponding `@font-face` definition:
     ```
 
 === "`zensical.toml`"
+
     ``` toml
     [project]
     extra_css = ["stylesheets/extra.css"]
@@ -116,8 +118,8 @@ globally to be used as the site-wide regular or monospaced font:
     }
     ```
 
-    1.  Always define fonts through CSS variables and not `font-family`, as
-        this would disable the system font fallback.
+    1. Always define fonts through CSS variables and not `font-family`, as
+       this would disable the system font fallback.
 
 === "Monospaced font"
 
@@ -127,4 +129,6 @@ globally to be used as the site-wide regular or monospaced font:
     }
     ```
 
-  [additional style sheet]: ../customization.md#additional-css
+[additional style sheet]: ../customization.md#additional-css
+[data privacy]: https://developers.google.com/fonts/faq/privacy
+[Google Fonts]: https://fonts.google.com

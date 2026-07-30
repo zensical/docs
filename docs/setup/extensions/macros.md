@@ -22,13 +22,9 @@ The Macros extension, included with Zensical, enables [Jinja2] templating in Mar
       - zensical.extensions.macros
     ```
 
-  [Jinja2]: https://jinja.palletsprojects.com
-
 !!! tip "Macros in Python docstrings"
 
     When using [mkdocstrings] to generate API documentation from Python docstrings, Jinja2 expressions in docstrings are rendered natively, so macros and template variables can be used directly in docstrings.
-
-  [mkdocstrings]: https://mkdocstrings.github.io
 
 !!! warning "Keep files in project folder"
 
@@ -326,8 +322,6 @@ List of [Jinja2 extensions] to be loaded into the template environment. The defa
             - jinja2.ext.do
     ```
 
-  [Jinja2 extensions]: https://jinja.palletsprojects.com/en/stable/extensions/
-
 ## Defining a module
 
 Variables, macros, and filters are registered via a `define_env(env)` function in the configured module:
@@ -360,49 +354,47 @@ def define_env(env):
 
 The following variables are available in all templates without any additional configuration:
 
-| Variable | Description |
-| -------- | ----------- |
-| `config` | Project configuration object |
-| `environment` | System info: `system`, `system_version`, `python_version` |
-| `filters` | Registered Jinja2 filters |
-| `filters_builtin` | Built-in Jinja2 filters |
-| `git` | Git repository metadata (see below) |
-| `macros` | Registered macros |
-| `now()` | Current date and time (`datetime.now()`) |
-| `page` | Current page object |
-| `plugin` | Current extension configuration |
-| `context()` | Macro for displaying the full template context |
-| `macros_info()` | Macro for displaying environment info, useful for debugging |
-| `pd_read_*` | Read a file and return a pandas DataFrame — see [Reading tabular data] |
-| `read_*` | Read a file and return it as a Markdown table — see [Reading tabular data] |
+| Variable          | Description                                                                |
+| ----------------- | -------------------------------------------------------------------------- |
+| `config`          | Project configuration object                                               |
+| `environment`     | System info: `system`, `system_version`, `python_version`                  |
+| `filters`         | Registered Jinja2 filters                                                  |
+| `filters_builtin` | Built-in Jinja2 filters                                                    |
+| `git`             | Git repository metadata (see below)                                        |
+| `macros`          | Registered macros                                                          |
+| `now()`           | Current date and time (`datetime.now()`)                                   |
+| `page`            | Current page object                                                        |
+| `plugin`          | Current extension configuration                                            |
+| `context()`       | Macro for displaying the full template context                             |
+| `macros_info()`   | Macro for displaying environment info, useful for debugging                |
+| `pd_read_*`       | Read a file and return a pandas DataFrame — see [Reading tabular data]     |
+| `read_*`          | Read a file and return it as a Markdown table — see [Reading tabular data] |
 
 The `git` variable exposes the following fields when a Git repository is detected:
 
-| Field | Description |
-| ----- | ----------- |
-| `git.commit` | Full commit hash |
-| `git.short_commit` | Short commit hash |
-| `git.tag` | Full tag name from `git describe` |
-| `git.short_tag` | Nearest tag name without suffix |
-| `git.author` | Commit author name |
-| `git.author_email` | Commit author email |
-| `git.committer` | Committer name |
-| `git.committer_email` | Committer email |
-| `git.date` | Commit date as a `datetime` object |
-| `git.date_ISO` | Commit date in ISO 8601 format |
-| `git.message` | Commit message |
-| `git.status` | `true` if Git information was successfully retrieved |
+| Field                 | Description                                          |
+| --------------------- | ---------------------------------------------------- |
+| `git.commit`          | Full commit hash                                     |
+| `git.short_commit`    | Short commit hash                                    |
+| `git.tag`             | Full tag name from `git describe`                    |
+| `git.short_tag`       | Nearest tag name without suffix                      |
+| `git.author`          | Commit author name                                   |
+| `git.author_email`    | Commit author email                                  |
+| `git.committer`       | Committer name                                       |
+| `git.committer_email` | Committer email                                      |
+| `git.date`            | Commit date as a `datetime` object                   |
+| `git.date_ISO`        | Commit date in ISO 8601 format                       |
+| `git.message`         | Commit message                                       |
+| `git.status`          | `true` if Git information was successfully retrieved |
 
 The following filters are registered and available in all templates:
 
-| Filter | Description |
-| ------ | ----------- |
-| `add_indentation` | Indents every line of a string by a given number of `spaces` or `tabs` |
-| `convert_to_md_table` | Converts a pandas DataFrame to a Markdown table string |
-| `fix_url` | Prepends `../` to relative URLs, correcting links generated in macro context |
-| `pretty` | Formats `context()` output as a Markdown table, useful for debugging |
-
-  [Reading tabular data]: #reading-tabular-data
+| Filter                | Description                                                                  |
+| --------------------- | ---------------------------------------------------------------------------- |
+| `add_indentation`     | Indents every line of a string by a given number of `spaces` or `tabs`       |
+| `convert_to_md_table` | Converts a pandas DataFrame to a Markdown table string                       |
+| `fix_url`             | Prepends `../` to relative URLs, correcting links generated in macro context |
+| `pretty`              | Formats `context()` output as a Markdown table, useful for debugging         |
 
 ## Reading tabular data
 
@@ -410,51 +402,45 @@ Tabular data from external files can be read and rendered directly as Markdown t
 
 === "with `pip`"
 
-    ```sh
+    ``` sh
     pip install pandas tabulate
     ```
 
 === "with `uv`"
 
-    ```sh
+    ``` sh
     uv add pandas tabulate
     ```
 
 File paths are resolved relative to the directory containing the configuration file. A `read_*` macro is provided for each supported format. Each macro reads the file, converts it to a pandas DataFrame internally, and returns a Markdown table string ready to be embedded into content:
 
-```jinja
+``` jinja
 {{ read_csv("data/team.csv") }}
 ```
 
 Keyword arguments are split between the underlying pandas reader and the [`DataFrame.to_markdown()`][to_markdown] method:
 
-```jinja
+``` jinja
 {{ read_csv("data/releases.csv", sep=";", index=True) }}
 ```
 
 The following formats are supported:
 
-| Macro | Description | Extra dependency |
-| ----- | ----------- | ---------------- |
-| `read_csv` | Comma-separated values | — |
-| `read_fwf` | Fixed-width formatted text | — |
-| `read_yaml` | YAML | — |
-| `read_json` | JSON | — |
-| `read_table` | Generic delimited text | — |
-| `read_excel` | Excel (`.xlsx`, `.xls`) | [`openpyxl`][openpyxl] |
-| `read_feather` | Apache Feather | [`pyarrow`][pyarrow] |
+| Macro          | Description                | Extra dependency       |
+| -------------- | -------------------------- | ---------------------- |
+| `read_csv`     | Comma-separated values     | —                      |
+| `read_fwf`     | Fixed-width formatted text | —                      |
+| `read_yaml`    | YAML                       | —                      |
+| `read_json`    | JSON                       | —                      |
+| `read_table`   | Generic delimited text     | —                      |
+| `read_excel`   | Excel (`.xlsx`, `.xls`)    | [`openpyxl`][openpyxl] |
+| `read_feather` | Apache Feather             | [`pyarrow`][pyarrow]   |
 
 When the data needs to be processed before rendering, the `pd_read_*` variants return a pandas DataFrame instead of a Markdown string. A `pd_read_*` macro is available for each format listed above:
 
-```jinja
+``` jinja
 {{ pd_read_csv("data/team.csv") | convert_to_md_table }}
 ```
-
-  [pandas]: https://pandas.pydata.org
-  [tabulate]: https://pypi.org/project/tabulate/
-  [openpyxl]: https://pypi.org/project/openpyxl/
-  [pyarrow]: https://pypi.org/project/pyarrow/
-  [to_markdown]: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_markdown.html
 
 ## Per-page overrides
 
@@ -487,5 +473,14 @@ include_yaml:
 
 When macros or filters read from external files — such as CSV data files or Markdown fragments — modifications to those files will not trigger a rebuild during [preview] unless the paths are registered via the [`watch`][watch] configuration option.
 
-  [preview]: ../../usage/preview.md
-  [watch]: ../basics.md#watch
+[Jinja2]: https://jinja.palletsprojects.com
+[Jinja2 extensions]: https://jinja.palletsprojects.com/en/stable/extensions/
+[mkdocstrings]: https://mkdocstrings.github.io
+[openpyxl]: https://pypi.org/project/openpyxl/
+[pandas]: https://pandas.pydata.org
+[preview]: ../../usage/preview.md
+[pyarrow]: https://pypi.org/project/pyarrow/
+[Reading tabular data]: #reading-tabular-data
+[tabulate]: https://pypi.org/project/tabulate/
+[to_markdown]: https://pandas.pydata.org/docs/reference/api/pandas.DataFrame.to_markdown.html
+[watch]: ../basics.md#watch

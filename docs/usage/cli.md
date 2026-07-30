@@ -3,12 +3,12 @@ icon: lucide/play
 tags:
   - Usage
 ---
-# Usage
 
+# Usage
 
 The general command line syntax for Zensical is:
 
-```sh
+``` sh
 zensical COMMAND [OPTIONS] [ARGS]...
 ```
 

@@ -11,8 +11,6 @@ icons and thousands of emojis in your project documentation with practically
 zero additional effort. Moreover, [custom icons can be added] and used in your
 configuration, documents and templates.
 
-  [custom icons can be added]: ../setup/logo-and-icons.md#additional-icons
-
 ## Configuration
 
 This configuration enables the use of icons and emojis by using simple
@@ -41,15 +39,6 @@ See additional configuration options:
 - [Emoji]
 - [Emoji with custom icons]
 
-  [Lucide]: https://lucide.dev/
-  [Material Design]: https://pictogrammers.com/library/mdi/
-  [FontAwesome]: https://fontawesome.com/search?m=free
-  [Octicons]: https://octicons.github.com/
-  [Simple Icons]: https://simpleicons.org/
-  [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
-  [Emoji]: ../setup/extensions/python-markdown-extensions.md#emoji
-  [Emoji with custom icons]: ../setup/extensions/python-markdown-extensions.md#custom_icons
-
 ## Included icon sets
 
 The following icon sets are bundled with Zensical (links lead to search page for
@@ -62,8 +51,6 @@ each):
 - :simple-simpleicons: – [Simple Icons]
 
 Note that you are not limited to these icons as you can [add your own icons].
-
-  [add your own icons]: ../setup/logo-and-icons.md#additional-icons
 
 ## Usage
 
@@ -82,8 +69,6 @@ the shortcodes at [Emojipedia]:
 :smile:
 
 </div>
-  [Twemoji]: https://github.com/jdecked/twemoji
-  [Emojipedia]: https://emojipedia.org/twitter/
 
 ### Use icons
 
@@ -100,8 +85,6 @@ a valid path to any icon bundled with the theme, which are located in the
 :fontawesome-regular-face-laugh-wink:
 
 </div>
-
-  [custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/templates/.icons
 
 #### with colors
 
@@ -148,8 +131,6 @@ After applying the customization, add the CSS class to the icon shortcode:
 :fontawesome-brands-youtube:{ .youtube }
 
 </div>
-
-  [additional style sheet]: ../customization.md#additional-css
 
 #### with animations
 
@@ -199,9 +180,6 @@ After applying the customization, add the CSS class to the icon shortcode:
 
 </div>
 
-  [colors]: #with-colors
-  [animations]: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
-
 ## Customization
 
 ### Use icons in templates
@@ -218,6 +196,22 @@ wrap it with the `.twemoji` CSS class:
 
 This is exactly what Zensical does in its templates.
 
-  [extending the theme]: ../customization.md#extending-the-theme
-  [available icon]: #included-icon-sets
-  [include]: https://jinja.palletsprojects.com/en/2.11.x/templates/#include
+[add your own icons]: ../setup/logo-and-icons.md#additional-icons
+[additional style sheet]: ../customization.md#additional-css
+[animations]: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
+[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[available icon]: #included-icon-sets
+[colors]: #with-colors
+[custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/templates/.icons
+[custom icons can be added]: ../setup/logo-and-icons.md#additional-icons
+[Emoji]: ../setup/extensions/python-markdown-extensions.md#emoji
+[Emoji with custom icons]: ../setup/extensions/python-markdown-extensions.md#custom_icons
+[Emojipedia]: https://emojipedia.org/twitter/
+[extending the theme]: ../customization.md#extending-the-theme
+[FontAwesome]: https://fontawesome.com/search?m=free
+[include]: https://jinja.palletsprojects.com/en/2.11.x/templates/#include
+[Lucide]: https://lucide.dev/
+[Material Design]: https://pictogrammers.com/library/mdi/
+[Octicons]: https://octicons.github.com/
+[Simple Icons]: https://simpleicons.org/
+[Twemoji]: https://github.com/jdecked/twemoji

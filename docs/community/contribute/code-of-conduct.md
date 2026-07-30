@@ -31,13 +31,13 @@ Examples of behavior that contributes to a positive environment:
 Examples of unacceptable behavior by users include:
 
 - Using sexualized language or imagery and unwelcome sexual attention or
-advances
+  advances
 - Trolling, insulting, derogatory comments, and personal or political attacks
 - Public or private harassment
 - Publishing others' private information, such as physical or electronic
-addresses, without explicit permission
+  addresses, without explicit permission
 - Other conduct that could reasonably be considered inappropriate in a
-professional setting
+  professional setting
 
 ## Scope
 
@@ -50,10 +50,6 @@ including:
 - [Zensical Spark] space
 - Email communication
 
-  [Zensical GitHub]: https://github.com/zensical
-  [Discord channel]: https://discord.gg/hqXRNq9CjT
-  [Zensical Spark]: https://zensical.org/spark
-
 All the above platforms are considered part of the Zensical community and are
 subject to this Code of Conduct. Beyond our own CoC, each platform may have its
 own additional guidelines and rules that users are expected to follow.
@@ -63,11 +59,8 @@ own additional guidelines and rules that users are expected to follow.
 As maintainers, we are responsible for upholding the integrity and positive
 atmosphere of our community. This includes moderating all communication with the
 authority to close, remove, reject, or edit issues, comments, commits, and, when
-necessary, temporarily or permanently [block users] who __do not align__ with
+necessary, temporarily or permanently [block users] who **do not align** with
 our [contribution guidelines] and this Code of Conduct.
-
-  [contribution guidelines]: index.md
-  [block users]: #enforcement
 
 ## Enforcement
 
@@ -84,8 +77,6 @@ appropriate for the situation.
 
 For this, we have established a clear [warning policy], described below.
 
-  [warning policy]: #warning-policy
-
 ## Warning policy
 
 Given the increasing popularity of our projects and our commitment to a healthy
@@ -101,7 +92,7 @@ The first warning is permanent.
 ### Second warning
 
 If the behavior persists, a second warning will be issued. Upon receiving the
-second warning, the user will be given a __5-day reflection period__, during
+second warning, the user will be given a **5-day reflection period**, during
 which they are encouraged to publicly explain or apologize for their actions.
 This period is designed to offer an opportunity to openly clear up any
 misunderstandings.
@@ -119,4 +110,10 @@ Blocking has been an exceptionally rare necessity in our overwhelmingly positive
 community, highlighting our preference for constructive dialogue and mutual
 respect. It aims to protect our community members and team.
 
-  [our platforms]: #scope
+[block users]: #enforcement
+[contribution guidelines]: index.md
+[Discord channel]: https://discord.gg/hqXRNq9CjT
+[our platforms]: #scope
+[warning policy]: #warning-policy
+[Zensical GitHub]: https://github.com/zensical
+[Zensical Spark]: https://zensical.org/spark

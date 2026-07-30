@@ -116,15 +116,11 @@ the `docs` directory:
     })
     ```
 
-  [instant navigation]: setup/navigation.md#instant-navigation
-
 #### Modules, `async`, `defer`
 
 If you want to import code as a [JavaScript module], you can simply make sure
 that the file has the `.mjs` extension or you can explicitly specify that it is
 to be loaded as a module:
-
-[JavaScript module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 
 === "`zensical.toml`"
 
@@ -165,9 +161,6 @@ the `async` case:
         async: true
     ```
 
-  [defer]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer
-  [async]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#async
-
 Note that Zensical will auto-detect modules by looking at the file extension
 only when the `extra_javascript` element is plain text. That means that if you
 want to load a module using `async`, you also need to specify the `type`
@@ -185,10 +178,6 @@ Templates are HTML files enhanced with MiniJinja instructions for dynamic
 rendering. The default page template is `main.html`, which inherits from
 `base.html` and includes additional templates found in the `partials` directory.
 The [`template`][template] can be customized per page.
-
-[MiniJinja]: https://docs.rs/minijinja/latest/minijinja/
-[Jinja]: https://jinja.palletsprojects.com
-[template]: authoring/frontmatter.md#page-template
 
 ### Configuring overrides
 
@@ -217,7 +206,7 @@ The `custom_dir` path is resolved relative to your configuration file.
 In order to override theme templates, it's important to understand the file
 system structure, since any files you store in `custom_dir` override the
 templates and partials of the same name as they are provided by Zensical.
-Likewise, it's important to know what files exist if you want to *add* your
+Likewise, it's important to know what files exist if you want to _add_ your
 new templates or partials:
 
 ``` .sh
@@ -271,14 +260,10 @@ your blog posts. You can use the [template language provided by MiniJinja] to
 produce any HTML structure you like. Use the templates provided by Zensical as
 a starter or start from a clean slate.
 
-[template language provided by MiniJinja]: https://docs.rs/minijinja/latest/minijinja/syntax/index.html
-
 Add a new template to the overrides directory you configured. Make sure its name
 is not the same as one of the files provided by Zensical (such as `main.html`
 and `base.html`). Now you can specify which template should be used for a page
 by adding the [template option] to the page header:
-
-[template option]: authoring/frontmatter.md#page-template
 
 ``` yaml
 ---
@@ -312,8 +297,6 @@ which is the recommended approach.
 
 For more information, refer to the [Jinja Template Designer Documentation].
 
-[Jinja Template Designer Documentation]: https://jinja.palletsprojects.com/en/stable/templates/
-
 #### Overriding blocks <small>recommended</small> { #overriding-blocks data-toc-label="Overriding blocks" }
 
 Zensical templates contain _blocks_ that wrap specific features and that can be
@@ -341,7 +324,7 @@ Then, e.g. to override the site title, add the following lines to `main.html`:
 {% endblock %}
 ```
 
-If you intend to __add__ something to a block rather than to replace it
+If you intend to **add** something to a block rather than to replace it
 altogether with new content, use `{{ super() }}` inside the block to include the
 original block content. This is particularly useful when adding third-party
 scripts to your docs, e.g.
@@ -358,27 +341,26 @@ scripts to your docs, e.g.
 
 The following template blocks are provided by the theme:
 
-| Block name        | Purpose                                         |
-| :---------------- | :---------------------------------------------- |
-| `analytics`       | Wraps the Google Analytics integration          |
-| `announce`        | Wraps the announcement bar                      |
-| `config`          | Wraps the JavaScript application config         |
-| `container`       | Wraps the main content container                |
-| `content`         | Wraps the main content                          |
-| `extrahead`       | Empty block to add custom meta tags             |
-| `fonts`           | Wraps the font definitions                      |
-| `footer`          | Wraps the footer with navigation and copyright  |
-| `header`          | Wraps the fixed header bar                      |
-| `hero`            | Wraps the hero teaser (if available)            |
-| `htmltitle`       | Wraps the `<title>` tag                         |
-| `libs`            | Wraps the JavaScript libraries (header)         |
-| `outdated`        | Wraps the version warning                       |
-| `scripts`         | Wraps the JavaScript application (footer)       |
-| `site_meta`       | Wraps the meta tags in the document head        |
-| `site_nav`        | Wraps the site navigation and table of contents |
-| `styles`          | Wraps the style sheets (also extra sources)     |
-| `tabs`            | Wraps the tabs navigation (if available)        |
-
+| Block name  | Purpose                                         |
+| :---------- | :---------------------------------------------- |
+| `analytics` | Wraps the Google Analytics integration          |
+| `announce`  | Wraps the announcement bar                      |
+| `config`    | Wraps the JavaScript application config         |
+| `container` | Wraps the main content container                |
+| `content`   | Wraps the main content                          |
+| `extrahead` | Empty block to add custom meta tags             |
+| `fonts`     | Wraps the font definitions                      |
+| `footer`    | Wraps the footer with navigation and copyright  |
+| `header`    | Wraps the fixed header bar                      |
+| `hero`      | Wraps the hero teaser (if available)            |
+| `htmltitle` | Wraps the `<title>` tag                         |
+| `libs`      | Wraps the JavaScript libraries (header)         |
+| `outdated`  | Wraps the version warning                       |
+| `scripts`   | Wraps the JavaScript application (footer)       |
+| `site_meta` | Wraps the meta tags in the document head        |
+| `site_nav`  | Wraps the site navigation and table of contents |
+| `styles`    | Wraps the style sheets (also extra sources)     |
+| `tabs`      | Wraps the tabs navigation (if available)        |
 
 #### Overriding partials
 
@@ -410,8 +392,6 @@ by name in their configuration.
     upcoming [component system], this process will become more flexible,
     enabling reuse at the component level.
 
-[component system]: https://zensical.org/about/roadmap/#component-system
-
 ### Package layout
 
 The following layout is recommended for a packaged theme extension. The package
@@ -429,21 +409,19 @@ the package metadata and entry point:
    └─ mkdocs_theme.yml
 ```
 
-1.  The `__init__.py` file is required to make the theme directory a Python
-    package that can be imported. __It can be empty__.
+1. The `__init__.py` file is required to make the theme directory a Python
+   package that can be imported. **It can be empty**.
 
-2.  You can add any files you like here. As a recommendation for a sensible
-    structure, you can follow the patterns laid out in the [theme structure]
-    section.
-
-[theme structure]: #theme-structure
+2. You can add any files you like here. As a recommendation for a sensible
+   structure, you can follow the patterns laid out in the [theme structure]
+   section.
 
 ### Package configuration
 
 The `pyproject.toml` file should contain the following content, with the
 placeholders – marked as highlighted lines – replaced with your actual values:
 
-```toml hl_lines="6 8 10 17 20"
+``` toml hl_lines="6 8 10 17 20"
 [build-system]
 requires = ["hatchling"]
 build-backend = "hatchling.build"
@@ -476,7 +454,7 @@ the directory inside your package that contains the theme files.
 A packaged theme extension may include a `mkdocs_theme.yml` file in the theme
 directory to set default configuration values and declare which theme it extends:
 
-```yaml
+``` yaml
 extends: material #(1)!
 
 # Default configuration - here, we just set a different font to demonstrate the
@@ -497,7 +475,6 @@ The `extends` key tells Zensical which theme this extension builds on. Users
 can override any of the defaults defined here in their own `mkdocs.yml` or
 `zensical.toml`. If no `mkdocs_theme.yml` is provided, the extension is treated
 as a full standalone theme.
-
 
 !!! note "Differences from MkDocs theme packaging"
 
@@ -525,7 +502,7 @@ configuration:
 
 === "`zensical.toml`"
 
-    ```toml
+    ``` toml
     [project.theme]
     name = "my_theme"
     ```
@@ -536,3 +513,16 @@ configuration:
     theme:
       name: my_theme
     ```
+
+[async]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#async
+[component system]: https://zensical.org/about/roadmap/#component-system
+[defer]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer
+[instant navigation]: setup/navigation.md#instant-navigation
+[JavaScript module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
+[Jinja]: https://jinja.palletsprojects.com
+[Jinja Template Designer Documentation]: https://jinja.palletsprojects.com/en/stable/templates/
+[MiniJinja]: https://docs.rs/minijinja/latest/minijinja/
+[template]: authoring/frontmatter.md#page-template
+[template language provided by MiniJinja]: https://docs.rs/minijinja/latest/minijinja/syntax/index.html
+[template option]: authoring/frontmatter.md#page-template
+[theme structure]: #theme-structure

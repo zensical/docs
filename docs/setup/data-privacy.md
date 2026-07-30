@@ -11,9 +11,6 @@ Zensical offers features to comply with data privacy regulations, as it offers
 a native [cookie consent] solution to seek explicit consent from users before
 setting up [site analytics].
 
-  [cookie consent]: #cookie-consent
-  [site analytics]: analytics.md
-
 ## Configuration
 
 ### Cookie consent
@@ -35,8 +32,8 @@ following to your configuration:
     """ # (1)!
     ```
 
-    1.  You can add arbitrary HTML tags in the `description`, e.g. to link to your
-        terms of service or other parts of the site.
+    1. You can add arbitrary HTML tags in the `description`, e.g. to link to your
+       terms of service or other parts of the site.
 
 === "`mkdocs.yml`"
 
@@ -51,8 +48,8 @@ following to your configuration:
           make our documentation better.
     ```
 
-    1.  You can add arbitrary HTML tags in the `description`, e.g. to link to your
-        terms of service or other parts of the site.
+    1. You can add arbitrary HTML tags in the `description`, e.g. to link to your
+       terms of service or other parts of the site.
 
 The following properties are available:
 
@@ -73,8 +70,8 @@ The following properties are available:
     state and name of built-in cookies. Currently, the following cookies are
     built-in:
 
-    - __Google Analytics__ – `analytics` (enabled by default)
-    - __GitHub__ – `github` (enabled by default)
+    - **Google Analytics** – `analytics` (enabled by default)
+    - **GitHub** – `github` (enabled by default)
 
     Each cookie must receive a unique identifier which is used as a key in the
     `cookies` map, and can be either set to a string, or to a map defining
@@ -129,9 +126,9 @@ The following properties are available:
         custom = "Custom cookie"
         ```
 
-        1.  If you define a custom cookie as part of the `cookies` property,
-            the `analytics` cookie must be added back explicitly, or analytics
-            won't be triggered.
+        1. If you define a custom cookie as part of the `cookies` property,
+           the `analytics` cookie must be added back explicitly, or analytics
+           won't be triggered.
 
     === "`mkdocs.yml`"
 
@@ -143,9 +140,9 @@ The following properties are available:
               custom: Custom cookie
         ```
 
-        1.  If you define a custom cookie as part of the `cookies` property,
-            the `analytics` cookie must be added back explicitly, or analytics
-            won't be triggered.
+        1. If you define a custom cookie as part of the `cookies` property,
+           the `analytics` cookie must be added back explicitly, or analytics
+           won't be triggered.
 
     If Google Analytics was configured, the cookie consent will
     automatically include a setting for the user to disable it. [Custom cookies]
@@ -157,6 +154,7 @@ The following properties are available:
     allow the user to accept cookies and manage settings:
 
     === "`zensical.toml`"
+
         ``` toml
         [project.extra.consent]
         actions = [
@@ -165,10 +163,11 @@ The following properties are available:
         ]
         ```
 
-        1.  If the `manage` settings button is omitted from the `actions` property,
-            the settings are always shown.
+        1. If the `manage` settings button is omitted from the `actions` property,
+           the settings are always shown.
 
     === "`mkdocs.yml`"
+
         ``` yaml
         extra:
           consent:
@@ -177,8 +176,8 @@ The following properties are available:
               - manage # (1)!
         ```
 
-        1.  If the `manage` settings button is omitted from the `actions` property,
-            the settings are always shown.
+        1. If the `manage` settings button is omitted from the `actions` property,
+           the settings are always shown.
 
     The cookie consent form includes three types of buttons:
 
@@ -191,10 +190,6 @@ When a user first visits your site, a cookie consent form is rendered:
 ![Cookie consent enabled]
 ![Cookie consent enabled dark]
 
-  [Custom cookies]: #custom-cookies
-  [Cookie consent enabled]: ../assets/screenshots/consent.png#gh-light-mode-only
-  [Cookie consent enabled dark]: ../assets/screenshots/consent-dark.png#gh-dark-mode-only
-
 #### Change cookie settings
 
 In order to comply with GDPR, users must be able to change their cookie settings
@@ -202,6 +197,7 @@ at any time. This can be done by adding a simple link to your [copyright notice]
 in the footer below the copyright message:
 
 === "`zensical.toml`"
+
     ``` toml
     [project]
     copyright = """
@@ -211,13 +207,12 @@ in the footer below the copyright message:
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     copyright: >
       Copyright &copy; Zensical LLC –
       <a href="#__consent">Change cookie settings</a>
     ```
-
-  [copyright notice]: footer.md#copyright-notice
 
 ## Customization
 
@@ -227,13 +222,6 @@ If you've customized the [cookie consent] and added a `custom` cookie, the user
 will be prompted to accept or reject your custom cookie. Once the user accepts
 or rejects the cookie consent, or [changes the settings], the page reloads[^1].
 Use [additional JavaScript] to query the result:
-
-  [^1]:
-    We reload the page to make interop with custom cookies simpler. If Zensical
-    was to implement a callback-based approach, the author would need
-    to make sure to correctly update all scripts that use cookies. Additionally,
-    the cookie consent is only answered initially, which is why we consider this
-    to be a good trade-off of DX and UX.
 
 === "`docs/javascripts/consent.js`"
 
@@ -247,10 +235,12 @@ Use [additional JavaScript] to query the result:
     ```
 
 === "`zensical.toml`"
+
     ``` toml
     [project]
     extra_javascript = ["javascripts/consent.js"]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -258,5 +248,13 @@ Use [additional JavaScript] to query the result:
       - javascripts/consent.js
     ```
 
-  [additional JavaScript]: ../customization.md#additional-javascript
-  [changes the settings]: #change-cookie-settings
+[^1]: We reload the page to make interop with custom cookies simpler. If Zensical was to implement a callback-based approach, the author would need to make sure to correctly update all scripts that use cookies. Additionally, the cookie consent is only answered initially, which is why we consider this to be a good trade-off of DX and UX.
+
+[additional JavaScript]: ../customization.md#additional-javascript
+[changes the settings]: #change-cookie-settings
+[cookie consent]: #cookie-consent
+[Cookie consent enabled]: ../assets/screenshots/consent.png#gh-light-mode-only
+[Cookie consent enabled dark]: ../assets/screenshots/consent-dark.png#gh-dark-mode-only
+[copyright notice]: footer.md#copyright-notice
+[Custom cookies]: #custom-cookies
+[site analytics]: analytics.md

@@ -9,10 +9,6 @@ documentation on [GitHub Pages] by integrating with our fork of [mike], a tool
 that was originally designed for MkDocs which we adapted for Zensical – a bridge
 solution until we introduce [native versioning support].
 
-  [GitHub Pages]: ../publish-your-site.md#github-pages
-  [mike]: https://github.com/squidfunk/mike
-  [native versioning support]: https://zensical.org/about/roadmap/#versioning
-
 ## Installation
 
 We provide a fork of [mike] that you can install with `pip`:
@@ -66,11 +62,11 @@ you can [override the `outdated` block][overriding blocks]:
 {% endblock %}
 ```
 
-1.  Given this value for the `href` attribute, the link will always redirect to
-    the root of your site, which will then redirect to the latest version. This
-    ensures that older versions of your site do not depend on a specific alias,
-    e.g. `latest`, to allow for changing the alias later on without breaking
-    earlier versions.
+1. Given this value for the `href` attribute, the link will always redirect to
+   the root of your site, which will then redirect to the latest version. This
+   ensures that older versions of your site do not depend on a specific alias,
+   e.g. `latest`, to allow for changing the alias later on without breaking
+   earlier versions.
 
 This will render a version warning above the header.
 
@@ -85,8 +81,8 @@ to your configuration:
     default = "stable" # (1)!
     ```
 
-    1.  You can also define multiple aliases as the default version, e.g. `stable`
-        and `development`.
+    1. You can also define multiple aliases as the default version, e.g. `stable`
+       and `development`.
 
         ``` toml
         [project.extra.version]
@@ -104,8 +100,8 @@ to your configuration:
         default: stable # (1)!
     ```
 
-    1.  You can also define multiple aliases as the default version, e.g. `stable`
-        and `development`.
+    1. You can also define multiple aliases as the default version, e.g. `stable`
+       and `development`.
 
         ``` yaml
         extra:
@@ -120,10 +116,6 @@ to your configuration:
 
 Make sure one alias matches the [default version], as this is where users are
 redirected to.
-
-  [theme extension]: ../customization.md#extending-the-theme
-  [overriding blocks]: ../customization.md#overriding-blocks
-  [default version]: #setting-a-default-version
 
 ### Version alias
 
@@ -151,8 +143,6 @@ option to `true`:
 While this section outlines the basic workflow for publishing new versions,
 it's best to check out [mike's documentation] to make yourself familiar
 with its mechanics.
-
-  [mike's documentation]: https://github.com/jimporter/mike
 
 ### Publishing a new version
 
@@ -199,3 +189,11 @@ When publishing a new version, [mike] will create a redirect in the root of
 your project documentation to the version associated with the alias:
 
 _docs.example.com_ :octicons-arrow-right-24: _docs.example.com/0.1_
+
+[default version]: #setting-a-default-version
+[GitHub Pages]: ../publish-your-site.md#github-pages
+[mike]: https://github.com/squidfunk/mike
+[mike's documentation]: https://github.com/jimporter/mike
+[native versioning support]: https://zensical.org/about/roadmap/#versioning
+[overriding blocks]: ../customization.md#overriding-blocks
+[theme extension]: ../customization.md#extending-the-theme

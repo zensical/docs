@@ -12,13 +12,6 @@ content in browsers. Although both libraries offer similar functionality, they
 use different syntaxes and have different configuration options. This
 page provides information on how to integrate them with Zensical.
 
-  [MathJax]: https://www.mathjax.org/
-  [LaTeX]: https://en.wikibooks.org/wiki/LaTeX/Mathematics
-  [MathML]: https://en.wikipedia.org/wiki/MathML
-  [AsciiMath]: https://asciimath.org/
-  [KaTeX]: https://katex.org/
-
-
 ## Configuration
 
 ### MathJax
@@ -87,10 +80,8 @@ See additional configuration options:
 
 - [Arithmatex]
 
-  [Arithmatex]: ../setup/extensions/python-markdown-extensions.md#arithmatex
-  [instant navigation]: ../setup/navigation.md#instant-navigation
-
 <script id="MathJax-script" async src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+
 <script>
   window.MathJax = {
     tex: {
@@ -207,26 +198,34 @@ that $f(a)=f(b)$.
 When deciding between MathJax and KaTeX, there are several key factors to
 consider:
 
-- __Speed__: KaTeX is generally faster than MathJax. If your site requires
+- **Speed**: KaTeX is generally faster than MathJax. If your site requires
   rendering large quantities of complex equations quickly, KaTeX may be the
   better choice.
 
-- __Syntax Support__: MathJax supports a wider array of LaTeX commands and can
+- **Syntax Support**: MathJax supports a wider array of LaTeX commands and can
   process a variety of mathematical markup languages (like AsciiMath and MathML).
   If you need advanced LaTeX features, MathJax may be more suitable.
 
-- __Output Format__: Both libraries support HTML and SVG outputs. However,
+- **Output Format**: Both libraries support HTML and SVG outputs. However,
   MathJax also offers MathML output, which can be essential for accessibility,
   as it is readable by screen readers.
 
-- __Configurability__: MathJax provides a range of configuration options,
+- **Configurability**: MathJax provides a range of configuration options,
   allowing for more precise control over its behavior. If you have specific
   rendering requirements, MathJax might be a more flexible choice.
 
-- __Browser Support__: While both libraries work well in modern browsers,
+- **Browser Support**: While both libraries work well in modern browsers,
   MathJax has broader compatibility with older browsers. If your audience uses a
   variety of browsers, including older ones, MathJax might be a safer option.
 
 In summary, KaTeX shines with its speed and simplicity, whereas MathJax offers
 more features and better compatibility at the expense of speed. The choice
 between the two will largely depend on your specific needs and constraints.
+
+[Arithmatex]: ../setup/extensions/python-markdown-extensions.md#arithmatex
+[AsciiMath]: https://asciimath.org/
+[instant navigation]: ../setup/navigation.md#instant-navigation
+[KaTeX]: https://katex.org/
+[LaTeX]: https://en.wikibooks.org/wiki/LaTeX/Mathematics
+[MathJax]: https://www.mathjax.org/
+[MathML]: https://en.wikipedia.org/wiki/MathML

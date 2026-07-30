@@ -11,9 +11,6 @@ tabular data in project documentation. Furthermore, customizations like
 [sortable tables] can be achieved with a third-party library and some
 [additional JavaScript].
 
-  [sortable tables]: #sortable-tables
-  [additional JavaScript]: ../customization.md#additional-javascript
-
 ## Configuration
 
 This configuration enables Markdown table support, which should normally be
@@ -37,8 +34,6 @@ See additional configuration options:
 
 - [Tables]
 
-  [Tables]: ../setup/extensions/python-markdown.md#tables
-
 ## Usage
 
 Data tables can be used at any position in your project documentation and can
@@ -46,24 +41,22 @@ contain arbitrary Markdown, including inline code blocks, as well as [icons and
 emojis]:
 
 ``` markdown title="Data table"
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :lucide-check:       Fetch resource  |
-| `PUT`       | :lucide-check-check: Update resource |
-| `DELETE`    | :lucide-x:           Delete resource |
+| Method   | Description                          |
+| -------- | ------------------------------------ |
+| `GET`    | :lucide-check: Fetch resource        |
+| `PUT`    | :lucide-check-check: Update resource |
+| `DELETE` | :lucide-x: Delete resource           |
 ```
 
 <div class="result" markdown>
 
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :lucide-check:       Fetch resource  |
-| `PUT`       | :lucide-check-check: Update resource |
-| `DELETE`    | :lucide-x:           Delete resource |
+| Method   | Description                          |
+| -------- | ------------------------------------ |
+| `GET`    | :lucide-check: Fetch resource        |
+| `PUT`    | :lucide-check-check: Update resource |
+| `DELETE` | :lucide-x: Delete resource           |
 
 </div>
-
-  [icons and emojis]: icons-emojis.md
 
 ### Column alignment
 
@@ -74,64 +67,62 @@ and/or end of the divider.
 === "Left"
 
     ``` markdown hl_lines="2" title="Data table, columns aligned to left"
-    | Method      | Description                          |
-    | :---------- | :----------------------------------- |
-    | `GET`       | :lucide-check:       Fetch resource  |
-    | `PUT`       | :lucide-check-check: Update resource |
-    | `DELETE`    | :lucide-x:           Delete resource |
+    | Method   | Description                          |
+    | :------- | :----------------------------------- |
+    | `GET`    | :lucide-check: Fetch resource        |
+    | `PUT`    | :lucide-check-check: Update resource |
+    | `DELETE` | :lucide-x: Delete resource           |
     ```
 
     <div class="result" markdown>
-
-    | Method      | Description                          |
-    | :---------- | :----------------------------------- |
-    | `GET`       | :lucide-check:       Fetch resource  |
-    | `PUT`       | :lucide-check-check: Update resource |
-    | `DELETE`    | :lucide-x:           Delete resource |
-
+    
+    | Method   | Description                          |
+    | :------- | :----------------------------------- |
+    | `GET`    | :lucide-check: Fetch resource        |
+    | `PUT`    | :lucide-check-check: Update resource |
+    | `DELETE` | :lucide-x: Delete resource           |
+    
     </div>
 
 === "Center"
 
     ``` markdown hl_lines="2" title="Data table, columns centered"
-    | Method      | Description                          |
-    | :---------: | :----------------------------------: |
-    | `GET`       | :lucide-check:       Fetch resource  |
-    | `PUT`       | :lucide-check-check: Update resource |
-    | `DELETE`    | :lucide-x:           Delete resource |
+    |  Method  |             Description              |
+    | :------: | :----------------------------------: |
+    |  `GET`   |    :lucide-check: Fetch resource     |
+    |  `PUT`   | :lucide-check-check: Update resource |
+    | `DELETE` |      :lucide-x: Delete resource      |
     ```
 
     <div class="result" markdown>
-
-    | Method      | Description                          |
-    | :---------: | :----------------------------------: |
-    | `GET`       | :lucide-check:       Fetch resource  |
-    | `PUT`       | :lucide-check-check: Update resource |
-    | `DELETE`    | :lucide-x:           Delete resource |
-
+    
+    |  Method  |             Description              |
+    | :------: | :----------------------------------: |
+    |  `GET`   |    :lucide-check: Fetch resource     |
+    |  `PUT`   | :lucide-check-check: Update resource |
+    | `DELETE` |      :lucide-x: Delete resource      |
+    
     </div>
 
 === "Right"
 
     ``` markdown hl_lines="2" title="Data table, columns aligned to right"
-    | Method      | Description                          |
-    | ----------: | -----------------------------------: |
-    | `GET`       | :lucide-check:       Fetch resource  |
-    | `PUT`       | :lucide-check-check: Update resource |
-    | `DELETE`    | :lucide-x:           Delete resource |
+    |   Method |                          Description |
+    | -------: | -----------------------------------: |
+    |    `GET` |        :lucide-check: Fetch resource |
+    |    `PUT` | :lucide-check-check: Update resource |
+    | `DELETE` |           :lucide-x: Delete resource |
     ```
 
     <div class="result" markdown>
-
-    | Method      | Description                          |
-    | ----------: | -----------------------------------: |
-    | `GET`       | :lucide-check:       Fetch resource  |
-    | `PUT`       | :lucide-check-check: Update resource |
-    | `DELETE`    | :lucide-x:           Delete resource |
-
+    
+    |   Method |                          Description |
+    | -------: | -----------------------------------: |
+    |    `GET` |        :lucide-check: Fetch resource |
+    |    `PUT` | :lucide-check-check: Update resource |
+    | `DELETE` |           :lucide-x: Delete resource |
+    
     </div>
-
-  [regular Markdown syntax]: https://www.markdownguide.org/extended-syntax/#tables
 
 ## Customization
 
@@ -183,11 +174,11 @@ column:
 
 <div class="result" markdown>
 
-| Method      | Description                          |
-| ----------- | ------------------------------------ |
-| `GET`       | :material-check:     Fetch resource  |
-| `PUT`       | :material-check-all: Update resource |
-| `DELETE`    | :material-close:     Delete resource |
+| Method   | Description                          |
+| -------- | ------------------------------------ |
+| `GET`    | :material-check:     Fetch resource  |
+| `PUT`    | :material-check-all: Update resource |
+| `DELETE` | :material-close:     Delete resource |
 
 </div>
 
@@ -196,10 +187,16 @@ numbers, filesizes, dates and month names. See the [tablesort documentation]
 [tablesort] for more information.
 
 <script src="https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js"></script>
+
 <script>
   var tables = document.querySelectorAll("article table")
   new Tablesort(tables.item(tables.length - 1));
 </script>
 
-  [tablesort]: https://tristen.ca/tablesort/demo/
-  [instant navigation]: ../setup/navigation.md#instant-navigation
+[additional JavaScript]: ../customization.md#additional-javascript
+[icons and emojis]: icons-emojis.md
+[instant navigation]: ../setup/navigation.md#instant-navigation
+[regular Markdown syntax]: https://www.markdownguide.org/extended-syntax/#tables
+[sortable tables]: #sortable-tables
+[Tables]: ../setup/extensions/python-markdown.md#tables
+[tablesort]: https://tristen.ca/tablesort/demo/

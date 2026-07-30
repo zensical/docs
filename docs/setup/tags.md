@@ -11,9 +11,6 @@ Zensical adds first-class support for categorizing pages with tags, which allows
 users to discover related pages via the [search]. If your documentation is
 large, tags can help to discover relevant information faster.
 
-  [search]: search.md
-  [feature parity]: https://zensical.org/compatibility/features
-
 ## Configuration
 
 The built-in tags functionality lets you categorize any page with tags
@@ -21,11 +18,10 @@ as part of the [metadata] of the page. Tags are supported by default, no
 configuration needed.
 
 !!! info "Tag listings are currently not supported"
+
     As we are working towards [feature parity] with Material for MkDocs, we
     will be adding features such as tag indexes that are implemented as part of
     the tags plugin in Material for MkDocs.
-
-  [metadata]: ../authoring/frontmatter.md
 
 ### Tag icons and identifiers
 
@@ -35,7 +31,7 @@ by adding the following to your configuration:
 
 === "`zensical.toml`"
 
-    ```toml
+    ``` toml
     [project.extra.tags]
     <tag> = "<identifier>"
     ```
@@ -77,7 +73,7 @@ setting:
 
 === "`zensical.toml`"
 
-    ```toml
+    ``` toml
     [project.theme.icon.tag]
     default = "<icon>"
     <identifier> = "<icon>"
@@ -96,7 +92,8 @@ setting:
 ??? example "Expand to see an example"
 
     === "`zensical.toml`"
-        ```toml
+
+        ``` toml
         [project.theme.icon.tag]
         default = "lucide/hash"
         html = "fontawesome/brands/html5"
@@ -110,6 +107,7 @@ setting:
         ```
 
     === "`mkdocs.yml`"
+
         ``` yaml
         theme:
           icon:
@@ -124,8 +122,6 @@ setting:
             JavaScript: js
             CSS: css
         ```
-
-  [custom icon]: logo-and-icons.md#additional-icons
 
 ## Usage
 
@@ -165,3 +161,8 @@ hide:
 # Page title
 ...
 ```
+
+[custom icon]: logo-and-icons.md#additional-icons
+[feature parity]: https://zensical.org/compatibility/features
+[metadata]: ../authoring/frontmatter.md
+[search]: search.md

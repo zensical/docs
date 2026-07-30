@@ -8,11 +8,9 @@ tags:
 
 To build your documentation site, run `zensical build`.
 
-[site_dir]: ../setup/basics.md#site_dir
-
 ## Usage
 
-```sh
+``` sh
 zensical build [OPTIONS]
 ```
 
@@ -31,4 +29,5 @@ command. It supports the following options:
 | --strict      | -s    | Enable [strict mode].           |
 | --help        |       | Show a help message and exit.   |
 
+[site_dir]: ../setup/basics.md#site_dir
 [strict mode]: ../setup/validation.md#strict-mode

@@ -9,13 +9,10 @@ of what makes it so attractive for technical writing. Following is a list of all
 supported extensions, linking to the relevant sections of the authoring guide for
 which features they need to be enabled.
 
-  [Python Markdown]: https://python-markdown.github.io/
-
 !!! tip "Defaults"
+
     Zensical has [sensible defaults] for the Markdown extensions settings. Make
     sure to check these out before you begin to configure things manually.
-
-[sensible defaults]: about.md#default-configuration
 
 ## Supported extensions
 
@@ -44,10 +41,6 @@ usage:
 - [Adding abbreviations]
 - [Adding a glossary]
 
-  [Abbreviations]: https://python-markdown.github.io/extensions/abbreviations/
-  [Adding abbreviations]: ../../authoring/tooltips.md#add-abbreviations
-  [Adding a glossary]: ../../authoring/tooltips.md#add-a-glossary
-
 ### Admonition
 
 The [Admonition] extension adds support for admonitions, more commonly known as
@@ -74,12 +67,6 @@ usage:
 - [Changing the title]
 - [Removing the title]
 - [Supported types]
-
-  [Admonition]: https://python-markdown.github.io/extensions/admonition/
-  [Adding admonitions]: ../../authoring/admonitions.md#usage
-  [Changing the title]: ../../authoring/admonitions.md#change-the-title
-  [Removing the title]: ../../authoring/admonitions.md#remove-the-title
-  [Supported types]: ../../authoring/admonitions.md#supported-types
 
 ### Attribute Lists
 
@@ -111,16 +98,6 @@ usage:
 - [Image alignment]
 - [Image lazy-loading]
 
-  [Attribute Lists]: https://python-markdown.github.io/extensions/attr_list/
-  [Attribute Lists limitations]: https://python-markdown.github.io/extensions/attr_list/#limitations
-  [Using grids]: ../../authoring/grids.md#usage
-  [Adding buttons]: ../../authoring/buttons.md#add-a-button
-  [Adding tooltips]: ../../authoring/tooltips.md#add-a-tooltip
-  [Using icons with colors]: ../../authoring/icons-emojis.md#with-colors
-  [Using icons with animations]: ../../authoring/icons-emojis.md#with-animations
-  [Image alignment]: ../../authoring/images.md#image-alignment
-  [Image lazy-loading]: ../../authoring/images.md#image-lazy-loading
-
 ### Definition Lists
 
 The [Definition Lists] extension adds the ability to add definition lists (more
@@ -145,10 +122,6 @@ usage:
 
 - [Using definition lists]
 
-  [Definition Lists]: https://python-markdown.github.io/extensions/definition_lists/
-  [description lists]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
-  [Using definition lists]: ../../authoring/lists.md#use-definition-lists
-
 ### Footnotes
 
 The [Footnotes] extension allows to define inline footnotes, which are then
@@ -172,10 +145,6 @@ usage:
 
 - [Adding footnote references]
 - [Adding footnote content]
-
-  [Footnotes]: https://python-markdown.github.io/extensions/footnotes/
-  [Adding footnote references]: ../../authoring/footnotes.md#adding-footnote-references
-  [Adding footnote content]: ../../authoring/footnotes.md#add-footnote-content
 
 ### Markdown in HTML
 
@@ -207,9 +176,6 @@ can be used:
 
 - [Using grids]
 - [Image captions]
-
-  [Markdown in HTML]: https://python-markdown.github.io/extensions/md_in_html/
-  [Image captions]: ../../authoring/images.md#image-captions
 
 ### Table of Contents
 
@@ -281,6 +247,7 @@ or string like so:
     ```
 
 #### `toc.permalink_title`
+
 This option sets the title of the anchor link which is shown on hover and
 read by screen readers.  For accessibility reasons, it might be beneficial to
 change it to a more discernable name, stating that the anchor links to the
@@ -302,6 +269,7 @@ section itself:
     ```
 
 #### `toc.slugify`
+
 This option allows for customization of the slug function. For some
 languages, the default may not produce good and readable identifiers –
 consider using another slug function like for example [those from
@@ -326,6 +294,7 @@ Python Markdown Extensions][Slugs]:
     ```
 
 #### `toc.toc_depth`
+
 Define the range of levels to be included in the table of contents (default:
 6). This may be useful for project documentation with deeply structured
 headings to decrease the length of the table of contents:
@@ -363,13 +332,10 @@ To remove the table of contents altogether:
     ```
 
 !!! warn "Other options"
+
     The other configuration options of this extension are not officially
     supported by Zensical, which is why they may yield unexpected results.
     Use them at your own risk.
-
-  [Table of Contents]: https://python-markdown.github.io/extensions/toc/
-  [site language]: ../language.md#site-language
-  [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 
 ### Tables
 
@@ -395,7 +361,36 @@ usage:
 - [Using data tables]
 - [Column alignment]
 
-  [Tables]: https://python-markdown.github.io/extensions/tables/
-  [Using data tables]: ../../authoring/data-tables.md#usage
-  [Column alignment]: ../../authoring/data-tables.md#column-alignment
-
+[Abbreviations]: https://python-markdown.github.io/extensions/abbreviations/
+[Adding a glossary]: ../../authoring/tooltips.md#add-a-glossary
+[Adding abbreviations]: ../../authoring/tooltips.md#add-abbreviations
+[Adding admonitions]: ../../authoring/admonitions.md#usage
+[Adding buttons]: ../../authoring/buttons.md#add-a-button
+[Adding footnote content]: ../../authoring/footnotes.md#add-footnote-content
+[Adding footnote references]: ../../authoring/footnotes.md#adding-footnote-references
+[Adding tooltips]: ../../authoring/tooltips.md#add-a-tooltip
+[Admonition]: https://python-markdown.github.io/extensions/admonition/
+[Attribute Lists]: https://python-markdown.github.io/extensions/attr_list/
+[Attribute Lists limitations]: https://python-markdown.github.io/extensions/attr_list/#limitations
+[Changing the title]: ../../authoring/admonitions.md#change-the-title
+[Column alignment]: ../../authoring/data-tables.md#column-alignment
+[Definition Lists]: https://python-markdown.github.io/extensions/definition_lists/
+[description lists]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
+[Footnotes]: https://python-markdown.github.io/extensions/footnotes/
+[Image alignment]: ../../authoring/images.md#image-alignment
+[Image captions]: ../../authoring/images.md#image-captions
+[Image lazy-loading]: ../../authoring/images.md#image-lazy-loading
+[Markdown in HTML]: https://python-markdown.github.io/extensions/md_in_html/
+[Python Markdown]: https://python-markdown.github.io/
+[Removing the title]: ../../authoring/admonitions.md#remove-the-title
+[sensible defaults]: about.md#default-configuration
+[site language]: ../language.md#site-language
+[Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
+[Supported types]: ../../authoring/admonitions.md#supported-types
+[Table of Contents]: https://python-markdown.github.io/extensions/toc/
+[Tables]: https://python-markdown.github.io/extensions/tables/
+[Using data tables]: ../../authoring/data-tables.md#usage
+[Using definition lists]: ../../authoring/lists.md#use-definition-lists
+[Using grids]: ../../authoring/grids.md#usage
+[Using icons with animations]: ../../authoring/icons-emojis.md#with-animations
+[Using icons with colors]: ../../authoring/icons-emojis.md#with-colors

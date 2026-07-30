@@ -13,14 +13,7 @@ documentation. Zensical provides several options to configure the behavior of
 navigational elements, including [tabs] and [sections], as well as features
 such as [instant navigation] and [instant previews].
 
-  [tabs]: #navigation-tabs
-  [sections]: #navigation-sections
-  [instant navigation]: #instant-navigation
-  [instant previews]: #instant-previews
-
 Additional navigation can be configured [in the footer].
-
-[in the footer]: footer.md#navigation
 
 ## Configuration
 
@@ -35,8 +28,6 @@ can create an explicit definition of the navigation structure in your
 configuration file. In the simplest case, you simply list the paths to your
 content files, leaving it to Zensical to extract a title for each of them from
 the content itself. The paths need to be relative to the [`docs_dir`][docs_dir].
-
-  [docs_dir]: basics.md#docs_dir
 
 === "`zensical.toml`"
 
@@ -84,28 +75,28 @@ your users to the information they require.
 
 === "`zensical.toml`"
 
-      ``` toml
-      [project]
-      nav = [
-        {"Home" = "index.md"},
-        {"About" = [
-           "about/index.md",
-           "about/vision.md",
-           "about/team.md"
-        ]}
-      ]
-      ```
+    ``` toml
+    [project]
+    nav = [
+      {"Home" = "index.md"},
+      {"About" = [
+         "about/index.md",
+         "about/vision.md",
+         "about/team.md"
+      ]}
+    ]
+    ```
 
 === "`mkdocs.yml`"
 
-      ``` yaml
-      nav:
-        - Home: index.md
-        - About:
-          - about/index.md
-          - about/vision.md
-          - about/team.md
-      ```
+    ``` yaml
+    nav:
+      - Home: index.md
+      - About:
+        - about/index.md
+        - about/vision.md
+        - about/team.md
+    ```
 
 #### External links
 
@@ -114,19 +105,19 @@ string that cannot be resolved to a Markdown page is treated as a URL.
 
 === "`zensical.toml`"
 
-      ``` toml
-      [project]
-      nav = [
-        {"GitHub Repo" = "https://github.com/zensical/docs"}
-      ]
-      ```
+    ``` toml
+    [project]
+    nav = [
+      {"GitHub Repo" = "https://github.com/zensical/docs"}
+    ]
+    ```
 
 === "`mkdocs.yml`"
 
-      ``` yaml
-      nav:
-        - GitHub Repo: https://github.com/zensical/docs
-      ```
+    ``` yaml
+    nav:
+      - GitHub Repo: https://github.com/zensical/docs
+    ```
 
 The "GitHub Repo" navigation entry takes the user to the repository for the
 Zensical Documentation.
@@ -145,6 +136,7 @@ the following lines to your configuration:
         "navigation.instant"
     ]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -154,8 +146,8 @@ the following lines to your configuration:
     ```
 
 The resulting page is parsed and injected and all event handlers and components
-are rebound automatically, i.e., __Zensical now behaves like a Single
-Page Application__. Also, the search index is persisted through navigation,
+are rebound automatically, i.e., **Zensical now behaves like a Single
+Page Application**. Also, the search index is persisted through navigation,
 which is especially useful for large documentation sites.
 
 !!! info "The [`site_url`][site_url] setting must be set"
@@ -163,9 +155,6 @@ which is especially useful for large documentation sites.
     Note that you must set [`site_url`][site_url] when using instant
     navigation, as instant navigation relies on the generated `sitemap.xml`
     which will be empty if this setting is omitted.
-
-  [XHR]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest
-  [site_url]: basics.md#site_url
 
 #### Instant prefetching
 
@@ -183,6 +172,7 @@ immediately upon navigation. Enable it with:
         "navigation.instant.prefetch"
     ]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -200,6 +190,7 @@ the top of the page and will be hidden once the page has fully loaded. You can
 enable it in your configuration with:
 
 === "`zensical.toml`"
+
     ``` toml
     [project.theme]
     features = [
@@ -209,6 +200,7 @@ enable it in your configuration with:
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     theme:
       features:
@@ -282,6 +274,7 @@ extensions in the setup guide.
 ??? example "Full configuration example"
 
     === "`zensical.toml`"
+
         ``` toml
         [[project.markdown_extensions.zensical.extensions.preview.configurations]]
         sources.include = [...]
@@ -291,6 +284,7 @@ extensions in the setup guide.
         ```
 
     === "`mkdocs.yml`"
+
         ``` yaml
         markdown_extensions:
           - material.extensions.preview:
@@ -319,6 +313,7 @@ extensions in the setup guide.
 
         2.  Targets specify the pages _to_ which instant previews should be enabled.
             This is the recommended way to enable instant previews.
+
 ---
 
 !!! info "The [`site_url`][site_url] setting must be set"
@@ -383,11 +378,6 @@ following lines to your configuration:
     ![Navigation tabs disabled]
     ![Navigation tabs disabled dark]
 
-  [Navigation tabs enabled]: ../assets/screenshots/navigation-tabs.png#gh-light-mode-only
-  [Navigation tabs enabled dark]: ../assets/screenshots/navigation-tabs-dark.png#gh-dark-mode-only
-  [Navigation tabs disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
-  [Navigation tabs disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
-
 #### Sticky navigation tabs
 
 When sticky tabs are enabled, navigation tabs will lock below the header and
@@ -446,11 +436,6 @@ following lines to your configuration:
     ![Navigation sections disabled]
     ![Navigation sections disabled dark]
 
-  [Navigation sections enabled]: ../assets/screenshots/navigation-sections.png#gh-light-mode-only
-  [Navigation sections enabled dark]: ../assets/screenshots/navigation-sections-dark.png#gh-dark-mode-only
-  [Navigation sections disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
-  [Navigation sections disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
-
 Both feature flags, [`navigation.tabs`][tabs] and
 [`navigation.sections`][sections], can be combined with each other. If both
 feature flags are enabled, sections are rendered for level 2 navigation items.
@@ -469,6 +454,7 @@ Add the following lines to your configuration:
         "navigation.expand"
     ]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -486,11 +472,6 @@ Add the following lines to your configuration:
 
     ![Navigation expansion disabled]
     ![Navigation expansion disabled dark]
-
-  [Navigation expansion enabled]: ../assets/screenshots/navigation-expand.png#gh-light-mode-only
-  [Navigation expansion enabled dark]: ../assets/screenshots/navigation-expand-dark.png#gh-dark-mode-only
-  [Navigation expansion disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
-  [Navigation expansion disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
 
 ### Navigation path <small>Breadcrumbs</small> { #navigation-path data-toc-label="Navigation path" }
 
@@ -526,15 +507,10 @@ your configuration:
     ![Navigation path disabled]
     ![Navigation path disabled dark]
 
-  [Navigation path enabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
-  [Navigation path enabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
-  [Navigation path disabled]: ../assets/screenshots/navigation-path.png#gh-light-mode-only
-  [Navigation path disabled dark]: ../assets/screenshots/navigation-path-dark.png#gh-dark-mode-only
-
 ### Navigation pruning
 
 When pruning is enabled, only the visible navigation items are included in the
-rendered HTML, __reducing the size of the built site by 33% or more__. Add the
+rendered HTML, **reducing the size of the built site by 33% or more**. Add the
 following lines to your configuration:
 
 === "`zensical.toml`"
@@ -546,9 +522,9 @@ following lines to your configuration:
     ]
     ```
 
-    1.  This feature flag is not compatible with
-        [`navigation.expand`][navigation.expand], as navigation expansion requires
-        the complete navigation structure.
+    1. This feature flag is not compatible with
+       [`navigation.expand`][navigation.expand], as navigation expansion requires
+       the complete navigation structure.
 
 === "`mkdocs.yml`"
 
@@ -558,16 +534,14 @@ following lines to your configuration:
         - navigation.prune # (1)!
     ```
 
-    1.  This feature flag is not compatible with
-        [`navigation.expand`][navigation.expand], as navigation expansion requires
-        the complete navigation structure.
+    1. This feature flag is not compatible with
+       [`navigation.expand`][navigation.expand], as navigation expansion requires
+       the complete navigation structure.
 
 This feature flag is especially useful for documentation sites with thousands of
 pages, as the navigation makes up a significant fraction of the HTML. Navigation
 pruning will replace all expandable sections with links to the first page in
 that section (or the section index page).
-
-  [navigation.expand]: #navigation-expansion
 
 ### Section index pages
 
@@ -584,8 +558,8 @@ following lines to your configuration:
     ]
     ```
 
-    1.  This feature flag is not compatible with [`toc.integrate`][toc.integrate],
-        as sections cannot host the table of contents due to missing space.
+    1. This feature flag is not compatible with [`toc.integrate`][toc.integrate],
+       as sections cannot host the table of contents due to missing space.
 
 === "`mkdocs.yml`"
 
@@ -595,8 +569,8 @@ following lines to your configuration:
         - navigation.indexes # (1)!
     ```
 
-    1.  This feature flag is not compatible with [`toc.integrate`][toc.integrate],
-        as sections cannot host the table of contents due to missing space.
+    1. This feature flag is not compatible with [`toc.integrate`][toc.integrate],
+       as sections cannot host the table of contents due to missing space.
 
 In order to link a page to a section, create a new document with the name
 `index.md` in the respective folder, and add it to the beginning of your
@@ -617,7 +591,7 @@ navigation section:
     ]
     ```
 
-    1.  `README.md` is also considered an index page.
+    1. `README.md` is also considered an index page.
 
 === "`mkdocs.yml`"
 
@@ -630,9 +604,7 @@ navigation section:
         - Page n: section/page-n.md
     ```
 
-    1.  `README.md` is also considered an index page.
-
-  [toc.integrate]: #navigation-integration
+    1. `README.md` is also considered an index page.
 
 ### Table of contents
 
@@ -650,6 +622,7 @@ following lines to your configuration:
         "toc.follow"
     ]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -673,9 +646,9 @@ to your configuration:
     ]
     ```
 
-    1.  This feature flag is not compatible with
-        [`navigation.indexes`][navigation.indexes], as sections cannot host the
-        table of contents due to missing space.
+    1. This feature flag is not compatible with
+       [`navigation.indexes`][navigation.indexes], as sections cannot host the
+       table of contents due to missing space.
 
 === "`mkdocs.yml`"
 
@@ -685,10 +658,9 @@ to your configuration:
         - toc.integrate # (1)!
     ```
 
-    1.  This feature flag is not compatible with
-        [`navigation.indexes`][navigation.indexes], as sections cannot host the
-        table of contents due to missing space.
-
+    1. This feature flag is not compatible with
+       [`navigation.indexes`][navigation.indexes], as sections cannot host the
+       table of contents due to missing space.
 
 ===! "With navigation integration"
 
@@ -699,13 +671,6 @@ to your configuration:
 
     ![Navigation integration disabled]
     ![Navigation integration disabled dark]
-
-  [table of contents]: extensions/python-markdown.md#table-of-contents
-  [Navigation integration enabled]: ../assets/screenshots/toc-integrate.png#gh-light-mode-only
-  [Navigation integration enabled dark]: ../assets/screenshots/toc-integrate-dark.png#gh-dark-mode-only
-  [Navigation integration disabled]: ../assets/screenshots/navigation-tabs.png#gh-light-mode-only
-  [Navigation integration disabled dark]: ../assets/screenshots/navigation-tabs-dark.png#gh-dark-mode-only
-  [navigation.indexes]: #section-index-pages
 
 ### Back-to-top button
 
@@ -765,8 +730,6 @@ hide:
 ...
 ```
 
-  [navigation path]: #navigation-path
-
 ## Customization
 
 ### Content area width
@@ -788,8 +751,8 @@ of CSS:
     }
     ```
 
-    1.  If you want the content area to always stretch to the available screen
-        space, reset `max-width` with the following CSS:
+    1. If you want the content area to always stretch to the available screen
+       space, reset `max-width` with the following CSS:
 
         ``` css
         .md-grid {
@@ -811,4 +774,37 @@ of CSS:
       - stylesheets/extra.css
     ```
 
-  [additional style sheet]: ../customization.md#additional-css
+[additional style sheet]: ../customization.md#additional-css
+[docs_dir]: basics.md#docs_dir
+[in the footer]: footer.md#navigation
+[instant navigation]: #instant-navigation
+[instant previews]: #instant-previews
+[Navigation expansion disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
+[Navigation expansion disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
+[Navigation expansion enabled]: ../assets/screenshots/navigation-expand.png#gh-light-mode-only
+[Navigation expansion enabled dark]: ../assets/screenshots/navigation-expand-dark.png#gh-dark-mode-only
+[Navigation integration disabled]: ../assets/screenshots/navigation-tabs.png#gh-light-mode-only
+[Navigation integration disabled dark]: ../assets/screenshots/navigation-tabs-dark.png#gh-dark-mode-only
+[Navigation integration enabled]: ../assets/screenshots/toc-integrate.png#gh-light-mode-only
+[Navigation integration enabled dark]: ../assets/screenshots/toc-integrate-dark.png#gh-dark-mode-only
+[navigation path]: #navigation-path
+[Navigation path disabled]: ../assets/screenshots/navigation-path.png#gh-light-mode-only
+[Navigation path disabled dark]: ../assets/screenshots/navigation-path-dark.png#gh-dark-mode-only
+[Navigation path enabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
+[Navigation path enabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
+[Navigation sections disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
+[Navigation sections disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
+[Navigation sections enabled]: ../assets/screenshots/navigation-sections.png#gh-light-mode-only
+[Navigation sections enabled dark]: ../assets/screenshots/navigation-sections-dark.png#gh-dark-mode-only
+[Navigation tabs disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
+[Navigation tabs disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
+[Navigation tabs enabled]: ../assets/screenshots/navigation-tabs.png#gh-light-mode-only
+[Navigation tabs enabled dark]: ../assets/screenshots/navigation-tabs-dark.png#gh-dark-mode-only
+[navigation.expand]: #navigation-expansion
+[navigation.indexes]: #section-index-pages
+[sections]: #navigation-sections
+[site_url]: basics.md#site_url
+[table of contents]: extensions/python-markdown.md#table-of-contents
+[tabs]: #navigation-tabs
+[toc.integrate]: #navigation-integration
+[XHR]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest

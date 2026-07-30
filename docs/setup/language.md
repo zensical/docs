@@ -38,8 +38,6 @@ The following languages are supported:
 
 --8<-- "includes/languages.html"
 
-  [single language per document]: https://www.w3.org/International/questions/qa-html-language-declarations.en#attributes
-
 ### Site language selector
 
 If your documentation is available in multiple languages, a language selector
@@ -78,21 +76,17 @@ The following properties are required for each alternate language:
 
 `alternate.link`
 
-:    This property must be set to an absolute link, which might also point to
-     another domain or subdomain not necessarily generated with Zensical.
-     If it includes a domain part, it's used as defined. Otherwise the domain
-     part of the [`site_url`][site_url] as set in your configuration is
-     prepended to the link.
-
+:   This property must be set to an absolute link, which might also point to
+    another domain or subdomain not necessarily generated with Zensical.
+    If it includes a domain part, it's used as defined. Otherwise the domain
+    part of the [`site_url`][site_url] as set in your configuration is
+    prepended to the link.
 
 `alternate.lang`
 
 :   This property must contain an [ISO 639-1 language code] and is used for
     the `hreflang` attribute of the link, improving discoverability via search
     engines.
-
-  [site_url]: https://www.mkdocs.org/user-guide/configuration/#site_url
-  [ISO 639-1 language code]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
 
 ### Directionality
 
@@ -101,12 +95,14 @@ supports `rtl` (right-to-left) directionality which is deduced from the
 selected language, but can also be set with:
 
 === "`zensical.toml`"
+
     ``` toml
     [project.theme]
     direction = "ltr"
     ```
 
 === "`mkdocs.yml`"
+
     ``` yaml
     theme:
       direction: ltr
@@ -159,23 +155,29 @@ adjust the ones you want to override:
     }}{% endmacro %}
     ```
 
-    1.  Note that `en` must always be used as a fallback language, as it's the
-        default theme language.
+    1. Note that `en` must always be used as a fallback language, as it's the
+       default theme language.
 
-    2.  Check the [list of available languages], pick the translation you want
-        to override for your language and add them here.
+    2. Check the [list of available languages], pick the translation you want
+       to override for your language and add them here.
 
 === "`zensical.toml`"
+
     ``` toml
     [project.theme]
     language = "custom"
     ```
+
 === "`mkdocs.yml`"
+
     ``` yaml
     theme:
       language: custom
     ```
 
-  [theme extension]: ../customization.md#extending-the-theme
-  [translations]: https://github.com/zensical/ui/tree/master/dist/partials/languages
-  [list of available languages]: https://github.com/zensical/ui/tree/master/dist/partials/languages
+[ISO 639-1 language code]: https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes
+[list of available languages]: https://github.com/zensical/ui/tree/master/dist/partials/languages
+[single language per document]: https://www.w3.org/International/questions/qa-html-language-declarations.en#attributes
+[site_url]: https://www.mkdocs.org/user-guide/configuration/#site_url
+[theme extension]: ../customization.md#extending-the-theme
+[translations]: https://github.com/zensical/ui/tree/master/dist/partials/languages

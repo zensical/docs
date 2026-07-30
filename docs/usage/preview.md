@@ -19,7 +19,7 @@ remote server.
 
 ## Usage
 
-```sh
+``` sh
 zensical serve [OPTIONS]
 ```
 
@@ -27,15 +27,15 @@ This starts a local web server that serves your documentation site on
 [localhost:8000][live preview]. As you make changes to source files, the browser
 will automatically reload the page you're on.
 
-  [live preview]: http://localhost:8000
-
 ## Options
 
 The `serve` command accepts the following options:
 
-| Option                     | Short | Description                                            |
+| Option                     | Short | Description                                   |
 | -------------------------- | ----- | --------------------------------------------- |
 | --config-file              | -f    | Path to the config file to use.               |
 | --open                     | -o    | Open preview in default browser               |
 | --dev-addr &lt;IP:PORT&gt; | -a    | IP address and port (default: localhost:8000) |
 | --help                     |       | Show a help message and exit.                 |
+
+[live preview]: http://localhost:8000

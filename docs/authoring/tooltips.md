@@ -41,10 +41,6 @@ See additional configuration options:
 - [Attribute Lists]
 - [Snippets]
 
-  [Abbreviations]: ../setup/extensions/python-markdown.md#abbreviations
-  [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
-  [Snippets]: ../setup/extensions/python-markdown-extensions.md#snippets
-
 ### Improved tooltips
 
 When improved tooltips are enabled, Zensical replaces the browser's rendering
@@ -70,9 +66,9 @@ lines to your configuration::
 
 Now, tooltips will be rendered for the following elements:
 
-- __Content__ – elements with a `title`, permalinks and code copy button
-- __Header__ – home button, header title, color palette switch and repository link
-- __Navigation__ – links that are shortened with ellipsis, i.e. `...`
+- **Content** – elements with a `title`, permalinks and code copy button
+- **Header** – home button, header title, color palette switch and repository link
+- **Navigation** – links that are shortened with ellipsis, i.e. `...`
 
 ## Usage
 
@@ -97,7 +93,7 @@ Tooltips can also be added to link references:
 ``` markdown title="Link with tooltip, reference syntax"
 [Hover me][example]
 
-  [example]: https://example.com "I'm a tooltip!"
+[example]: https://example.com "I'm a tooltip!"
 ```
 
 <div class="result" markdown>
@@ -118,9 +114,6 @@ extension:
 :material-information-outline:{ title="Important information" }
 
 </div>
-
-  [Markdown syntax]: https://daringfireball.net/projects/markdown/syntax#link
-  [improved tooltips]: #improved-tooltips
 
 ### Add abbreviations
 
@@ -144,26 +137,18 @@ The HTML specification is maintained by the W3C.
 
 </div>
 
-  [footnotes]: footnotes.md
-
 ### Add a glossary
 
 The [Snippets] extension can be used to implement a simple glossary by moving
 all abbreviations in a dedicated file[^1], and [auto-append] this file to all
 pages with the following configuration:
 
-  [^1]:
-    It's highly recommended to put the Markdown file containing the
-    abbreviations outside of the `docs` folder (here, a folder with the name
-    `includes` is used), as Zensical might otherwise complain about a
-    file that is not referenced.
-
 === "`includes/abbreviations.md`"
 
-    ```` markdown
+    ``` markdown
     *[HTML]: Hyper Text Markup Language
     *[W3C]: World Wide Web Consortium
-    ````
+    ```
 
 === "`zensical.toml`"
 
@@ -174,12 +159,19 @@ pages with the following configuration:
 
 === "`mkdocs.yml`"
 
-    ```` yaml
+    ``` yaml
     markdown_extensions:
       - pymdownx.snippets:
           auto_append:
             - includes/abbreviations.md
-    ````
+    ```
 
-  [auto-append]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#auto-append-snippets
+[^1]: It's highly recommended to put the Markdown file containing the abbreviations outside of the `docs` folder (here, a folder with the name `includes` is used), as Zensical might otherwise complain about a file that is not referenced.
 
+[Abbreviations]: ../setup/extensions/python-markdown.md#abbreviations
+[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[auto-append]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#auto-append-snippets
+[footnotes]: footnotes.md
+[improved tooltips]: #improved-tooltips
+[Markdown syntax]: https://daringfireball.net/projects/markdown/syntax#link
+[Snippets]: ../setup/extensions/python-markdown-extensions.md#snippets

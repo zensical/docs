@@ -11,8 +11,6 @@ customizations, and much more. If you have found an inconsistency or see room
 for improvement, please follow this guide to submit an issue on our [issue
 tracker] for the documentation repository.
 
-  [issue tracker]: https://github.com/zensical/docs/issues
-
 ## Issue template
 
 Reporting a documentation issue is usually less involved than reporting a bug,
@@ -25,13 +23,6 @@ part of the issue:
 - [Related links]
 - [Proposed change] <small>optional</small>
 - [Checklist]
-
-  [reproduction]: ../guides/create-a-reproduction.md
-  [Title]: #title
-  [Description]: #description
-  [Related links]: #related-links
-  [Proposed change]: #proposed-change
-  [Checklist]: #checklist
 
 ### Title
 
@@ -46,15 +37,15 @@ encountered in the documentation or the documentation section that needs
 improvement. Explain why you think the documentation should be adjusted and
 describe the severity of the issue:
 
--   __Keep it short__ – if the inconsistency or issue can be precisely explained
-    in one or two sentences, perfect. Maintainers and future users will be
-    grateful for having to read less.
+- **Keep it short** – if the inconsistency or issue can be precisely explained
+  in one or two sentences, perfect. Maintainers and future users will be
+  grateful for having to read less.
 
--   __One issue at a time__ – if you encounter several unrelated inconsistencies,
-    please create separate issues for them. Don't report them in the same issue
-    – it makes attribution difficult.
+- **One issue at a time** – if you encounter several unrelated inconsistencies,
+  please create separate issues for them. Don't report them in the same issue
+  – it makes attribution difficult.
 
-> __Why we need this__: describing the problem clearly and concisely is a
+> **Why we need this**: describing the problem clearly and concisely is a
 > prerequisite for improving our documentation – we need to understand what's
 > wrong to fix it.
 
@@ -65,10 +56,9 @@ share the link to this specific documentation section and other related
 sections.  Make sure to use anchor links (permanent links) where possible, as it
 simplifies discovery.
 
-> __Why we need this__: providing the links to the documentation helps us
+> **Why we need this**: providing the links to the documentation helps us
 > understand which sections of our documentation need to be adjusted, extended,
 > or overhauled.
-
 
 ### Proposed change <small>optional</small> { #proposed-change }
 
@@ -77,7 +67,7 @@ documentation sections, you can help us, maintainers, and the community by
 proposing an improvement. You can sketch out rough ideas or write a concrete
 proposal. This field is optional but invaluable.
 
-> __Why we need this__: an improvement proposal can be beneficial for other
+> **Why we need this**: an improvement proposal can be beneficial for other
 > users who encounter the same issue, as they offer solutions before we
 > maintainers can update the documentation.
 
@@ -88,4 +78,12 @@ documentation – you are almost done. The checklist ensures that you have read
 this guide and have done your best to provide us with every piece of information
 we need to improve it.
 
-__We'll take it from here.__
+**We'll take it from here.**
+
+[Checklist]: #checklist
+[Description]: #description
+[issue tracker]: https://github.com/zensical/docs/issues
+[Proposed change]: #proposed-change
+[Related links]: #related-links
+[reproduction]: ../guides/create-a-reproduction.md
+[Title]: #title

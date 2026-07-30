@@ -11,16 +11,14 @@ Zensical allows to change the color palette of your documentation site through
 configuration to fit your brand's identity. If you want to go beyond that, you
 can also define [custom colors].
 
-  [custom colors]: #custom-colors
-
 ## Configuration
 
 ### Color palette
 
 #### Color scheme
 
-Zensical supports two color schemes: a __light mode__, which is called `default`,
-and a __dark mode__, which is called `slate`. The color scheme can be set via
+Zensical supports two color schemes: a **light mode**, which is called `default`,
+and a **dark mode**, which is called `slate`. The color scheme can be set via
 configuration:
 
 === "`zensical.toml`"
@@ -192,7 +190,7 @@ following lines to allow users to switch between light and dark mode:
     toggle.name = "Switch to light mode"
     ```
 
-    1.  Note that the `theme.palette` setting is defined as a list.
+    1. Note that the `theme.palette` setting is defined as a list.
 
 === "`mkdocs.yml`"
 
@@ -213,11 +211,9 @@ following lines to allow users to switch between light and dark mode:
             name: Switch to light mode
     ```
 
-    1.  Note that the `theme.palette` setting is now defined as a list.
+    1. Note that the `theme.palette` setting is now defined as a list.
 
 You can use any icon from an [available icon set] for the toggle icon.
-
-  [available icon set]: ../authoring/icons-emojis.md#included-icon-sets
 
 This configuration will render a color palette toggle next to the search bar.
 Note that you can also define separate settings for [`primary`][palette.primary]
@@ -227,21 +223,17 @@ The following properties must be set for each toggle:
 
 `icon`
 
-:    This property must point to a valid icon path referencing any icon
-bundled with the theme, or the build will not succeed. Some popular combinations
-in addition to the ones above:
+:   This property must point to a valid icon path referencing any icon
+    bundled with the theme, or the build will not succeed. Some popular combinations
+    in addition to the ones above:
 
-    * :lucide-sun: + :lucide-moon: – `lucide/sun` + `lucide/moon`
-    * :lucide-toggle-left: + :lucide-toggle-right: – `lucide/toggle-left` + `lucide/toggle-right`
+    - :lucide-sun: + :lucide-moon: – `lucide/sun` + `lucide/moon`
+    - :lucide-toggle-left: + :lucide-toggle-right: – `lucide/toggle-left` + `lucide/toggle-right`
 
 `name`
+
 :   This property is used as the toggle's `title` attribute and should be set to
     a discernable name to improve accessibility. It's rendered as a [tooltip].
-
-  [palette.scheme]: #color-scheme
-  [palette.primary]: #primary-color
-  [palette.accent]: #accent-color
-  [tooltip]: ../authoring/tooltips.md
 
 ### System preference
 
@@ -348,9 +340,9 @@ selection to the user's operating system. Add the following lines to your config
             name: Switch to system preference
     ```
 
-    1.  You can also define separate settings for [`primary`][palette.primary] and
-        [`accent`][palette.accent] per color palette, i.e. different colors for
-        light and dark mode.
+    1. You can also define separate settings for [`primary`][palette.primary] and
+       [`accent`][palette.accent] per color palette, i.e. different colors for
+       light and dark mode.
 
 Zensical will now change the color palette each time the operating
 system switches between light and dark appearance, even when the user doesn't
@@ -364,8 +356,6 @@ Zensical implements colors using [CSS variables] (custom properties). If you
 want to customize the colors beyond the palette (e.g. to use your brand-specific
 colors), you can add an [additional style sheet] and tweak the values of the CSS
 variables.
-
-  [additional style sheet]: ../customization.md#additional-css
 
 First, set the [`primary`][palette.primary] or [`accent`][palette.accent] values
 in `mkdocs.yml` to `custom`, to signal to the theme that you want to define
@@ -387,7 +377,7 @@ custom colors, e.g., when you want to override the `primary` color:
     ```
 
 Let's say you're :fontawesome-brands-youtube:{ style="color: #EE0F0F" }
-__YouTube__, and want to set the primary color to your brand's palette. Just
+**YouTube**, and want to set the primary color to your brand's palette. Just
 add this CSS and make sure that it is included in the `extra_css` setting in
 your configuration:
 
@@ -414,8 +404,6 @@ your configuration:
     extra_css:
       - stylesheets/extra.css
     ```
-
-  [CSS variables]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
 
 ### Custom color schemes
 
@@ -462,6 +450,14 @@ can tune the `slate` theme with:
 }
 ```
 
-1.  The `hue` value must be in the range of `[0, 360]`
+1. The `hue` value must be in the range of `[0, 360]`
 
-  [attribute selector]: https://www.w3.org/TR/selectors-4/#attribute-selectors
+[additional style sheet]: ../customization.md#additional-css
+[attribute selector]: https://www.w3.org/TR/selectors-4/#attribute-selectors
+[available icon set]: ../authoring/icons-emojis.md#included-icon-sets
+[CSS variables]: https://developer.mozilla.org/en-US/docs/Web/CSS/Using_CSS_custom_properties
+[custom colors]: #custom-colors
+[palette.accent]: #accent-color
+[palette.primary]: #primary-color
+[palette.scheme]: #color-scheme
+[tooltip]: ../authoring/tooltips.md

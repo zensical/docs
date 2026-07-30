@@ -18,11 +18,6 @@ consent] and a [feedback widget][widget].
     currently being overhauled to better fit into Zensical's ecosystem, and to
     allow for more customization options. Join our [newsletter] to stay updated.
 
-  [Google Analytics]: https://developers.google.com/analytics
-  [cookie consent]: data-privacy.md#cookie-consent
-  [widget]: #was-this-page-helpful
-  [newsletter]: https://zensical.org/about/newsletter/
-
 ## Configuration
 
 ### Google Analytics
@@ -54,13 +49,11 @@ your configuration:
     understand how people use your documentation and what they expect to find.
     In order to enable site search tracking, the following steps are required:
 
-    1. Go to your Google Analytics __admin settings__
+    1. Go to your Google Analytics **admin settings**
     2. Select the property for the respective tracking code
-    3. Select the __data streams__ tab and click the corresponding URL
-    4. Click the gear icon within the __enhanced measurement__ section
-    5. Ensure that __site search__ is enabled
-
-  [site search]: search.md
+    3. Select the **data streams** tab and click the corresponding URL
+    4. Click the gear icon within the **enhanced measurement** section
+    5. Ensure that **site search** is enabled
 
 ### Was this page helpful?
 
@@ -126,37 +119,36 @@ This feature uses [Google Analytics][analytics], which is why `provider` and
 `property` are also required. However, it's also possible to provide a [custom
 feedback integration].
 
-
 ??? question "How to visualize the collected feedback ratings?"
 
     To visualize feedback ratings you'll need to create a custom report with
     [Google Analytics] that will quickly show you the worst- and best-rated
     pages of your project documentation.
 
-    1.  Go to your Google Analytics __dashboard__
+    1.  Go to your Google Analytics **dashboard**
 
-    2.  Go to the __Admin__ page on the left hand menu (at the bottom), then select
-        __custom definitions__ on the __Data display__ card
+    2.  Go to the **Admin** page on the left hand menu (at the bottom), then select
+        **custom definitions** on the **Data display** card
 
-    3.  Click the __custom metrics__ tab and then __create custom metrics__,
+    3.  Click the **custom metrics** tab and then **create custom metrics**,
         enter the following values:
 
-        * Metric name: Page helpful
-        * Description: Was this page helpful?
-        * Event parameter: `data`
-        * Unit of measurement: Standard
+        - Metric name: Page helpful
+        - Description: Was this page helpful?
+        - Event parameter: `data`
+        - Unit of measurement: Standard
 
-    4.  Go to the __explore__ page on the left hand menu, create a new
-        __blank exploration__
+    4.  Go to the **explore** page on the left hand menu, create a new
+        **blank exploration**
 
     5.  Configure the report as follows:
 
-        * Dimensions: Add `Event name` and `Page location`
-        * Metrics: Add `Event count` and `Page helpful`
+        - Dimensions: Add `Event name` and `Page location`
+        - Metrics: Add `Event count` and `Page helpful`
           (the custom metric created in step 3)
-        * Rows: `Page location`
-        * Values: Drag in both `Event count` and `Page helpful`
-        * Filters: Add a new filter for
+        - Rows: `Page location`
+        - Values: Drag in both `Event count` and `Page helpful`
+        - Filters: Add a new filter for
           `Event name / exactly matches / feedback`
 
     !!! warning "Delay in data availability"
@@ -165,30 +157,25 @@ feedback integration].
 
 The following properties are available for each rating:
 
-
 `analytics.feedback.ratings.icon`
 
 :   This property must point to a valid icon path referencing [any icon bundled
     with the theme][custom icons], or the build will not succeed. Some popular
     combinations:
 
-    * :material-emoticon-happy-outline: + :material-emoticon-sad-outline: – `material/emoticon-happy-outline` + `material/emoticon-sad-outline`
-    * :material-thumb-up-outline: + :material-thumb-down-outline: – `material/thumb-up-outline` + `material/thumb-down-outline`
-    * :material-heart: + :material-heart-broken: – `material/heart` + `material/heart-broken`
+    - :material-emoticon-happy-outline: + :material-emoticon-sad-outline: – `material/emoticon-happy-outline` + `material/emoticon-sad-outline`
+    - :material-thumb-up-outline: + :material-thumb-down-outline: – `material/thumb-up-outline` + `material/thumb-down-outline`
+    - :material-heart: + :material-heart-broken: – `material/heart` + `material/heart-broken`
 
 `analytics.feedback.ratings.name`
 
 :   The value of this property is shown on user interaction (i.e. keyboard focus
     or mouse hover), explaining the meaning of the rating behind the icon.
 
-
 `analytics.feedback.ratings.data`
 
 :   The value of this property is sent as a data value with the custom event
     that is transmitted to Google Analytics[^3] (or any custom integration).
-
-  [^3]:
-    Note that for Google Analytics, the data value must be an integer.
 
 `analytics.feedback.ratings.note`
 
@@ -214,12 +201,6 @@ The following properties are available for each rating:
     ```
 
     An alternative to GitHub issues is [Google Forms].
-
-  [feedback widget]: #feedback
-  [analytics]: #google-analytics
-  [custom feedback integration]: #custom-site-feedback
-  [custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/templates/.icons
-  [Google Forms]: https://www.google.com/forms/about/
 
 ## Usage
 
@@ -263,18 +244,20 @@ used to configure the custom integration:
     </script>
     ```
 
-    1.  As an example, this variable receives the value set in `mkdocs.yml`,
-        which is `"foobar"` for `property`.
-    2.  If you're using [instant navigation], you can use the `location$`
-        observable to listen for navigation events, which always emits the
-        current `URL`.
+    1. As an example, this variable receives the value set in `mkdocs.yml`,
+       which is `"foobar"` for `property`.
+    2. If you're using [instant navigation], you can use the `location$`
+       observable to listen for navigation events, which always emits the
+       current `URL`.
 
 === "`zensical.toml`"
+
     ``` toml
     [project.extra.analytics]
     provider = "custom"
     property = "foobar"
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -287,9 +270,6 @@ used to configure the custom integration:
 You can add arbitrary key-value combinations to configure your custom
 integration. This is especially useful if you're sharing the custom integration
 across multiple repositories.
-
-[theme extension]: ../customization.md#extending-the-theme
-[instant navigation]: navigation.md#instant-navigation
 
 ### Custom site feedback
 
@@ -325,20 +305,21 @@ generated by users interacting with the feedback widget with the help of some
     }
     ```
 
-    1.  The feedback widget is hidden by default so that it does not appear when
-        people have JavaScript turned off. So, it needs to be turned on here.
+    1. The feedback widget is hidden by default so that it does not appear when
+       people have JavaScript turned off. So, it needs to be turned on here.
 
-    2.  Retrieve page and feedback value.
+    2. Retrieve page and feedback value.
 
-    3.  Replace this with the code that sends the data off to your analytics
-        provider.
+    3. Replace this with the code that sends the data off to your analytics
+       provider.
 
-    4.  Disable the form after submission.
+    4. Disable the form after submission.
 
-    5.  Show the configured notes. Which one is shown depends on the user
-        feedback.
+    5. Show the configured notes. Which one is shown depends on the user
+       feedback.
 
 === "`zensical.toml`"
+
     ``` toml
     [project]
     extra_javascript = ["javascripts/feedback.js"]
@@ -354,4 +335,18 @@ generated by users interacting with the feedback widget with the help of some
 &nbsp;
 { #feedback style="margin: 0; height: 0" }
 
-  [additional JavaScript]: ../customization.md#additional-javascript
+[^3]: Note that for Google Analytics, the data value must be an integer.
+
+[additional JavaScript]: ../customization.md#additional-javascript
+[analytics]: #google-analytics
+[cookie consent]: data-privacy.md#cookie-consent
+[custom feedback integration]: #custom-site-feedback
+[custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/templates/.icons
+[feedback widget]: #feedback
+[Google Analytics]: https://developers.google.com/analytics
+[Google Forms]: https://www.google.com/forms/about/
+[instant navigation]: navigation.md#instant-navigation
+[newsletter]: https://zensical.org/about/newsletter/
+[site search]: search.md
+[theme extension]: ../customization.md#extending-the-theme
+[widget]: #was-this-page-helpful

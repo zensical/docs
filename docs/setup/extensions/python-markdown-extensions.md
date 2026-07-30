@@ -9,8 +9,6 @@ additional extensions perfectly suited for advanced technical writing. Zensical
 lists this package as an explicit dependency, so it's automatically installed
 with a supported version.
 
-  [Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
-
 ## Supported extensions
 
 In general, all extensions that are part of [Python Markdown Extensions] should
@@ -22,10 +20,6 @@ are natively supported, meaning they work without any further adjustments.
 The [Arithmatex] extension allows for rendering of block and inline block
 equations and integrates seamlessly with [MathJax][^1] – a library for
 mathematical typesetting. Enable it via:
-
-[^1]: Other libraries like [KaTeX] are also supported and can be integrated
-    with some additional effort. See the [Arithmatex documentation on KaTeX]
-    for further guidance, as this is beyond the scope of Zensical.
 
 === "`zensical.toml`"
 
@@ -104,15 +98,6 @@ See these authoring guides for usage:
 - [Using block syntax]
 - [Using inline block syntax]
 
-  [Arithmatex]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
-  [Arithmatex documentation on KaTeX]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/#loading-katex
-  [MathJax]: https://www.mathjax.org/
-  [KaTeX]: https://github.com/Khan/KaTeX
-  [additional JavaScript]: ../../customization.md#additional-javascript
-  [instant navigation]: ../navigation.md#instant-navigation
-  [Using block syntax]: ../../authoring/math.md#use-block-syntax
-  [Using inline block syntax]: ../../authoring/math.md#use-inline-block-syntax
-
 ### Caption
 
 The [Caption] extension adds the ability to add captions to any Markdown block,
@@ -134,8 +119,6 @@ including images, tables, and code blocks. Enable it via:
 The configuration options of this extension are not specific to Zensical as
 they only impact the Markdown parsing stage.
 See the [Caption documentation][Caption] for more information.
-
-  [Caption]: https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/caption/
 
 ### Caret, Mark & Tilde { #caret-mark-tilde }
 
@@ -169,12 +152,6 @@ See these authoring guides for usage:
 - [Highlighting text]
 - [Sub- and superscripts]
 
-  [Caret]: https://facelessuser.github.io/pymdown-extensions/extensions/caret/
-  [Mark]: https://facelessuser.github.io/pymdown-extensions/extensions/mark/
-  [Tilde]: https://facelessuser.github.io/pymdown-extensions/extensions/tilde/
-  [Highlighting text]: ../../authoring/formatting.md#highlight-text
-  [Sub- and superscripts]: ../../authoring/formatting.md#sub-and-superscripts
-
 ### Details
 
 The [Details] extension supercharges the [Admonition] extension, making the
@@ -198,10 +175,6 @@ No configuration options are available. See this authoring guide for usage:
 
 - [Collapsible blocks]
 
-  [Details]: https://facelessuser.github.io/pymdown-extensions/extensions/details/
-  [Admonition]: python-markdown.md#admonition
-  [Collapsible blocks]: ../../authoring/admonitions.md#collapsible-blocks
-
 ### Emoji
 
 The [Emoji] extension automatically inlines bundled and custom icons and emojis
@@ -215,9 +188,9 @@ in `*.svg` file format into the resulting HTML page. Enable it via:
     emoji_generator = "zensical.extensions.emoji.to_svg"
     ```
 
-    1.  [Python Markdown Extensions] uses the `pymdownx` namespace, but in order to
-        support the inlining of icons, the `zensical` namespace must be used, as it
-        extends the functionality of `pymdownx`.
+    1. [Python Markdown Extensions] uses the `pymdownx` namespace, but in order to
+       support the inlining of icons, the `zensical` namespace must be used, as it
+       extends the functionality of `pymdownx`.
 
 === "`mkdocs.yml`"
 
@@ -228,13 +201,14 @@ in `*.svg` file format into the resulting HTML page. Enable it via:
           emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
     ```
 
-    1.  [Python Markdown Extensions] uses the `pymdownx` namespace, but in order to
-        support the inlining of icons, the `zensical` namespace must be used, as it
-        extends the functionality of `pymdownx`.
+    1. [Python Markdown Extensions] uses the `pymdownx` namespace, but in order to
+       support the inlining of icons, the `zensical` namespace must be used, as it
+       extends the functionality of `pymdownx`.
 
 The following configuration options are supported:
 
 #### `emoji_index`
+
 This option defines which set of emojis is used for rendering. Note that the use of `emojione` is not
 recommended due to [restrictions in licensing][Emoji index]:
 
@@ -310,13 +284,6 @@ See usage:
 - [Using icons]
 - [Using icons in templates]
 
-  [Emoji]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
-  [Emoji index]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/#default-emoji-indexes
-  [icon customization guide]: ../logo-and-icons.md#additional-icons
-  [Using emojis]: ../../authoring/icons-emojis.md#use-emojis
-  [Using icons]: ../../authoring/icons-emojis.md#use-icons
-  [Using icons in templates]: ../../authoring/icons-emojis.md#use-icons-in-templates
-
 ### Highlight
 
 The [Highlight] extension adds support for syntax highlighting of code blocks
@@ -331,9 +298,9 @@ The [Highlight] extension adds support for syntax highlighting of code blocks
     [project.markdown_extensions.pymdownx.superfences]
     ```
 
-    1.  [Highlight] is used by the [SuperFences][pymdownx.superfences] extension to
-        perform syntax highlighting on code blocks, not the other way round, which
-        is why this extension also needs to be enabled.
+    1. [Highlight] is used by the [SuperFences][pymdownx.superfences] extension to
+       perform syntax highlighting on code blocks, not the other way round, which
+       is why this extension also needs to be enabled.
 
 === "`mkdocs.yml`"
 
@@ -344,9 +311,9 @@ The [Highlight] extension adds support for syntax highlighting of code blocks
       - pymdownx.superfences # (1)!
     ```
 
-    1.  [Highlight] is used by the [SuperFences][pymdownx.superfences] extension to
-        perform syntax highlighting on code blocks, not the other way round, which
-        is why this extension also needs to be enabled.
+    1. [Highlight] is used by the [SuperFences][pymdownx.superfences] extension to
+       perform syntax highlighting on code blocks, not the other way round, which
+       is why this extension also needs to be enabled.
 
 The following configuration options are supported:
 
@@ -436,6 +403,7 @@ line itself:
     ```
 
 !!! note "Avoid including line numbers in copy-and-paste"
+
     Note that `inline` will put line numbers next to the actual code, which
     means that they will be included when selecting text with the cursor or
     copying a code block to the clipboard. Thus, the usage of either `table`
@@ -493,17 +461,6 @@ See these authoring guides for usage:
 - [Highlighting specific lines]
 - [Custom syntax theme]
 
-  [Highlight]: https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
-  [pymdownx.superfences]: #superfences
-  [pymdownx.inlinehilite]: #inlinehilite
-  [Pygments]: https://pygments.org
-  [title]: ../../authoring/code-blocks.md#add-a-title
-  [Adding line numbers]: ../../authoring/code-blocks.md#add-line-numbers
-  [Using code blocks]: ../../authoring/code-blocks.md#usage
-  [Adding a title]: ../../authoring/code-blocks.md#add-a-title
-  [Highlighting specific lines]: ../../authoring/code-blocks.md#highlight-specific-lines
-  [Custom syntax theme]: ../../authoring/code-blocks.md#custom-syntax-theme
-
 ### InlineHilite
 
 The [InlineHilite] extension add support for syntax highlighting of inline code
@@ -534,11 +491,6 @@ See this authoring guide for usage:
 
 - [Highlighting inline code blocks]
 
-  [InlineHilite]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
-  [InlineHilite options]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/#options
-  [pymdownx.highlight]: #highlight
-  [Highlighting inline code blocks]: ../../authoring/code-blocks.md#highlight-inline-code-blocks
-
 ### Keys
 
 The [Keys] extension adds a simple syntax to allow for the rendering of keyboard
@@ -566,10 +518,6 @@ See this authoring guide for usage:
 
 - [Adding keyboard keys]
 
-  [Keys]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/
-  [Keys options]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#options
-  [Adding keyboard keys]: ../../authoring/formatting.md#add-keyboard-keys
-
 ### SmartSymbols
 
 The [SmartSymbols] extension converts some sequences of characters into their
@@ -591,8 +539,6 @@ corresponding symbols, e.g. copyright symbols or fractions. Enable it via:
 The configuration options of this extension are not specific to Zensical as they
 only impact the Markdown parsing stage. See the [SmartSymbols
 documentation][SmartSymbols] for guidance.
-
-  [SmartSymbols]: https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
 
 ### Snippets
 
@@ -622,10 +568,6 @@ See these authoring guides for usage:
 - [Adding a glossary]
 - [Embedding external files]
 
-  [Snippets]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
-  [Adding a glossary]: ../../authoring/tooltips.md#add-a-glossary
-  [Embedding external files]: ../../authoring/code-blocks.md#embed-external-files
-
 ### SuperFences
 
 The [SuperFences] extension allows for arbitrary nesting of code and content
@@ -648,6 +590,7 @@ elements. Enable it via:
 The following configuration options are supported:
 
 #### `custom_fences`
+
 This option allows to define a handler for custom fences, e.g. to preserve
 the definitions of [Mermaid.js] diagrams to be interpreted in the browser:
 
@@ -689,16 +632,6 @@ See these authoring guides for usage:
 - [Using class diagrams]
 - [Using entity-relationship diagrams]
 
-  [SuperFences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
-  [Mermaid.js]: https://mermaid-js.github.io/mermaid/
-  [diagrams]: ../../authoring/diagrams.md
-  [Using content tabs]: ../../authoring/content-tabs.md#usage
-  [Using flowcharts]: ../../authoring/diagrams.md#use-flowcharts
-  [Using sequence diagrams]: ../../authoring/diagrams.md#use-sequence-diagrams
-  [Using state diagrams]: ../../authoring/diagrams.md#use-state-diagrams
-  [Using class diagrams]: ../../authoring/diagrams.md#use-class-diagrams
-  [Using entity-relationship diagrams]: ../../authoring/diagrams.md#use-entity-relationship-diagrams
-
 ### Tabbed
 
 The [Tabbed] extension allows the usage of content tabs, a simple way to group
@@ -724,7 +657,7 @@ The following configuration options are supported:
 #### `alternate_style`
 
 This option enables the content tabs [alternate style], which has [better
- behavior on mobile viewports], and is the only supported style:
+behavior on mobile viewports], and is the only supported style:
 
 === "`zensical.toml`"
 
@@ -762,6 +695,7 @@ prepends the id of the header to the `id` of the tab:
     ```
 
 #### `slugify`
+
 This option allows for customization of the slug function. For some
 languages, the default may not produce good and readable identifiers –
 consider using another slug function like for example those from [Python
@@ -811,14 +745,6 @@ See these authoring guides for usage:
 - [Grouping code blocks]
 - [Grouping other content]
 - [Embedded content]
-
-  [Tabbed]: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
-  [alternate style]: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/#alternate-style
-  [better behavior on mobile viewports]: https://x.com/squidfunk/status/1424740370596958214
-  [Grouping code blocks]: ../../authoring/content-tabs.md#group-code-blocks
-  [Grouping other content]: ../../authoring/content-tabs.md#group-other-content
-  [Embedded content]: ../../authoring/content-tabs.md#embed-content
-  [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 
 ### Tasklist
 
@@ -892,11 +818,6 @@ See this authoring guide for usage:
 
 - [Using task lists]
 
-  [Tasklist]: https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
-  [GitHub Flavored Markdown]: https://github.github.com/gfm/
-  [Tasklist specification]: https://github.github.com/gfm/#task-list-items-extension-
-  [Using task lists]: ../../authoring/lists.md#use-task-lists
-
 ## Other extensions
 
 Did not find what you are looking for? The Markdown extensions listed above are
@@ -905,3 +826,71 @@ work but we are not advertising their use as we believe there are better
 alternatives. The `critic` extension, for example, is quite difficult to use in
 projects of any significant size and we would advise users to work with Git
 to track changes instead.
+
+[^1]: Other libraries like [KaTeX] are also supported and can be integrated with some additional effort. See the [Arithmatex documentation on KaTeX] for further guidance, as this is beyond the scope of Zensical.
+
+[Adding a glossary]: ../../authoring/tooltips.md#add-a-glossary
+[Adding a title]: ../../authoring/code-blocks.md#add-a-title
+[Adding keyboard keys]: ../../authoring/formatting.md#add-keyboard-keys
+[Adding line numbers]: ../../authoring/code-blocks.md#add-line-numbers
+[additional JavaScript]: ../../customization.md#additional-javascript
+[Admonition]: python-markdown.md#admonition
+[alternate style]: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/#alternate-style
+[Arithmatex]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/
+[Arithmatex documentation on KaTeX]: https://facelessuser.github.io/pymdown-extensions/extensions/arithmatex/#loading-katex
+[better behavior on mobile viewports]: https://x.com/squidfunk/status/1424740370596958214
+[Caption]: https://facelessuser.github.io/pymdown-extensions/extensions/blocks/plugins/caption/
+[Caret]: https://facelessuser.github.io/pymdown-extensions/extensions/caret/
+[Collapsible blocks]: ../../authoring/admonitions.md#collapsible-blocks
+[Custom syntax theme]: ../../authoring/code-blocks.md#custom-syntax-theme
+[Details]: https://facelessuser.github.io/pymdown-extensions/extensions/details/
+[diagrams]: ../../authoring/diagrams.md
+[Embedded content]: ../../authoring/content-tabs.md#embed-content
+[Embedding external files]: ../../authoring/code-blocks.md#embed-external-files
+[Emoji]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/
+[Emoji index]: https://facelessuser.github.io/pymdown-extensions/extensions/emoji/#default-emoji-indexes
+[GitHub Flavored Markdown]: https://github.github.com/gfm/
+[Grouping code blocks]: ../../authoring/content-tabs.md#group-code-blocks
+[Grouping other content]: ../../authoring/content-tabs.md#group-other-content
+[Highlight]: https://facelessuser.github.io/pymdown-extensions/extensions/highlight/
+[Highlighting inline code blocks]: ../../authoring/code-blocks.md#highlight-inline-code-blocks
+[Highlighting specific lines]: ../../authoring/code-blocks.md#highlight-specific-lines
+[Highlighting text]: ../../authoring/formatting.md#highlight-text
+[icon customization guide]: ../logo-and-icons.md#additional-icons
+[InlineHilite]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
+[InlineHilite options]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/#options
+[instant navigation]: ../navigation.md#instant-navigation
+[KaTeX]: https://github.com/Khan/KaTeX
+[Keys]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/
+[Keys options]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#options
+[Mark]: https://facelessuser.github.io/pymdown-extensions/extensions/mark/
+[MathJax]: https://www.mathjax.org/
+[Mermaid.js]: https://mermaid-js.github.io/mermaid/
+[Pygments]: https://pygments.org
+[pymdownx.highlight]: #highlight
+[pymdownx.inlinehilite]: #inlinehilite
+[pymdownx.superfences]: #superfences
+[Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/
+[Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
+[SmartSymbols]: https://facelessuser.github.io/pymdown-extensions/extensions/smartsymbols/
+[Snippets]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
+[Sub- and superscripts]: ../../authoring/formatting.md#sub-and-superscripts
+[SuperFences]: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/
+[Tabbed]: https://facelessuser.github.io/pymdown-extensions/extensions/tabbed/
+[Tasklist]: https://facelessuser.github.io/pymdown-extensions/extensions/tasklist/
+[Tasklist specification]: https://github.github.com/gfm/#task-list-items-extension-
+[Tilde]: https://facelessuser.github.io/pymdown-extensions/extensions/tilde/
+[title]: ../../authoring/code-blocks.md#add-a-title
+[Using block syntax]: ../../authoring/math.md#use-block-syntax
+[Using class diagrams]: ../../authoring/diagrams.md#use-class-diagrams
+[Using code blocks]: ../../authoring/code-blocks.md#usage
+[Using content tabs]: ../../authoring/content-tabs.md#usage
+[Using emojis]: ../../authoring/icons-emojis.md#use-emojis
+[Using entity-relationship diagrams]: ../../authoring/diagrams.md#use-entity-relationship-diagrams
+[Using flowcharts]: ../../authoring/diagrams.md#use-flowcharts
+[Using icons]: ../../authoring/icons-emojis.md#use-icons
+[Using icons in templates]: ../../authoring/icons-emojis.md#use-icons-in-templates
+[Using inline block syntax]: ../../authoring/math.md#use-inline-block-syntax
+[Using sequence diagrams]: ../../authoring/diagrams.md#use-sequence-diagrams
+[Using state diagrams]: ../../authoring/diagrams.md#use-state-diagrams
+[Using task lists]: ../../authoring/lists.md#use-task-lists

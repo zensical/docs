@@ -27,9 +27,6 @@ documentation as a download.
 
     This does not impact multi-lingual search.
 
-  [offline]: offline.md
-  [standalone Open Source project]: https://zensical.org/about/roadmap/#search-and-discovery
-
 ## Configuration
 
 The built-in search module is seamlessly integrated with Zensical,
@@ -97,8 +94,6 @@ The content of this section is included
 The content of this section is excluded
 ```
 
-  [Attribute Lists]: extensions/python-markdown.md#attribute-lists
-
 #### Exclude a block
 
 When [Attribute Lists] is enabled, specific sections of pages can be excluded
@@ -113,3 +108,7 @@ The content of this block is included
 The content of this block is excluded
 { data-search-exclude }
 ```
+
+[Attribute Lists]: extensions/python-markdown.md#attribute-lists
+[offline]: offline.md
+[standalone Open Source project]: https://zensical.org/about/roadmap/#search-and-discovery

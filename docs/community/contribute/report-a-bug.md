@@ -11,8 +11,6 @@ With a project of this size and complexity, bugs may occur. If you
 think you have discovered a bug, you can help us by submitting an issue in our
 public [issue tracker], following this guide.
 
-  [issue tracker]: https://github.com/zensical/zensical/issues
-
 ## Before creating an issue
 
 We aim to keep the number of open issues low by addressing bugs promptly.
@@ -21,7 +19,7 @@ commitment to quality for new users evaluating Zensical. This guide explains
 how to provide the information we need to resolve your issue efficiently and
 improve the software for everyone.
 
-__Before submitting a new issue, please complete the following steps.__
+**Before submitting a new issue, please complete the following steps.**
 
 ### Upgrade to the latest version
 
@@ -43,9 +41,9 @@ In case you're using [customizations] like [additional CSS] and [JavaScript] or
 bug. We can't offer official support for bugs that might hide in your overrides,
 so make sure to omit the following settings:
 
-  - [`theme.custom_dir`][theme.custom_dir]
-  - [`extra_css`][extra_css]
-  - [`extra_javascript`][extra_javascript]
+- [`theme.custom_dir`][theme.custom_dir]
+- [`extra_css`][extra_css]
+- [`extra_javascript`][extra_javascript]
 
 If the bug is gone after removing those settings, it is likely caused by
 your customizations. A good idea is to add them back gradually to narrow down
@@ -59,18 +57,7 @@ adjusted all partials you have overridden.
     our documentation explicitly mentions, you are, of course, encouraged to
     report it.
 
-__You can ask for help on our [Discord channel] if you run into problems.__
-
-  [latest version]: https://github.com/zensical/zensical/releases
-  [upgrade guide]: ../../upgrade.md
-  [Customizations]: ../../customization.md
-  [additional CSS]: ../../customization.md#additional-css
-  [JavaScript]: ../../customization.md#additional-javascript
-  [theme extension]: ../../customization.md#extending-the-theme
-  [theme.custom_dir]: ../../customization.md#configuring-overrides
-  [extra_css]: ../../customization.md#additional-css
-  [extra_javascript]: ../../customization.md#additional-javascript
-  [Discord channel]: https://discord.gg/hqXRNq9CjT
+**You can ask for help on our [Discord channel] if you run into problems.**
 
 ### Search for solutions
 
@@ -83,25 +70,20 @@ and closed right away with a link to the relevant documentation section or
 another already reported or closed issue or discussion, you can save yourself
 and us time by doing some research:
 
-1.  [Search our documentation] and look for the relevant sections that could
-    be related to your problem. If found, make sure that you have configured
-    everything correctly.
+1. [Search our documentation] and look for the relevant sections that could
+   be related to your problem. If found, make sure that you have configured
+   everything correctly.
 
-2.  [Search our issue tracker][issue tracker], as another user might already
-    have reported the same problem, and there might even be a known workaround
-    or fix. Thus, no need to create a new issue.
+2. [Search our issue tracker][issue tracker], as another user might already
+   have reported the same problem, and there might even be a known workaround
+   or fix. Thus, no need to create a new issue.
 
-3.  Check our [Discord channel] to see if the issue you are encountering has
-    recently been discussed and if community members have already stated that
-    they are working on an issue.
+3. Check our [Discord channel] to see if the issue you are encountering has
+   recently been discussed and if community members have already stated that
+   they are working on an issue.
 
-__Keep track of all <u>search terms</u> and <u>relevant links</u>; you'll need
-them in the bug report.__[^2]
-
-  [^2]:
-    We might be using terminology in our documentation different from yours,
-    but we mean the same. When you include the search terms and related links
-    in your bug report, you help us to adjust and improve the documentation.
+**Keep track of all <u>search terms</u> and <u>relevant links</u>; you'll need
+them in the bug report.**[^2]
 
 ---
 
@@ -109,8 +91,6 @@ At this point, when you still haven't found a solution to your problem, we
 encourage you to create an issue because it's now very likely that you
 stumbled over something we don't know yet. Read the following section to learn
 how to create a complete and helpful bug report.
-
-  [Search our documentation]: ?q=
 
 ## Issue template
 
@@ -128,27 +108,18 @@ and consists of the following parts:
 - [Browser] <small>optional</small>
 - [Checklist]
 
-  [Title]: #title
-  [Context]: #context
-  [Bug description]: #bug-description
-  [Related links]: #related-links
-  [Reproduction]: #reproduction
-  [Steps to reproduce]: #steps-to-reproduce
-  [Browser]: #browser
-  [Checklist]: #checklist
-
 ### Title
 
 A good title is short and descriptive. It should be a one-sentence executive
 summary of the issue, so the impact and severity of the bug you want to report
 can be inferred from the title.
 
-| <!-- --> | Example  |
-| -------- | -------- |
-| :material-check:{ style="color: #4DB6AC" } __Clear__ | Built-in `typeset` plugin changes precedence of nav title over `h1`
-| :material-close:{ style="color: #EF5350" } __Wordy__ | The built-in `typeset` plugin changes the precedence of the nav title over the document headline
-| :material-close:{ style="color: #EF5350" } __Unclear__ | Title does not work
-| :material-close:{ style="color: #EF5350" } __Useless__ | Help
+| <!-- -->                                               | Example                                                                                          |
+| ------------------------------------------------------ | ------------------------------------------------------------------------------------------------ |
+| :material-check:{ style="color: #4DB6AC" } **Clear**   | Built-in `typeset` plugin changes precedence of nav title over `h1`                              |
+| :material-close:{ style="color: #EF5350" } **Wordy**   | The built-in `typeset` plugin changes the precedence of the nav title over the document headline |
+| :material-close:{ style="color: #EF5350" } **Unclear** | Title does not work                                                                              |
+| :material-close:{ style="color: #EF5350" } **Useless** | Help                                                                                             |
 
 ### Context <small>optional</small> { #context }
 
@@ -157,7 +128,7 @@ understand what you were trying to achieve. Explain the circumstances in which
 you're using Zensical, and what you _think_ might be relevant. Don't write
 about the bug here.
 
-> __Why this might be helpful__: some errors only manifest in specific settings,
+> **Why this might be helpful**: some errors only manifest in specific settings,
 > environments, or edge cases, for example, when your documentation contains
 > thousands of documents.
 
@@ -168,24 +139,24 @@ concise summary of the bug you encountered. Explain why you think this is a bug
 that should be reported to Zensical, and not to one of its dependencies. Adhere
 to the following principles:
 
--   __Explain the <u>what</u>, not the <u>how</u>__ – don't explain
-    [how to reproduce the bug][Steps to reproduce] here, we're getting to
-    that later. Focus on articulating the problem and its impact as clearly as
-    possible.
+- **Explain the <u>what</u>, not the <u>how</u>** – don't explain
+  [how to reproduce the bug][Steps to reproduce] here, we're getting to
+  that later. Focus on articulating the problem and its impact as clearly as
+  possible.
 
--   __Keep it short and concise__ – if the bug can be precisely explained in one
-    or two sentences, perfect. Don't inflate it – maintainers and future users
-    will be grateful for having to read less.
+- **Keep it short and concise** – if the bug can be precisely explained in one
+  or two sentences, perfect. Don't inflate it – maintainers and future users
+  will be grateful for having to read less.
 
--   __One bug at a time__ – if you encounter several unrelated bugs, please
-    create separate issues for them. Don't report them in the same issue, as
-    this makes attribution difficult.
+- **One bug at a time** – if you encounter several unrelated bugs, please
+  create separate issues for them. Don't report them in the same issue, as
+  this makes attribution difficult.
 
-:lucide-goal: __Stretch goal__ – if you found a workaround or a way to fix
+:lucide-goal: **Stretch goal** – if you found a workaround or a way to fix
 the bug, you can help other users temporarily mitigate the problem before
 we maintainers can fix the bug in our code base.
 
-> __Why we need this__: In order for us to understand the problem, we
+> **Why we need this**: In order for us to understand the problem, we
 > need a clear description of it and quantify its impact, which is essential
 > for triage and prioritization.
 
@@ -199,15 +170,13 @@ helps us gradually improve it.
 Additionally, since you have searched our [issue tracker] before reporting an
 issue, you may have found related issues. Include links to those as well.
 
-:lucide-goal: __Stretch goal__ – if you also include the search terms you
+:lucide-goal: **Stretch goal** – if you also include the search terms you
 used when [searching for a solution][search for solutions] to your problem, you
 make it easier for us maintainers to improve the documentation.
 
-> __Why we need this__: related links help us better understand what you were
+> **Why we need this**: related links help us better understand what you were
 > trying to achieve and whether sections of our documentation need to be
 > adjusted, extended, or overhauled.
-
-  [search for solutions]: #search-for-solutions
 
 ### Reproduction
 
@@ -222,7 +191,7 @@ After you have created the reproduction, you should have a `.zip` file, ideally
 not larger than 1 MB. Just drag and drop the `.zip` file into this field to
 upload it to GitHub.
 
-> __Why we need this__: If an issue contains no minimal reproduction or just a
+> **Why we need this**: If an issue contains no minimal reproduction or just a
 > link to a repository with thousands of files, the maintainers would need to
 > invest a lot of time recreating the right conditions to even inspect the bug,
 > let alone fix it.
@@ -232,8 +201,6 @@ upload it to GitHub.
     While we know that it is a good practice among developers to include a link
     to a repository with the bug report, we currently don't support those in our
     process.
-
-  [Create reproduction]: ../guides/create-a-reproduction.md
 
 ### Steps to reproduce
 
@@ -247,7 +214,7 @@ reproduction to observe the bug. Keep the steps concise, and make sure
 not to leave anything out. Use simple language as you would explain it to a
 five-year-old, and focus on continuity.
 
-> __Why we need this__: we must know how to navigate your reproduction in order
+> **Why we need this**: we must know how to navigate your reproduction in order
 > to observe the bug, as some bugs only occur at certain viewport sizes or in
 > specific conditions.
 
@@ -258,11 +225,11 @@ include the browser name and version here. This field is optional, as it is
 only relevant when the bug you are reporting does not involve a problem with
 building the site but rather with the site and its behavior in the browser.
 
-:lucide-hat-glasses: __Incognito mode__ – Please verify that the bug is
+:lucide-hat-glasses: **Incognito mode** – Please verify that the bug is
 not caused by a browser extension. Switch to incognito mode and try to reproduce
 the bug. If it's gone, it's caused by an extension.
 
-> __Why we need this__: Some bugs only occur in specific browsers or versions,
+> **Why we need this**: Some bugs only occur in specific browsers or versions,
 > and we need to know which ones so we can reproduce the issue.
 
 ### Checklist
@@ -272,4 +239,29 @@ report – you are almost done. The checklist ensures that you have read this
 guide and done your best to provide us with everything we need to help
 you.
 
-__We'll take it from here.__
+**We'll take it from here.**
+
+[^2]: We might be using terminology in our documentation different from yours, but we mean the same. When you include the search terms and related links in your bug report, you help us to adjust and improve the documentation.
+
+[additional CSS]: ../../customization.md#additional-css
+[Browser]: #browser
+[Bug description]: #bug-description
+[Checklist]: #checklist
+[Context]: #context
+[Create reproduction]: ../guides/create-a-reproduction.md
+[Customizations]: ../../customization.md
+[Discord channel]: https://discord.gg/hqXRNq9CjT
+[extra_css]: ../../customization.md#additional-css
+[extra_javascript]: ../../customization.md#additional-javascript
+[issue tracker]: https://github.com/zensical/zensical/issues
+[JavaScript]: ../../customization.md#additional-javascript
+[latest version]: https://github.com/zensical/zensical/releases
+[Related links]: #related-links
+[Reproduction]: #reproduction
+[search for solutions]: #search-for-solutions
+[Search our documentation]: ?q=
+[Steps to reproduce]: #steps-to-reproduce
+[theme extension]: ../../customization.md#extending-the-theme
+[theme.custom_dir]: ../../customization.md#configuring-overrides
+[Title]: #title
+[upgrade guide]: ../../upgrade.md

@@ -11,8 +11,6 @@ documentation. Zensical provides different ways to set up syntax highlighting
 for code blocks, either during build time using [Pygments] or during runtime
 using a JavaScript syntax highlighter.
 
-  [Pygments]: https://pygments.org
-
 ## Configuration
 
 This configuration enables syntax highlighting on code blocks and inline code
@@ -54,11 +52,6 @@ See additional configuration options:
 - [InlineHilite]
 - [SuperFences]
 - [Snippets]
-
-  [Highlight]: ../setup/extensions/python-markdown-extensions.md#highlight
-  [InlineHilite]: ../setup/extensions/python-markdown-extensions.md#inlinehilite
-  [SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
-  [Snippets]: ../setup/extensions/python-markdown-extensions.md#snippets
 
 ### Code copy button
 
@@ -123,6 +116,7 @@ to your configuration to enable it globally:
         "content.code.select"
     ]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -153,8 +147,6 @@ to your configuration to enable it globally:
     ```
     ````
 
-  [line highlighting]: #highlight-specific-lines
-
 ### Code annotations
 
 Code annotations offer a comfortable and friendly way to attach arbitrary
@@ -171,9 +163,8 @@ your configuration to enable them globally:
     ]
     ```
 
-    1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
-        text__, images, ... basically anything that can be written in Markdown.
-
+    1. :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
+       text**, images, ... basically anything that can be written in Markdown.
 
 === "`mkdocs.yml`"
 
@@ -183,8 +174,8 @@ your configuration to enable them globally:
         - content.code.annotate # (1)!
     ```
 
-    1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
-        text__, images, ... basically anything that can be written in Markdown.
+    1. :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
+       text**, images, ... basically anything that can be written in Markdown.
 
 ??? info "Enabling code annotations for a specific code block"
 
@@ -202,8 +193,6 @@ your configuration to enable them globally:
     Note that the language shortcode which has to come first must now also be
     prefixed by a `.`.
 
-  [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
-
 #### Custom selectors
 
 Normally, code annotations can only be [placed in comments], as comments can be
@@ -220,10 +209,10 @@ Additional selectors can be set per-language:
     json = [".s2"] # (1)!
     ```
 
-    1.  [`.s2`][s2] is the name of the lexeme that [Pygments] generates for
-        double-quoted strings. If you want to use a code annotation in another
-        lexeme than a comment, inspect the code block and determine which lexeme
-        needs to be added to the list of additional selectors.
+    1. [`.s2`][s2] is the name of the lexeme that [Pygments] generates for
+       double-quoted strings. If you want to use a code annotation in another
+       lexeme than a comment, inspect the code block and determine which lexeme
+       needs to be added to the list of additional selectors.
 
 === "`mkdocs.yml`"
 
@@ -233,10 +222,10 @@ Additional selectors can be set per-language:
         json: [.s2] # (1)!
     ```
 
-    1.  [`.s2`][s2] is the name of the lexeme that [Pygments] generates for
-        double-quoted strings. If you want to use a code annotation in another
-        lexeme than a comment, inspect the code block and determine which lexeme
-        needs to be added to the list of additional selectors.
+    1. [`.s2`][s2] is the name of the lexeme that [Pygments] generates for
+       double-quoted strings. If you want to use a code annotation in another
+       lexeme than a comment, inspect the code block and determine which lexeme
+       needs to be added to the list of additional selectors.
 
 Now, code annotations can be used from within strings in JSON:
 
@@ -246,11 +235,8 @@ Now, code annotations can be used from within strings in JSON:
 }
 ```
 
-1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
-    text__, images, ... basically anything that can be written in Markdown.
-
-  [placed in comments]: #add-annotations
-  [s2]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/extensions/pymdownx/_highlight.scss
+1. :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
+   text**, images, ... basically anything that can be written in Markdown.
 
 ## Usage
 
@@ -272,8 +258,6 @@ import tensorflow as tf
 ```
 
 </div>
-
-  [list of available lexers]: https://pygments.org/docs/lexers/
 
 ### Add a title
 
@@ -309,13 +293,6 @@ Code annotations can be placed anywhere in a code block where a comment for the
 language of the block can be placed, e.g. for JavaScript in `#!js // ...` and
 `#!js /* ... */`, for YAML in `#!yaml # ...`, etc.[^1]:
 
-  [^1]:
-    Code annotations require syntax highlighting with [Pygments] – they're
-    currently not compatible with JavaScript syntax highlighters, or languages
-    that do not have comments in their grammar. However, we're actively working
-    on supporting alternate ways of defining code annotations, allowing to
-    always place code annotations at the end of lines.
-
 ```` markdown title="Code block with annotation"
 ``` toml
 [project.theme]
@@ -333,8 +310,8 @@ features = ["content.code.annotate"] # (1)!
 features = ["content.code.annotate"] # (1)!
 ```
 
-1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
-    text__, images, ... basically anything that can be written in Markdown.
+1. :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
+   text**, images, ... basically anything that can be written in Markdown.
 
 </div>
 
@@ -357,7 +334,7 @@ simply add an `!` after the closing parenthesis of the code annotation:
 # (1)!
 ```
 
-1.  Look ma, less line noise!
+1. Look ma, less line noise!
 
 </div>
 
@@ -414,7 +391,7 @@ at `1`, regardless of the starting line number specified as part of
     ````
 
     <div class="result" markdown>
-
+    
     ``` py linenums="1" hl_lines="2 3"
     def bubble_sort(items):
         for i in range(len(items)):
@@ -422,7 +399,7 @@ at `1`, regardless of the starting line number specified as part of
                 if items[j] > items[j + 1]:
                     items[j], items[j + 1] = items[j + 1], items[j]
     ```
-
+    
     </div>
 
 === "Line ranges"
@@ -438,7 +415,7 @@ at `1`, regardless of the starting line number specified as part of
     ````
 
     <div class="result" markdown>
-
+    
     ``` py linenums="1" hl_lines="3-5"
     def bubble_sort(items):
         for i in range(len(items)):
@@ -446,10 +423,8 @@ at `1`, regardless of the starting line number specified as part of
                 if items[j] > items[j + 1]:
                     items[j], items[j + 1] = items[j + 1], items[j]
     ```
-
+    
     </div>
-
-  [Adding line numbers]: #add-line-numbers
 
 ### Highlight inline code blocks
 
@@ -486,8 +461,6 @@ last 4 years
 ```
 
 </div>
-
-  [Snippets notation]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
 
 ## Customization
 
@@ -560,18 +533,13 @@ override it as part of your [additional style sheet]:
     [project]
     extra_css = ["stylesheets/extra.css"]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
     extra_css:
       - stylesheets/extra.css
     ```
-
-  [colors]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/_colors.scss
-  [color schemes]: ../setup/colors.md#color-scheme
-  [types of string tokens]: https://pygments.org/docs/tokens/#literals
-  [additional style sheet]: ../customization.md#additional-css
-  [syntax theme definition]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/extensions/pymdownx/_highlight.scss
 
 ### Annotation tooltip width
 
@@ -593,6 +561,7 @@ of an [additional style sheet]:
     [project]
     extra_css = ["stylesheets/extra.css"]
     ```
+
 === "`mkdocs.yml`"
 
     ``` yaml
@@ -611,3 +580,23 @@ This will render annotations with a larger width:
 1. Muuuuuuuuuuuuuuuch more space for content
 
 </div>
+
+[^1]: Code annotations require syntax highlighting with [Pygments] – they're currently not compatible with JavaScript syntax highlighters, or languages that do not have comments in their grammar. However, we're actively working on supporting alternate ways of defining code annotations, allowing to always place code annotations at the end of lines.
+
+[Adding line numbers]: #add-line-numbers
+[additional style sheet]: ../customization.md#additional-css
+[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[color schemes]: ../setup/colors.md#color-scheme
+[colors]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/_colors.scss
+[Highlight]: ../setup/extensions/python-markdown-extensions.md#highlight
+[InlineHilite]: ../setup/extensions/python-markdown-extensions.md#inlinehilite
+[line highlighting]: #highlight-specific-lines
+[list of available lexers]: https://pygments.org/docs/lexers/
+[placed in comments]: #add-annotations
+[Pygments]: https://pygments.org
+[s2]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/extensions/pymdownx/_highlight.scss
+[Snippets]: ../setup/extensions/python-markdown-extensions.md#snippets
+[Snippets notation]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
+[SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
+[syntax theme definition]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/extensions/pymdownx/_highlight.scss
+[types of string tokens]: https://pygments.org/docs/tokens/#literals

@@ -12,8 +12,6 @@ different technical components, and are a great addition to project
 documentation. Zensical integrates with [Mermaid.js], a very popular and
 flexible solution for drawing diagrams.
 
-  [Mermaid.js]: https://mermaid.js.org/
-
 ## Configuration
 
 This configuration enables native support for [Mermaid.js] diagrams. Zensical
@@ -47,17 +45,6 @@ No further configuration is necessary. Advantages over a custom integration:
 - [x] Fonts and colors can be customized with [additional style sheets]
 - [x] Support for both, light and dark color schemes – _try it on this page!_
 
-  [^1]:
-    While all [Mermaid.js] features should work out-of-the-box, Zensical
-    will currently only adjust the fonts and colors for flowcharts,
-    sequence diagrams, class diagrams, state diagrams and entity relationship
-    diagrams. See the section on [other diagrams] for more information why this
-    is currently not implemented for all diagrams.
-
-  [instant navigation]: ../setup/navigation.md#instant-navigation
-  [additional style sheets]: ../customization.md#additional-css
-  [other diagrams]: #other-diagram-types
-
 ## Usage
 
 ### Use flowcharts
@@ -89,8 +76,6 @@ graph LR
 ```
 
 </div>
-
-  [Flowcharts]: https://mermaid.js.org/syntax/flowchart.html
 
 ### Use sequence diagrams
 
@@ -129,8 +114,6 @@ sequenceDiagram
 ```
 
 </div>
-
-  [Sequence diagrams]: https://mermaid.js.org/syntax/sequenceDiagram.html
 
 ### Use state diagrams
 
@@ -171,8 +154,6 @@ stateDiagram-v2
 ```
 
 </div>
-
-  [State diagrams]: https://mermaid.js.org/syntax/stateDiagram.html
 
 ### Use class diagrams
 
@@ -244,8 +225,6 @@ classDiagram
 
 </div>
 
-  [Class diagrams]: https://mermaid.js.org/syntax/classDiagram.html
-
 ### Use entity-relationship diagrams
 
 An [entity-relationship diagram] is composed of entity types and specifies
@@ -280,8 +259,6 @@ erDiagram
 
 </div>
 
-  [entity-relationship diagram]: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
-
 ### Other diagram types
 
 Besides the diagram types listed above, [Mermaid.js] provides support for [pie
@@ -289,12 +266,6 @@ charts], [gantt charts], [user journeys], [git graphs] and [requirement
 diagrams], all of which are not officially supported by Zensical. Those diagrams
 should still work as advertised by [Mermaid.js], but we don't consider them a
 good choice, mostly as they don't work well on mobile.
-
-  [pie charts]: https://mermaid.js.org/syntax/pie.html
-  [gantt charts]: https://mermaid.js.org/syntax/gantt.html
-  [user journeys]: https://mermaid.js.org/syntax/userJourney.html
-  [git graphs]: https://mermaid.js.org/syntax/gitgraph.html
-  [requirement diagrams]: https://mermaid.js.org/syntax/requirementDiagram.html
 
 ## Customization
 
@@ -319,14 +290,33 @@ you can do so by adding a custom JavaScript file to your configuration:
     ```
 
 === "`zensical.toml`"
+
     ``` toml
     [project]
     extra_javascript = ["javascripts/mermaid.mjs"]
     ```
+
 === "`mkdocs.yml`"
+
     ``` yaml
     extra_javascript:
       - javascripts/mermaid.mjs
     ```
 
-  [ELK layouts]: https://www.npmjs.com/package/@mermaid-js/layout-elk
+[^1]: While all [Mermaid.js] features should work out-of-the-box, Zensical will currently only adjust the fonts and colors for flowcharts, sequence diagrams, class diagrams, state diagrams and entity relationship diagrams. See the section on [other diagrams] for more information why this is currently not implemented for all diagrams.
+
+[additional style sheets]: ../customization.md#additional-css
+[Class diagrams]: https://mermaid.js.org/syntax/classDiagram.html
+[ELK layouts]: https://www.npmjs.com/package/@mermaid-js/layout-elk
+[entity-relationship diagram]: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
+[Flowcharts]: https://mermaid.js.org/syntax/flowchart.html
+[gantt charts]: https://mermaid.js.org/syntax/gantt.html
+[git graphs]: https://mermaid.js.org/syntax/gitgraph.html
+[instant navigation]: ../setup/navigation.md#instant-navigation
+[Mermaid.js]: https://mermaid.js.org/
+[other diagrams]: #other-diagram-types
+[pie charts]: https://mermaid.js.org/syntax/pie.html
+[requirement diagrams]: https://mermaid.js.org/syntax/requirementDiagram.html
+[Sequence diagrams]: https://mermaid.js.org/syntax/sequenceDiagram.html
+[State diagrams]: https://mermaid.js.org/syntax/stateDiagram.html
+[user journeys]: https://mermaid.js.org/syntax/userJourney.html

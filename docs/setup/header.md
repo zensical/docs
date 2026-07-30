@@ -11,9 +11,6 @@ The header can be customized to show an announcement bar that disappears upon sc
 the [search bar] and a place to display your project's [git repository], as
 explained in those dedicated guides.
 
-  [search bar]: search.md
-  [git repository]: repository.md
-
 ## Configuration
 
 ### Automatic hiding
@@ -55,9 +52,6 @@ block][overriding blocks], which is empty by default:
 {% endblock %}
 ```
 
-  [extend the theme]: ../customization.md#extending-the-theme
-  [overriding blocks]: ../customization.md#overriding-blocks
-
 #### Mark as read
 
 For temporary announcements that can be marked as read by the user, a button to
@@ -83,3 +77,8 @@ your configuration:
 
 When the user clicks the button, the current announcement is dismissed and not
 displayed again until the content of the announcement changes.
+
+[extend the theme]: ../customization.md#extending-the-theme
+[git repository]: repository.md
+[overriding blocks]: ../customization.md#overriding-blocks
+[search bar]: search.md

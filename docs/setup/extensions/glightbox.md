@@ -81,7 +81,6 @@ Width of the lightbox overlay (default: `auto`). Accepts CSS units (`px`, `%`, `
           width: "800px"
     ```
 
-
 #### `height`
 
 Height of the lightbox overlay (default: `auto`). Accepts CSS units (`px`, `%`, `vw`, `vh`) or `auto`.
@@ -161,13 +160,12 @@ Default caption position for images (default: `bottom`). Valid values: `bottom`,
 
 ## Adding attributes to images
 
-- [Attribute Lists] — Enables adding data attributes to images for customizing lightbox behavior:
+-   [Attribute Lists] — Enables adding data attributes to images for customizing lightbox behavior:
     - `data-src` — Alternative image source for the lightbox
     - `data-title` — Custom caption text
     - `data-description` — Additional description text
     - `data-caption-position` — Override global caption position
     - `data-gallery` — Manual gallery grouping
 
-  [Attribute Lists]: python-markdown.md#attribute-lists
-  [light and dark mode images]: ../../authoring/images.md#light-and-dark-mode
-
+[Attribute Lists]: python-markdown.md#attribute-lists
+[light and dark mode images]: ../../authoring/images.md#light-and-dark-mode

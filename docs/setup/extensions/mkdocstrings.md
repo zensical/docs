@@ -15,10 +15,6 @@ months, making it much more flexible and powerful.
     not yet supported, specifically backlinks. We're working on bringing these
     features into Zensical.
 
-  [mkdocstrings]: https://mkdocstrings.github.io
-  [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
-  [API reference documentation]: https://zensical.org/about/roadmap/#api-documentation
-
 ## Installation
 
 [mkdocstrings] is not included with Zensical by default, so it needs to be
@@ -74,9 +70,6 @@ The complete list of options can be found here:
 - [mkdocstrings documentation]
 - [mkdocstrings Python handler documentation].
 
-  [mkdocstrings documentation]: https://mkdocstrings.github.io/usage/
-  [mkdocstrings Python handler documentation]: https://mkdocstrings.github.io/python/usage/
-
 !!! warning "Watching source files"
 
     While it is possible to configure search paths that are external to the
@@ -91,3 +84,9 @@ The complete list of options can be found here:
     - [Proposal: Configuration](https://github.com/zensical/backlog/issues/47)
     - [Allow use of `..` in `docs_dir` and `site_dir`](https://github.com/zensical/backlog/issues/56)
     - [Symbolic links pointing outside of `docs_dir`](https://github.com/zensical/backlog/issues/55)
+
+[0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
+[API reference documentation]: https://zensical.org/about/roadmap/#api-documentation
+[mkdocstrings]: https://mkdocstrings.github.io
+[mkdocstrings documentation]: https://mkdocstrings.github.io/usage/
+[mkdocstrings Python handler documentation]: https://mkdocstrings.github.io/python/usage/

@@ -5,7 +5,7 @@ contributing guidelines and optimized our issue templates to ensure a
 great overall experience with our project.
 
 Our goal is to ensure that our documentation, as well as our issue tracker, are
-__well-structured__, __easy to navigate__, and __searchable__, so you can find
+**well-structured**, **easy to navigate**, and **searchable**, so you can find
 what you need quickly and efficiently. Thus, when you follow our contribution
 guidelines, we can help you much faster.
 
@@ -16,7 +16,7 @@ In this section, we guide you through our processes.
 <div class="grid cards" markdown>
 
 -   :lucide-bug: &nbsp;
-    __Something is not working?__
+    **Something is not working?**
 
     ---
 
@@ -27,7 +27,7 @@ In this section, we guide you through our processes.
     :octicons-arrow-right-24: [Report a bug][report a bug]
 
 -   :lucide-file-pen-line: &nbsp;
-    __Missing information in our docs?__
+    **Missing information in our docs?**
 
     ---
 
@@ -39,7 +39,7 @@ In this section, we guide you through our processes.
     :octicons-arrow-right-24: [Report a docs issue][report a docs issue]
 
 -   :lucide-hand-platter: &nbsp;
-    __Want to submit an idea?__
+    **Want to submit an idea?**
 
     ---
 
@@ -50,7 +50,7 @@ In this section, we guide you through our processes.
     :octicons-arrow-right-24: [Request a change][request a change]
 
 -   :lucide-handshake: &nbsp;
-    __Have a question or need help?__
+    **Have a question or need help?**
 
     ---
 
@@ -66,24 +66,18 @@ In this section, we guide you through our processes.
 
 <div class="grid cards" markdown>
 
-  -   :lucide-git-pull-request-create: &nbsp;
-      __Want to contribute to the code?__
+-   :lucide-git-pull-request-create: &nbsp;
+    **Want to contribute to the code?**
 
-      ---
+    ---
 
-      Contribute to the development of Zensical by making a pull request.
+    Contribute to the development of Zensical by making a pull request.
 
-      ---
+    ---
 
-      :octicons-arrow-right-24: [Make a pull request][make a pull request]
-
+    :octicons-arrow-right-24: [Make a pull request][make a pull request]
 
 </div>
-
-  [report a bug]: report-a-bug.md
-  [report a docs issue]: report-a-docs-issue.md
-  [request a change]: request-a-change.md
-  [make a pull request]: pull-requests.md
 
 ## Checklist
 
@@ -118,14 +112,10 @@ with our community.
   respectful to our community and us maintainers? Could you just use a
   [reaction] instead?
 
-  [Code of Conduct]: code-of-conduct.md
-  [Discord channel]: https://discord.gg/hqXRNq9CjT
-  [reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
-
 ### Licensing of contributions
 
 By sharing code within the Zensical ecosystem – including in our
-__Discord channel__, __issue tracker__, and __Zensical Spark__ – you agree to
+**Discord channel**, **issue tracker**, and **Zensical Spark** – you agree to
 license your contributions under the MIT license. Please note that contributions
 are your own and do not fall under Zensical’s jurisdiction; we cannot be held
 liable for any issues arising from contributed code.
@@ -135,8 +125,6 @@ liable for any issues arising from contributed code.
     Code shared in private chats or channels within [Zensical Spark] is not
     affected by this requirement and remains under the control and original
     license of the author. Additionally, note that [Zensical offers an NDA].
-
-  [Zensical offers an NDA]: https://zensical.org/spark/confidentiality/
 
 ## Incomplete contributions
 
@@ -158,10 +146,8 @@ search function to avoid any duplicates and ensure your time is well spent. Your
 cooperation is crucial in keeping all Zensical platforms constructive and
 organized.
 
-__We reserve the right to handle issues that do not adhere to our guidelines as
-follows:__
-
-  [issue tracker]: https://github.com/zensical/zensical/issues
+**We reserve the right to handle issues that do not adhere to our guidelines as
+follows:**
 
 ### Incomplete issues
 
@@ -236,9 +222,18 @@ If you use AI tools to help draft an issue, critically review and verify the
 output yourself before submitting – keep it concise, on point, and in line with
 our contribution guidelines.
 
-  [minimal reproductions]: ../guides/create-a-reproduction.md
-  [minimal reproduction]: ../guides/create-a-reproduction.md
-  [bug reports]: report-a-bug.md
-  [documentation issues]: report-a-docs-issue.md
-  [change requests]: request-a-change.md
-  [Zensical Spark]: https://zensical.org/spark/
+[bug reports]: report-a-bug.md
+[change requests]: request-a-change.md
+[Code of Conduct]: code-of-conduct.md
+[Discord channel]: https://discord.gg/hqXRNq9CjT
+[documentation issues]: report-a-docs-issue.md
+[issue tracker]: https://github.com/zensical/zensical/issues
+[make a pull request]: pull-requests.md
+[minimal reproduction]: ../guides/create-a-reproduction.md
+[minimal reproductions]: ../guides/create-a-reproduction.md
+[reaction]: https://github.blog/2016-03-10-add-reactions-to-pull-requests-issues-and-comments/
+[report a bug]: report-a-bug.md
+[report a docs issue]: report-a-docs-issue.md
+[request a change]: request-a-change.md
+[Zensical offers an NDA]: https://zensical.org/spark/confidentiality/
+[Zensical Spark]: https://zensical.org/spark/

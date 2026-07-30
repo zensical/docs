@@ -39,9 +39,6 @@ See additional configuration options:
 - [Caret, Mark & Tilde]
 - [Keys]
 
-  [Caret, Mark & Tilde]: ../setup/extensions/python-markdown-extensions.md#caret-mark-tilde
-  [Keys]: ../setup/extensions/python-markdown-extensions.md#keys
-
 ## Usage
 
 ### Highlight text
@@ -64,10 +61,6 @@ syntax, which is more convenient that directly using the corresponding
 
 </div>
 
-  [mark]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
-  [ins]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
-  [del]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
-
 ### Sub- and superscripts { #sub-and-superscripts }
 
 When [Caret & Tilde][Caret, Mark & Tilde] are enabled, text can be sub- and
@@ -86,9 +79,6 @@ using the corresponding [`sub`][sub] and [`sup`][sup] HTML tags:
 
 </div>
 
-  [sub]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub
-  [sup]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup
-
 ### Add keyboard keys
 
 When [Keys] is enabled, keyboard keys can be rendered with a simple syntax.
@@ -105,6 +95,13 @@ available shortcodes:
 
 </div>
 
-----
+---
 
-  [Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index
+[Caret, Mark & Tilde]: ../setup/extensions/python-markdown-extensions.md#caret-mark-tilde
+[del]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
+[ins]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
+[Keys]: ../setup/extensions/python-markdown-extensions.md#keys
+[mark]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
+[Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index
+[sub]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub
+[sup]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sup

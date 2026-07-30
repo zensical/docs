@@ -41,28 +41,17 @@ See additional configuration options:
 - [Attribute Lists]
 - [Markdown in HTML]
 
-  [icons and emojis]: icons-emojis.md
-  [configured separately]: icons-emojis.md#configuration
-  [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
-  [Markdown in HTML]: ../setup/extensions/python-markdown.md#markdown-in-html
-
 ## Usage
 
 Grids come in two flavors: [card grids], which wrap each element in a card that
 levitates on hover, and [generic grids], which allow to arrange arbitrary block
 elements in a rectangular shape.
 
-  [card grids]: #use-card-grids
-  [generic grids]: #use-generic-grids
-
 ### Use card grids
 
 Card grids wrap each grid item with a beautiful hover card that levitates on
 hover. They come in two slightly different syntaxes: [list] and [block syntax],
 adding support for distinct use cases.
-
-  [list]: #list-syntax
-  [block syntax]: #block-syntax
 
 #### List syntax
 
@@ -82,14 +71,16 @@ classes:
 ```
 
 <div class="result" markdown>
+
   <div class="grid cards" markdown>
-
-- :fontawesome-brands-html5: __HTML__ for content and structure
-- :fontawesome-brands-js: __JavaScript__ for interactivity
-- :fontawesome-brands-css3: __CSS__ for text running out of boxes
-- :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
-
+  
+- :fontawesome-brands-html5: **HTML** for content and structure
+- :fontawesome-brands-js: **JavaScript** for interactivity
+- :fontawesome-brands-css3: **CSS** for text running out of boxes
+- :fontawesome-brands-internet-explorer: **Internet Explorer** ... huh?
+  
   </div>
+
 </div>
 
 List elements can contain arbitrary Markdown, as long as the surrounding `div`
@@ -136,9 +127,10 @@ includes icons and links:
 ```
 
 <div class="result" markdown>
-  <div class="grid cards" markdown>
 
--   :material-clock-fast:{ .lg .middle } __Set up in 5 minutes__
+  <div class="grid cards" markdown>
+  
+-   :material-clock-fast:{ .lg .middle } **Set up in 5 minutes**
 
     ---
 
@@ -147,7 +139,7 @@ includes icons and links:
 
     [:octicons-arrow-right-24: Getting started][getting started]
 
--   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
+-   :fontawesome-brands-markdown:{ .lg .middle } **It's just Markdown**
 
     ---
 
@@ -155,7 +147,7 @@ includes icons and links:
 
     [:octicons-arrow-right-24: Authoring][authoring]
 
--   :material-format-font:{ .lg .middle } __Made to measure__
+-   :material-format-font:{ .lg .middle } **Made to measure**
 
     ---
 
@@ -163,15 +155,16 @@ includes icons and links:
 
     [:octicons-arrow-right-24: Customization][customization]
 
--   :material-scale-balance:{ .lg .middle } __Open Source, MIT__
+-   :material-scale-balance:{ .lg .middle } **Open Source, MIT**
 
     ---
 
     Zensical is licensed under MIT and available on [GitHub]
 
     [:octicons-arrow-right-24: License][license]
-
+  
   </div>
+
 </div>
 
 If there's insufficient space to render grid items next to each other, the items
@@ -179,19 +172,10 @@ will stretch to the full width of the viewport, e.g. on mobile viewports. If
 there's more space available, grids will render in items of 3 and more, e.g.
 when [hiding both sidebars].
 
-  [zensical]: https://zensical.org
-  [pip]: ../get-started.md#install-with-pip
-  [getting started]: ../get-started.md
-  [authoring]: markdown.md
-  [customization]: ../customization.md
-  [license]: ../license.md
-  [GitHub]: https://github.com/zensical/zensical
-  [hiding both sidebars]: ../setup/navigation.md#hide-the-sidebars
-
 #### Block syntax
 
-The block syntax allows for arranging cards in grids __together with other
-elements__, as explained in the section on [generic grids]. Just add the `card`
+The block syntax allows for arranging cards in grids **together with other
+elements**, as explained in the section on [generic grids]. Just add the `card`
 class to any block element inside a `grid`:
 
 ``` html title="Card grid, blocks"
@@ -212,20 +196,22 @@ class to any block element inside a `grid`:
 ```
 
 <div class="result" markdown>
+
   <div class="grid" markdown>
-
-:fontawesome-brands-html5: __HTML__ for content and structure
+  
+:fontawesome-brands-html5: **HTML** for content and structure
 { .card }
 
-:fontawesome-brands-js: __JavaScript__ for interactivity
+:fontawesome-brands-js: **JavaScript** for interactivity
 { .card }
 
-:fontawesome-brands-css3: __CSS__ for text running out of boxes
+:fontawesome-brands-css3: **CSS** for text running out of boxes
 { .card }
 
-> :fontawesome-brands-internet-explorer: __Internet Explorer__ ... huh?
-
+> :fontawesome-brands-internet-explorer: **Internet Explorer** ... huh?
+  
   </div>
+
 </div>
 
 While this syntax may seem unnecessarily verbose at first, the previous example
@@ -271,13 +257,14 @@ by using a `div` with the `grid` class:
 ````
 
 <div class="result" markdown>
-  <div class="grid" markdown>
 
+  <div class="grid" markdown>
+  
 === "Unordered list"
 
-    * Sed sagittis eleifend rutrum
-    * Donec vitae suscipit est
-    * Nulla tempor lobortis orci
+    - Sed sagittis eleifend rutrum
+    - Donec vitae suscipit est
+    - Nulla tempor lobortis orci
 
 === "Ordered list"
 
@@ -298,10 +285,27 @@ by using a `div` with the `grid` class:
     2. Donec vitae suscipit est
     3. Nulla tempor lobortis orci
 ```
-
+  
   </div>
+
 </div>
 
-  [admonitions]: admonitions.md
-  [code blocks]: code-blocks.md
-  [content tabs]: content-tabs.md
+[admonitions]: admonitions.md
+[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[authoring]: markdown.md
+[block syntax]: #block-syntax
+[card grids]: #use-card-grids
+[code blocks]: code-blocks.md
+[configured separately]: icons-emojis.md#configuration
+[content tabs]: content-tabs.md
+[customization]: ../customization.md
+[generic grids]: #use-generic-grids
+[getting started]: ../get-started.md
+[GitHub]: https://github.com/zensical/zensical
+[hiding both sidebars]: ../setup/navigation.md#hide-the-sidebars
+[icons and emojis]: icons-emojis.md
+[license]: ../license.md
+[list]: #list-syntax
+[Markdown in HTML]: ../setup/extensions/python-markdown.md#markdown-in-html
+[pip]: ../get-started.md#install-with-pip
+[zensical]: https://zensical.org

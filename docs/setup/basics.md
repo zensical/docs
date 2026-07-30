@@ -11,24 +11,20 @@ project using the [`new` command][new], this file will be automatically created
 for you, and include an example configuration with comments describing the
 available settings.
 
-[new]: ../usage/new.md
-
 ??? info "Why Zensical uses TOML"
 
     The [TOML file format] is specifically designed to be easy to scan and
     understand. We've chosen TOML over YAML, since it avoids a number of
     problems that YAML suffers from:
 
-    * YAML uses indentation to express structure, which makes it particularly
+    - YAML uses indentation to express structure, which makes it particularly
       error prone to indentation mistakes that are hard to locate. In TOML,
       whitespace is mostly a stylistic choice.
 
-    * In YAML, values do not need to be escaped, which can cause ambiguities if
+    - In YAML, values do not need to be escaped, which can cause ambiguities if
       a value can be interpreted as different types, such as `no` or `off`, which would
       both be interpreted as a boolean by YAML, when they could be intended as strings.
       TOML requires all strings to be quoted.
-
-[TOML file format]: https://toml.io/
 
 ## Transition from MkDocs
 
@@ -44,8 +40,6 @@ both configuration file formats in content tabs.
     migration to Zensical smooth for users that have existing projects. Support
     for configuration with `mkdocs.yml` will always be supported, but
     eventually move out of the core.
-
-[Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
 
 ## The `project` scope
 
@@ -133,8 +127,6 @@ HTML header and should be set unless you're building for [offline usage].
     site_url: https://example.com
     ```
 
-  [offline usage]: offline.md
-
 ### `site_description`
 
 A `site_description` is used in the HTML head if the page itself does not
@@ -153,8 +145,6 @@ to describe the page content.
     ``` yaml
     site_description: Lorem ipsum dolor sit amet, consectetur adipiscing elit.
     ```
-
-[description in the page metadata]: ../authoring/frontmatter.md
 
 ### `site_author`
 
@@ -215,8 +205,6 @@ configuration file.
 !!! warning "`docs_dir` can't be set to `.`"
 
     This is a temporary limitation. We're working on increasing flexibility. As a workaround, please set `docs_dir` to a subdirectory, such as `docs`, and move your source files there. You can subscribe to the [backlog item] for this feature if you want to be notified when it's available.
-
-  [backlog item]: https://github.com/zensical/backlog/issues/101
 
 ### `site_dir`
 
@@ -281,19 +269,19 @@ server. The default value is `true`.
 
 === "`true`"
 
-    Source file      | Generated File     | URL Format
-    ---------------- | ------------------ | -------------------
-    index.md         | index.html         | /
-    usage.md         | usage.html         | /usage/
-    about/license.md | about/license.html | /about/license/
+    | Source file      | Generated File     | URL Format      |
+    | ---------------- | ------------------ | --------------- |
+    | index.md         | index.html         | /               |
+    | usage.md         | usage.html         | /usage/         |
+    | about/license.md | about/license.html | /about/license/ |
 
 === "`false`"
 
-    Source file      | Generated File     | URL Format
-    ---------------- | ------------------ | -------------------
-    index.md         | index.html         | /index.html
-    usage.md         | usage.html         | /usage.html
-    about/license.md | about/license.html | /about/license.html
+    | Source file      | Generated File     | URL Format          |
+    | ---------------- | ------------------ | ------------------- |
+    | index.md         | index.html         | /index.html         |
+    | usage.md         | usage.html         | /usage.html         |
+    | about/license.md | about/license.html | /about/license.html |
 
 ### `dev_addr`
 
@@ -350,15 +338,6 @@ configuration:
       - fragments
     ```
 
-  [preview]: ../usage/preview.md
-  [Snippets]: extensions/python-markdown-extensions.md#snippets
-  [Macros]: extensions/macros.md
-  [macros-module]: extensions/macros.md#module_name
-  [macros-modules]: extensions/macros.md#modules
-  [macros-include_yaml]: extensions/macros.md#include_yaml
-  [macros-include_dir]: extensions/macros.md#include_dir
-  [mkdocstrings]: extensions/mkdocstrings.md
-
 ## Unsupported settings
 
 The following `mkdocs.yml` settings are not (yet) supported in Zensical, as
@@ -370,3 +349,18 @@ we're rethinking how configuration and customization should work:
 - `draft_docs`
 - `not_in_nav`
 - `hooks`
+
+[backlog item]: https://github.com/zensical/backlog/issues/101
+[description in the page metadata]: ../authoring/frontmatter.md
+[Macros]: extensions/macros.md
+[macros-include_dir]: extensions/macros.md#include_dir
+[macros-include_yaml]: extensions/macros.md#include_yaml
+[macros-module]: extensions/macros.md#module_name
+[macros-modules]: extensions/macros.md#modules
+[Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
+[mkdocstrings]: extensions/mkdocstrings.md
+[new]: ../usage/new.md
+[offline usage]: offline.md
+[preview]: ../usage/preview.md
+[Snippets]: extensions/python-markdown-extensions.md#snippets
+[TOML file format]: https://toml.io/
