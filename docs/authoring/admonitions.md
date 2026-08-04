@@ -431,10 +431,97 @@ The following admonition types are available in Zensical. The default is `note`.
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
+## GitHub callouts
+
+In addition to the [admonition syntax], [GitHub callouts], also known as
+_alerts_, can be used. They are defined as blockquotes with a special marker.
+This syntax is portable to GitHub, GitLab, and other tools that recognize it.
+
+### Configuration
+
+GitHub callouts are enabled with the [Quotes] extension, which is bundled with
+[Python Markdown Extensions]. The `callouts` option must be turned on in the
+configuration:
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.markdown_extensions.pymdownx.quotes]
+    callouts = true
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    markdown_extensions:
+      - pymdownx.quotes:
+          callouts: true
+    ```
+
+### Usage
+
+A callout is started with a blockquote marker `>` followed by `[!<type>]`. The
+content of the callout follows on subsequent lines, each prefixed with `>`:
+
+``` markdown title="GitHub callout"
+> [!NOTE]
+> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+> nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+> massa, nec semper lorem quam in massa.
+```
+
+<div class="result" markdown>
+
+!!! note
+
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
+    nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
+    massa, nec semper lorem quam in massa.
+
+</div>
+
+The callout marker must be all uppercase. Lowercase markers, e.g. `[!note]`,
+are not recognized by GitHub, so they are not rendered as callouts there.
+
+### Supported callout types
+
+Five callout types are supported by GitHub. A direct mapping exists to the
+admonition types listed in the [supported types] section for three of them:
+
+`[!NOTE]`
+:   `note`
+
+`[!TIP]`
+:   `tip`
+
+`[!WARNING]`
+:   `warning`
+
+`[!IMPORTANT]`
+:   `important` – not a built-in admonition type, so the default admonition
+    styling is used unless a [custom style] is added.
+
+`[!CAUTION]`
+:   `caution` – not a built-in admonition type, so the default admonition
+    styling is used unless a [custom style] is added.
+
+With the [Quotes] extension, any admonition type supported by Zensical can be
+used, not only these five.
+
+Callouts are not part of the [GitHub Flavored Markdown specification][GFM], so
+they are not supported by all GitHub Flavored Markdown parsers.
+
 [Admonition]: ../setup/extensions/python-markdown.md#admonition
+[admonition syntax]: #usage
 [changing the title]: #change-the-title
 [collapsible blocks]: #collapsible-blocks
 [custom icon]: ../setup/logo-and-icons.md#additional-icons
+[custom style]: ../customization.md#additional-css
 [Details]: ../setup/extensions/python-markdown-extensions.md#details
+[GFM]: https://github.github.com/gfm/
+[GitHub callouts]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
+[Python Markdown Extensions]: ../setup/extensions/python-markdown-extensions.md
+[Quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
 [SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
+[supported types]: #supported-types
 [type qualifier]: #supported-types
