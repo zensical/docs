@@ -48,6 +48,10 @@ configuration with:
     [[project.extra.social]]
     icon = "fontawesome/brands/x-twitter"
     link = "https://x.com/zensical"
+
+    [[project.extra.social]]
+    icon = "fontawesome/brands/mastodon"
+    link = "https://fosstodon.org/@zensical"
     ```
 
 === "`mkdocs.yml`"
@@ -57,6 +61,8 @@ configuration with:
       social:
         - icon: fontawesome/brands/x-twitter
           link: https://x.com/zensical
+        - icon: fontawesome/brands/mastodon
+          link: https://fosstodon.org/@zensical
     ```
 
 The following properties are available for each link:
