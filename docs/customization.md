@@ -252,6 +252,9 @@ new templates or partials:
 └─ main.html                           # Default page
 ```
 
+The contents of these files can be found in the
+[Zensical UI repository on GitHub][theme templates].
+
 ### Custom templates
 
 Some of your pages may need a different structure. Say, you want to have a
@@ -525,4 +528,5 @@ configuration:
 [template]: authoring/frontmatter.md#page-template
 [template language provided by MiniJinja]: https://docs.rs/minijinja/latest/minijinja/syntax/index.html
 [template option]: authoring/frontmatter.md#page-template
+[theme templates]: https://github.com/zensical/ui/tree/master/dist
 [theme structure]: #theme-structure
