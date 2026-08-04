@@ -22,9 +22,9 @@ following lines to your configuration:
     ``` toml
     [project.markdown_extensions]
     pymdownx.highlight = {
-        anchor_linenums = true,
-        line_spans = "__span",
-        pygments_lang_class = true,
+      anchor_linenums = true,
+      line_spans = "__span",
+      pygments_lang_class = true,
     }
     pymdownx.inlinehilite = {}
     pymdownx.snippets = {}
@@ -66,7 +66,7 @@ your configuration to enable them globally:
     ``` toml
     [project.theme]
     features = [
-        "content.code.copy"
+      "content.code.copy",
     ]
     ```
 
@@ -115,7 +115,7 @@ to your configuration to enable it globally:
     ``` toml
     [project.theme]
     features = [
-        "content.code.select"
+      "content.code.select",
     ]
     ```
 
@@ -161,7 +161,7 @@ your configuration to enable them globally:
     ``` toml
     [project.theme]
     features = [
-      "content.code.annotate" # (1)!
+      "content.code.annotate", # (1)!
     ]
     ```
 
@@ -298,7 +298,9 @@ language of the block can be placed, e.g. for JavaScript in `#!js // ...` and
 ```` markdown title="Code block with annotation"
 ``` toml
 [project.theme]
-features = ["content.code.annotate"] # (1)!
+features = [
+  "content.code.annotate", # (1)!
+]
 ```
 
 1.  :man_raising_hand: I'm a code annotation! I can contain `code`, __formatted
@@ -309,7 +311,9 @@ features = ["content.code.annotate"] # (1)!
 
 ``` toml
 [project.theme]
-features = ["content.code.annotate"] # (1)!
+features = [
+  "content.code.annotate", # (1)!
+]
 ```
 
 1. :man_raising_hand: I'm a code annotation! I can contain `code`, **formatted
@@ -507,7 +511,9 @@ a new color by using an [additional style sheet]:
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -533,7 +539,9 @@ override it as part of your [additional style sheet]:
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -561,7 +569,9 @@ of an [additional style sheet]:
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"

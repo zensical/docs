@@ -22,7 +22,9 @@ your configuration:
     ``` toml
     [project.markdown_extensions]
     def_list = {}
-    pymdownx.tasklist = { custom_checkbox = true }
+    pymdownx.tasklist = {
+      custom_checkbox = true
+    }
     ```
 
 === "`mkdocs.yml`"

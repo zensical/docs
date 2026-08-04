@@ -49,8 +49,8 @@ lines to your configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.theme.icon]
-    admonition = {<type> = "<icon>"}
+    [project.theme.icon.admonition]
+    <type> = "<icon>"
     ```
 
     ??? example "Expand to show alternate icon sets"

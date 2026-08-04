@@ -49,8 +49,8 @@ can be defined via configuration:
     ``` toml
     [project.extra]
     alternate = [
-        { name = "English", link = "/en/", lang = "en" },
-        { name = "Deutsch", link = "/de/", lang = "de" }
+      { name = "English", link = "/en/", lang = "en" },
+      { name = "Deutsch", link = "/de/", lang = "de" },
     ]
     ```
 

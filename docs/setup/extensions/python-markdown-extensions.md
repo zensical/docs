@@ -25,7 +25,9 @@ mathematical typesetting. Enable it via:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.arithmatex = { generic = true }
+    pymdownx.arithmatex = {
+      generic = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -76,8 +78,8 @@ of [additional JavaScript]:
     ``` toml
     [project]
     extra_javascript = [
-        "javascripts/mathjax.js",
-        "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+      "javascripts/mathjax.js",
+      "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
     ]
     ```
 
@@ -188,8 +190,8 @@ in `*.svg` file format into the resulting HTML page. Enable it via:
     ``` toml
     [project.markdown_extensions]
     pymdownx.emoji = {
-        emoji_index = "zensical.extensions.emoji.twemoji", # (1)!
-        emoji_generator = "zensical.extensions.emoji.to_svg",
+      emoji_generator = "zensical.extensions.emoji.to_svg",
+      emoji_index = "zensical.extensions.emoji.twemoji", # (1)!
     }
     ```
 
@@ -221,7 +223,9 @@ recommended due to [restrictions in licensing][Emoji index]:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.emoji = { emoji_index = "zensical.extensions.emoji.twemoji" }
+    pymdownx.emoji = {
+      emoji_index = "zensical.extensions.emoji.twemoji",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -241,7 +245,9 @@ that icons can only be used together with the `to_svg` configuration:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.emoji = { emoji_generator = "zensical.extensions.emoji.to_svg" }
+    pymdownx.emoji = {
+      emoji_generator = "zensical.extensions.emoji.to_svg",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -263,9 +269,11 @@ Markdown or the configuration, which is explained in more detail in the
     ``` toml
     [project.markdown_extensions]
     pymdownx.emoji = {
-        emoji_index = "zensical.extensions.emoji.twemoji",
-        emoji_generator = "zensical.extensions.emoji.to_svg",
-        options.custom_icons = ["overrides/.icons"],
+      emoji_generator = "zensical.extensions.emoji.to_svg",
+      emoji_index = "zensical.extensions.emoji.twemoji",
+      options.custom_icons = [
+        "overrides/.icons",
+      ],
     }
     ```
 
@@ -274,8 +282,8 @@ Markdown or the configuration, which is explained in more detail in the
     ``` yaml
     markdown_extensions:
       - pymdownx.emoji:
-          emoji_index: !!python/name:material.extensions.emoji.twemoji
-          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+          emoji_index: !!python/name:zensical.extensions.emoji.twemoji
+          emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
           options:
             custom_icons:
               - overrides/.icons
@@ -301,7 +309,9 @@ The [Highlight] extension adds support for syntax highlighting of code blocks
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { anchor_linenums = true }
+    pymdownx.highlight = {
+      anchor_linenums = true,
+    }
     pymdownx.superfences = {}
     ```
 
@@ -334,7 +344,9 @@ function. Enable via:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { pygments_lang_class = true }
+    pymdownx.highlight = {
+      pygments_lang_class = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -354,7 +366,9 @@ the name of the language being used, e.g. `Python` is printed for a `py` block:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { auto_title = true }
+    pymdownx.highlight = {
+      auto_title = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -376,7 +390,9 @@ which also contains some tips on working with line numbers:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { linenums = true }
+    pymdownx.highlight = {
+      linenums = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -398,7 +414,9 @@ line itself:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { linenums_style = "pymdownx-inline" }
+    pymdownx.highlight = {
+      linenums_style = "pymdownx-inline",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -425,7 +443,9 @@ with anchor links, so they can be hyperlinked and shared more easily:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { anchor_linenums = true }
+    pymdownx.highlight = {
+      anchor_linenums = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -445,7 +465,9 @@ which is essential for features like line highlighting to work correctly:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = { line_spans = "__span" }
+    pymdownx.highlight = {
+      line_spans = "__span",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -611,13 +633,13 @@ the definitions of [Mermaid.js] diagrams to be interpreted in the browser:
     ``` toml
     [project.markdown_extensions]
     pymdownx.superfences = {
-        custom_fences = [
-            {
-                name = "mermaid",
-                class = "mermaid",
-                format = "pymdownx.superfences.fence_code_format",
-            },
-        ],
+      custom_fences = [
+        {
+          name = "mermaid",
+          class = "mermaid",
+          format = "pymdownx.superfences.fence_code_format",
+        },
+      ],
     }
     ```
 
@@ -659,7 +681,10 @@ related content and code blocks under accessible tabs. Enable it via:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tabbed = { alternate_style = true }
+    pymdownx.tabbed = {
+      alternate_style = true,
+      combine_header_slug = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -668,6 +693,7 @@ related content and code blocks under accessible tabs. Enable it via:
     markdown_extensions:
       - pymdownx.tabbed:
           alternate_style: true
+          combine_header_slug: true
     ```
 
 The following configuration options are supported:
@@ -681,7 +707,9 @@ behavior on mobile viewports], and is the only supported style:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tabbed = { alternate_style = true }
+    pymdownx.tabbed = {
+      alternate_style = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -701,7 +729,9 @@ prepends the id of the header to the `id` of the tab:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tabbed = { combine_header_slug = true }
+    pymdownx.tabbed = {
+      combine_header_slug = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -724,10 +754,10 @@ Markdown Extensions][Slugs]. To produce all-lowercase slugs:
     ``` toml
     [project.markdown_extensions]
     pymdownx.tabbed = {
-        slugify = {
-            object = "pymdownx.slugs.slugify",
-            kwds = { case = "lower" },
-        },
+      slugify = {
+        object = "pymdownx.slugs.slugify",
+        kwds.case = "lower",
+      },
     }
     ```
 
@@ -748,7 +778,9 @@ In order to retain the case of the input:
     ``` toml
     [project.markdown_extensions]
     pymdownx.tabbed = {
-        slugify = { object = "pymdownx.slugs.slugify" },
+      slugify = {
+        object = "pymdownx.slugs.slugify"
+      },
     }
     ```
 
@@ -780,7 +812,9 @@ conventions. Enable it via:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tasklist = { custom_checkbox = true }
+    pymdownx.tasklist = {
+      custom_checkbox = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -802,7 +836,9 @@ checkbox styles with beautiful icons, and is therefore recommended:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tasklist = { custom_checkbox = true }
+    pymdownx.tasklist = {
+      custom_checkbox = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -823,7 +859,9 @@ experience perspective:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tasklist = { clickable_checkbox = true }
+    pymdownx.tasklist = {
+      clickable_checkbox = true,
+    }
     ```
 
 === "`mkdocs.yml`"

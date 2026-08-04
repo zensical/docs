@@ -86,7 +86,10 @@ to your configuration:
 
         ``` toml
         [project.extra.version]
-        default = ["stable", "development"]
+        default = [
+          "stable",
+          "development",
+        ]
         ```
 
         Now every version that has the `stable` and `development` aliases will not

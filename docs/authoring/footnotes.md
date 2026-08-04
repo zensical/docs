@@ -45,7 +45,7 @@ enabled with:
     ``` toml
     [project.theme]
     features = [
-        "content.footnote.tooltips"
+      "content.footnote.tooltips",
     ]
     ```
 

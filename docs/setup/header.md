@@ -24,7 +24,7 @@ following lines to your configuration:
     ``` toml
     [project.theme]
     features = [
-        "header.autohide"
+      "header.autohide",
     ]
     ```
 
@@ -63,7 +63,7 @@ your configuration:
     ``` toml
     [project.theme]
     features = [
-        "announce.dismiss"
+      "announce.dismiss",
     ]
     ```
 

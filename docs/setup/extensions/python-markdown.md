@@ -193,7 +193,9 @@ page. Enable it via:
 
     ``` toml
     [project.markdown_extensions]
-    toc = { permalink = true }
+    toc = {
+      permalink = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -216,7 +218,9 @@ the [site language]. Set the title explicitly via:
 
     ``` toml
     [project.markdown_extensions]
-    toc = { title = "On this page" }
+    toc = {
+      title = "On this page",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -241,7 +245,9 @@ or string like so:
 
     ``` toml
     [project.markdown_extensions]
-    toc = { permalink = "⚓︎" }
+    toc = {
+      permalink = "⚓︎",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -263,7 +269,9 @@ section itself:
 
     ``` toml
     [project.markdown_extensions]
-    toc = { permalink_title = "Anchor link to this section" }
+    toc = {
+      permalink_title = "Anchor link to this section",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -286,10 +294,10 @@ Python Markdown Extensions][Slugs]:
     ``` toml
     [project.markdown_extensions]
     toc = {
-        slugify = {
-            object = "pymdownx.slugs.slugify",
-            kwds = { case = "lower" },
-        },
+      slugify = {
+        object = "pymdownx.slugs.slugify",
+        kwds.case = "lower",
+      },
     }
     ```
 
@@ -313,7 +321,9 @@ headings to decrease the length of the table of contents:
 
     ``` toml
     [project.markdown_extensions]
-    toc = { toc_depth = 3 }
+    toc = {
+      toc_depth = 3,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -330,7 +340,9 @@ To remove the table of contents altogether:
 
     ``` toml
     [project.markdown_extensions]
-    toc = { toc_depth = 0 }
+    toc = {
+      toc_depth = 0,
+    }
     ```
 
 === "`mkdocs.yml`"

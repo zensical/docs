@@ -107,7 +107,7 @@ features:
     [project.theme]
     features = [
       "content.action.edit", # Edit this page
-      "content.action.view"  # View source of this page
+      "content.action.view", # View source of this page
     ]
     ```
 

@@ -57,12 +57,14 @@ to your configuration:
     ``` toml
     [project]
     extra_javascript = [
-        "javascripts/mathjax.js",
-        "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"
+      "javascripts/mathjax.js",
+      "https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js",
     ]
 
     [project.markdown_extensions]
-    pymdownx.arithmatex = { generic = true }
+    pymdownx.arithmatex = {
+      generic = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -126,17 +128,19 @@ supports a subset of LaTeX syntax and can render math to HTML and SVG. To use
     ``` toml
     [project]
     extra_javascript = [
-        "javascripts/katex.js",
-        "https://unpkg.com/katex@0/dist/katex.min.js",
-        "https://unpkg.com/katex@0/dist/contrib/auto-render.min.js"
+      "javascripts/katex.js",
+      "https://unpkg.com/katex@0/dist/katex.min.js",
+      "https://unpkg.com/katex@0/dist/contrib/auto-render.min.js",
     ]
 
     extra_css = [
-        "https://unpkg.com/katex@0/dist/katex.min.css"
+      "https://unpkg.com/katex@0/dist/katex.min.css",
     ]
 
     [project.markdown_extensions]
-    pymdownx.arithmatex = { generic = true }
+    pymdownx.arithmatex = {
+      generic = true,
+    }
     ```
 
 === "`mkdocs.yml`"

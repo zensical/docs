@@ -327,7 +327,10 @@ configuration:
 
     ``` toml
     [project]
-    watch = ["data.csv", "fragments"]
+    watch = [
+      "data.csv",
+      "fragments",
+    ]
     ```
 
 === "`mkdocs.yml`"

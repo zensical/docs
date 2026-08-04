@@ -179,11 +179,13 @@ following lines to allow users to switch between light and dark mode:
 === "`zensical.toml`"
 
     ``` toml
+    # Palette toggle for light mode
     [[project.theme.palette]] # (1)!
     scheme = "default"
     toggle.icon = "lucide/sun"
     toggle.name = "Switch to dark mode"
 
+    # Palette toggle for dark mode
     [[project.theme.palette]]
     scheme = "slate"
     toggle.icon = "lucide/moon"
@@ -395,7 +397,9 @@ your configuration:
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -427,7 +431,10 @@ in the [color schemes][palette.scheme] section:
     ``` toml
     [project]
     theme.palette.scheme = "youtube"
-    extra_css = ["stylesheets/extra.css"]
+
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"

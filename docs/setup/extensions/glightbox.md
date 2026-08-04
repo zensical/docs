@@ -12,8 +12,8 @@ The GLightbox extension, included with Zensical, enables image zoom through ligh
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = {}
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {}
     ```
 
 === "`mkdocs.yml`"
@@ -32,8 +32,10 @@ When `true`, images are wrapped automatically, unless they have the `off-glb` CS
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { auto = false }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      auto = false,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -51,8 +53,10 @@ When set to `true`, images for light and dark modes are grouped into separate ga
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { auto_themed = true }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      auto_themed = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -70,8 +74,10 @@ Width of the lightbox overlay (default: `auto`). Accepts CSS units (`px`, `%`, `
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { width = "800px" }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      width = "800px",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -89,8 +95,10 @@ Height of the lightbox overlay (default: `auto`). Accepts CSS units (`px`, `%`, 
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { height = "600px" }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      height = "600px",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -108,8 +116,12 @@ List of image CSS classes to exclude from automatic wrapping. The default value 
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { skip_classes = ["extra-class-to-exclude"] }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      skip_classes = [
+        "extra-class-to-exclude",
+      ],
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -128,8 +140,10 @@ When set to `true`, the image `alt` attribute is used as a caption when no expli
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { auto_caption = true }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      auto_caption = true,
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -147,8 +161,10 @@ Default caption position for images (default: `bottom`). Valid values: `bottom`,
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions.zensical.extensions]
-    glightbox = { caption_position = "right" }
+    [project.markdown_extensions]
+    zensical.extensions.glightbox = {
+      caption_position = "right",
+    }
     ```
 
 === "`mkdocs.yml`"

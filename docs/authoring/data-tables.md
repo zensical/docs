@@ -149,8 +149,8 @@ via [additional JavaScript]:
     ``` toml
     [project]
     extra_javascript = [
-        "https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js",
-        "javascripts/tablesort.js"
+      "https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js",
+      "javascripts/tablesort.js",
     ]
     ```
 

@@ -43,9 +43,9 @@ Configure mkdocstrings as a plugin:
     inventories = ["https://docs.python.org/3/objects.inv"]
     paths = ["src"]
     options = {
-        docstring_style = "google",
-        inherited_members = true,
-        show_source = false,
+      docstring_style = "google",
+      inherited_members = true,
+      show_source = false,
     }
     ```
 

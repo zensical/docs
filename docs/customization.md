@@ -40,7 +40,9 @@ design or apply specific branding, simply place your style sheet file within the
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -80,7 +82,9 @@ the `docs` directory:
 
     ``` toml
     [project]
-    extra_javascript = ["javascripts/extra.js"]
+    extra_javascript = [
+      "javascripts/extra.js",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -125,9 +129,13 @@ to be loaded as a module:
 === "`zensical.toml`"
 
     ``` toml
-    [[project.extra_javascript]]
-    path = "javascripts/extra.js"
-    type = "module"
+    [project]
+    extra_javascript = [
+      {
+        path = "javascripts/extra.js",
+        type = "module",
+      },
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -148,9 +156,13 @@ the `async` case:
 === "`zensical.toml`"
 
     ``` toml
-    [[project.extra_javascript]]
-    path = "javascripts/extra.js"
-    async = true
+    [project]
+    extra_javascript = [
+      {
+        path = "javascripts/extra.js",
+        async = true,
+      },
+    ]
     ```
 
 === "`mkdocs.yml`"

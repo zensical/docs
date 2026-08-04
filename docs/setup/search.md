@@ -44,7 +44,7 @@ Add the following lines to your configuration:
     ``` toml
     [project.theme]
     features = [
-        "search.highlight"
+      "search.highlight",
     ]
     ```
 

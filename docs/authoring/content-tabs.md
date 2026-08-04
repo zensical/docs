@@ -22,7 +22,9 @@ following lines to your configuration file:
     ``` toml
     [project.markdown_extensions]
     pymdownx.superfences = {}
-    pymdownx.tabbed = { alternate_style = true }
+    pymdownx.tabbed = {
+      alternate_style = true
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -69,9 +71,11 @@ function with the following lines:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.tabbed.slugify = {
+    pymdownx.tabbed = {
+      slugify = {
         object = "pymdownx.slugs.slugify",
-        kwds = { case = "lower" },
+        kwds.case = "lower",
+      }
     }
     ```
 
@@ -97,8 +101,9 @@ following lines to your configuration:
 
     ``` toml
     [project.theme]
-    features = ["content.tabs.link"]
-
+    features = [
+      "content.tabs.link",
+    ]
     ```
 
 === "`mkdocs.yml`"

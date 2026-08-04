@@ -25,10 +25,10 @@ following to your configuration:
     [project.extra.consent]
     title = "Cookie consent"
     description = """
-        We use cookies to recognize your repeated visits and preferences, as well
-        as to measure the effectiveness of our documentation and whether users
-        find what they're searching for. With your consent, you're helping us to
-        make our documentation better.
+      We use cookies to recognize your repeated visits and preferences, as well
+      as to measure the effectiveness of our documentation and whether users
+      find what they're searching for. With your consent, you're helping us to
+      make our documentation better.
     """ # (1)!
     ```
 
@@ -101,8 +101,10 @@ The following properties are available:
 
         ``` toml
         [project.extra.consent.cookies]
-        analytics.name = "Google Analytics"
-        checked = false
+        analytics = {
+          name = "Google Analytics",
+          checked = false,
+        }
         ```
 
     === "`mkdocs.yml`"
@@ -122,8 +124,10 @@ The following properties are available:
 
         ``` toml
         [project.extra.consent.cookies]
-        analytics.name = "Google Analytics" # (1)!
-        custom = "Custom cookie"
+        analytics = {
+          name = "Google Analytics", # (1)!
+          custom = "Custom cookie",
+        }
         ```
 
         1. If you define a custom cookie as part of the `cookies` property,
@@ -158,8 +162,8 @@ The following properties are available:
         ``` toml
         [project.extra.consent]
         actions = [
-            "accept",
-            "manage" # (1)!
+          "accept",
+          "manage", # (1)!
         ]
         ```
 
@@ -238,7 +242,9 @@ Use [additional JavaScript] to query the result:
 
     ``` toml
     [project]
-    extra_javascript = ["javascripts/consent.js"]
+    extra_javascript = [
+      "javascripts/consent.js",
+    ]
     ```
 
 === "`mkdocs.yml`"

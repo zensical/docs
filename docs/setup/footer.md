@@ -24,7 +24,7 @@ configuration:
     ``` toml
     [project.theme]
     features = [
-        "navigation.footer"
+      "navigation.footer",
     ]
     ```
 

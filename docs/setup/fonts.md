@@ -97,7 +97,9 @@ corresponding `@font-face` definition:
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"

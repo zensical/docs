@@ -82,17 +82,23 @@ in `extra.polyfills`:
 
 ``` toml
 [project.extra]
-polyfills = ["js/iframe-worker-shim.js"]
+polyfills = [
+  "js/iframe-worker-shim.js",
+]
 ```
 
 or
 
 ``` toml
-[[project.extra.polyfills]]
-path = "js/iframe-worker-shim.js"
-type = "text/javascript"
-async = false
-defer = false
+[project.extra]
+polyfills = [
+  {
+    path = "js/iframe-worker-shim.js",
+    type = "text/javascript",
+    async = false,
+    defer = false,
+  },
+]
 ```
 
 Here it is assumed the asset is in a `js/` folder in your configured `docs/` directory:

@@ -21,7 +21,10 @@ shortcodes. Add the following lines to your configuration:
     ``` toml
     [project.markdown_extensions]
     attr_list = {}
-    pymdownx.emoji = {}
+    pymdownx.emoji = {
+      emoji_generator = "zensical.extensions.emoji.to_svg",
+      emoji_index = "zensical.extensions.emoji.twemoji",
+    }
     ```
 
 === "`mkdocs.yml`"
@@ -30,8 +33,8 @@ shortcodes. Add the following lines to your configuration:
     markdown_extensions:
       - attr_list
       - pymdownx.emoji:
-          emoji_index: !!python/name:material.extensions.emoji.twemoji
-          emoji_generator: !!python/name:material.extensions.emoji.to_svg
+          emoji_generator: !!python/name:zensical.extensions.emoji.to_svg
+          emoji_index: !!python/name:zensical.extensions.emoji.twemoji
     ```
 
 See additional configuration options:
@@ -111,7 +114,9 @@ While HTML allows inline styles, it's always recommended to add an
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -159,7 +164,9 @@ dedicated CSS class to the icon:
 
     ``` toml
     [project]
-    extra_css = ["stylesheets/extra.css"]
+    extra_css = [
+      "stylesheets/extra.css",
+    ]
     ```
 
 === "`mkdocs.yml`"

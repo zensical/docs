@@ -161,9 +161,11 @@ your project documentation. The structure of your project should look like this:
 
     [project.markdown_extensions]
     pymdownx.emoji = {
-        emoji_index = "zensical.extensions.emoji.twemoji",
-        emoji_generator = "zensical.extensions.emoji.to_svg",
-        options.custom_icons = ["overrides/.icons"],
+      emoji_generator = "zensical.extensions.emoji.to_svg",
+      emoji_index = "zensical.extensions.emoji.twemoji",
+      options.custom_icons = [
+        "overrides/.icons",
+      ],
     }
     ```
 
