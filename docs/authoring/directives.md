@@ -25,7 +25,7 @@ named variants.
 previews for directives (click to enlarge):
 
 ![shows switching between variants and how the source documents imports
-reusable content](../../assets/images/directives.webp)
+reusable content](../assets/images/directives.webp)
 
 You can explore our example project [deployment-guide example] directly in
 Zensical Studio. You do not need to install the Directives extension - or even
@@ -218,6 +218,6 @@ the unresolved directive visible in the output instead. We will add validation
 to Zensical Studio first, so authors can find and fix these issues while
 writing.
 
-[deployment-guide example]: ../../assets/deployment-guide.zip
+[deployment-guide example]: ../assets/deployment-guide.zip
 [Zensical Spark]: https://zensical.org/spark/
 [Zensical Studio]: https://zensical.org/studio/
