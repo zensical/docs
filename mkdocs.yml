@@ -207,6 +207,7 @@ nav:
           - Offline usage: setup/offline.md
   - Extensions:
       - About extensions: setup/extensions/about.md
+      - Directives: setup/extensions/directives.md
       - GLightbox: setup/extensions/glightbox.md
       - Macros: setup/extensions/macros.md
       - Markdown Exec: setup/extensions/markdown-exec.md
