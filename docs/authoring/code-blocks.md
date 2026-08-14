@@ -21,11 +21,9 @@ following lines to your configuration:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.highlight = {
-      anchor_linenums = true,
-      line_spans = "__span",
-      pygments_lang_class = true,
-    }
+    pymdownx.highlight.anchor_linenums = true
+    pymdownx.highlight.line_spans = "__span"
+    pymdownx.highlight.pygments_lang_class = true
     pymdownx.inlinehilite = {}
     pymdownx.snippets = {}
     pymdownx.superfences = {}

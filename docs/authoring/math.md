@@ -62,9 +62,7 @@ to your configuration:
     ]
 
     [project.markdown_extensions]
-    pymdownx.arithmatex = {
-      generic = true,
-    }
+    pymdownx.arithmatex.generic = true
     ```
 
 === "`mkdocs.yml`"
@@ -138,9 +136,7 @@ supports a subset of LaTeX syntax and can render math to HTML and SVG. To use
     ]
 
     [project.markdown_extensions]
-    pymdownx.arithmatex = {
-      generic = true,
-    }
+    pymdownx.arithmatex.generic = true
     ```
 
 === "`mkdocs.yml`"

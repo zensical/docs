@@ -101,10 +101,8 @@ The following properties are available:
 
         ``` toml
         [project.extra.consent.cookies]
-        analytics = {
-          name = "Google Analytics",
-          checked = false,
-        }
+        analytics.name = "Google Analytics"
+        analytics.checked = false
         ```
 
     === "`mkdocs.yml`"
@@ -124,10 +122,8 @@ The following properties are available:
 
         ``` toml
         [project.extra.consent.cookies]
-        analytics = {
-          name = "Google Analytics", # (1)!
-          custom = "Custom cookie",
-        }
+        analytics.name = "Google Analytics" # (1)!
+        analytics.custom = "Custom cookie"
         ```
 
         1. If you define a custom cookie as part of the `cookies` property,

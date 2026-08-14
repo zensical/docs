@@ -246,14 +246,10 @@ instant previews on a per-page or per-section level for your documentation:
 === "`zensical.toml`"
 
     ``` toml
-    [project.markdown_extensions]
-    zensical.extensions.preview.configurations = [
-      {
-        targets.include = [
-          "customization.md",
-          "setup/extensions/*",
-        ]
-      },
+    [[project.markdown_extensions.zensical.extensions.preview.configurations]]
+    targets.include = [
+      "customization.md",
+      "setup/extensions/*",
     ]
     ```
 
@@ -278,19 +274,11 @@ extensions in the setup guide.
     === "`zensical.toml`"
 
         ``` toml
-        [project.markdown_extensions]
-        zensical.extensions.preview.configurations = [
-          {
-            sources = {
-              include = [],
-              exclude = [],
-            }, # (1)!
-            targets = {
-              include = [],
-              exclude = [],
-            }, # (2)!
-          },
-        ]
+        [[project.markdown_extensions.zensical.extensions.preview.configurations]]
+        sources.include = [] # (1)!
+        sources.exclude = []
+        targets.include = [] # (2)!
+        targets.exclude = []
         ```
 
     === "`mkdocs.yml`"

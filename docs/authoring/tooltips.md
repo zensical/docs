@@ -155,9 +155,9 @@ pages with the following configuration:
 
     ``` toml
     [project.markdown_extensions]
-    pymdownx.snippets = {
-      auto_append = ["includes/abbreviations.md"],
-    }
+    pymdownx.snippets.auto_append = [
+      "includes/abbreviations.md",
+    ]
     ```
 
 === "`mkdocs.yml`"

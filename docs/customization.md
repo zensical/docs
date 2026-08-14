@@ -131,10 +131,7 @@ to be loaded as a module:
     ``` toml
     [project]
     extra_javascript = [
-      {
-        path = "javascripts/extra.js",
-        type = "module",
-      },
+      { path = "javascripts/extra.js", type = "module" },
     ]
     ```
 
@@ -158,10 +155,7 @@ the `async` case:
     ``` toml
     [project]
     extra_javascript = [
-      {
-        path = "javascripts/extra.js",
-        async = true,
-      },
+      { path = "javascripts/extra.js", async = true },
     ]
     ```
 

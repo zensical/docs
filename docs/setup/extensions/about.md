@@ -84,45 +84,27 @@ default configuration is written to the generated `zensical.toml` file:
     def_list = {}
     footnotes = {}
     md_in_html = {}
-    toc = {
-      permalink = true,
-    }
-    pymdownx.arithmatex = {
-      generic = true,
-    }
+    toc.permalink = true
+    pymdownx.arithmatex.generic = true
     pymdownx.betterem = {}
     pymdownx.caret = {}
     pymdownx.details = {}
-    pymdownx.emoji = {
-      emoji_generator = "zensical.extensions.emoji.to_svg",
-      emoji_index = "zensical.extensions.emoji.twemoji",
-    }
-    pymdownx.highlight = {
-      anchor_linenums = true,
-      line_spans = "__span",
-      pygments_lang_class = true,
-    }
+    pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+    pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+    pymdownx.highlight.anchor_linenums = true
+    pymdownx.highlight.line_spans = "__span"
+    pymdownx.highlight.pygments_lang_class = true
     pymdownx.inlinehilite = {}
     pymdownx.keys = {}
     pymdownx.magiclink = {}
     pymdownx.mark = {}
     pymdownx.smartsymbols = {}
-    pymdownx.superfences = {
-      custom_fences = [
-        {
-          name = "mermaid",
-          class = "mermaid",
-          format = "pymdownx.superfences.fence_code_format",
-        },
-      ],
-    }
-    pymdownx.tabbed = {
-      alternate_style = true,
-      combine_header_slug = true,
-    }
-    pymdownx.tasklist = {
-      custom_checkbox = true,
-    }
+    pymdownx.superfences.custom_fences = [
+      { name = "mermaid", class = "mermaid", format = "pymdownx.superfences.fence_code_format" },
+    ]
+    pymdownx.tabbed.alternate_style = true
+    pymdownx.tabbed.combine_header_slug = true
+    pymdownx.tasklist.custom_checkbox = true
     pymdownx.tilde = {}
     ```
 

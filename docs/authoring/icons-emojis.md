@@ -21,10 +21,8 @@ shortcodes. Add the following lines to your configuration:
     ``` toml
     [project.markdown_extensions]
     attr_list = {}
-    pymdownx.emoji = {
-      emoji_generator = "zensical.extensions.emoji.to_svg",
-      emoji_index = "zensical.extensions.emoji.twemoji",
-    }
+    pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+    pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
     ```
 
 === "`mkdocs.yml`"

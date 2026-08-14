@@ -42,11 +42,9 @@ Configure mkdocstrings as a plugin:
     [project.plugins.mkdocstrings.handlers.python]
     inventories = ["https://docs.python.org/3/objects.inv"]
     paths = ["src"]
-    options = {
-      docstring_style = "google",
-      inherited_members = true,
-      show_source = false,
-    }
+    options.docstring_style = "google"
+    options.inherited_members = true
+    options.show_source = false
     ```
 
 === "`mkdocs.yml`"

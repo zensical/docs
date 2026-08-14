@@ -92,12 +92,7 @@ or
 ``` toml
 [project.extra]
 polyfills = [
-  {
-    path = "js/iframe-worker-shim.js",
-    type = "text/javascript",
-    async = false,
-    defer = false,
-  },
+  { path = "js/iframe-worker-shim.js", type = "text/javascript", async = false, defer = false },
 ]
 ```
 

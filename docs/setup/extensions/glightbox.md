@@ -33,9 +33,7 @@ When `true`, images are wrapped automatically, unless they have the `off-glb` CS
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      auto = false,
-    }
+    zensical.extensions.glightbox.auto = false
     ```
 
 === "`mkdocs.yml`"
@@ -54,9 +52,7 @@ When set to `true`, images for light and dark modes are grouped into separate ga
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      auto_themed = true,
-    }
+    zensical.extensions.glightbox.auto_themed = true
     ```
 
 === "`mkdocs.yml`"
@@ -75,9 +71,7 @@ Width of the lightbox overlay (default: `auto`). Accepts CSS units (`px`, `%`, `
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      width = "800px",
-    }
+    zensical.extensions.glightbox.width = "800px"
     ```
 
 === "`mkdocs.yml`"
@@ -96,9 +90,7 @@ Height of the lightbox overlay (default: `auto`). Accepts CSS units (`px`, `%`, 
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      height = "600px",
-    }
+    zensical.extensions.glightbox.height = "600px"
     ```
 
 === "`mkdocs.yml`"
@@ -117,11 +109,9 @@ List of image CSS classes to exclude from automatic wrapping. The default value 
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      skip_classes = [
-        "extra-class-to-exclude",
-      ],
-    }
+    zensical.extensions.glightbox.skip_classes = [
+      "extra-class-to-exclude",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -141,9 +131,7 @@ When set to `true`, the image `alt` attribute is used as a caption when no expli
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      auto_caption = true,
-    }
+    zensical.extensions.glightbox.auto_caption = true
     ```
 
 === "`mkdocs.yml`"
@@ -162,9 +150,7 @@ Default caption position for images (default: `bottom`). Valid values: `bottom`,
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.glightbox = {
-      caption_position = "right",
-    }
+    zensical.extensions.glightbox.caption_position = "right"
     ```
 
 === "`mkdocs.yml`"

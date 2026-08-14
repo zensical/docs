@@ -160,13 +160,11 @@ your project documentation. The structure of your project should look like this:
     custom_dir = "overrides"
 
     [project.markdown_extensions]
-    pymdownx.emoji = {
-      emoji_generator = "zensical.extensions.emoji.to_svg",
-      emoji_index = "zensical.extensions.emoji.twemoji",
-      options.custom_icons = [
-        "overrides/.icons",
-      ],
-    }
+    pymdownx.emoji.emoji_generator = "zensical.extensions.emoji.to_svg"
+    pymdownx.emoji.emoji_index = "zensical.extensions.emoji.twemoji"
+    pymdownx.emoji.options.custom_icons = [
+      "overrides/.icons",
+    ]
     ```
 
 === "`mkdocs.yml`"

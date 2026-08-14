@@ -46,9 +46,7 @@ Name of a Python module to load for defining variables, macros, and filters (def
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      module_name = "macros",
-    }
+    zensical.extensions.macros.module_name = "macros"
     ```
 
 === "`mkdocs.yml`"
@@ -67,11 +65,9 @@ List of additional importable module names (pluglets) to load on top of [`module
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      modules = [
-        "my_package.macros",
-      ],
-    }
+    zensical.extensions.macros.modules = [
+      "my_package.macros",
+    ]
     ```
 
 === "`mkdocs.yml`"
@@ -91,22 +87,16 @@ YAML files whose contents are merged into the template variables. A list of file
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      include_yaml = [
-        "data/variables.yml",
-      ],
-    }
+    zensical.extensions.macros.include_yaml = [
+      "data/variables.yml",
+    ]
     ```
 
     To assign file contents to a named variable:
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      include_yaml = {
-        team = "data/team.yml"
-      }
-    }
+    zensical.extensions.macros.include_yaml.team = "data/team.yml"
     ```
 
 === "`mkdocs.yml`"
@@ -135,9 +125,7 @@ Directory used as a Jinja2 template loader, enabling `{% include %}` tags in pag
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      include_dir = "includes",
-    }
+    zensical.extensions.macros.include_dir = "includes"
     ```
 
 === "`mkdocs.yml`"
@@ -156,9 +144,7 @@ When `true`, all pages are rendered as Jinja2 templates. When `false`, only page
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      render_by_default = false,
-    }
+    zensical.extensions.macros.render_by_default = false
     ```
 
 === "`mkdocs.yml`"
@@ -177,9 +163,7 @@ When `true`, render errors cause the build to fail. When `false`, pages that fai
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      on_error_fail = true,
-    }
+    zensical.extensions.macros.on_error_fail = true
     ```
 
 === "`mkdocs.yml`"
@@ -198,9 +182,7 @@ How undefined template variables are handled. When set to `"keep"`, undefined ex
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      on_undefined = "strict",
-    }
+    zensical.extensions.macros.on_undefined = "strict"
     ```
 
 === "`mkdocs.yml`"
@@ -219,9 +201,7 @@ Opening delimiter for Jinja2 block tags (default: `{%`).
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_block_start_string = "<%",
-    }
+    zensical.extensions.macros.j2_block_start_string = "<%"
     ```
 
 === "`mkdocs.yml`"
@@ -240,9 +220,7 @@ Closing delimiter for Jinja2 block tags (default: `%}`).
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_block_end_string = "%>",
-    }
+    zensical.extensions.macros.j2_block_end_string = "%>"
     ```
 
 === "`mkdocs.yml`"
@@ -261,9 +239,7 @@ Opening delimiter for Jinja2 variable expressions (default: `{{`).
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_variable_start_string = "<<",
-    }
+    zensical.extensions.macros.j2_variable_start_string = "<<"
     ```
 
 === "`mkdocs.yml`"
@@ -282,9 +258,7 @@ Closing delimiter for Jinja2 variable expressions (default: `}}`).
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_variable_end_string = ">>",
-    }
+    zensical.extensions.macros.j2_variable_end_string = ">>"
     ```
 
 === "`mkdocs.yml`"
@@ -303,9 +277,7 @@ Opening delimiter for Jinja2 comments (default: `{#`).
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_comment_start_string = "<#",
-    }
+    zensical.extensions.macros.j2_comment_start_string = "<#"
     ```
 
 === "`mkdocs.yml`"
@@ -324,9 +296,7 @@ Closing delimiter for Jinja2 comments (default: `#}`).
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_comment_end_string = "#>",
-    }
+    zensical.extensions.macros.j2_comment_end_string = "#>"
     ```
 
 === "`mkdocs.yml`"
@@ -345,11 +315,9 @@ List of [Jinja2 extensions] to be loaded into the template environment. The defa
 
     ``` toml
     [project.markdown_extensions]
-    zensical.extensions.macros = {
-      j2_extensions = [
-        "jinja2.ext.do",
-      ],
-    }
+    zensical.extensions.macros.j2_extensions = [
+      "jinja2.ext.do",
+    ]
     ```
 
 === "`mkdocs.yml`"
