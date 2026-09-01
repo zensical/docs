@@ -80,17 +80,22 @@ generating redirect files:
 
 ## Directory URLs
 
-The plugin follows `use_directory_urls`. With directory URLs enabled:
+The plugin follows [`use_directory_urls`][use_directory_urls]. With directory
+URLs enabled, a mapping such as:
 
-- `old.md: new.md` writes `old/index.html` and points it to `../new/`.
-- `old/dir/README.md: new/dir/README.md` writes `old/dir/index.html` and points
-  it to `../../new/dir/`.
-- `old/dir/page.md: new/dir/page.md` writes `old/dir/page/index.html` and points
-  it to `../../new/dir/page/`.
+```yaml
+old.md: new.md
+```
 
-With directory URLs disabled, regular pages use `.html` output paths instead:
-`old.md: new.md` writes `old.html` and points it to `new.html`. Index pages
+generates `old/index.html` and redirects to `../new/`. Other Markdown paths
+follow the same rule: index pages use `index.html` in their directory, while
+other pages use a directory named after the page.
+
+With directory URLs disabled, regular pages use `.html` output paths instead.
+The same mapping generates `old.html` and redirects to `new.html`. Index pages
 still use `index.html` in their directory.
+
+[use_directory_urls]: ../setup/basics.md#use_directory_urls
 
 ## Validation
 
