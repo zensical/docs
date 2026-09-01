@@ -111,7 +111,9 @@ Set `implicit_index` to `true` to add the directory's preferred index page
 automatically: Zensical uses `index.md`, or `README.md` when no `index.md`
 exists.
 
-## Navigation files
+## Usage
+
+### Navigation files
 
 Write ordinary Markdown lists in the navigation file. Links add pages to the
 navigation, and nested lists create sections:
@@ -141,7 +143,7 @@ first page in that section:
 
 The `Guides` page is listed first, followed by `Installation`.
 
-### Nested navigation
+#### Nested navigation
 
 To use a navigation file in a subdirectory, include that directory with a
 trailing slash, for example:
@@ -174,7 +176,7 @@ The same mechanism can be used with an explicitly configured `nav`:
       - Guides: guides/
     ```
 
-### Wildcards
+#### Wildcards
 
 Use a bare item containing `*` to include matching pages or directories. The
 pattern is relative to the navigation file:
@@ -194,7 +196,7 @@ also be used inside a section:
     - api/*.md
 ```
 
-## Controlling list selection
+### Controlling list selection
 
 By default, the plugin uses the first suitable list in the navigation file. To
 select a particular list, place `<!--nav-->` on a line of its own immediately

@@ -56,7 +56,7 @@ minification or asset renaming:
 enabled = false
 ```
 
-## JavaScript files
+### JavaScript files
 
 Set `minify_js` to `true` and use `js_files` to select JavaScript files with
 paths or glob patterns. The paths are relative to `docs_dir`. These can be the
@@ -83,7 +83,7 @@ files listed in [additional JavaScript][extra_javascript].
 Minified JavaScript files use the `.min.js` suffix by convention. Zensical
 updates references in the generated HTML to use the emitted filename.
 
-## CSS files
+### CSS files
 
 Set `minify_css` to `true` and use `css_files` to select CSS files with paths or
 glob patterns. The paths are relative to `docs_dir`. These can be the files
@@ -115,7 +115,7 @@ references in the generated HTML to use the emitted filename.
     If Zensical cannot parse a selected JavaScript or CSS file, it keeps the
     original content instead of emitting a minified version.
 
-## Cache-safe asset names
+### Cache-safe asset names
 
 Set `cache_safe` to add a content hash to the selected asset names:
 
@@ -138,7 +138,7 @@ to cache an asset until its contents change.
     hosting platform to assign a long cache lifetime to these assets. Since
     the filename changes when the content changes, long-lived caching is safe.
 
-## HTML options
+### HTML options
 
 Use `htmlmin_opts` to control HTML processing. For example, remove ordinary
 HTML comments while preserving the default handling of preformatted content:

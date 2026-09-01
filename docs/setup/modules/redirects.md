@@ -84,7 +84,7 @@ generating redirect files:
           enabled: false
     ```
 
-## Directory URLs
+### Directory URLs
 
 The plugin follows [`use_directory_urls`][use_directory_urls]. With directory
 URLs enabled, a mapping such as:
@@ -106,7 +106,7 @@ still use `index.html` in their directory.
 [DataRobot]: https://github.com/datarobot
 [burkestar]: https://github.com/burkestar
 
-## Validation
+### Validation
 
 Zensical warns when an internal target does not exist and does not write that
 redirect. During a strict build, the warning fails the build. Duplicate

@@ -97,7 +97,9 @@ navigation files.
     `!(pattern)` are not supported. MkDocs' `not_in_nav` setting is not
     currently supported.
 
-## Custom navigation
+## Usage
+
+### Custom navigation
 
 Create `docs/.nav.yml` to control the root navigation. The `nav` option uses
 the same basic structure as the `nav` setting in a `mkdocs.yml` file:
@@ -110,7 +112,7 @@ nav:
       - guides/configuration.md
 ```
 
-### Pages and directories
+#### Pages and directories
 
 Paths in `nav` are relative to the directory containing the `.nav.yml` file.
 List a path to a Markdown file to add a page. Map a title to the path to give
@@ -132,7 +134,7 @@ nav:
   - Reference: reference
 ```
 
-### Sections and links
+#### Sections and links
 
 Use a mapping with a list as its value to create a section that does not
 correspond to a directory:
@@ -155,7 +157,7 @@ nav:
   - Project repository: ../
 ```
 
-## Patterns
+### Patterns
 
 Use a `glob` entry to add all matching pages or directories. Patterns are
 relative to the `.nav.yml` file. Use `*` to match items in the current directory
@@ -193,7 +195,7 @@ Set `ignore_no_matches` to `true` to suppress the diagnostic for a pattern that
 matches no pages or directories. Patterns that start with `*` must be quoted
 in YAML.
 
-## Directory options
+### Directory options
 
 The following options can be set in a `.nav.yml` file. The layout, sorting,
 ignore, and unmatched-page options apply to child directories unless overridden.
@@ -245,7 +247,7 @@ append_unmatched: true
 
 For more extensive examples, see the [upstream awesome-nav documentation].
 
-## Sorting
+### Sorting
 
 Use `sort` to control the order of pages and sections that are not explicitly
 ordered in `nav`. Sorting settings are inherited by child directories.
@@ -277,7 +279,7 @@ The available values are:
 `ignore_case`
 : Ignore letter case while sorting. The default is `false`.
 
-## Unmatched pages
+### Unmatched pages
 
 Pages that are not included by `nav` or a pattern are still built and
 accessible by URL, but they do not appear in the navigation. Set
@@ -290,7 +292,7 @@ nav:
   - guides
 ```
 
-## Diagnostics
+### Diagnostics
 
 By default, the plugin reports the following conditions as warnings:
 
