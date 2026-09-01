@@ -213,8 +213,8 @@ nav:
       - Tags: plugins/tags.md
       - Redirects: plugins/redirects.md
       - Minification: plugins/minify.md
-      - Literate navigation: plugins/literate-nav.md
-      - Awesome navigation: plugins/awesome-nav.md
+      - Literate-nav: plugins/literate-nav.md
+      - Awesome-nav: plugins/awesome-nav.md
   - Extensions:
       - About extensions: setup/extensions/about.md
       - GLightbox: setup/extensions/glightbox.md
