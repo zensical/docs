@@ -20,6 +20,8 @@ The following plugins are available in the current development release:
 - [Tags](tags.md) assigns tags to pages and creates tag listings.
 - [Redirects](redirects.md) creates redirect pages for moved content.
 - [Minification](minify.md) reduces the size of generated HTML, CSS, and JavaScript.
+- [Literate navigation](literate-nav.md) defines navigation in Markdown files.
+- [Awesome navigation](awesome-nav.md) customizes navigation with `.nav.yml` files.
 
 These plugins preserve the configuration names used by the corresponding
 Material for MkDocs or MkDocs plugins where possible. The pages in this
