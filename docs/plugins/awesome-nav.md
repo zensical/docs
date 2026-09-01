@@ -60,7 +60,7 @@ explicitly:
 ### Enable or disable
 
 The plugin is enabled when it is configured. Set `enabled` to `false` to keep
-the configuration without using awesome navigation. Its default value is
+the configuration without using the plugin. Its default value is
 `true`:
 
 === "`zensical.toml`"
@@ -123,8 +123,8 @@ nav:
 ### Pages and directories
 
 Paths in `nav` are relative to the directory containing the `.nav.yml` file.
-List a Markdown path to add a page. Give it a title by mapping the title to the
-path:
+List a path to a Markdown file to add a page. Map a title to the path to give
+the page a custom title:
 
 ``` yaml
 nav:
@@ -205,8 +205,8 @@ in YAML.
 
 ## Directory options
 
-The following options can be set in a `.nav.yml` file. Layout, sorting, ignore,
-and unmatched-page settings apply to child directories unless overridden.
+The following options can be set in a `.nav.yml` file. The layout, sorting,
+ignore, and unmatched-page options apply to child directories unless overridden.
 `title` and `hide` apply only to the current directory:
 
 `title`
@@ -253,8 +253,7 @@ ignore:
 append_unmatched: true
 ```
 
-For more extensive examples, see the [awesome-nav documentation](
-https://lukasgeiter.github.io/mkdocs-awesome-nav/features/nav/).
+For more extensive examples, see the [upstream awesome-nav documentation].
 
 ## Sorting
 
@@ -335,3 +334,4 @@ Use `logs` to set each diagnostic level to `info`, `warning`, or `error`:
 
 In a strict build, warnings cause the build to fail. An `info` diagnostic does
 not.
+[upstream awesome-nav documentation]: https://lukasgeiter.github.io/mkdocs-awesome-nav/features/nav/
