@@ -595,18 +595,18 @@ This will render annotations with a larger width:
 
 [Adding line numbers]: #add-line-numbers
 [additional style sheet]: ../customization.md#additional-css
-[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[Attribute Lists]: ../setup/modules/python-markdown.md#attribute-lists
 [color schemes]: ../setup/colors.md#color-scheme
 [colors]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/_colors.scss
-[Highlight]: ../setup/extensions/python-markdown-extensions.md#highlight
-[InlineHilite]: ../setup/extensions/python-markdown-extensions.md#inlinehilite
+[Highlight]: ../setup/modules/python-markdown-extensions.md#highlight
+[InlineHilite]: ../setup/modules/python-markdown-extensions.md#inlinehilite
 [line highlighting]: #highlight-specific-lines
 [list of available lexers]: https://pygments.org/docs/lexers/
 [placed in comments]: #add-annotations
 [Pygments]: https://pygments.org
 [s2]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/extensions/pymdownx/_highlight.scss
-[Snippets]: ../setup/extensions/python-markdown-extensions.md#snippets
+[Snippets]: ../setup/modules/python-markdown-extensions.md#snippets
 [Snippets notation]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets-notation
-[SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
+[SuperFences]: ../setup/modules/python-markdown-extensions.md#superfences
 [syntax theme definition]: https://github.com/zensical/ui/blob/master/src/assets/stylesheets/modern/main/extensions/pymdownx/_highlight.scss
 [types of string tokens]: https://pygments.org/docs/tokens/#literals

@@ -89,7 +89,21 @@ plugins:
   - markdown-exec
   - redirects:
       redirect_maps:
-        setup/tags.md: plugins/tags.md
+        setup/tags.md: setup/modules/tags.md
+        setup/extensions/index.md: setup/modules/index.md
+        setup/extensions/about.md: setup/modules/index.md
+        setup/extensions/glightbox.md: setup/modules/glightbox.md
+        setup/extensions/macros.md: setup/modules/macros.md
+        setup/extensions/markdown-exec.md: setup/modules/markdown-exec.md
+        setup/extensions/mkdocstrings.md: setup/modules/mkdocstrings.md
+        setup/extensions/meta.md: setup/modules/meta.md
+        setup/extensions/tags.md: setup/modules/tags.md
+        setup/extensions/redirects.md: setup/modules/redirects.md
+        setup/extensions/minify.md: setup/modules/minify.md
+        setup/extensions/literate-nav.md: setup/modules/literate-nav.md
+        setup/extensions/awesome-nav.md: setup/modules/awesome-nav.md
+        setup/extensions/python-markdown.md: setup/modules/python-markdown.md
+        setup/extensions/python-markdown-extensions.md: setup/modules/python-markdown-extensions.md
 
 # Additional configuration
 extra:
@@ -100,6 +114,7 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
+    material: Material for MkDocs
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/zensical
@@ -132,7 +147,7 @@ markdown_extensions:
       targets:
         include:
           - customization.md
-          - setup/extensions/*
+          - setup/modules/*
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -207,22 +222,21 @@ nav:
           - Versioning: setup/versioning.md
           - Comment system: setup/comment-system.md
           - Offline usage: setup/offline.md
-  - Plugins:
-      - Plugins: plugins/index.md
-      - Metadata: plugins/meta.md
-      - Tags: plugins/tags.md
-      - Redirects: plugins/redirects.md
-      - Minification: plugins/minify.md
-      - Literate-nav: plugins/literate-nav.md
-      - Awesome-nav: plugins/awesome-nav.md
-  - Extensions:
-      - About extensions: setup/extensions/about.md
-      - GLightbox: setup/extensions/glightbox.md
-      - Macros: setup/extensions/macros.md
-      - Markdown Exec: setup/extensions/markdown-exec.md
-      - mkdocstrings: setup/extensions/mkdocstrings.md
-      - Python Markdown: setup/extensions/python-markdown.md
-      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+  - Modules:
+      - Modules: setup/modules/index.md
+      - Feature parity: setup/modules/features.md
+      - GLightbox: setup/modules/glightbox.md
+      - Macros: setup/modules/macros.md
+      - Markdown Exec: setup/modules/markdown-exec.md
+      - mkdocstrings: setup/modules/mkdocstrings.md
+      - Metadata: setup/modules/meta.md
+      - Tags: setup/modules/tags.md
+      - Redirects: setup/modules/redirects.md
+      - Minification: setup/modules/minify.md
+      - Literate-nav: setup/modules/literate-nav.md
+      - Awesome-nav: setup/modules/awesome-nav.md
+      - Python Markdown: setup/modules/python-markdown.md
+      - Python Markdown Extensions: setup/modules/python-markdown-extensions.md
   - Authoring:
       - Markdown: authoring/markdown.md
       - Front matter: authoring/frontmatter.md

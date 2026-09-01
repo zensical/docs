@@ -199,5 +199,5 @@ numbers, filesizes, dates and month names. See the [tablesort documentation]
 [instant navigation]: ../setup/navigation.md#instant-navigation
 [regular Markdown syntax]: https://www.markdownguide.org/extended-syntax/#tables
 [sortable tables]: #sortable-tables
-[Tables]: ../setup/extensions/python-markdown.md#tables
+[Tables]: ../setup/modules/python-markdown.md#tables
 [tablesort]: https://tristen.ca/tablesort/demo/

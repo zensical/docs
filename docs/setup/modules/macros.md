@@ -1,8 +1,7 @@
 ---
 icon: lucide/braces
 tags:
-  - Extensions
-status: new
+  - Modules
 ---
 
 # Macros

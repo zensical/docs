@@ -84,7 +84,7 @@ together with any valid [icon shortcode]:
 </div>
 
 [accent color]: ../setup/colors.md#accent-color
-[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[Attribute Lists]: ../setup/modules/python-markdown.md#attribute-lists
 [Demo]: javascript:alert$.next("Demo")
 [icon shortcode]: icons-emojis.md#included-icon-sets
 [icon syntax]: icons-emojis.md#use-icons

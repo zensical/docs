@@ -1,8 +1,9 @@
 ---
 icon: lucide/forward
 tags:
-  - Plugins
+  - Modules
   - Redirects
+status: new
 ---
 
 # Redirects
@@ -100,7 +101,7 @@ With directory URLs disabled, regular pages use `.html` output paths instead.
 The same mapping generates `old.html` and redirects to `new.html`. Index pages
 still use `index.html` in their directory.
 
-[use_directory_urls]: ../setup/basics.md#use_directory_urls
+[use_directory_urls]: ../basics.md#use_directory_urls
 [mkdocs-redirects]: https://github.com/mkdocs/mkdocs-redirects
 [DataRobot]: https://github.com/datarobot
 [burkestar]: https://github.com/burkestar

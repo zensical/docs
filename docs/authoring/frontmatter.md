@@ -217,9 +217,9 @@ multiple pages at once.
 [Navigation path]: ../setup/navigation.md#hide-the-navigation-path
 [Previous and next page links]: ../setup/footer.md#hiding-prevnext-links
 [Feedback widget]: ../setup/analytics.md#hide-the-feedback-widget
-[Page tags]: ../plugins/tags.md#hide-tags
+[Page tags]: ../setup/modules/tags.md#hide-tags
 [included icon sets]: icons-emojis.md#included-icon-sets
-[meta plugin]: ../plugins/meta.md
+[meta plugin]: ../setup/modules/meta.md
 [nofollow]: https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
 [overrides directory]: ../customization.md#configuring-overrides
 [Search exclusion]: ../setup/search.md#search-exclusion

@@ -178,5 +178,5 @@ for the definition of task lists:
 
 ---
 
-[Definition Lists]: ../setup/extensions/python-markdown.md#definition-lists
-[Tasklist]: ../setup/extensions/python-markdown-extensions.md#tasklist
+[Definition Lists]: ../setup/modules/python-markdown.md#definition-lists
+[Tasklist]: ../setup/modules/python-markdown-extensions.md#tasklist

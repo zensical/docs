@@ -1,8 +1,7 @@
 ---
 icon: lucide/cog
 tags:
-  - Extensions
-status: new
+  - Modules
 ---
 
 # Markdown Exec
@@ -35,7 +34,8 @@ The `ansi` extra adds the pieces needed to render ANSI colors in HTML code block
 
 ## Configuration
 
-Markdown Exec relies on the [SuperFences] extension, which is [enabled by default] in Zensical. Configure Markdown Exec as a plugin:
+Markdown Exec relies on the [SuperFences] extension, which is enabled by
+default in Zensical. Configure Markdown Exec as a plugin:
 
 === "`zensical.toml`"
 
@@ -113,7 +113,6 @@ Markdown Exec has additional options for naming and prefixing generated HTML ids
 - [Gallery of examples](https://pawamoy.github.io/markdown-exec/gallery/)
 
 [Ace]: https://ace.c9.io/
-[enabled by default]: about.md#default-configuration
 [Markdown Exec]: https://pawamoy.github.io/markdown-exec/
 [Markdown in HTML]: python-markdown.md#markdown-in-html
 [Pyodide]: https://pyodide.org/en/stable/

@@ -355,15 +355,15 @@ we're rethinking how configuration and customization should work:
 
 [backlog item]: https://github.com/zensical/backlog/issues/101
 [description in the page metadata]: ../authoring/frontmatter.md
-[Macros]: extensions/macros.md
-[macros-include_dir]: extensions/macros.md#include_dir
-[macros-include_yaml]: extensions/macros.md#include_yaml
-[macros-module]: extensions/macros.md#module_name
-[macros-modules]: extensions/macros.md#modules
+[Macros]: modules/macros.md
+[macros-include_dir]: modules/macros.md#include_dir
+[macros-include_yaml]: modules/macros.md#include_yaml
+[macros-module]: modules/macros.md#module_name
+[macros-modules]: modules/macros.md#modules
 [Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
-[mkdocstrings]: extensions/mkdocstrings.md
+[mkdocstrings]: modules/mkdocstrings.md
 [new]: ../usage/new.md
 [offline usage]: offline.md
 [preview]: ../usage/preview.md
-[Snippets]: extensions/python-markdown-extensions.md#snippets
+[Snippets]: modules/python-markdown-extensions.md#snippets
 [TOML file format]: https://toml.io/

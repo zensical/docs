@@ -171,10 +171,10 @@ pages with the following configuration:
 
 [^1]: It's highly recommended to put the Markdown file containing the abbreviations outside of the `docs` folder (here, a folder with the name `includes` is used), as Zensical might otherwise complain about a file that is not referenced.
 
-[Abbreviations]: ../setup/extensions/python-markdown.md#abbreviations
-[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[Abbreviations]: ../setup/modules/python-markdown.md#abbreviations
+[Attribute Lists]: ../setup/modules/python-markdown.md#attribute-lists
 [auto-append]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#auto-append-snippets
 [footnotes]: footnotes.md
 [improved tooltips]: #improved-tooltips
 [Markdown syntax]: https://daringfireball.net/projects/markdown/syntax#link
-[Snippets]: ../setup/extensions/python-markdown-extensions.md#snippets
+[Snippets]: ../setup/modules/python-markdown-extensions.md#snippets

@@ -1,8 +1,9 @@
 ---
 icon: lucide/waypoints
 tags:
-  - Plugins
+  - Modules
   - Navigation
+status: new
 ---
 
 # Awesome navigation

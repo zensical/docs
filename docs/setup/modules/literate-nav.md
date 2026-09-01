@@ -1,8 +1,9 @@
 ---
 icon: lucide/list-tree
 tags:
-  - Plugins
+  - Modules
   - Navigation
+status: new
 ---
 
 # Literate navigation

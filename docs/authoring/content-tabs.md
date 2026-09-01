@@ -259,7 +259,7 @@ content, including further content tabs, and can be nested in other blocks like
 [first]: #anchor-links-open-me-in-a-new-tab-
 [instant navigation]: ../setup/navigation.md#instant-navigation
 [second]: #anchor-links--or-me-
-[slugification]: ../setup/extensions/python-markdown-extensions.md#slugify
-[SuperFences]: ../setup/extensions/python-markdown-extensions.md#superfences
-[Tabbed]: ../setup/extensions/python-markdown-extensions.md#tabbed
+[slugification]: ../setup/modules/python-markdown-extensions.md#slugify
+[SuperFences]: ../setup/modules/python-markdown-extensions.md#superfences
+[Tabbed]: ../setup/modules/python-markdown-extensions.md#tabbed
 [third]: #anchor-links--or-even-me

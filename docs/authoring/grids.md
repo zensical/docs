@@ -292,7 +292,7 @@ by using a `div` with the `grid` class:
 </div>
 
 [admonitions]: admonitions.md
-[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[Attribute Lists]: ../setup/modules/python-markdown.md#attribute-lists
 [authoring]: markdown.md
 [block syntax]: #block-syntax
 [card grids]: #use-card-grids
@@ -307,6 +307,6 @@ by using a `div` with the `grid` class:
 [icons and emojis]: icons-emojis.md
 [license]: ../license.md
 [list]: #list-syntax
-[Markdown in HTML]: ../setup/extensions/python-markdown.md#markdown-in-html
+[Markdown in HTML]: ../setup/modules/python-markdown.md#markdown-in-html
 [pip]: ../get-started.md#install-with-pip
 [zensical]: https://zensical.org

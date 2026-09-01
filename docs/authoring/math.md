@@ -223,7 +223,7 @@ In summary, KaTeX shines with its speed and simplicity, whereas MathJax offers
 more features and better compatibility at the expense of speed. The choice
 between the two will largely depend on your specific needs and constraints.
 
-[Arithmatex]: ../setup/extensions/python-markdown-extensions.md#arithmatex
+[Arithmatex]: ../setup/modules/python-markdown-extensions.md#arithmatex
 [AsciiMath]: https://asciimath.org/
 [instant navigation]: ../setup/navigation.md#instant-navigation
 [KaTeX]: https://katex.org/

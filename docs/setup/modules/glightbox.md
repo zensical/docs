@@ -1,8 +1,7 @@
 ---
 icon: lucide/box
 tags:
-  - Extensions
-status: new
+  - Modules
 ---
 
 # GLightbox

@@ -1,8 +1,9 @@
 ---
 icon: lucide/file-cog
 tags:
-  - Plugins
+  - Modules
   - Metadata
+status: material
 ---
 
 # Metadata
@@ -207,11 +208,11 @@ Custom metadata such as `authors` and `categories` is available through
 
 Read more: [Using metadata in templates].
 
-[custom theme]: ../customization.md#packaging-themes
-[Front matter]: ../authoring/frontmatter.md
-[Hiding sidebars]: ../setup/navigation.md#hide-the-sidebars
-[Page template]: ../authoring/frontmatter.md#page-template
-[overrides directory]: ../customization.md#configuring-overrides
-[Search exclusion]: ../setup/search.md#exclude-a-section
+[custom theme]: ../../customization.md#packaging-themes
+[Front matter]: ../../authoring/frontmatter.md
+[Hiding sidebars]: ../navigation.md#hide-the-sidebars
+[Page template]: ../../authoring/frontmatter.md#page-template
+[overrides directory]: ../../customization.md#configuring-overrides
+[Search exclusion]: ../search.md#exclude-a-section
 [Tags plugin]: tags.md
-[Using metadata in templates]: ../authoring/frontmatter.md#use-in-templates
+[Using metadata in templates]: ../../authoring/frontmatter.md#use-in-templates

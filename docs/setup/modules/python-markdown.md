@@ -11,7 +11,7 @@ which features they need to be enabled.
 
 !!! tip "Defaults"
 
-    Zensical has [sensible defaults] for the Markdown extensions settings. Make
+    Zensical has sensible defaults for the Markdown extensions settings. Make
     sure to check these out before you begin to configure things manually.
 
 ## Supported extensions
@@ -390,7 +390,6 @@ usage:
 [Markdown in HTML]: https://python-markdown.github.io/extensions/md_in_html/
 [Python Markdown]: https://python-markdown.github.io/
 [Removing the title]: ../../authoring/admonitions.md#remove-the-title
-[sensible defaults]: about.md#default-configuration
 [site language]: ../language.md#site-language
 [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 [Supported types]: ../../authoring/admonitions.md#supported-types

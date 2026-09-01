@@ -1,8 +1,9 @@
 ---
 icon: lucide/minimize-2
 tags:
-  - Plugins
+  - Modules
   - Performance
+status: new
 ---
 
 # Minification
@@ -185,8 +186,8 @@ The supported options are:
 : Set the attribute that marks an element or attribute value for preservation.
   The default is `pre`.
 
-[extra_css]: ../customization.md#additional-css
-[extra_javascript]: ../customization.md#additional-javascript
+[extra_css]: ../../customization.md#additional-css
+[extra_javascript]: ../../customization.md#additional-javascript
 [mkdocs-minify-plugin]: https://github.com/byrnereese/mkdocs-minify-plugin
 [Byrne Reese]: https://github.com/byrnereese
 [Lars Wilhelmer]: https://github.com/wilhelmer

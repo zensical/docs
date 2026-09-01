@@ -205,13 +205,13 @@ This is exactly what Zensical does in its templates.
 [add your own icons]: ../setup/logo-and-icons.md#additional-icons
 [additional style sheet]: ../customization.md#additional-css
 [animations]: https://developer.mozilla.org/en-US/docs/Web/CSS/animation
-[Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
+[Attribute Lists]: ../setup/modules/python-markdown.md#attribute-lists
 [available icon]: #included-icon-sets
 [colors]: #with-colors
 [custom icons]: https://github.com/squidfunk/mkdocs-material/tree/master/material/templates/.icons
 [custom icons can be added]: ../setup/logo-and-icons.md#additional-icons
-[Emoji]: ../setup/extensions/python-markdown-extensions.md#emoji
-[Emoji with custom icons]: ../setup/extensions/python-markdown-extensions.md#custom_icons
+[Emoji]: ../setup/modules/python-markdown-extensions.md#emoji
+[Emoji with custom icons]: ../setup/modules/python-markdown-extensions.md#custom_icons
 [Emojipedia]: https://emojipedia.org/twitter/
 [extending the theme]: ../customization.md#extending-the-theme
 [FontAwesome]: https://fontawesome.com/search?m=free

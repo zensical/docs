@@ -227,7 +227,7 @@ attribute:
 
 <div class="result" markdown>
 
-[Attribute Lists](extensions/python-markdown.md#attribute-lists){ data-preview }
+[Attribute Lists](modules/python-markdown.md#attribute-lists){ data-preview }
 
 </div>
 
@@ -249,7 +249,7 @@ instant previews on a per-page or per-section level for your documentation:
     [[project.markdown_extensions.zensical.extensions.preview.configurations]]
     targets.include = [
       "customization.md",
-      "setup/extensions/*",
+      "setup/modules/*",
     ]
     ```
 
@@ -262,7 +262,7 @@ instant previews on a per-page or per-section level for your documentation:
             - targets:
                 include:
                   - customization.md
-                  - setup/extensions/*
+                  - setup/modules/*
     ```
 
 The above configuration is what we use for our documentation. We've enabled
@@ -803,7 +803,7 @@ of CSS:
 [navigation.indexes]: #section-index-pages
 [sections]: #navigation-sections
 [site_url]: basics.md#site_url
-[table of contents]: extensions/python-markdown.md#table-of-contents
+[table of contents]: modules/python-markdown.md#table-of-contents
 [tabs]: #navigation-tabs
 [toc.integrate]: #navigation-integration
 [XHR]: https://developer.mozilla.org/en-US/docs/Web/API/XMLHttpRequest

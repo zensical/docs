@@ -1,8 +1,9 @@
 ---
 icon: lucide/tags
 tags:
-  - Plugins
+  - Modules
   - Tags
+status: material
 ---
 
 # Tags
@@ -826,9 +827,9 @@ Named configurations support `scope`, `shadow`, `layout`, `toc`, `include`,
 and `exclude`. Inline settings can also override the selected listing
 configuration.
 
-[custom icon]: ../setup/logo-and-icons.md#additional-icons
-[hide property]: ../authoring/frontmatter.md#hide-page-elements
+[custom icon]: ../logo-and-icons.md#additional-icons
+[hide property]: ../../authoring/frontmatter.md#hide-page-elements
 [metadata plugin]: meta.md
-[custom theme]: ../customization.md#packaging-themes
-[overrides directory]: ../customization.md#configuring-overrides
+[custom theme]: ../../customization.md#packaging-themes
+[overrides directory]: ../../customization.md#configuring-overrides
 [Unicode case folding]: https://www.unicode.org/faq/casemap_charprop.html
