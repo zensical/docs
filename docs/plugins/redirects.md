@@ -7,6 +7,11 @@ tags:
 
 # Redirects
 
+This page documents Zensical's native replacement for [`mkdocs-redirects`][mkdocs-redirects].
+The plugin was originally developed by [DataRobot], transferred to
+the MkDocs organization in 2019, and has since been primarily maintained by
+Dustin Burke ([`@burkestar`][burkestar]).
+
 The redirects plugin keeps old documentation links working after you move or
 rename a page.
 
@@ -96,6 +101,9 @@ The same mapping generates `old.html` and redirects to `new.html`. Index pages
 still use `index.html` in their directory.
 
 [use_directory_urls]: ../setup/basics.md#use_directory_urls
+[mkdocs-redirects]: https://github.com/mkdocs/mkdocs-redirects
+[DataRobot]: https://github.com/datarobot
+[burkestar]: https://github.com/burkestar
 
 ## Validation
 

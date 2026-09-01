@@ -5,9 +5,14 @@ tags:
 
 # Plugins
 
-Zensical includes native plugins for functionality that Material for MkDocs
-and the MkDocs ecosystem provide. These plugins run as part of Zensical's build
-workflow and do not require separate Python packages.
+Zensical provides native replacements for selected MkDocs plugins. These
+modules independently implement the supported plugin behavior without
+executing, embedding, or depending on the original plugin code. Native plugin
+replacements preserve supported MkDocs behavior while using Zensical’s
+differential architecture for faster, more resource-efficient builds.
+
+These plugins run as part of Zensical's build workflow and do not require
+separate Python packages.
 
 Configure plugins in the `[project.plugins]` table in `zensical.toml`.
 Zensical also accepts the compatible `plugins` configuration in `mkdocs.yml`.

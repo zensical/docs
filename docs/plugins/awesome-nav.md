@@ -7,12 +7,13 @@ tags:
 
 # Awesome navigation
 
-For compatibility with projects that use the existing MkDocs `awesome-nav`
-plugin, Zensical provides an implementation that lets you adjust the
-navigation using small `.nav.yml` files placed in the documentation tree next
-to your content. It combines automatic navigation based on the directory
-structure with individually listed pages, sections, links, patterns, sorting,
-and visibility controls.
+This page documents Zensical's native replacement for [`awesome-nav`][mkdocs-awesome-nav],
+created by [Lukas Geiter].
+
+The plugin lets you adjust the navigation using small `.nav.yml` files placed
+in the documentation tree next to your content. It combines automatic
+navigation based on the directory structure with individually listed pages,
+sections, links, patterns, sorting, and visibility controls.
 
 ## How it works
 
@@ -324,3 +325,5 @@ In a strict build, warnings cause the build to fail. An `info` diagnostic does
 not.
 
 [upstream awesome-nav documentation]: https://lukasgeiter.github.io/mkdocs-awesome-nav/features/nav/
+[mkdocs-awesome-nav]: https://github.com/lukasgeiter/mkdocs-awesome-nav
+[Lukas Geiter]: https://github.com/lukasgeiter

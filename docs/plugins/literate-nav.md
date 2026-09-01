@@ -7,10 +7,12 @@ tags:
 
 # Literate navigation
 
-For compatibility with projects that use the existing MkDocs
-`mkdocs-literate-nav` plugin, Zensical provides an implementation that lets
-you define navigation in Markdown instead of a configuration file. It is
-useful when navigation is generated or maintained alongside documentation.
+This page documents Zensical's native replacement for [`mkdocs-literate-nav`][mkdocs-literate-nav],
+created by [Oleh Prypin].
+
+The plugin lets you define navigation in Markdown instead of a configuration
+file. It is useful when navigation is generated or maintained alongside
+documentation.
 
 ## How it works
 
@@ -205,3 +207,6 @@ before it:
 
 This is useful when the file contains introductory content as well as the
 navigation list.
+
+[mkdocs-literate-nav]: https://github.com/oprypin/mkdocs-literate-nav
+[Oleh Prypin]: https://github.com/oprypin

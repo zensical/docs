@@ -7,6 +7,9 @@ tags:
 
 # Minification
 
+This page documents Zensical's native replacement for [`mkdocs-minify-plugin`][mkdocs-minify-plugin],
+created by [Byrne Reese] and [Lars Wilhelmer].
+
 The minification plugin reduces the size of output files. It can minify rendered
 HTML, inline JavaScript and CSS, and JavaScript and CSS files selected through
 configuration. It replaces the MkDocs minify plugin without requiring a
@@ -184,3 +187,6 @@ The supported options are:
 
 [extra_css]: ../customization.md#additional-css
 [extra_javascript]: ../customization.md#additional-javascript
+[mkdocs-minify-plugin]: https://github.com/byrnereese/mkdocs-minify-plugin
+[Byrne Reese]: https://github.com/byrnereese
+[Lars Wilhelmer]: https://github.com/wilhelmer
