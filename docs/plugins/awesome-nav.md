@@ -14,18 +14,6 @@ to your content. It combines automatic navigation based on the directory
 structure with individually listed pages, sections, links, patterns, sorting,
 and visibility controls.
 
-!!! note "Modular navigation"
-
-    This plugin exists mainly for projects that use the `mkdocs-awesome-nav`
-    plugin already. We are working on making navigation more modular to allow
-    more than a single navigation tree as well as to treat navigation as
-    content rather than configuration. This will not replace our support for
-    `awesome-nav`-style navigation but offer more features. See the following
-    for details:
-
-    * [ZAP 003 - Navigation as content]
-    * [ZAP 004 - Modular navigation]
-
 ## How it works
 
 Place a `.nav.yml` file in the documentation tree and use it to describe or
@@ -334,4 +322,5 @@ Use `logs` to set each diagnostic level to `info`, `warning`, or `error`:
 
 In a strict build, warnings cause the build to fail. An `info` diagnostic does
 not.
+
 [upstream awesome-nav documentation]: https://lukasgeiter.github.io/mkdocs-awesome-nav/features/nav/

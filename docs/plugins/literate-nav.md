@@ -12,18 +12,6 @@ For compatibility with projects that use the existing MkDocs
 you define navigation in Markdown instead of a configuration file. It is
 useful when navigation is generated or maintained alongside documentation.
 
-!!! note "Modular navigation"
-
-    This plugin exists mainly for projects that use the `mkdocs-literate-nav`
-    plugin already. We are working on making navigation more modular to
-    allow more than a single navigation tree as well as to treat navigation
-    as content rather than configuration. This will not replace our support
-    for literate navigation but offer more features. See the following for
-    details:
-
-    * [ZAP 003 - Navigation as content]
-    * [ZAP 004 - Modular navigation]
-
 ## How it works
 
 Create the root navigation file at `docs_dir/SUMMARY.md`, the default location,
@@ -217,7 +205,3 @@ before it:
 
 This is useful when the file contains introductory content as well as the
 navigation list.
-
-
-[ZAP 003 - Navigation as content]: https://zensical.org/spark/proposals/zap-003-navigation-as-content/
-[ZAP 004 - Modular navigation]: https://zensical.org/spark/proposals/zap-004-modular-navigation/
