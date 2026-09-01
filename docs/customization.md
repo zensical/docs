@@ -185,6 +185,22 @@ rendering. The default page template is `main.html`, which inherits from
 `base.html` and includes additional templates found in the `partials` directory.
 The [`template`][template] can be customized per page.
 
+### Jinja compatibility
+
+MiniJinja is largely compatible with Jinja, but it does not provide a Python
+interpreter. Templates cannot call arbitrary Python functions; use the available
+[filters] and [tests] instead.
+
+Material for MkDocs adapted its standard templates for MiniJinja compatibility.
+The last such change was made in [version 9.6.18]. If your overrides are based
+on that version or a later one, they should be compatible with Zensical.
+
+#### Remove function calls
+
+If an override calls a Python function that cannot be replaced with a MiniJinja
+filter or test, the required functionality must be provided through a Zensical
+module or another supported customization mechanism.
+
 ### Configuring overrides
 
 To add new templates or to override parts of existing one, you first need to
@@ -531,6 +547,9 @@ configuration:
 [Jinja]: https://jinja.palletsprojects.com
 [Jinja Template Designer Documentation]: https://jinja.palletsprojects.com/en/stable/templates/
 [MiniJinja]: https://docs.rs/minijinja/latest/minijinja/
+[filters]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
+[tests]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
+[version 9.6.18]: https://github.com/squidfunk/mkdocs-material/releases/tag/9.6.18
 [template]: authoring/frontmatter.md#page-template
 [template language provided by MiniJinja]: https://docs.rs/minijinja/latest/minijinja/syntax/index.html
 [template option]: authoring/frontmatter.md#page-template
