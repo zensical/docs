@@ -69,6 +69,9 @@ in that directory and its subdirectories:
 Use the meta plugin to apply metadata to a group of pages without repeating the
 same front matter on every page.
 
+Using a metadata file reduces inconsistencies when metadata changes or pages
+are added. Pages outside the metadata file's directory tree are unaffected.
+
 <div class="grid cards" markdown>
 
 -   :lucide-tags: &nbsp; **[Apply tags](#apply-tags-to-a-section)**
@@ -144,9 +147,6 @@ same front matter on every page.
     ```
 
 </div>
-
-Using a metadata file reduces inconsistencies when metadata changes or pages
-are added. Pages outside the metadata file's directory tree are unaffected.
 
 ## Configuration
 

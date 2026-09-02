@@ -19,7 +19,7 @@ contents.
 
 The plugin reads the `tags` property from each page's metadata and turns its
 values into tag references. The property can be set in a page's front matter or
-provided by the [meta plugin]. If `tags_name_property` is configured, the
+be provided by the [meta plugin]. If `tags_name_property` is configured, the
 tags plugin reads that property instead. It uses the references to render tags
 on the page and to build listings wherever a tags listing directive appears on
 a page.
@@ -45,7 +45,7 @@ front matter:
     so that the section remains consistently categorized.
     This avoids repeating the same tag in every page's front matter.
 
--   :lucide-search: &nbsp; **Filter search results**
+-   :lucide-search: &nbsp; **[Filter search results](../search.md)**
 
     ---
 
