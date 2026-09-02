@@ -155,14 +155,14 @@ Enable the plugin:
 === "`zensical.toml`"
 
     ``` toml
-    [project.plugins."material/meta"]
+    [project.plugins.meta]
     ```
 
 === "`mkdocs.yml`"
 
     ``` yaml
     plugins:
-      - material/meta
+      - meta
     ```
 
 ### General
@@ -175,7 +175,7 @@ keeping its configuration:
 === "`zensical.toml`"
 
     ``` toml
-    [project.plugins."material/meta"]
+    [project.plugins.meta]
     enabled = false
     ```
 
@@ -183,7 +183,7 @@ keeping its configuration:
 
     ``` yaml
     plugins:
-      - material/meta:
+      - meta:
           enabled: false
     ```
 
@@ -197,7 +197,7 @@ when you want to use a different metadata file:
 === "`zensical.toml`"
 
     ``` toml
-    [project.plugins."material/meta"]
+    [project.plugins.meta]
     meta_file = "defaults.yml"
     ```
 
@@ -205,7 +205,7 @@ when you want to use a different metadata file:
 
     ``` yaml
     plugins:
-      - material/meta:
+      - meta:
           meta_file: defaults.yml
     ```
 
