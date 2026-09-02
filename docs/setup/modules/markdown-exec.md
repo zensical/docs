@@ -6,6 +6,9 @@ tags:
 
 # Markdown Exec
 
+This page documents Zensical's native replacement for
+[`markdown-exec`][markdown-exec], created by [Timothée Mazzucotelli].
+
 ## Objective
 
 ### How it works
@@ -128,7 +131,9 @@ Markdown Exec has additional options for naming and prefixing generated HTML ids
 - [Gallery of examples](https://pawamoy.github.io/markdown-exec/gallery/)
 
 [Ace]: https://ace.c9.io/
+[markdown-exec]: https://github.com/pawamoy/markdown-exec
 [Markdown in HTML]: python-markdown.md#markdown-in-html
+[Timothée Mazzucotelli]: https://github.com/pawamoy
 [Pyodide]: https://pyodide.org/en/stable/
 [SuperFences]: python-markdown-extensions.md#superfences
 [Tabbed]: python-markdown-extensions.md#tabbed

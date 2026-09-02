@@ -6,6 +6,9 @@ tags:
 
 # Macros
 
+This page documents Zensical's native replacement for
+[`mkdocs-macros-plugin`][mkdocs-macros-plugin], created by [Laurent Franceschetti].
+
 ## Objective
 
 ### How it works
@@ -500,6 +503,8 @@ include_yaml:
 When macros or filters read from external files — such as CSV data files or Markdown fragments — modifications to those files will not trigger a rebuild during [preview] unless the paths are registered via the [`watch`][watch] configuration option.
 
 [Jinja2 extensions]: https://jinja.palletsprojects.com/en/stable/extensions/
+[mkdocs-macros-plugin]: https://github.com/fralau/mkdocs-macros-plugin
+[Laurent Franceschetti]: https://github.com/fralau
 [mkdocstrings]: https://mkdocstrings.github.io
 [openpyxl]: https://pypi.org/project/openpyxl/
 [pandas]: https://pandas.pydata.org

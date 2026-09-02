@@ -6,6 +6,9 @@ tags:
 
 # GLightbox
 
+This page documents Zensical's native replacement for
+[`mkdocs-glightbox`][mkdocs-glightbox], created by [Yi-Wei Liu].
+
 ## Objective
 
 ### How it works
@@ -195,3 +198,5 @@ Default caption position for images (default: `bottom`). Valid values: `bottom`,
 
 [Attribute Lists]: python-markdown.md#attribute-lists
 [light and dark mode images]: ../../authoring/images.md#light-and-dark-mode
+[mkdocs-glightbox]: https://github.com/blueswen/mkdocs-glightbox
+[Yi-Wei Liu]: https://github.com/blueswen
