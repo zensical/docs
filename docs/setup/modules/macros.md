@@ -6,7 +6,40 @@ tags:
 
 # Macros
 
-The Macros extension, included with Zensical, enables [Jinja2] templating in Markdown pages — variables, custom macros, filters, and control flow can be used directly in content. Enable it via:
+## Objective
+
+### How it works
+
+The Macros extension lets you use Jinja2 templating directly in Markdown pages.
+During the build, Zensical evaluates expressions and expands variables, macros,
+filters, and control flow. This allows you to generate and reuse content from
+project data while keeping your Markdown concise and consistent.
+
+### When to use it
+
+Use Macros when parts of your documentation are generated from project data,
+repeated across pages, or need to stay synchronized with another source. It is
+particularly useful for reducing repetitive Markdown and applying consistent
+formatting to dynamic content.
+
+!!! tip "Macros in Python docstrings"
+
+    When using [mkdocstrings] to generate API documentation from Python
+    docstrings, Jinja2 expressions in docstrings are rendered natively, so
+    macros and template variables can be used directly in docstrings.
+
+## Configuration
+
+!!! warning "Keep files in project folder"
+
+    Zensical watches files to be able to re-build the project when they change.
+    This includes Python files containing macros and YAML files included
+    with `include_yaml`. Since Zensical's security policy does not allow paths
+    outside the project folder, make sure that any files used are located
+    inside it. This includes modules installed in virtual environments,
+    which must also be created within the project folder.
+
+Enable the extension with its default settings:
 
 === "`zensical.toml`"
 
@@ -21,19 +54,6 @@ The Macros extension, included with Zensical, enables [Jinja2] templating in Mar
     markdown_extensions:
       - zensical.extensions.macros
     ```
-
-!!! tip "Macros in Python docstrings"
-
-    When using [mkdocstrings] to generate API documentation from Python docstrings, Jinja2 expressions in docstrings are rendered natively, so macros and template variables can be used directly in docstrings.
-
-!!! warning "Keep files in project folder"
-
-    Zensical watches files to be able to re-build the project when they change.
-    This includes Python files containing macros and YAML files included
-    with `include_yaml`. Since Zensical's security policy does not allow paths
-    outside the project folder, make sure that any files used are located
-    inside it. This includes modules installed in virtual environments,
-    which must also be created within the project folder.
 
 The following additional configuration options are supported:
 

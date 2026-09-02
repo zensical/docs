@@ -6,13 +6,28 @@ tags:
 
 # Markdown Exec
 
-[Markdown Exec] executes code blocks in your Markdown files at build time and renders their output in place of the code, instead of just displaying it. It supports Python, shell (`bash`, `sh`, `console`), Pyodide, and directory trees (`tree`), and can render results as Markdown or raw HTML.
+## Objective
+
+### How it works
+
+Markdown Exec runs supported fenced code blocks while building the site and
+inserts the resulting output into the page. It supports Python, shell commands,
+Pyodide, and directory trees, with output rendered as Markdown or raw HTML. The
+output comes directly from the code block, so rebuilding the site reruns the
+code and updates the displayed result when the example changes.
 
 !!! warning "Executes arbitrary code at build time"
 
     Markdown Exec runs the code in your fenced code blocks when the site is
     built.  Only enable it for content you trust, and treat it the same way you
     would treat any other build script with access to your project.
+
+### When to use it
+
+Use Markdown Exec when documentation benefits from generated examples, live
+command output, or content derived from executable code. It is especially useful
+when the output should stay synchronized with the example or source data. Since
+code runs during the build, use it only with trusted content.
 
 ## Installation
 

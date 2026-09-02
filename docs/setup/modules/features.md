@@ -37,9 +37,9 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Literate-nav] ([Backlog #13])
 - [x] [Macros] ([Backlog #16])
 - [x] [Markdown Exec] ([Backlog #134])
-- [x] [Metadata] ([Backlog #31]) <span class="md-status md-status--material" title="Material for MkDocs"></span>
+- [x] [Meta] ([Backlog #31]) <span class="md-status md-status--material" title="Material for MkDocs"></span>
 - [x] [mike] ([Backlog #14])
-- [x] [Minification] ([Backlog #15])
+- [x] [Minify] ([Backlog #15])
 - [x] [mkdocstrings] ([Backlog #4])
 - [x] [Offline] ([Backlog #32])
 - [x] [Redirects] ([Backlog #23])
@@ -320,8 +320,8 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 [Literate-nav]: literate-nav.md
 [Macros]: macros.md
 [Markdown Exec]: markdown-exec.md
-[Metadata]: meta.md
-[Minification]: minify.md
+[Meta]: meta.md
+[Minify]: minify.md
 [mike]: ../versioning.md
 [mkdocstrings]: mkdocstrings.md
 [Offline]: ../offline.md

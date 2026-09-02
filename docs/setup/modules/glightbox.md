@@ -6,7 +6,31 @@ tags:
 
 # GLightbox
 
-The GLightbox extension, included with Zensical, enables image zoom through lightbox galleries — full-screen overlays with navigation controls. Enable it via:
+## Objective
+
+### How it works
+
+During Markdown rendering, GLightbox wraps images in links that open the image
+in a full-screen lightbox. By default, it processes all images except those
+excluded by their CSS classes. You can switch to opt-in behavior with
+`auto: false`, mark individual images with `on-glb`, or exclude images with
+`off-glb` and other configured CSS classes.
+
+Images can be grouped into galleries with `data-gallery`. Additional image
+attributes control the lightbox source, caption, description, dimensions, and
+caption position. When `auto_themed` is enabled, light and dark variants can be
+grouped into separate galleries.
+
+### When to use it
+
+Use GLightbox when readers may need to inspect screenshots, diagrams, or other
+images in more detail than the page layout allows. It is also useful for pages
+with related images that readers may want to browse as a gallery while keeping
+the inline content compact.
+
+## Configuration
+
+Enable the extension with its default settings:
 
 === "`zensical.toml`"
 

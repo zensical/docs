@@ -229,10 +229,10 @@ nav:
       - Macros: setup/modules/macros.md
       - Markdown Exec: setup/modules/markdown-exec.md
       - mkdocstrings: setup/modules/mkdocstrings.md
-      - Metadata: setup/modules/meta.md
+      - Meta: setup/modules/meta.md
       - Tags: setup/modules/tags.md
       - Redirects: setup/modules/redirects.md
-      - Minification: setup/modules/minify.md
+      - Minify: setup/modules/minify.md
       - Literate-nav: setup/modules/literate-nav.md
       - Awesome-nav: setup/modules/awesome-nav.md
       - Python Markdown: setup/modules/python-markdown.md

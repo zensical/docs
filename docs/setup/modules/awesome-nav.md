@@ -16,7 +16,9 @@ in the documentation tree next to your content. It combines automatic
 navigation based on the directory structure with individually listed pages,
 sections, links, patterns, sorting, and visibility controls.
 
-## How it works
+## Objective
+
+### How it works
 
 Place a `.nav.yml` file in the documentation tree and use it to describe or
 adjust the navigation for that directory. Zensical reads `docs/.nav.yml` for
@@ -28,6 +30,13 @@ When enabled, the plugin takes ownership of navigation and replaces the `nav`
 setting from `mkdocs.yml`. If no navigation is specified in a `.nav.yml`, the
 plugin builds a navigation from the directory structure, placing index pages
 first and grouping pages in directories into sections.
+
+### When to use it
+
+Use Awesome Nav when you want navigation to follow your documentation tree
+without listing every page manually. Glob patterns can add groups of pages,
+filters can exclude drafts or other directories, and sorting options keep the
+resulting navigation organized as the site grows.
 
 ## Configuration
 
@@ -47,7 +56,9 @@ explicitly:
       - awesome-nav
     ```
 
-### Enable or disable
+### General
+
+#### `enabled`
 
 The plugin is enabled when it is configured. Set `enabled` to `false` to keep
 the configuration without using the plugin. Its default value is
@@ -69,6 +80,8 @@ the configuration without using the plugin. Its default value is
     ```
 
 ### Navigation file
+
+#### `filename`
 
 The default value of `filename` is `.nav.yml`. Zensical looks for this file
 inside each directory in the documentation tree:
@@ -159,6 +172,8 @@ nav:
 
 ### Patterns
 
+#### `glob`
+
 Use a `glob` entry to add all matching pages or directories. Patterns are
 relative to the `.nav.yml` file. Use `*` to match items in the current directory
 and `**` to include items in nested directories:
@@ -191,9 +206,11 @@ nav:
       type: natural
 ```
 
+#### `ignore_no_matches`
+
 Set `ignore_no_matches` to `true` to suppress the diagnostic for a pattern that
-matches no pages or directories. Patterns that start with `*` must be quoted
-in YAML.
+matches no pages or directories. Patterns that start with `*` must be quoted in
+YAML. Its default value is `false`.
 
 ### Directory options
 
@@ -201,38 +218,44 @@ The following options can be set in a `.nav.yml` file. The layout, sorting,
 ignore, and unmatched-page options apply to child directories unless overridden.
 `title` and `hide` apply only to the current directory:
 
-`title`
-: Set the title of a directory section. A title has no effect in the root
-  configuration.
+#### `title`
 
-`hide`
-: Remove a directory and its children from the navigation when a parent pattern
-  discovers it. The pages are still built and accessible by URL. It has no
-  effect in the root configuration.
+Set the title of a directory section. A title has no effect in the root
+configuration.
 
-`flatten_single_child_sections`
-: Remove a section when it contains only one page or section.
+#### `hide`
 
-`preserve_directory_names`
-: Use directory names as section titles without converting them to display
-  titles.
+Remove a directory and its children from the navigation when a parent pattern
+discovers it. The pages are still built and accessible by URL. It has no effect
+in the root configuration.
 
-`use_index_title`
-: Use the metadata title from a directory's `index.md` as its section title.
-  Zensical uses this title only when no title is provided by the parent `nav`
-  or the current `.nav.yml`, and `preserve_directory_names` is `false`.
+#### `flatten_single_child_sections`
 
-`ignore`
-: Accept a single pattern or a list of patterns to exclude pages or directories
-  during pattern expansion. Ignore patterns use the same glob syntax as
-  navigation patterns. A pattern that does not begin with `/` is relative to
-  the current directory and matches descendants. Use `$inherit` to retain the
-  parent directory's ignore patterns.
+Remove a section when it contains only one page or section.
 
-`append_unmatched`
-: Add pages and directories not otherwise included in `nav` to the end of the
-  navigation. Its default is `false`. The setting also applies to child
-  directories unless a child `.nav.yml` overrides it.
+#### `preserve_directory_names`
+
+Use directory names as section titles without converting them to display titles.
+
+#### `use_index_title`
+
+Use the metadata title from a directory's `index.md` as its section title.
+Zensical uses this title only when no title is provided by the parent `nav` or
+the current `.nav.yml`, and `preserve_directory_names` is `false`.
+
+#### `ignore`
+
+Accept a single pattern or a list of patterns to exclude pages or directories
+during pattern expansion. Ignore patterns use the same glob syntax as navigation
+patterns. A pattern that does not begin with `/` is relative to the current
+directory and matches descendants. Use `$inherit` to retain the parent
+directory's ignore patterns.
+
+#### `append_unmatched`
+
+Add pages and directories not otherwise included in `nav` to the end of the
+navigation. Its default is `false`. The setting also applies to child
+directories unless a child `.nav.yml` overrides it.
 
 For example, a child directory's `.nav.yml` file could contain:
 
@@ -248,6 +271,8 @@ append_unmatched: true
 For more extensive examples, see the [upstream awesome-nav documentation].
 
 ### Sorting
+
+#### `sort`
 
 Use `sort` to control the order of pages and sections that are not explicitly
 ordered in `nav`. Sorting settings are inherited by child directories.
@@ -293,6 +318,8 @@ nav:
 ```
 
 ### Diagnostics
+
+#### `logs`
 
 By default, the plugin reports the following conditions as warnings:
 

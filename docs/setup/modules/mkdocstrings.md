@@ -1,19 +1,39 @@
 ---
 icon: lucide/boxes
+tags:
+  - Modules
+  - API reference
+status: new
 ---
 
 # mkdocstrings
 
-As of [0.0.11], Zensical provides preliminary support for [mkdocstrings],
-which allows rendering API reference documentation from source code. We'll be
-rethinking [API reference documentation] from the ground up in the coming
-months, making it much more flexible and powerful.
+This page documents Zensical's integration with [`mkdocstrings`][mkdocstrings],
+a third-party plugin created by [Timothée Mazzucotelli].
+
+## Objective
+
+### How it works
+
+As of [0.0.11], Zensical provides preliminary support for mkdocstrings, which
+extracts documentation from source code and docstrings, then renders it directly
+into Markdown pages through documentation directives. During the build,
+Zensical resolves the referenced objects and formats their documentation using
+the configured language handler. This keeps API reference documentation close
+to the source code and avoids maintaining generated Markdown files by hand.
 
 !!! warning "Preliminary support"
 
     The mkdocstrings integration is preliminary, which means some features are
     not yet supported, specifically backlinks. We're working on bringing these
     features into Zensical.
+
+### When to use it
+
+Use mkdocstrings when you want to publish API reference documentation that
+stays synchronized with your source code and docstrings. It is especially useful
+for software libraries, where manually maintaining reference pages would be
+repetitive and prone to becoming outdated.
 
 ## Installation
 
@@ -86,5 +106,6 @@ The complete list of options can be found here:
 [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
 [API reference documentation]: https://zensical.org/about/roadmap/#api-documentation
 [mkdocstrings]: https://mkdocstrings.github.io
+[Timothée Mazzucotelli]: https://github.com/pawamoy
 [mkdocstrings documentation]: https://mkdocstrings.github.io/usage/
 [mkdocstrings Python handler documentation]: https://mkdocstrings.github.io/python/usage/

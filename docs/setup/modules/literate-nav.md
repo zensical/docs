@@ -15,7 +15,9 @@ The plugin lets you define navigation in Markdown instead of a configuration
 file. It is useful when navigation is generated or maintained alongside
 documentation.
 
-## How it works
+## Objective
+
+### How it works
 
 Create the root navigation file at `docs_dir/SUMMARY.md`, the default location,
 and write the navigation as nested lists of links. Zensical reads those lists
@@ -23,6 +25,14 @@ to build the navigation. When the root navigation file links to a directory
 with a trailing slash, that directory can define its navigation in a separate
 navigation file. If a directory has no navigation file, the plugin discovers
 its pages automatically.
+
+### When to use it
+
+Use Literate Nav to define your site's navigation in a Markdown file, using
+nested lists of links to describe pages and sections. It is especially useful
+when you want navigation to live alongside the documentation it describes. As
+Markdown is already used for the content, you can create and update navigation
+structures without editing a separate configuration file for each change.
 
 ## Configuration
 
@@ -42,7 +52,9 @@ explicitly:
       - literate-nav
     ```
 
-### Enable or disable
+### General
+
+#### `enabled`
 
 The plugin is enabled when it is configured. Set `enabled` to `false` to keep
 the configuration without using literate navigation. Its default value is
@@ -64,6 +76,8 @@ the configuration without using literate navigation. Its default value is
     ```
 
 ### Navigation file
+
+#### `nav_file`
 
 The default value of `nav_file` is `SUMMARY.md`:
 
@@ -88,6 +102,8 @@ is `docs/SUMMARY.md`. If that file includes `guide/`, the plugin looks for a
 separate navigation file at `docs/guide/SUMMARY.md`.
 
 ### Implicit index
+
+#### `implicit_index`
 
 By default, an `index.md` or `README.md` page must be listed explicitly in a
 navigation file. The default value of `implicit_index` is `false`:

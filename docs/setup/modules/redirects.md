@@ -16,7 +16,9 @@ Dustin Burke ([`@burkestar`][burkestar]).
 The redirects plugin keeps old documentation links working after you move or
 rename a page.
 
-## How it works
+## Objective
+
+### How it works
 
 For each valid mapping, Zensical generates a static HTML page at the old
 location. The page redirects the browser with JavaScript and provides a
@@ -24,6 +26,16 @@ location. The page redirects the browser with JavaScript and provides a
 fragments, such as `#installation`, when sending visitors to the new location.
 Because the redirect is a static file, it works on static hosting without
 server-side redirect configuration.
+
+### When to use it
+
+Use the redirects plugin when you move or rename pages after publishing your
+documentation. Add redirects for the old paths to preserve bookmarks,
+references from other sites, and links in older versions of your documentation.
+
+It is also useful when a page has moved to another site or URL. In that case,
+redirect the old path to the external destination instead of leaving visitors
+with a broken link.
 
 ## Configuration
 
