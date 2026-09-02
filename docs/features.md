@@ -227,12 +227,12 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [ ] [Data privacy]
 </div>
 
-[Awesome-nav]: awesome-nav.md
-[404 pages]: ../../customization.md#custom-error-pages
-[Abbreviations]: ../../authoring/tooltips.md#add-abbreviations
-[Admonitions]: ../../authoring/admonitions.md
-[Annotations]: ../../authoring/code-blocks.md#add-annotations
-[Attribute lists]: python-markdown.md#attribute-lists
+[Awesome-nav]: setup/modules/awesome-nav.md
+[404 pages]: customization.md#custom-error-pages
+[Abbreviations]: authoring/tooltips.md#add-abbreviations
+[Admonitions]: authoring/admonitions.md
+[Annotations]: authoring/code-blocks.md#add-annotations
+[Attribute lists]: setup/modules/python-markdown.md#attribute-lists
 [Backlog #1]: https://github.com/zensical/backlog/issues/1
 [Backlog #4]: https://github.com/zensical/backlog/issues/4
 [Backlog #5]: https://github.com/zensical/backlog/issues/5
@@ -261,103 +261,103 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 [Backlog #89]: https://github.com/zensical/backlog/issues/89
 [Backlog #102]: https://github.com/zensical/backlog/issues/102
 [Backlog #134]: https://github.com/zensical/backlog/issues/134
-[GLightbox]: glightbox.md
-[Buttons]: ../../authoring/buttons.md
-[Caption]: ../../authoring/images.md#image-captions
-[Caret, Mark, and Tilde]: python-markdown-extensions.md#caret-mark-tilde
-[Code blocks, highlighting, and copying]: ../../authoring/code-blocks.md
-[Content tabs]: ../../authoring/content-tabs.md
-[Critic]: python-markdown-extensions.md#other-extensions
-[Data tables]: ../../authoring/data-tables.md
-[Definition lists]: ../../authoring/lists.md#use-definition-lists
-[Details]: python-markdown-extensions.md#details
-[Diagrams with Mermaid]: ../../authoring/diagrams.md
-[Directory URLs]: ../basics.md#use_directory_urls
-[explicit-navigation]: ../navigation.md
-[Extra CSS, JavaScript, and templates]: ../../customization.md#adding-assets
-[Fonts]: ../fonts.md
-[Header and footer]: ../header.md
-[Hiding the sidebars]: ../navigation.md#hide-the-sidebars
-[Icons, emojis, and favicon]: ../logo-and-icons.md
-[Images]: ../../authoring/images.md
-[Inline highlighting]: python-markdown-extensions.md#inlinehilite
-[Instant loading and prefetching]: ../navigation.md#instant-navigation
-[Instant previews]: ../navigation.md#instant-previews
-[Jinja templates]: ../../customization.md#custom-templates
-[Keys]: ../../authoring/formatting.md#add-keyboard-keys
-[Link validation]: ../validation.md
-[Markdown in HTML]: python-markdown.md#markdown-in-html
-[Math with MathJax and KaTeX]: ../../authoring/math.md
-[Navigation expansion]: ../navigation.md#navigation-expansion
-[Navigation paths and breadcrumbs]: ../navigation.md#navigation-path
-[Navigation pruning]: ../navigation.md#navigation-pruning
-[Navigation sections]: ../navigation.md#navigation-sections
-[Navigation tabs and sticky tabs]: ../navigation.md#navigation-tabs
-[Page metadata]: ../../authoring/frontmatter.md
-[Progress indicator]: ../navigation.md#progress-indicator
-[Repository icon and link in the header]: ../repository.md
-[Repository integration]: ../repository.md
-[Search engine optimization]: ../basics.md#site_url
-[Site analytics and feedback widget]: ../analytics.md
-[Site language selector]: ../language.md#site-language-selector
-[Social cards]: ../social-cards.md
-[Social links]: ../footer.md#social-links
-[Strict mode]: ../validation.md#strict-mode
-[SuperFences]: python-markdown-extensions.md#superfences
-[Table of contents and anchor following]: ../navigation.md#table-of-contents
-[Table of contents integration]: ../navigation.md#table-of-contents
-[Tabbed content]: ../../authoring/content-tabs.md
-[Task lists]: ../../authoring/lists.md#use-task-lists
-[Template overrides]: ../../customization.md#template-overrides
-[Tooltips]: ../../authoring/tooltips.md
-[Versioning]: ../versioning.md
-[YAML page metadata]: ../../authoring/frontmatter.md
-[Anchor tracking]: ../navigation.md#anchor-tracking
-[Automatic light and dark mode]: ../colors.md
-[Automatic navigation]: ../navigation.md
-[Automatic previews]: ../navigation.md
-[Assets and customization]: ../../customization.md
-[Back-to-top button]: ../navigation.md#back-to-top-button
-[BetterEm]: python-markdown-extensions.md#other-extensions
-[build-from-mkdocs]: ../basics.md#transition-from-mkdocs
-[Built-in preview server]: ../../usage/preview.md
-[Classic Material theme]: ../basics.md#theme-variant
-[Colors and palette toggle]: ../colors.md#color-palette-toggle
-[Comment system]: ../comment-system.md
-[Compatible with the MkDocs file layout]: ../basics.md#docs_dir
-[Cookie consent]: ../data-privacy.md#cookie-consent
-[Content area width]: ../navigation.md#content-area-width
-[Create a new site]: ../../create-your-site.md
-[Custom colors and color schemes]: ../colors.md#custom-colors
-[Custom cookies]: ../data-privacy.md#custom-cookies
-[Data privacy]: ../data-privacy.md
-[install-with-pip]: ../../get-started.md
-[Keyboard shortcuts]: ../navigation.md
-[Search]: ../search.md
-[Tags]: tags.md
-[Tag listings]: tags.md
-[Tags in search]: ../search.md#search-exclusion
-[Offline usage]: ../offline.md
-[Table reader]: macros.md#reading-tabular-data
-[Announcement bar]: ../header.md#announcement-bar
-[Footnotes]: ../../authoring/footnotes.md
-[Grids]: ../../authoring/grids.md
-[Highlight]: python-markdown-extensions.md#highlight
-[Icons and emojis]: ../logo-and-icons.md
-[Python Markdown dialect]: python-markdown.md
-[Snippets]: python-markdown-extensions.md#snippets
-[Smart symbols]: python-markdown-extensions.md#smartsymbols
-[Table of contents]: python-markdown.md#table-of-contents
-[Tables]: python-markdown.md#tables
-[Literate-nav]: literate-nav.md
-[Macros]: macros.md
-[Markdown Exec]: markdown-exec.md
-[Meta]: meta.md
-[Minify]: minify.md
-[mike]: ../versioning.md
-[mkdocstrings]: mkdocstrings.md
-[Offline]: ../offline.md
-[Redirects]: redirects.md
-[Section index]: ../navigation.md#section-index-pages
-[Section index pages]: ../navigation.md#section-index-pages
+[GLightbox]: setup/modules/glightbox.md
+[Buttons]: authoring/buttons.md
+[Caption]: authoring/images.md#image-captions
+[Caret, Mark, and Tilde]: setup/modules/python-markdown-extensions.md#caret-mark-tilde
+[Code blocks, highlighting, and copying]: authoring/code-blocks.md
+[Content tabs]: authoring/content-tabs.md
+[Critic]: setup/modules/python-markdown-extensions.md#other-extensions
+[Data tables]: authoring/data-tables.md
+[Definition lists]: authoring/lists.md#use-definition-lists
+[Details]: setup/modules/python-markdown-extensions.md#details
+[Diagrams with Mermaid]: authoring/diagrams.md
+[Directory URLs]: setup/basics.md#use_directory_urls
+[explicit-navigation]: setup/navigation.md
+[Extra CSS, JavaScript, and templates]: customization.md#adding-assets
+[Fonts]: setup/fonts.md
+[Header and footer]: setup/header.md
+[Hiding the sidebars]: setup/navigation.md#hide-the-sidebars
+[Icons, emojis, and favicon]: setup/logo-and-icons.md
+[Images]: authoring/images.md
+[Inline highlighting]: setup/modules/python-markdown-extensions.md#inlinehilite
+[Instant loading and prefetching]: setup/navigation.md#instant-navigation
+[Instant previews]: setup/navigation.md#instant-previews
+[Jinja templates]: customization.md#custom-templates
+[Keys]: authoring/formatting.md#add-keyboard-keys
+[Link validation]: setup/validation.md
+[Markdown in HTML]: setup/modules/python-markdown.md#markdown-in-html
+[Math with MathJax and KaTeX]: authoring/math.md
+[Navigation expansion]: setup/navigation.md#navigation-expansion
+[Navigation paths and breadcrumbs]: setup/navigation.md#navigation-path
+[Navigation pruning]: setup/navigation.md#navigation-pruning
+[Navigation sections]: setup/navigation.md#navigation-sections
+[Navigation tabs and sticky tabs]: setup/navigation.md#navigation-tabs
+[Page metadata]: authoring/frontmatter.md
+[Progress indicator]: setup/navigation.md#progress-indicator
+[Repository icon and link in the header]: setup/repository.md
+[Repository integration]: setup/repository.md
+[Search engine optimization]: setup/basics.md#site_url
+[Site analytics and feedback widget]: setup/analytics.md
+[Site language selector]: setup/language.md#site-language-selector
+[Social cards]: setup/social-cards.md
+[Social links]: setup/footer.md#social-links
+[Strict mode]: setup/validation.md#strict-mode
+[SuperFences]: setup/modules/python-markdown-extensions.md#superfences
+[Table of contents and anchor following]: setup/navigation.md#table-of-contents
+[Table of contents integration]: setup/navigation.md#table-of-contents
+[Tabbed content]: authoring/content-tabs.md
+[Task lists]: authoring/lists.md#use-task-lists
+[Template overrides]: customization.md#template-overrides
+[Tooltips]: authoring/tooltips.md
+[Versioning]: setup/versioning.md
+[YAML page metadata]: authoring/frontmatter.md
+[Anchor tracking]: setup/navigation.md#anchor-tracking
+[Automatic light and dark mode]: setup/colors.md
+[Automatic navigation]: setup/navigation.md
+[Automatic previews]: setup/navigation.md
+[Assets and customization]: customization.md
+[Back-to-top button]: setup/navigation.md#back-to-top-button
+[BetterEm]: setup/modules/python-markdown-extensions.md#other-extensions
+[build-from-mkdocs]: setup/basics.md#transition-from-mkdocs
+[Built-in preview server]: usage/preview.md
+[Classic Material theme]: setup/basics.md#theme-variant
+[Colors and palette toggle]: setup/colors.md#color-palette-toggle
+[Comment system]: setup/comment-system.md
+[Compatible with the MkDocs file layout]: setup/basics.md#docs_dir
+[Cookie consent]: setup/data-privacy.md#cookie-consent
+[Content area width]: setup/navigation.md#content-area-width
+[Create a new site]: create-your-site.md
+[Custom colors and color schemes]: setup/colors.md#custom-colors
+[Custom cookies]: setup/data-privacy.md#custom-cookies
+[Data privacy]: setup/data-privacy.md
+[install-with-pip]: get-started.md
+[Keyboard shortcuts]: setup/navigation.md
+[Search]: setup/search.md
+[Tags]: setup/modules/tags.md
+[Tag listings]: setup/modules/tags.md
+[Tags in search]: setup/search.md#search-exclusion
+[Offline usage]: setup/offline.md
+[Table reader]: setup/modules/macros.md#reading-tabular-data
+[Announcement bar]: setup/header.md#announcement-bar
+[Footnotes]: authoring/footnotes.md
+[Grids]: authoring/grids.md
+[Highlight]: setup/modules/python-markdown-extensions.md#highlight
+[Icons and emojis]: setup/logo-and-icons.md
+[Python Markdown dialect]: setup/modules/python-markdown.md
+[Snippets]: setup/modules/python-markdown-extensions.md#snippets
+[Smart symbols]: setup/modules/python-markdown-extensions.md#smartsymbols
+[Table of contents]: setup/modules/python-markdown.md#table-of-contents
+[Tables]: setup/modules/python-markdown.md#tables
+[Literate-nav]: setup/modules/literate-nav.md
+[Macros]: setup/modules/macros.md
+[Markdown Exec]: setup/modules/markdown-exec.md
+[Meta]: setup/modules/meta.md
+[Minify]: setup/modules/minify.md
+[mike]: setup/versioning.md
+[mkdocstrings]: setup/modules/mkdocstrings.md
+[Offline]: setup/offline.md
+[Redirects]: setup/modules/redirects.md
+[Section index]: setup/navigation.md#section-index-pages
+[Section index pages]: setup/navigation.md#section-index-pages
 [Customization]: ../../customization.md

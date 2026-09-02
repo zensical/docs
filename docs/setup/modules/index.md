@@ -17,6 +17,6 @@ that Zensical modules replace.
 Zensical also installs [Python Markdown] and [Python Markdown Extensions] as
 dependencies. They provide widely used collections of Markdown extensions.
 
-[Feature parity]: features.md
+[Feature parity]: ../../features.md
 [Python Markdown]: python-markdown.md
 [Python Markdown Extensions]: python-markdown-extensions.md

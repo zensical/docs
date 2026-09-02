@@ -193,6 +193,7 @@ nav:
       - Get started: get-started.md
       - Create your site: create-your-site.md
       - Publish your site: publish-your-site.md
+      - Feature parity: features.md
       - Customization: customization.md
       - How to upgrade: upgrade.md
       - Browser support: browser-support.md
@@ -224,7 +225,6 @@ nav:
           - Offline usage: setup/offline.md
   - Modules:
       - Modules: setup/modules/index.md
-      - Feature parity: setup/modules/features.md
       - GLightbox: setup/modules/glightbox.md
       - Macros: setup/modules/macros.md
       - Markdown Exec: setup/modules/markdown-exec.md
