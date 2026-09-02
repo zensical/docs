@@ -868,10 +868,10 @@ to track changes instead.
 [Highlighting inline code blocks]: ../../authoring/code-blocks.md#highlight-inline-code-blocks
 [Highlighting specific lines]: ../../authoring/code-blocks.md#highlight-specific-lines
 [Highlighting text]: ../../authoring/formatting.md#highlight-text
-[icon customization guide]: ../logo-and-icons.md#additional-icons
+[icon customization guide]: ../../setup/logo-and-icons.md#additional-icons
 [InlineHilite]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/
 [InlineHilite options]: https://facelessuser.github.io/pymdown-extensions/extensions/inlinehilite/#options
-[instant navigation]: ../navigation.md#instant-navigation
+[instant navigation]: ../../setup/navigation.md#instant-navigation
 [KaTeX]: https://github.com/Khan/KaTeX
 [Keys]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/
 [Keys options]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#options

@@ -111,7 +111,7 @@ fallback.
 
 [bl_readme]: https://github.com/zensical/backlog/issues/135
 [CommonMark]: https://commonmark.org/
-[compatibility pages]: https://zensical.org/compatibility/
+[compatibility pages]: ../compatibility/mkdocs/index.md
 [differences]: https://python-markdown.github.io/#differences
 [dirurls]: ../setup/basics.md#use_directory_urls
 [gruber]: https://daringfireball.net/projects/markdown/

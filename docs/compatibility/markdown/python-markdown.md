@@ -9,11 +9,6 @@ of what makes it so attractive for technical writing. Following is a list of all
 supported extensions, linking to the relevant sections of the authoring guide for
 which features they need to be enabled.
 
-!!! tip "Defaults"
-
-    Zensical has sensible defaults for the Markdown extensions settings. Make
-    sure to check these out before you begin to configure things manually.
-
 ## Supported extensions
 
 ### Abbreviations
@@ -390,7 +385,7 @@ usage:
 [Markdown in HTML]: https://python-markdown.github.io/extensions/md_in_html/
 [Python Markdown]: https://python-markdown.github.io/
 [Removing the title]: ../../authoring/admonitions.md#remove-the-title
-[site language]: ../language.md#site-language
+[site language]: ../../setup/language.md#site-language
 [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 [Supported types]: ../../authoring/admonitions.md#supported-types
 [Table of Contents]: https://python-markdown.github.io/extensions/toc/

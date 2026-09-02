@@ -89,22 +89,15 @@ plugins:
   - markdown-exec
   - redirects:
       redirect_maps:
-        setup/tags.md: setup/modules/tags.md
-        setup/extensions/index.md: setup/modules/index.md
-        setup/extensions/about.md: setup/modules/index.md
-        setup/extensions/glightbox.md: setup/modules/glightbox.md
-        setup/extensions/macros.md: setup/modules/macros.md
-        setup/extensions/markdown-exec.md: setup/modules/markdown-exec.md
-        setup/extensions/mkdocstrings.md: setup/modules/mkdocstrings.md
-        setup/extensions/meta.md: setup/modules/meta.md
-        setup/extensions/tags.md: setup/modules/tags.md
-        setup/extensions/redirects.md: setup/modules/redirects.md
-        setup/extensions/minify.md: setup/modules/minify.md
-        setup/extensions/literate-nav.md: setup/modules/literate-nav.md
-        setup/extensions/awesome-nav.md: setup/modules/awesome-nav.md
-        setup/extensions/python-markdown.md: setup/modules/python-markdown.md
-        setup/extensions/python-markdown-extensions.md: setup/modules/python-markdown-extensions.md
-
+        setup/extensions/about.md: compatibility/markdown/index.md
+        setup/extensions/glightbox.md: compatibility/mkdocs/plugins.md#glightbox
+        setup/extensions/macros.md: compatibility/mkdocs/plugins.md#macros
+        setup/extensions/markdown-exec.md: compatibility/mkdocs/plugins.md#markdown-exec
+        setup/extensions/mkdocstrings.md: compatibility/mkdocs/plugins.md#mkdocstrings
+        setup/extensions/python-markdown.md: compatibility/markdown/python-markdown.md
+        setup/extensions/python-markdown-extensions.md: compatibility/markdown/python-markdown-extensions.md
+        setup/versioning.md: compatibility/mkdocs/mike.md
+        setup/social-cards.md: compatibility/mkdocs/index.md
 # Additional configuration
 extra:
   homepage: https://zensical.org
@@ -147,7 +140,7 @@ markdown_extensions:
       targets:
         include:
           - customization.md
-          - setup/modules/*
+          - compatibility/markdown/*
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -193,7 +186,6 @@ nav:
       - Get started: get-started.md
       - Create your site: create-your-site.md
       - Publish your site: publish-your-site.md
-      - Feature parity: features.md
       - Customization: customization.md
       - How to upgrade: upgrade.md
       - Browser support: browser-support.md
@@ -219,24 +211,9 @@ nav:
           - Validation: setup/validation.md
           - Site search: setup/search.md
           - Site analytics: setup/analytics.md
-          - Social cards: setup/social-cards.md
-          - Versioning: setup/versioning.md
+          - Tags: setup/tags.md
           - Comment system: setup/comment-system.md
           - Offline usage: setup/offline.md
-  - Modules:
-      - Modules: setup/modules/index.md
-      - GLightbox: setup/modules/glightbox.md
-      - Macros: setup/modules/macros.md
-      - Markdown Exec: setup/modules/markdown-exec.md
-      - mkdocstrings: setup/modules/mkdocstrings.md
-      - Meta: setup/modules/meta.md
-      - Tags: setup/modules/tags.md
-      - Redirects: setup/modules/redirects.md
-      - Minify: setup/modules/minify.md
-      - Literate-nav: setup/modules/literate-nav.md
-      - Awesome-nav: setup/modules/awesome-nav.md
-      - Python Markdown: setup/modules/python-markdown.md
-      - Python Markdown Extensions: setup/modules/python-markdown-extensions.md
   - Authoring:
       - Markdown: authoring/markdown.md
       - Front matter: authoring/frontmatter.md
@@ -255,6 +232,16 @@ nav:
       - Lists: authoring/lists.md
       - Math: authoring/math.md
       - Tooltips: authoring/tooltips.md
+  - Compatibility:
+      - MkDocs:
+          - compatibility/mkdocs/index.md
+          - Migrate from MkDocs: compatibility/mkdocs/migration.md
+          - MkDocs plugins: compatibility/mkdocs/plugins.md
+          - Versioning: compatibility/mkdocs/mike.md
+      - Markdown:
+          - compatibility/markdown/index.md
+          - Python Markdown: compatibility/markdown/python-markdown.md
+          - Python Markdown Extensions: compatibility/markdown/python-markdown-extensions.md
   - Community:
       - Get involved: community/get-involved.md
       - How we work: community/how-we-work.md

@@ -11,36 +11,6 @@ project using the [`new` command][new], this file will be automatically created
 for you, and include an example configuration with comments describing the
 available settings.
 
-??? info "Why Zensical uses TOML"
-
-    The [TOML file format] is specifically designed to be easy to scan and
-    understand. We've chosen TOML over YAML, since it avoids a number of
-    problems that YAML suffers from:
-
-    - YAML uses indentation to express structure, which makes it particularly
-      error prone to indentation mistakes that are hard to locate. In TOML,
-      whitespace is mostly a stylistic choice.
-
-    - In YAML, values do not need to be escaped, which can cause ambiguities if
-      a value can be interpreted as different types, such as `no` or `off`, which would
-      both be interpreted as a boolean by YAML, when they could be intended as strings.
-      TOML requires all strings to be quoted.
-
-## Transition from MkDocs
-
-To ease transition from [Material for MkDocs], Zensical can natively read
-`mkdocs.yml` configuration files. However, we recommend that new projects use
-`zensical.toml` files. This documentation lists configuration options for
-both configuration file formats in content tabs.
-
-???+ note "Why we support `mkdocs.yml`"
-
-    Since Zensical is built by the creators of Material for MkDocs, we support
-    configuration via `mkdocs.yml` files as a transition mechanism to make
-    migration to Zensical smooth for users that have existing projects. Support
-    for configuration with `mkdocs.yml` will always be supported, but
-    eventually move out of the core.
-
 ## The `project` scope
 
 A `zensical.toml` configuration begins with a line declaring a scope for the
@@ -54,40 +24,6 @@ As of now, all settings are contained within this scope. As we evolve Zensical,
 we will introduce additional scopes and move settings out of the `project`
 scope where appropriate. Of course, we'll provide automatic refactorings, so
 there's no need for manual migration.
-
-## Theme variant
-
-Zensical comes with two theme variants: `modern` and `classic`, with `modern`
-being the default – you're looking at it right now. The `classic` theme exactly
-matches the look and feel of Material for MkDocs, while the `modern` theme
-provides a fresh new design.
-
-In case you're coming from [Material for MkDocs] and want to keep its look and
-feel, or customize your site based on its appearance, you can switch to the
-`classic` theme variant:
-
-=== "`zensical.toml`"
-
-    ``` toml
-    [project.theme]
-    variant = "classic"
-    ```
-
-=== "`mkdocs.yml`"
-
-    ``` yaml
-    theme:
-      variant: classic
-    ```
-
-!!! note "Customization"
-
-    The HTML structure of Zensical matches that of Material for MkDocs in both
-    theme variants. This means that your existing customizations with CSS and
-    JavaScript should work with either theme variant. However, there may be
-    circumstances where customizations do not yield the desired results.
-
-    In that case we recommend switching to the `classic` variant.
 
 ## Settings
 
@@ -341,29 +277,15 @@ configuration:
       - fragments
     ```
 
-## Unsupported settings
-
-The following `mkdocs.yml` settings are not (yet) supported in Zensical, as
-we're rethinking how configuration and customization should work:
-
-- `remote_branch`
-- `remote_name`
-- `exclude_docs`
-- `draft_docs`
-- `not_in_nav`
-- `hooks`
-
 [backlog item]: https://github.com/zensical/backlog/issues/101
 [description in the page metadata]: ../authoring/frontmatter.md
-[Macros]: modules/macros.md
-[macros-include_dir]: modules/macros.md#include_dir
-[macros-include_yaml]: modules/macros.md#include_yaml
-[macros-module]: modules/macros.md#module_name
-[macros-modules]: modules/macros.md#modules
-[Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
-[mkdocstrings]: modules/mkdocstrings.md
+[Macros]: ../compatibility/mkdocs/plugins.md#macros
+[macros-include_dir]: ../compatibility/mkdocs/plugins.md#macros
+[macros-include_yaml]: ../compatibility/mkdocs/plugins.md#macros
+[macros-module]: ../compatibility/mkdocs/plugins.md#macros
+[macros-modules]: ../compatibility/mkdocs/plugins.md#macros
+[mkdocstrings]: ../compatibility/mkdocs/plugins.md#mkdocstrings
 [new]: ../usage/new.md
 [offline usage]: offline.md
 [preview]: ../usage/preview.md
-[Snippets]: modules/python-markdown-extensions.md#snippets
-[TOML file format]: https://toml.io/
+[Snippets]: ../compatibility/markdown/python-markdown-extensions.md#snippets

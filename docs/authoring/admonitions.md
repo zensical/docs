@@ -512,17 +512,17 @@ used, not only these five.
 Callouts are not part of the [GitHub Flavored Markdown specification][GFM], so
 they are not supported by all GitHub Flavored Markdown parsers.
 
-[Admonition]: ../setup/modules/python-markdown.md#admonition
+[Admonition]: ../compatibility/markdown/python-markdown.md#admonition
 [admonition syntax]: #usage
 [changing the title]: #change-the-title
 [collapsible blocks]: #collapsible-blocks
 [custom icon]: ../setup/logo-and-icons.md#additional-icons
 [custom style]: ../customization.md#additional-css
-[Details]: ../setup/modules/python-markdown-extensions.md#details
+[Details]: ../compatibility/markdown/python-markdown-extensions.md#details
 [GFM]: https://github.github.com/gfm/
 [GitHub callouts]: https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax#alerts
-[Python Markdown Extensions]: ../setup/modules/python-markdown-extensions.md
+[Python Markdown Extensions]: ../compatibility/markdown/python-markdown-extensions.md
 [Quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
-[SuperFences]: ../setup/modules/python-markdown-extensions.md#superfences
+[SuperFences]: ../compatibility/markdown/python-markdown-extensions.md#superfences
 [supported types]: #supported-types
 [type qualifier]: #supported-types

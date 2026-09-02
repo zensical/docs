@@ -52,8 +52,7 @@ The following settings are available:
 
     There is no way to turn the offline functionality off or on
     based on an environment variable as in a `mkdocs.yml`. We are
-    working towards [feature parity] and will be providing a more
-    comprehensive system for managing [variants] in due course.
+    planning a more comprehensive system for managing [variants] in due course.
 
 === "`mkdocs.yml`"
 
@@ -111,7 +110,6 @@ The file name **must** contain the `iframe-worker` substring, otherwise Zensical
 will fetch it again from unpkg.com.
 
 [Comment systems]: comment-system.md
-[feature parity]: https://zensical.org/compatibility/features/
 [fetched from unpkg.com]: https://unpkg.com/iframe-worker/shim
 [Git repository]: repository.md
 [instant navigation]: navigation.md#instant-navigation

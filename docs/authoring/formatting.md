@@ -98,10 +98,10 @@ available shortcodes:
 
 ---
 
-[Caret, Mark & Tilde]: ../setup/modules/python-markdown-extensions.md#caret-mark-tilde
+[Caret, Mark & Tilde]: ../compatibility/markdown/python-markdown-extensions.md#caret-mark-tilde
 [del]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/del
 [ins]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/ins
-[Keys]: ../setup/modules/python-markdown-extensions.md#keys
+[Keys]: ../compatibility/markdown/python-markdown-extensions.md#keys
 [mark]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/mark
 [Python Markdown Extensions]: https://facelessuser.github.io/pymdown-extensions/extensions/keys/#extendingmodifying-key-map-index
 [sub]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/sub

@@ -109,6 +109,6 @@ The content of this block is excluded
 { data-search-exclude }
 ```
 
-[Attribute Lists]: modules/python-markdown.md#attribute-lists
+[Attribute Lists]: ../compatibility/markdown/python-markdown.md#attribute-lists
 [offline]: offline.md
 [standalone Open Source project]: https://zensical.org/about/roadmap/#search-and-discovery

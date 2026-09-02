@@ -128,7 +128,7 @@ The following is a complete list of customizable icons used by the theme:
 | `view`       | View page source                                                     |
 | `repo`       | Repository icon                                                      |
 | `admonition` | See [Admonition icons](../authoring/admonitions.md#admonition-icons) |
-| `tag`        | See [Tag icons and identifiers](modules/tags.md#tag-icons-and-identifiers) |
+| `tag`        | See [Tags](../compatibility/mkdocs/plugins.md#tags)                      |
 | `previous`   | Previous page in footer, hide search on mobile                       |
 | `next`       | Next page in footer                                                  |
 

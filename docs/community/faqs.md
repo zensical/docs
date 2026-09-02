@@ -23,31 +23,22 @@ before looking elsewhere.
 
 ### When can I migrate from Material for MkDocs?
 
-Zensical is ready to be used right now, provided your project requires only
-features that are already implemented. Our [feature parity] page provides a
-breakdown of our progress towards feature parity and we have additional pages
-covering:
-
-- [Command-line options]
-- [Template overrides] (also applies to custom templates)
-- [Third-party plugins]
-
-We have not made any changes to the HTML structure, so your CSS and JavaScript
-customization will continue to work.
+Zensical supports the complete Material for MkDocs settings surface and provides
+a classic theme variant with the same HTML structure. Existing CSS and
+JavaScript customizations can therefore continue to work. Before changing a
+production workflow, follow [Migrate from MkDocs] and check any [MkDocs
+plugins] used by the project.
 
 ### Should I convert my `mkdocs.yml` to `zensical.toml`?
 
-At this point in time (January 2026) we do not recommend switching to
-`zensical.toml` for existing MkDocs projects. The `zensical.toml` configuration
-mirrors the `mkdocs.yml` format, except that everything is moved into the `project`
-scope. Once we change anything in the configuration format, we will prompt you
-and offer tooling to convert.
+Existing MkDocs projects can keep their `mkdocs.yml`; converting the file is not
+required to build them with Zensical. For new projects, we recommend
+`zensical.toml`. See [configuration and project structure] for the differences.
 
 ### Can I use Zensical in production since it is a 0.0.x release?
 
-The versioning is primarily technical – you can use Zensical now if the features
-that you need are already supported – it is ready for prime time, and we're
-working on closing the feature parity gap.
+The versioning is primarily technical – Zensical is ready for production use,
+and we continue to improve it carefully.
 
 We're still making significant changes to Zensical's API, which is why 0.0.x
 versioning is the correct choice. While the code changes a lot, we keep
@@ -56,37 +47,25 @@ of the CLI. There's currently no ETA for a 1.0.0 release.
 
 ### Will Zensical support plugins?
 
-We see the ecosystem as key to the popularity of Material for MkDocs and will be
-offering a significantly more powerful API that will make it easier to extend
-Zensical. To overcome the technical limitations of MkDocs, there was no way
-around making changes to its plugin API. Our new API will help to reduce
-boilerplate and the number of workarounds that are often necessary with MkDocs
-(as in several of our own plugins). We aim for a future where documentation
-toolchains are easy to adapt to a wide range of projects.
+Zensical provides native implementations of the MkDocs plugins listed in the
+[plugin support] guide. Most are built in and recognize the original plugin
+configuration; integrations that require the original package include
+installation instructions. A public API for native Zensical modules is planned
+separately and is not required to use these compatibility implementations.
 
 ### When will an MkDocs plugin I use be supported?
 
-The item currently top of our list of priorities is the creation of the [module
-system] that will allow us to implement the functionality of the [Material for
-MkDocs plugins] as well as that of a number of other plugins and tools that we
-have committed to supporting. See the list of [third-party plugins] we are
-committed to covering. Work on this functionality is a large part of our effort
-to achieve [feature parity] with Material for MkDocs. You can track progress by
-subscribing to the corresponding items on our [backlog].
-
-We will use work towards feature parity to road-test the module system before we
-make it generally available. Once the API can be declared stable, we invite the
-community to develop modules to support all conceivable use cases.
+Check [plugin support] for the current list and Zensical-specific differences.
+If the plugin isn't listed, check the public [backlog] to see whether support is
+already planned or create a new [change request].
 
 ### Why do you call them "modules" and not "plugins"?
 
-The name "plugin" suggests that something is "plugged into" an otherwise
-monolithic and static system. The term "module" indicates that _all_
-functionality in Zensical will be built as a module, not just third-party code.
-This makes everything exchangeable, including things that are hard-coded in
-MkDocs. For example, this allows us to develop an alternative Markdown
-rendering module that supports CommonMark and uses a Rust-based parser
-to improve performance.
+We use "plugin" for MkDocs plugins and the compatibility implementations that
+recognize their configuration. "Module" refers to Zensical's future native
+extension model. That public module API is not available yet, so compatibility
+support should not be read as a promise that an MkDocs plugin can run as a
+native Zensical module.
 
 ### Can I use any Markdown extension?
 
@@ -116,15 +95,13 @@ above.
 
 ### How long will you support Material for MkDocs?
 
-We are committed to [supporting Material for MkDocs][support-mkm] for at least
-12 months after the release of Zensical on November 5th, 2025.
-We expect to reach feature parity with Material for MkDocs within these 12 months.
+See [Zensical today] for the current Material for MkDocs maintenance timeline.
+The [compatibility overview] explains how to assess a project before migrating.
 
 ### How long will you support reading `mkdocs.yml` files?
 
-Indefinitely. We plan to move the functionality that is required only for
-compatibility with Material for MkDocs into a dedicated compatibility package,
-which will be optional for Zensical users who do not need it.
+Indefinitely. Reading existing MkDocs configuration is part of Zensical's
+compatibility surface; new projects can use `zensical.toml`.
 
 ### How long will the "classic" theme variant be supported?
 
@@ -172,8 +149,7 @@ options that will allow you to opt in to support for symbolic links.
 The installation methods we support officially are with `pip` and `uv` since
 both use the [PyPI] package index. This is the repository we officially release
 to. We are not currently planning to use any other distribution channels as
-supporting more would bind resources we need to work towards feature parity and
-implement our roadmap.
+supporting more would bind resources we need to implement our roadmap.
 
 ### If Zensical is written in Rust, why can't I `cargo install` it?
 
@@ -236,7 +212,7 @@ This combination of attributes is unique in the market, where there is all too
 often a choice to make between ease of adoption and use on the one hand, and
 capabilities on the other. We do not accept that this is a necessary tradeoff.
 Zensical already demonstrates this and our [roadmap] goes far beyond
-feature parity with Material for MkDocs.
+compatibility with Material for MkDocs.
 
 At the same time, we are developing mechanisms that make it even easier to use
 than Material for MkDocs, especially for teams of professionals. With Zensical,
@@ -383,23 +359,22 @@ diagramming tools much easier.
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
 [backlog item]: https://github.com/zensical/backlog/issues/25
 [change request]: https://zensical.org/docs/community/contribute/request-a-change/
-[command-line options]: https://zensical.org/compatibility/cli/
 [component system]: https://zensical.org/about/roadmap/#component-system
-[configure it]: https://zensical.org/docs/setup/extensions/about/
+[compatibility overview]: ../compatibility/mkdocs/index.md
+[configuration and project structure]: ../compatibility/mkdocs/migration.md#configuration
+[configure it]: ../compatibility/markdown/python-markdown.md
 [define a custom template]: https://zensical.org/docs/customization/#custom-templates
-[feature parity]: https://zensical.org/compatibility/features/
 [filter]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
 [introducing a component system]: https://zensical.org/about/roadmap/#component-system
 [Kroki]: https://kroki.io/
-[Material for MkDocs plugins]: https://squidfunk.github.io/mkdocs-material/plugins/
 [Mermaid]: https://www.mermaidchart.com
-[module system]: https://zensical.org/about/roadmap/#module-system
+[Migrate from MkDocs]: ../compatibility/mkdocs/migration.md
+[MkDocs plugins]: ../compatibility/mkdocs/plugins.md
+[plugin support]: ../compatibility/mkdocs/plugins.md
 [process for requesting changes]: https://zensical.org/docs/community/contribute/request-a-change/
 [PyPI]: https://pypi.org/
 [quick-thoughts]: https://discord.com/channels/1289187620659789824/1435275497549598770
 [roadmap]: https://zensical.org/about/roadmap/
-[support-mkm]: https://github.com/squidfunk/mkdocs-material/issues/8523
-[template overrides]: https://zensical.org/compatibility/overrides/
 [test]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
-[third-party plugins]: https://zensical.org/compatibility/plugins/
 [vision]: https://zensical.org/about/vision/
+[Zensical today]: https://zensical.org/about/zensical-today/
