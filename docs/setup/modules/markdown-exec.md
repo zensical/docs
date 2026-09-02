@@ -128,7 +128,6 @@ Markdown Exec has additional options for naming and prefixing generated HTML ids
 - [Gallery of examples](https://pawamoy.github.io/markdown-exec/gallery/)
 
 [Ace]: https://ace.c9.io/
-[Markdown Exec]: https://pawamoy.github.io/markdown-exec/
 [Markdown in HTML]: python-markdown.md#markdown-in-html
 [Pyodide]: https://pyodide.org/en/stable/
 [SuperFences]: python-markdown-extensions.md#superfences

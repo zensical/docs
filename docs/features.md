@@ -63,6 +63,7 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 ### Tier 1
 
 <div class="mdx-columns" markdown>
+
 - [x] autorefs ([Backlog #89])
 - [x] [Awesome-nav] ([Backlog #12])
 - [x] [GLightbox] ([Backlog #21])
@@ -78,11 +79,13 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Search] ([Backlog #34])
 - [x] [Section index] ([Backlog #20])
 - [x] [Tags] ([Backlog #38]) <span class="md-status md-status--material" title="Material for MkDocs"></span>
+
 </div>
 
 ### Tier 2
 
 <div class="mdx-columns" markdown>
+
 - [x] [Table reader] ([Backlog #28])
 - [ ] Audio ([Backlog #102])
 - [ ] Blog ([Backlog #30])
@@ -97,11 +100,13 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [ ] Social ([Backlog #37])
 - [ ] Static i18n ([Backlog #1])
 - [ ] Video ([Backlog #5])
+
 </div>
 
 ## Core features
 
 <div class="mdx-columns" markdown>
+
 - [x] [Install with pip install][install-with-pip]
 - [x] [Create a new site]
 - [x] [Build from mkdocs.yml][build-from-mkdocs]
@@ -114,11 +119,13 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Extra CSS, JavaScript, and templates]
 - [x] [Link validation]
 - [x] [Strict mode]
+
 </div>
 
 ## Site and page structure
 
 <div class="mdx-columns" markdown>
+
 - [x] [Site language selector]
 - [x] [Header and footer]
 - [x] [Announcement bar]
@@ -129,11 +136,13 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Tags]
 - [x] [Tag listings]
 - [x] [Tags in search]
+
 </div>
 
 ## Appearance
 
 <div class="mdx-columns" markdown>
+
 - [x] [Classic Material theme]
 - [x] [Assets and customization]
 - [x] [Template overrides]
@@ -143,11 +152,13 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Fonts]
 - [x] [Icons, emojis, and favicon]
 - [ ] Social cards
+
 </div>
 
 ## Markdown extensions
 
 <div class="mdx-columns" markdown>
+
 - [x] [Abbreviations]
 - [x] [Admonitions]
 - [x] [Annotations]
@@ -180,20 +191,24 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Tables]
 - [x] [Task lists]
 - [x] [Tooltips]
+
 </div>
 
 ## Content
 
 <div class="mdx-columns" markdown>
+
 - [x] Comment system
 - [x] [Repository integration]
 - [x] [Versioning]
 - [ ] Blog
+
 </div>
 
 ## Navigation
 
 <div class="mdx-columns" markdown>
+
 - [x] Explicit navigation in [`mkdocs.yml`][explicit-navigation]
 - [x] [Instant loading and prefetching]
 - [x] [Progress indicator]
@@ -214,34 +229,44 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 - [x] [Automatic previews]
 - [x] [Automatic navigation]
 - [x] [Search]
+
 </div>
 
 ## Optimization
 
 <div class="mdx-columns" markdown>
+
 - [x] [Site analytics and feedback widget]
 - [x] [Cookie consent]
 - [x] [Custom cookies]
 - [x] [Search engine optimization]
 - [x] [Offline usage]
 - [ ] [Data privacy]
+
 </div>
 
-[Awesome-nav]: setup/modules/awesome-nav.md
 [404 pages]: customization.md#custom-error-pages
 [Abbreviations]: authoring/tooltips.md#add-abbreviations
 [Admonitions]: authoring/admonitions.md
+[Anchor tracking]: setup/navigation.md#anchor-tracking
 [Annotations]: authoring/code-blocks.md#add-annotations
+[Announcement bar]: setup/header.md#announcement-bar
+[Assets and customization]: customization.md
 [Attribute lists]: setup/modules/python-markdown.md#attribute-lists
+[Automatic light and dark mode]: setup/colors.md
+[Automatic navigation]: setup/navigation.md
+[Automatic previews]: setup/navigation.md
+[Awesome-nav]: setup/modules/awesome-nav.md
+[Back-to-top button]: setup/navigation.md#back-to-top-button
 [Backlog #1]: https://github.com/zensical/backlog/issues/1
-[Backlog #4]: https://github.com/zensical/backlog/issues/4
-[Backlog #5]: https://github.com/zensical/backlog/issues/5
-[Backlog #8]: https://github.com/zensical/backlog/issues/8
+[Backlog #102]: https://github.com/zensical/backlog/issues/102
 [Backlog #12]: https://github.com/zensical/backlog/issues/12
 [Backlog #13]: https://github.com/zensical/backlog/issues/13
+[Backlog #134]: https://github.com/zensical/backlog/issues/134
 [Backlog #14]: https://github.com/zensical/backlog/issues/14
 [Backlog #15]: https://github.com/zensical/backlog/issues/15
 [Backlog #16]: https://github.com/zensical/backlog/issues/16
+[Backlog #17]: https://github.com/zensical/backlog/issues/17
 [Backlog #18]: https://github.com/zensical/backlog/issues/18
 [Backlog #19]: https://github.com/zensical/backlog/issues/19
 [Backlog #20]: https://github.com/zensical/backlog/issues/20
@@ -258,16 +283,29 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 [Backlog #35]: https://github.com/zensical/backlog/issues/35
 [Backlog #37]: https://github.com/zensical/backlog/issues/37
 [Backlog #38]: https://github.com/zensical/backlog/issues/38
+[Backlog #4]: https://github.com/zensical/backlog/issues/4
+[Backlog #5]: https://github.com/zensical/backlog/issues/5
+[Backlog #8]: https://github.com/zensical/backlog/issues/8
 [Backlog #89]: https://github.com/zensical/backlog/issues/89
-[Backlog #102]: https://github.com/zensical/backlog/issues/102
-[Backlog #134]: https://github.com/zensical/backlog/issues/134
-[GLightbox]: setup/modules/glightbox.md
+[BetterEm]: setup/modules/python-markdown-extensions.md#other-extensions
+[build-from-mkdocs]: setup/basics.md#transition-from-mkdocs
+[Built-in preview server]: usage/preview.md
 [Buttons]: authoring/buttons.md
 [Caption]: authoring/images.md#image-captions
 [Caret, Mark, and Tilde]: setup/modules/python-markdown-extensions.md#caret-mark-tilde
+[Classic Material theme]: setup/basics.md#theme-variant
 [Code blocks, highlighting, and copying]: authoring/code-blocks.md
+[Colors and palette toggle]: setup/colors.md#color-palette-toggle
+[Compatible with the MkDocs file layout]: setup/basics.md#docs_dir
+[Content area width]: setup/navigation.md#content-area-width
 [Content tabs]: authoring/content-tabs.md
+[Cookie consent]: setup/data-privacy.md#cookie-consent
+[Create a new site]: create-your-site.md
 [Critic]: setup/modules/python-markdown-extensions.md#other-extensions
+[Custom colors and color schemes]: setup/colors.md#custom-colors
+[Custom cookies]: setup/data-privacy.md#custom-cookies
+[Customization]: customization.md
+[Data privacy]: setup/data-privacy.md
 [Data tables]: authoring/data-tables.md
 [Definition lists]: authoring/lists.md#use-definition-lists
 [Details]: setup/modules/python-markdown-extensions.md#details
@@ -276,88 +314,66 @@ uses Zensical's configuration and build system. Tier 1 has the higher priority.
 [explicit-navigation]: setup/navigation.md
 [Extra CSS, JavaScript, and templates]: customization.md#adding-assets
 [Fonts]: setup/fonts.md
+[Footnotes]: authoring/footnotes.md
+[GLightbox]: setup/modules/glightbox.md
+[Grids]: authoring/grids.md
 [Header and footer]: setup/header.md
 [Hiding the sidebars]: setup/navigation.md#hide-the-sidebars
+[Highlight]: setup/modules/python-markdown-extensions.md#highlight
+[Icons and emojis]: setup/logo-and-icons.md
 [Icons, emojis, and favicon]: setup/logo-and-icons.md
 [Images]: authoring/images.md
 [Inline highlighting]: setup/modules/python-markdown-extensions.md#inlinehilite
+[install-with-pip]: get-started.md
 [Instant loading and prefetching]: setup/navigation.md#instant-navigation
 [Instant previews]: setup/navigation.md#instant-previews
 [Jinja templates]: customization.md#custom-templates
+[Keyboard shortcuts]: setup/navigation.md
 [Keys]: authoring/formatting.md#add-keyboard-keys
 [Link validation]: setup/validation.md
+[Literate-nav]: setup/modules/literate-nav.md
+[Macros]: setup/modules/macros.md
+[Markdown Exec]: setup/modules/markdown-exec.md
 [Markdown in HTML]: setup/modules/python-markdown.md#markdown-in-html
 [Math with MathJax and KaTeX]: authoring/math.md
+[Meta]: setup/modules/meta.md
+[mike]: setup/versioning.md
+[Minify]: setup/modules/minify.md
+[mkdocstrings]: setup/modules/mkdocstrings.md
 [Navigation expansion]: setup/navigation.md#navigation-expansion
 [Navigation paths and breadcrumbs]: setup/navigation.md#navigation-path
 [Navigation pruning]: setup/navigation.md#navigation-pruning
 [Navigation sections]: setup/navigation.md#navigation-sections
 [Navigation tabs and sticky tabs]: setup/navigation.md#navigation-tabs
-[Page metadata]: authoring/frontmatter.md
+[Offline]: setup/offline.md
+[Offline usage]: setup/offline.md
 [Progress indicator]: setup/navigation.md#progress-indicator
+[Python Markdown dialect]: setup/modules/python-markdown.md
+[Redirects]: setup/modules/redirects.md
 [Repository icon and link in the header]: setup/repository.md
 [Repository integration]: setup/repository.md
+[Search]: setup/search.md
 [Search engine optimization]: setup/basics.md#site_url
+[Section index]: setup/navigation.md#section-index-pages
+[Section index pages]: setup/navigation.md#section-index-pages
 [Site analytics and feedback widget]: setup/analytics.md
 [Site language selector]: setup/language.md#site-language-selector
-[Social cards]: setup/social-cards.md
+[Smart symbols]: setup/modules/python-markdown-extensions.md#smartsymbols
+[Snippets]: setup/modules/python-markdown-extensions.md#snippets
 [Social links]: setup/footer.md#social-links
 [Strict mode]: setup/validation.md#strict-mode
 [SuperFences]: setup/modules/python-markdown-extensions.md#superfences
+[Tabbed content]: authoring/content-tabs.md
+[Table of contents]: setup/modules/python-markdown.md#table-of-contents
 [Table of contents and anchor following]: setup/navigation.md#table-of-contents
 [Table of contents integration]: setup/navigation.md#table-of-contents
-[Tabbed content]: authoring/content-tabs.md
+[Table reader]: setup/modules/macros.md#reading-tabular-data
+[Tables]: setup/modules/python-markdown.md#tables
+[Tag listings]: setup/modules/tags.md
+[Tags]: setup/modules/tags.md
+[Tags in search]: setup/search.md#search-exclusion
 [Task lists]: authoring/lists.md#use-task-lists
 [Template overrides]: customization.md#template-overrides
 [Tooltips]: authoring/tooltips.md
 [Versioning]: setup/versioning.md
 [YAML page metadata]: authoring/frontmatter.md
-[Anchor tracking]: setup/navigation.md#anchor-tracking
-[Automatic light and dark mode]: setup/colors.md
-[Automatic navigation]: setup/navigation.md
-[Automatic previews]: setup/navigation.md
-[Assets and customization]: customization.md
-[Back-to-top button]: setup/navigation.md#back-to-top-button
-[BetterEm]: setup/modules/python-markdown-extensions.md#other-extensions
-[build-from-mkdocs]: setup/basics.md#transition-from-mkdocs
-[Built-in preview server]: usage/preview.md
-[Classic Material theme]: setup/basics.md#theme-variant
-[Colors and palette toggle]: setup/colors.md#color-palette-toggle
-[Comment system]: setup/comment-system.md
-[Compatible with the MkDocs file layout]: setup/basics.md#docs_dir
-[Cookie consent]: setup/data-privacy.md#cookie-consent
-[Content area width]: setup/navigation.md#content-area-width
-[Create a new site]: create-your-site.md
-[Custom colors and color schemes]: setup/colors.md#custom-colors
-[Custom cookies]: setup/data-privacy.md#custom-cookies
-[Data privacy]: setup/data-privacy.md
-[install-with-pip]: get-started.md
-[Keyboard shortcuts]: setup/navigation.md
-[Search]: setup/search.md
-[Tags]: setup/modules/tags.md
-[Tag listings]: setup/modules/tags.md
-[Tags in search]: setup/search.md#search-exclusion
-[Offline usage]: setup/offline.md
-[Table reader]: setup/modules/macros.md#reading-tabular-data
-[Announcement bar]: setup/header.md#announcement-bar
-[Footnotes]: authoring/footnotes.md
-[Grids]: authoring/grids.md
-[Highlight]: setup/modules/python-markdown-extensions.md#highlight
-[Icons and emojis]: setup/logo-and-icons.md
-[Python Markdown dialect]: setup/modules/python-markdown.md
-[Snippets]: setup/modules/python-markdown-extensions.md#snippets
-[Smart symbols]: setup/modules/python-markdown-extensions.md#smartsymbols
-[Table of contents]: setup/modules/python-markdown.md#table-of-contents
-[Tables]: setup/modules/python-markdown.md#tables
-[Literate-nav]: setup/modules/literate-nav.md
-[Macros]: setup/modules/macros.md
-[Markdown Exec]: setup/modules/markdown-exec.md
-[Meta]: setup/modules/meta.md
-[Minify]: setup/modules/minify.md
-[mike]: setup/versioning.md
-[mkdocstrings]: setup/modules/mkdocstrings.md
-[Offline]: setup/offline.md
-[Redirects]: setup/modules/redirects.md
-[Section index]: setup/navigation.md#section-index-pages
-[Section index pages]: setup/navigation.md#section-index-pages
-[Customization]: ../../customization.md

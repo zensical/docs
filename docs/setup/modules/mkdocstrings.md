@@ -104,8 +104,7 @@ The complete list of options can be found here:
     - [Symbolic links pointing outside of `docs_dir`](https://github.com/zensical/backlog/issues/55)
 
 [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
-[API reference documentation]: https://zensical.org/about/roadmap/#api-documentation
 [mkdocstrings]: https://mkdocstrings.github.io
-[Timothée Mazzucotelli]: https://github.com/pawamoy
 [mkdocstrings documentation]: https://mkdocstrings.github.io/usage/
 [mkdocstrings Python handler documentation]: https://mkdocstrings.github.io/python/usage/
+[Timothée Mazzucotelli]: https://github.com/pawamoy

@@ -192,7 +192,7 @@ The supported options are:
 #### `minify_js`
 
 The default value of `minify_js` is `false`. Set it to `true` to minify the
-JavaScript files selected by [`js_files`][js_files].
+JavaScript files selected by [`js_files`](#js_files).
 
 === "`zensical.toml`"
 
@@ -209,7 +209,7 @@ JavaScript files selected by [`js_files`][js_files].
           minify_js: true
     ```
 
-#### `js_files`
+#### `js_files` { #js_files }
 
 Use `js_files` to select JavaScript files with paths or glob patterns. The
 paths are relative to `docs_dir`. These can be the files listed in [additional
@@ -240,7 +240,7 @@ in generated HTML to use the emitted filename.
 #### `minify_css`
 
 The default value of `minify_css` is `false`. Set it to `true` to minify the
-CSS files selected by [`css_files`][css_files].
+CSS files selected by [`css_files`](#css_files).
 
 === "`zensical.toml`"
 
@@ -257,7 +257,7 @@ CSS files selected by [`css_files`][css_files].
           minify_css: true
     ```
 
-#### `css_files`
+#### `css_files` { #css_files }
 
 Use `css_files` to select CSS files with paths or glob patterns. The paths are
 relative to `docs_dir`. These can be the files listed in [additional CSS][extra_css].
@@ -323,8 +323,8 @@ to cache an asset until its contents change.
     hosting platform to assign a long cache lifetime to these assets. Since
     the filename changes when the content changes, long-lived caching is safe.
 
+[Byrne Reese]: https://github.com/byrnereese
 [extra_css]: ../../customization.md#additional-css
 [extra_javascript]: ../../customization.md#additional-javascript
-[mkdocs-minify-plugin]: https://github.com/byrnereese/mkdocs-minify-plugin
-[Byrne Reese]: https://github.com/byrnereese
 [Lars Wilhelmer]: https://github.com/wilhelmer
+[mkdocs-minify-plugin]: https://github.com/byrnereese/mkdocs-minify-plugin
