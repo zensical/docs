@@ -86,7 +86,6 @@ extra_css:
 plugins:
   - search
   - tags
-  - markdown-exec
   - redirects:
       redirect_maps:
         setup/extensions/about.md: compatibility/markdown/index.md
