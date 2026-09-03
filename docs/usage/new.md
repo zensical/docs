@@ -15,7 +15,7 @@ does not yet exist, it will be created for you.
 ## Usage
 
 ``` sh
-zensical new [OPTIONS] PROJECT_DIRECTORY
+zensical new [OPTIONS] [PROJECT_DIRECTORY]
 ```
 
 The directory structure created within the project directory consists of:
