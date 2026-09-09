@@ -36,9 +36,10 @@ If your project already uses `zensical.toml`:
 minify_html = true
 ```
 
-The original documentation for each plugin (linked below) remains the reference for usage and
-configuration. We're working on shipping a growing list of supported plugins,
-as well as Zensical's own native public module API.
+Unless an entry documents differences, the original plugin documentation
+(linked below) remains the reference for usage and configuration. We're working
+on shipping a growing list of supported plugins, as well as Zensical's own
+native public module API.
 
 If you're lazy like us, use [Zensical Studio] to get completions and validation
 for all supported plugins directly in your editor inside `zensical.toml` and
@@ -47,9 +48,8 @@ for all supported plugins directly in your editor inside `zensical.toml` and
 ## Supported plugins
 
 Plugins are listed alphabetically. Most implementations require no additional
-installation. Each entry links to the original plugin documentation, which
-remains the reference for settings and usage, and to the Zensical release in
-which support was added.
+installation. Each entry links to the original plugin documentation, where
+applicable, and to the Zensical release in which support was added.
 
 !!! question "The plugin I need isn't listed. What can I do?"
 
@@ -180,7 +180,19 @@ See [plugin documentation][redirects] for usage and configuration.
 
 _Since [0.0.3]_
 
-See [plugin documentation][search] for usage and configuration.
+Zensical doesn't load the search plugin provided by MkDocs or Material for
+MkDocs. Both `search` and `material/search` configure Zensical's built-in [site
+search] module.
+
+**Differences**:
+
+- Search is enabled by default, even when it isn't listed under `plugins`.
+- `enabled` and `separator` are the only supported plugin options.
+- The search language is taken from [`theme.language`][site language]. The
+  `lang` plugin option isn't supported.
+- Material for MkDocs' `pipeline` option has no equivalent, because Zensical's
+  search engine doesn't use the Lunr pipeline. Remove it, along with any other
+  unsupported options, when building with Zensical.
 
 ---
 
@@ -236,7 +248,8 @@ without using their original codebases.
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
 [redirects]: https://github.com/mkdocs/mkdocs-redirects
-[search]: https://www.mkdocs.org/user-guide/configuration/#search
+[site language]: ../../setup/language.md#site-language
+[site search]: ../../setup/search.md
 [table-reader]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
 [Zensical Studio]: https://zensical.org/studio/
