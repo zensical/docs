@@ -19,7 +19,7 @@
 # IN THE SOFTWARE.
 
 # Project information
-site_name: Zensical Documentation
+site_name: Zensical
 site_url: https://zensical.org/docs/
 site_description: >-
   Write your documentation in Markdown and create a professional static site in
@@ -97,6 +97,7 @@ plugins:
         setup/extensions/python-markdown-extensions.md: compatibility/markdown/python-markdown-extensions.md
         setup/versioning.md: compatibility/mkdocs/mike.md
         setup/social-cards.md: compatibility/mkdocs/index.md
+
 # Additional configuration
 extra:
   homepage: https://zensical.org
@@ -207,6 +208,7 @@ nav:
       - Site settings:
           - Data privacy: setup/data-privacy.md
           - Navigation: setup/navigation.md
+          - Redirects: setup/redirects.md
           - Validation: setup/validation.md
           - Site search: setup/search.md
           - Site analytics: setup/analytics.md
