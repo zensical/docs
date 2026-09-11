@@ -14,7 +14,8 @@ structure. In most cases, no additional packages are required as our
 implementations are behavior-preserving rewrites.
 
 We aim to match their behavior as closely as possible and document the remaining
-differences.
+differences. See the [compatibility roadmap] for work in progress and planned
+support.
 
 ## Configuration
 
@@ -53,9 +54,9 @@ applicable, and to the Zensical release in which support was added.
 
 !!! question "The plugin I need isn't listed. What can I do?"
 
-    Check our public [backlog] to see whether support is already planned. If it
-    isn't, [create a change request] for the missing plugin in Zensical's issue
-    tracker.
+    Check our [compatibility roadmap] and public [backlog] to see whether support
+    is already planned. If it isn't, [create a change request] for the missing
+    plugin in Zensical's issue tracker.
 
 ### `autorefs`
 
@@ -172,7 +173,12 @@ See [plugin documentation][offline] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][redirects] for usage and configuration.
+See [Redirects] for usage and configuration.
+
+**Differences**:
+
+- Zensical supports anchor-based redirects for moving sections and splitting
+  pages.
 
 ---
 
@@ -218,6 +224,31 @@ _Since [0.0.58]_
 
 See [plugin documentation][tags] for usage and configuration.
 
+## Compatibility roadmap
+
+We are closing the remaining compatibility gaps for widely used MkDocs and
+Material for MkDocs plugins. These statuses reflect our current priorities and
+do not imply release dates.
+
+### In progress
+
+- [ ] [`blog`][blog]
+- [ ] [`social`][social]
+
+### Planned
+
+- [ ] [`rss`][rss]
+- [ ] [`optimize`][optimize]
+- [ ] [`exclude`][exclude]
+- [ ] [`privacy`][privacy]
+- [ ] [`git-authors`][git-authors]
+- [ ] [`git-committers`][git-committers]
+- [ ] [`git-revision-date-localized`][git-revision-date-localized]
+- [ ] [`audio`][audio]
+- [ ] [`video`][video]
+
+_Review our public [backlog] for additional plugins we may support later._
+
 ## Acknowledgements
 
 We thank all plugin authors and contributors for building and maintaining the
@@ -233,10 +264,17 @@ without using their original codebases.
 [0.0.41]: https://github.com/zensical/zensical/releases/tag/v0.0.41
 [0.0.47]: https://github.com/zensical/zensical/releases/tag/v0.0.47
 [0.0.58]: https://github.com/zensical/zensical/releases/tag/v0.0.58
+[audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
+[blog]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
+[compatibility roadmap]: #compatibility-roadmap
 [create a change request]: https://github.com/zensical/zensical/issues/new/choose
+[exclude]: https://github.com/apenwarr/mkdocs-exclude
+[git-authors]: https://timvink.github.io/mkdocs-git-authors-plugin/
+[git-committers]: https://github.com/byrnereese/mkdocs-git-committers-plugin
+[git-revision-date-localized]: https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
 [glightbox]: https://blueswen.github.io/mkdocs-glightbox/
 [glob patterns]: https://docs.rs/globset/latest/globset/#syntax
 [literate-nav]: https://oprypin.github.io/mkdocs-literate-nav/
@@ -247,9 +285,14 @@ without using their original codebases.
 [mkdocstrings]: https://mkdocstrings.github.io/
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
-[redirects]: https://github.com/mkdocs/mkdocs-redirects
+[optimize]: https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+[privacy]: https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+[Redirects]: ../../setup/redirects.md
+[rss]: https://guts.github.io/mkdocs-rss-plugin/
 [site language]: ../../setup/language.md#site-language
 [site search]: ../../setup/search.md
+[social]: https://squidfunk.github.io/mkdocs-material/plugins/social/
 [table-reader]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
+[video]: https://github.com/soulless-viewer/mkdocs-video
 [Zensical Studio]: https://zensical.org/studio/

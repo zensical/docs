@@ -97,6 +97,7 @@ plugins:
         setup/extensions/python-markdown-extensions.md: compatibility/markdown/python-markdown-extensions.md
         setup/versioning.md: compatibility/mkdocs/mike.md
         setup/social-cards.md: compatibility/mkdocs/index.md
+
 # Additional configuration
 extra:
   homepage: https://zensical.org
@@ -207,6 +208,7 @@ nav:
       - Site settings:
           - Data privacy: setup/data-privacy.md
           - Navigation: setup/navigation.md
+          - Redirects: setup/redirects.md
           - Validation: setup/validation.md
           - Site search: setup/search.md
           - Site analytics: setup/analytics.md

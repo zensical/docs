@@ -12,7 +12,8 @@ maintaining project documentation. It's built by the creators of [Material for
 MkDocs] and shares the same core design principles and philosophy – batteries
 included, easy to use, with powerful customization options.
 
-_You can learn more about how both projects interconnect with each other [here]._
+_Already using MkDocs or Material for MkDocs? [Adopt Zensical gradually with
+your existing project][Migrate from MkDocs]._
 
 ## Installation
 
@@ -164,9 +165,9 @@ be installed using [conda] or [Mamba].
 [conda]: https://docs.conda.io/en/latest/
 [conda-forge]: https://conda-forge.org/
 [conda-forge/zensical-feedstock]: https://github.com/conda-forge/zensical-feedstock
-[here]: https://zensical.org/about
 [Mamba]: https://mamba.readthedocs.io
 [Material for MkDocs]: https://squidfunk.github.io/mkdocs-material/
+[Migrate from MkDocs]: compatibility/mkdocs/migration.md
 [Miniforge]: https://conda-forge.org/download/
 [official Docker image]: https://hub.docker.com/r/zensical/zensical
 [Python package]: https://pypi.org/project/zensical

@@ -3,7 +3,6 @@ icon: lucide/scan-text
 tags:
   - Setup
   - Information architecture
-status: new
 ---
 
 # Validation
