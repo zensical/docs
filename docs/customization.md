@@ -496,10 +496,16 @@ font:
     For now, we deliberately keep the name of the default theme as `material`
     for compatibility with existing Material for MkDocs extensions.
 
-The `extends` key tells Zensical which theme this extension builds on. Users
-can override any of the defaults defined here in their own `mkdocs.yml` or
-`zensical.toml`. If no `mkdocs_theme.yml` is provided, the extension is treated
-as a full standalone theme.
+The `extends` key tells Zensical which theme this extension builds on.
+
+The contents of `mkdocs_theme.yml` are merged into the project's `theme`
+configuration, which means **this file can only set theme options**. Project-level options,
+such as `plugins` and `markdown_extensions`, must be configured in the project's
+own `mkdocs.yml` or `zensical.toml`.
+
+If no `mkdocs_theme.yml` is provided, the extension is treated as a full
+standalone theme. For more background on this format, see [Developing Themes in
+MkDocs].
 
 !!! note "Differences from MkDocs theme packaging"
 
@@ -542,16 +548,17 @@ configuration:
 [async]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#async
 [component system]: https://zensical.org/about/roadmap/#component-system
 [defer]: https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/script#defer
+[Developing Themes in MkDocs]: https://www.mkdocs.org/dev-guide/themes/#developing-themes
+[filters]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
 [instant navigation]: setup/navigation.md#instant-navigation
 [JavaScript module]: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules
 [Jinja]: https://jinja.palletsprojects.com
 [Jinja Template Designer Documentation]: https://jinja.palletsprojects.com/en/stable/templates/
 [MiniJinja]: https://docs.rs/minijinja/latest/minijinja/
-[filters]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
-[tests]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
-[version 9.6.18]: https://github.com/squidfunk/mkdocs-material/releases/tag/9.6.18
 [template]: authoring/frontmatter.md#page-template
 [template language provided by MiniJinja]: https://docs.rs/minijinja/latest/minijinja/syntax/index.html
 [template option]: authoring/frontmatter.md#page-template
+[tests]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions
 [theme structure]: #theme-structure
 [theme templates]: https://github.com/zensical/ui/tree/master/dist
+[version 9.6.18]: https://github.com/squidfunk/mkdocs-material/releases/tag/9.6.18

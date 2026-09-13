@@ -14,7 +14,8 @@ structure. In most cases, no additional packages are required as our
 implementations are behavior-preserving rewrites.
 
 We aim to match their behavior as closely as possible and document the remaining
-differences.
+differences. See the [compatibility roadmap] for work in progress and planned
+support.
 
 ## Configuration
 
@@ -36,9 +37,10 @@ If your project already uses `zensical.toml`:
 minify_html = true
 ```
 
-The original documentation for each plugin (linked below) remains the reference for usage and
-configuration. We're working on shipping a growing list of supported plugins,
-as well as Zensical's own native public module API.
+Unless an entry documents differences, the original plugin documentation
+(linked below) remains the reference for usage and configuration. We're working
+on shipping a growing list of supported plugins, as well as Zensical's own
+native public module API.
 
 If you're lazy like us, use [Zensical Studio] to get completions and validation
 for all supported plugins directly in your editor inside `zensical.toml` and
@@ -47,15 +49,14 @@ for all supported plugins directly in your editor inside `zensical.toml` and
 ## Supported plugins
 
 Plugins are listed alphabetically. Most implementations require no additional
-installation. Each entry links to the original plugin documentation, which
-remains the reference for settings and usage, and to the Zensical release in
-which support was added.
+installation. Each entry links to the original plugin documentation, where
+applicable, and to the Zensical release in which support was added.
 
 !!! question "The plugin I need isn't listed. What can I do?"
 
-    Check our public [backlog] to see whether support is already planned. If it
-    isn't, [create a change request] for the missing plugin in Zensical's issue
-    tracker.
+    Check our [compatibility roadmap] and public [backlog] to see whether support
+    is already planned. If it isn't, [create a change request] for the missing
+    plugin in Zensical's issue tracker.
 
 ### `autorefs`
 
@@ -172,7 +173,12 @@ See [plugin documentation][offline] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][redirects] for usage and configuration.
+See [Redirects] for usage and configuration.
+
+**Differences**:
+
+- Zensical supports anchor-based redirects for moving sections and splitting
+  pages.
 
 ---
 
@@ -180,7 +186,19 @@ See [plugin documentation][redirects] for usage and configuration.
 
 _Since [0.0.3]_
 
-See [plugin documentation][search] for usage and configuration.
+Zensical doesn't load the search plugin provided by MkDocs or Material for
+MkDocs. Both `search` and `material/search` configure Zensical's built-in [site
+search] module.
+
+**Differences**:
+
+- Search is enabled by default, even when it isn't listed under `plugins`.
+- `enabled` and `separator` are the only supported plugin options.
+- The search language is taken from [`theme.language`][site language]. The
+  `lang` plugin option isn't supported.
+- Material for MkDocs' `pipeline` option has no equivalent, because Zensical's
+  search engine doesn't use the Lunr pipeline. Remove it, along with any other
+  unsupported options, when building with Zensical.
 
 ---
 
@@ -223,6 +241,31 @@ uvx --with mkdocs-gen-files python scripts/gen_ref_pages.py
 
 This method requires a `mkdocs.yml` file. It does not work with `zensical.toml`.
 
+## Compatibility roadmap
+
+We are closing the remaining compatibility gaps for widely used MkDocs and
+Material for MkDocs plugins. These statuses reflect our current priorities and
+do not imply release dates.
+
+### In progress
+
+- [ ] [`blog`][blog]
+- [ ] [`social`][social]
+
+### Planned
+
+- [ ] [`rss`][rss]
+- [ ] [`optimize`][optimize]
+- [ ] [`exclude`][exclude]
+- [ ] [`privacy`][privacy]
+- [ ] [`git-authors`][git-authors]
+- [ ] [`git-committers`][git-committers]
+- [ ] [`git-revision-date-localized`][git-revision-date-localized]
+- [ ] [`audio`][audio]
+- [ ] [`video`][video]
+
+_Review our public [backlog] for additional plugins we may support later._
+
 ## Acknowledgements
 
 We thank all plugin authors and contributors for building and maintaining the
@@ -238,10 +281,17 @@ without using their original codebases.
 [0.0.41]: https://github.com/zensical/zensical/releases/tag/v0.0.41
 [0.0.47]: https://github.com/zensical/zensical/releases/tag/v0.0.47
 [0.0.58]: https://github.com/zensical/zensical/releases/tag/v0.0.58
+[audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
+[blog]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
+[compatibility roadmap]: #compatibility-roadmap
 [create a change request]: https://github.com/zensical/zensical/issues/new/choose
+[exclude]: https://github.com/apenwarr/mkdocs-exclude
+[git-authors]: https://timvink.github.io/mkdocs-git-authors-plugin/
+[git-committers]: https://github.com/byrnereese/mkdocs-git-committers-plugin
+[git-revision-date-localized]: https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
 [glightbox]: https://blueswen.github.io/mkdocs-glightbox/
 [glob patterns]: https://docs.rs/globset/latest/globset/#syntax
 [literate-nav]: https://oprypin.github.io/mkdocs-literate-nav/
@@ -253,8 +303,14 @@ without using their original codebases.
 [mkdocstrings]: https://mkdocstrings.github.io/
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
-[redirects]: https://github.com/mkdocs/mkdocs-redirects
-[search]: https://www.mkdocs.org/user-guide/configuration/#search
+[optimize]: https://squidfunk.github.io/mkdocs-material/plugins/optimize/
+[privacy]: https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+[Redirects]: ../../setup/redirects.md
+[rss]: https://guts.github.io/mkdocs-rss-plugin/
+[site language]: ../../setup/language.md#site-language
+[site search]: ../../setup/search.md
+[social]: https://squidfunk.github.io/mkdocs-material/plugins/social/
 [table-reader]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
+[video]: https://github.com/soulless-viewer/mkdocs-video
 [Zensical Studio]: https://zensical.org/studio/

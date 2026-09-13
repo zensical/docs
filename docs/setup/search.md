@@ -22,16 +22,67 @@ documentation as a download.
 
     At the moment, the search interface is not localized, since it's an entirely
     new implementation. Thus, it does not make sense for us to carry over the
-    search localization from Material for MkDocs, as its tightly coupled to
+    search localization from Material for MkDocs, as it's tightly coupled to
     the old search implementation, and we're still changing too much.
 
     This does not impact multi-lingual search.
 
 ## Configuration
 
-The built-in search module is seamlessly integrated with Zensical,
-adding multilingual client-side search, and is enabled by default, so there's
-not need for additional configuration.
+The built-in search module is seamlessly integrated with Zensical, adding
+multilingual client-side search. It is enabled by default, so no additional
+configuration is needed.
+
+Zensical doesn't load the search implementation provided by MkDocs or Material
+for MkDocs. Existing `search` and `material/search` plugin entries both
+configure Zensical's built-in module.
+
+The following plugin settings are available:
+
+`config.enabled`
+: Use this setting to enable or disable search when building your project.
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.plugins.search]
+    enabled = false
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    plugins:
+      - search:
+          enabled: false
+    ```
+
+`config.separator`
+: Set the JavaScript regular expression used to split text into search terms.
+
+### Search language
+
+The search language is derived from the configured [site language]. Set
+`theme.language` instead of the MkDocs search plugin's `lang` option:
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.theme]
+    language = "en"
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    theme:
+      language: en
+    ```
+
+Options specific to the MkDocs and Material for MkDocs search implementations
+aren't supported. In particular, Material for MkDocs' `pipeline` option has no
+equivalent, because Zensical's search engine doesn't use the Lunr pipeline. See
+the [MkDocs plugin compatibility entry] for the complete compatibility notes.
 
 ### Search highlighting
 
@@ -111,4 +162,6 @@ The content of this block is excluded
 
 [Attribute Lists]: ../compatibility/markdown/python-markdown.md#attribute-lists
 [offline]: offline.md
+[MkDocs plugin compatibility entry]: ../compatibility/mkdocs/plugins.md#search
+[site language]: language.md#site-language
 [standalone Open Source project]: https://zensical.org/about/roadmap/#search-and-discovery
