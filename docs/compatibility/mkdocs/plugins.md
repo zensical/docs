@@ -224,6 +224,23 @@ _Since [0.0.58]_
 
 See [plugin documentation][tags] for usage and configuration.
 
+## Unsupported plugins
+
+### `mkdocs-gen-files`
+
+Zensical does not currently support [`mkdocs-gen-files`][mkdocs-gen-files]. Run
+the generation scripts separately from the Zensical build. You can run them once
+or regularly. Track the generated files in version control.
+
+You do not need to add `mkdocs-gen-files` to your project dependencies. Use
+`uvx` to run a script:
+
+``` sh
+uvx --with mkdocs-gen-files python scripts/gen_ref_pages.py
+```
+
+This method requires a `mkdocs.yml` file. It does not work with `zensical.toml`.
+
 ## Compatibility roadmap
 
 We are closing the remaining compatibility gaps for widely used MkDocs and
@@ -282,6 +299,7 @@ without using their original codebases.
 [markdown-exec]: https://github.com/pawamoy/markdown-exec
 [meta]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
 [minify]: https://github.com/byrnereese/mkdocs-minify-plugin
+[mkdocs-gen-files]: https://oprypin.github.io/mkdocs-gen-files/
 [mkdocstrings]: https://mkdocstrings.github.io/
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
