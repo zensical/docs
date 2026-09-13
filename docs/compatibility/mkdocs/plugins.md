@@ -19,7 +19,7 @@ support.
 
 ## Configuration
 
-Existing `mkdocs.yml` plugin configuration can remain unchanged. For example:
+Most existing `mkdocs.yml` plugin configuration can remain unchanged. Review the differences below before migration. For example:
 
 ``` yaml
 plugins:
@@ -36,6 +36,14 @@ If your project already uses `zensical.toml`:
 [project.plugins.minify]
 minify_html = true
 ```
+
+### Validation and ignored settings
+
+Zensical silently ignores the configuration for plugins that are not listed under [Supported plugins](#supported-plugins). It does not import or run these plugins.
+
+For a supported plugin, Zensical also silently ignores the settings that its entry identifies as ignored. Zensical does not validate their values or print a warning. It rejects any other unknown setting during configuration parsing.
+
+Review each ignored setting before migration. The setting can remain in a configuration that is shared with MkDocs, but it has no effect when Zensical builds the site.
 
 Unless an entry documents differences, the original plugin documentation
 (linked below) remains the reference for usage and configuration. We're working
@@ -64,6 +72,10 @@ _Since [0.0.22]_
 
 See [plugin documentation][autorefs] for usage and configuration.
 
+**Differences**:
+
+- Zensical ignores `resolve_closest`, `link_titles`, and `strip_title_tags`.
+
 ---
 
 ### `awesome-nav`
@@ -79,11 +91,28 @@ See [plugin documentation][awesome-nav] for usage and configuration.
 
 ---
 
+### `callouts`
+
+_Since [0.0.62]_
+
+See [plugin documentation][callouts] for the supported callout syntax.
+
+**Differences**:
+
+- The plugin entry enables [`pymdownx.quotes`][pymdownx quotes] with `callouts: true`.
+- Zensical ignores all three plugin settings: `aliases`, `breakless_lists`, and `title_from_first_bold`.
+
+---
+
 ### `glightbox`
 
 _Since [0.0.35]_
 
 See [plugin documentation][glightbox] for usage and configuration.
+
+**Differences**:
+
+- Zensical ignores `touchNavigation`, `loop`, `effect`, `slide_effect`, `zoomable`, `draggable`, `background`, and `shadow`.
 
 ---
 
@@ -104,6 +133,7 @@ See [plugin documentation][macros] for usage and configuration.
 **Differences**:
 
 - Referenced Python and YAML files must be inside the project directory.
+- Zensical ignores `force_render_paths` and `verbose`.
 
 ---
 
@@ -127,6 +157,23 @@ _Since [0.0.58]_
 
 See [plugin documentation][meta] for usage and configuration.
 
+**Differences**:
+
+- Custom YAML tags are not supported in metadata files.
+
+---
+
+### `mike`
+
+_Since [0.0.30]_
+
+See [Versioning with mike] for installation, usage, and configuration.
+
+**Differences**:
+
+- Zensical requires the compatible fork described in the versioning guide.
+- Zensical ignores `css_dir` and `javascript_dir` because it provides the version selector assets.
+
 ---
 
 ### `minify`
@@ -139,6 +186,7 @@ See [plugin documentation][minify] for usage and configuration.
 
 - Assets that cannot be parsed retain their original content instead of crashing
   the build.
+- `minify_inline_js` and `minify_inline_css` are Zensical-only options. They minify JavaScript in `<script>` elements and CSS in `<style>` elements.
 
 ---
 
@@ -158,6 +206,7 @@ See [plugin documentation][mkdocstrings] for usage and configuration.
 
 - Backlinks are not supported.
 - Sources outside the project directory are not watched during preview.
+- Zensical ignores `enable_inventory` and `watch`.
 
 ---
 
@@ -193,12 +242,10 @@ search] module.
 **Differences**:
 
 - Search is enabled by default, even when it isn't listed under `plugins`.
-- `enabled` and `separator` are the only supported plugin options.
-- The search language is taken from [`theme.language`][site language]. The
-  `lang` plugin option isn't supported.
-- Material for MkDocs' `pipeline` option has no equivalent, because Zensical's
-  search engine doesn't use the Lunr pipeline. Remove it, along with any other
-  unsupported options, when building with Zensical.
+- `enabled` and `separator` are the only plugin settings that affect Zensical search.
+- Zensical ignores `lang`. It takes the search language from [`theme.language`][site language].
+- Zensical ignores `pipeline`. It has no equivalent because Zensical's search engine does not use the Lunr pipeline.
+- Zensical ignores `fields`, `indexing`, `jieba_dict`, `jieba_dict_user`, `min_search_length`, and `prebuild_index`.
 
 ---
 
@@ -206,7 +253,7 @@ search] module.
 
 _Since [0.0.3]_
 
-No configuration options are required.
+Zensical provides section-index behavior natively. You can keep the `section-index` plugin entry in a shared configuration, but Zensical ignores the entry.
 
 ---
 
@@ -216,6 +263,11 @@ _Since [0.0.41]_
 
 See [plugin documentation][table-reader] for usage and configuration.
 
+**Differences**:
+
+- `data_path` and all table files must be inside the project directory.
+- Reader call arguments must be Python literals. Names, expressions, and `**kwargs` expansion are not supported.
+
 ---
 
 ### `tags`
@@ -223,6 +275,24 @@ See [plugin documentation][table-reader] for usage and configuration.
 _Since [0.0.58]_
 
 See [plugin documentation][tags] for usage and configuration.
+
+**Differences**:
+
+Zensical silently ignores the legacy settings below. Rename or replace them so that their behavior applies to a Zensical build.
+
+| Ignored setting | Migration |
+| --- | --- |
+| `tags_compare` | Use [`tags_sort_by`][Tags configuration]. |
+| `tags_compare_reverse` | Use [`tags_sort_reverse`][Tags configuration]. |
+| `tags_pages_compare` | Use [`listings_sort_by`][Tags configuration]. |
+| `tags_pages_compare_reverse` | Use [`listings_sort_reverse`][Tags configuration]. |
+| `tags_file` | Add `<!-- material/tags -->` to the tag index page. |
+| `tags_extra_files` | Add a `<!-- material/tags -->` directive to each extra tag index page. |
+| `export` | No replacement. Native tags do not export JSON. |
+| `export_file` | No replacement. Native tags do not export JSON. |
+| `export_only` | No replacement. Native tags do not export JSON. |
+
+Custom Python callables for `tags_slugify`, `tags_sort_by`, `listings_sort_by`, and `listings_tags_sort_by` are not supported. Use one of the built-in callables documented by Material for MkDocs.
 
 ## Unsupported plugins
 
@@ -275,17 +345,20 @@ without using their original codebases.
 
 [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
 [0.0.22]: https://github.com/zensical/zensical/releases/tag/v0.0.22
+[0.0.30]: https://github.com/zensical/zensical/releases/tag/v0.0.30
 [0.0.3]: https://github.com/zensical/zensical/releases/tag/v0.0.3
 [0.0.35]: https://github.com/zensical/zensical/releases/tag/v0.0.35
 [0.0.40]: https://github.com/zensical/zensical/releases/tag/v0.0.40
 [0.0.41]: https://github.com/zensical/zensical/releases/tag/v0.0.41
 [0.0.47]: https://github.com/zensical/zensical/releases/tag/v0.0.47
 [0.0.58]: https://github.com/zensical/zensical/releases/tag/v0.0.58
+[0.0.62]: https://github.com/zensical/zensical/releases/tag/v0.0.62
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
 [blog]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
+[callouts]: https://github.com/sondregronas/mkdocs-callouts
 [compatibility roadmap]: #compatibility-roadmap
 [create a change request]: https://github.com/zensical/zensical/issues/new/choose
 [exclude]: https://github.com/apenwarr/mkdocs-exclude
@@ -305,6 +378,7 @@ without using their original codebases.
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
 [optimize]: https://squidfunk.github.io/mkdocs-material/plugins/optimize/
 [privacy]: https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+[pymdownx quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
 [Redirects]: ../../setup/redirects.md
 [rss]: https://guts.github.io/mkdocs-rss-plugin/
 [site language]: ../../setup/language.md#site-language
@@ -312,5 +386,7 @@ without using their original codebases.
 [social]: https://squidfunk.github.io/mkdocs-material/plugins/social/
 [table-reader]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
+[Tags configuration]: ../../setup/tags.md#configuration
 [video]: https://github.com/soulless-viewer/mkdocs-video
+[Versioning with mike]: mike.md
 [Zensical Studio]: https://zensical.org/studio/
