@@ -116,8 +116,8 @@ Since the `dist` directory is symlinked into the Zensical project, the build
 artifacts will be immediately picked up by any new runs of Zensical.
 
 [Node.js]: https://nodejs.org
-[pull request]: ../contribute/pull-requests.md
-[pull requests]: ../contribute/pull-requests.md
+[pull request]: https://zensical.org/contributing/pull-requests/
+[pull requests]: https://zensical.org/contributing/pull-requests/
 [Python]: https://www.python.org/
 [Rust toolchain]: https://rust-lang.org/tools/install/
 [UI repository]: https://github.com/zensical/ui

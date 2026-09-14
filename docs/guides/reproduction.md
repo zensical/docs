@@ -70,4 +70,4 @@ lines and files, especially the `site` directory.
 
 Pack up the project directory in a `.zip` file.
 
-[Getting started]: ../../get-started.md
+[Getting started]: ../get-started.md

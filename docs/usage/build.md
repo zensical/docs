@@ -45,6 +45,6 @@ the near term.
 
 If the problem recurs after a clean build, please [create an issue].
 
-[create an issue]: ../community/contribute/report-a-bug.md
+[create an issue]: https://zensical.org/contributing/bug-reports/
 [site_dir]: ../setup/basics.md#site_dir
 [strict mode]: ../setup/validation.md#strict-mode
