@@ -88,6 +88,16 @@ plugins:
   - tags
   - redirects:
       redirect_maps:
+        community/contribute/code-of-conduct.md: https://zensical.org/community/code-of-conduct/
+        community/contribute/index.md: https://zensical.org/contributing/
+        community/contribute/pull-requests.md: https://zensical.org/contributing/pull-requests/
+        community/contribute/report-a-bug.md: https://zensical.org/contributing/bug-reports/
+        community/contribute/report-a-docs-issue.md: https://zensical.org/contributing/documentation/
+        community/contribute/request-a-change.md: https://zensical.org/contributing/change-requests/
+        community/get-involved.md: https://zensical.org/community/
+        community/guides/create-a-reproduction.md: guides/reproduction.md
+        community/guides/develop.md: guides/development.md
+        community/how-we-work.md: https://zensical.org/community/
         setup/extensions/about.md: compatibility/markdown/index.md
         setup/extensions/glightbox.md: compatibility/mkdocs/plugins.md#glightbox
         setup/extensions/macros.md: compatibility/mkdocs/plugins.md#macros
@@ -190,6 +200,9 @@ nav:
       - How to upgrade: upgrade.md
       - Browser support: browser-support.md
       - License: license.md
+      - Guides:
+          - Development: guides/development.md
+          - Reproduction: guides/reproduction.md
   - Usage:
       - Command line: usage/cli.md
       - New project: usage/new.md
@@ -243,16 +256,3 @@ nav:
           - compatibility/markdown/index.md
           - Python Markdown: compatibility/markdown/python-markdown.md
           - Python Markdown Extensions: compatibility/markdown/python-markdown-extensions.md
-  - Community:
-      - Get involved: community/get-involved.md
-      - How we work: community/how-we-work.md
-      - Contribute:
-          - community/contribute/index.md
-          - Bug reports: community/contribute/report-a-bug.md
-          - Documentation: community/contribute/report-a-docs-issue.md
-          - Change requests: community/contribute/request-a-change.md
-          - Pull requests: community/contribute/pull-requests.md
-          - Code of conduct: community/contribute/code-of-conduct.md
-      - Guides:
-          - Reproductions: community/guides/create-a-reproduction.md
-          - Development: community/guides/develop.md

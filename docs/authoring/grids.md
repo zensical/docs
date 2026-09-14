@@ -305,7 +305,7 @@ by using a `div` with the `grid` class:
 [GitHub]: https://github.com/zensical/zensical
 [hiding both sidebars]: ../setup/navigation.md#hide-the-sidebars
 [icons and emojis]: icons-emojis.md
-[license]: ../license.md
+[license]: https://zensical.org/license/
 [list]: #list-syntax
 [Markdown in HTML]: ../compatibility/markdown/python-markdown.md#markdown-in-html
 [pip]: ../get-started.md#install-with-pip
