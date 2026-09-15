@@ -107,6 +107,8 @@ plugins:
         setup/extensions/python-markdown-extensions.md: compatibility/markdown/python-markdown-extensions.md
         setup/versioning.md: compatibility/mkdocs/mike.md
         setup/social-cards.md: compatibility/mkdocs/index.md
+  - minify:
+      minify_html: true
 
 # Additional configuration
 extra:
