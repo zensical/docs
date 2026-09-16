@@ -9,10 +9,8 @@ scenario in which the bug occurred. It includes all necessary minimal settings
 and instructions and should be as simple as possible while still demonstrating
 the issue.
 
-Issues containing a minimal reproduction have been solved within 24 hours in the
-past which clearly shows that investing time in creating a reproduction is worth
-the effort. What is more, the process of creating a reproduction can sometimes
-already help identify where the problem lies, so you may not even need to file
+The process of creating a reproduction can sometimes help identify where the
+problem lies, so you may not even need to file
 a bug report if, for example, it is due to a mistake made in the configuration
 or in a customization.
 

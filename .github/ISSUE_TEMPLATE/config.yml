@@ -20,24 +20,27 @@
 
 blank_issues_enabled: false
 contact_links:
-  - name: Report a bug
-    url: https://github.com/zensical/zensical/issues/new?template=01-report-a-bug.yml
+  - name: Bug report
+    url: https://github.com/zensical/zensical/issues/new?template=01-bug-report.yml
     about: >
-      Something is not working? Report a bug
+      Report something that isn't working as expected
 
-  - name: Request a change
-    url: https://github.com/zensical/zensical/issues/new?template=02-request-a-change.yml
+  - name: Change request
+    url: https://github.com/zensical/zensical/issues/new?template=02-change-request.yml
     about: >
-      Want to submit an idea? Propose a change or feature request
+      Propose an improvement or new feature
 
-  - name: Ask a question
+  - name: Security vulnerability
+    url: https://zensical.org/contributing/security/
+    about: >
+      Report potential security vulnerabilities privately
+
+  - name: Question
     url: https://discord.gg/hqXRNq9CjT
     about: >
-      Have a question or need help? Connect with our community on our
-      Discord channel
+      Ask the community for help on Discord
 
-  - name: Get professional support
+  - name: Professional support
     url: https://zensical.org/spark/
     about: >
-      Need help with Zensical? Get professional support directly from the
-      Zensical team
+      Get professional support from the Zensical team through Spark
