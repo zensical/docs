@@ -23,22 +23,99 @@
 }
 
 [data-md-component="announce"] {
-  background: linear-gradient(90deg, #da814a, #f5a623);
-  transition: all 250ms;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background:
+    radial-gradient(
+      circle at 50% -180%,
+      rgba(255, 119, 53, 0.18),
+      transparent 58%
+    ),
+    #15161a;
 }
 
-[data-md-component="announce"]:hover {
-  opacity: 0.8;
+[data-md-component="announce"] .md-banner {
+  background-color: transparent;
+  color: #f7f7f8;
 }
 
-[data-md-component="announce"] a {
-  margin-left: 4px;
-  color: #ffffff !important;
-  text-decoration: none;
+[data-md-component="announce"] .md-icon {
+  color: inherit;
 }
 
-[data-md-component="announce"] .md-icon svg {
-  stroke: #ffffff;
+[data-md-color-scheme="slate"] [data-md-component="announce"] {
+  border-bottom-color: rgba(255, 255, 255, 0.07);
+  background:
+    radial-gradient(
+      circle at 50% -180%,
+      rgba(255, 119, 53, 0.13),
+      transparent 58%
+    ),
+    #1b1c21;
+}
+
+.mdx-announcement {
+  display: flex;
+  gap: 0.55rem;
+  align-items: center;
+  justify-content: flex-start;
+  color: inherit !important;
+  font-size: 0.66rem;
+  text-decoration: none !important;
+}
+
+.mdx-announcement__label {
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 0.3rem;
+  align-items: center;
+  border: 1px solid rgba(255, 138, 140, 0.28);
+  border-radius: 1rem;
+  padding: 0.12rem 0.45rem;
+  background-color: rgba(255, 119, 53, 0.128);
+  color: #ffb06f;
+  font-size: 0.57rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.mdx-announcement__label::before {
+  width: 0.3rem;
+  height: 0.3rem;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #FF8A8C, #FFC120);
+  box-shadow: 0 0 0.35rem rgba(255, 119, 53, 0.45);
+  content: "";
+}
+
+.mdx-announcement__message {
+  min-width: 0;
+  white-space: normal;
+}
+
+.mdx-announcement__action {
+  flex: 0 0 auto;
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  text-underline-offset: 0.1rem;
+  transition: text-decoration-color 150ms ease;
+  white-space: nowrap;
+}
+
+.mdx-announcement:focus-visible .mdx-announcement__action,
+.mdx-announcement:hover .mdx-announcement__action {
+  text-decoration-color: currentcolor;
+}
+
+@media (max-width: 600px) {
+  .mdx-announcement {
+    gap: 0.4rem;
+  }
+
+  .mdx-announcement__content,
+  .mdx-announcement__separator {
+    display: none;
+  }
 }
 
 .mdx-heart {

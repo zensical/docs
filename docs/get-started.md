@@ -12,8 +12,8 @@ maintaining project documentation. It's built by the creators of [Material for
 MkDocs] and shares the same core design principles and philosophy – batteries
 included, easy to use, with powerful customization options.
 
-_Already using MkDocs or Material for MkDocs? [Adopt Zensical gradually with
-your existing project][Migrate from MkDocs]._
+_Already using MkDocs or Material for MkDocs? [See how to migrate an existing
+project gradually][Migrate from MkDocs]._
 
 ## Installation
 
