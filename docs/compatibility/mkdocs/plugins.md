@@ -91,6 +91,19 @@ See [plugin documentation][awesome-nav] for usage and configuration.
 
 ---
 
+### `blog`
+
+_Since [0.0.64]_
+
+See [Blog] for setup and the [plugin documentation][blog] for all
+configuration options and post metadata.
+
+**Differences**:
+
+- Custom Python callables aren't supported; built-in strategies are.
+
+---
+
 ### `callouts`
 
 _Since [0.0.62]_
@@ -280,17 +293,17 @@ See [plugin documentation][tags] for usage and configuration.
 
 Zensical silently ignores the legacy settings below. Rename or replace them so that their behavior applies to a Zensical build.
 
-| Ignored setting | Migration |
-| --- | --- |
-| `tags_compare` | Use [`tags_sort_by`][Tags configuration]. |
-| `tags_compare_reverse` | Use [`tags_sort_reverse`][Tags configuration]. |
-| `tags_pages_compare` | Use [`listings_sort_by`][Tags configuration]. |
-| `tags_pages_compare_reverse` | Use [`listings_sort_reverse`][Tags configuration]. |
-| `tags_file` | Add `<!-- material/tags -->` to the tag index page. |
-| `tags_extra_files` | Add a `<!-- material/tags -->` directive to each extra tag index page. |
-| `export` | No replacement. Native tags do not export JSON. |
-| `export_file` | No replacement. Native tags do not export JSON. |
-| `export_only` | No replacement. Native tags do not export JSON. |
+| Ignored setting              | Migration                                                              |
+| ---------------------------- | ---------------------------------------------------------------------- |
+| `tags_compare`               | Use [`tags_sort_by`][Tags configuration].                              |
+| `tags_compare_reverse`       | Use [`tags_sort_reverse`][Tags configuration].                         |
+| `tags_pages_compare`         | Use [`listings_sort_by`][Tags configuration].                          |
+| `tags_pages_compare_reverse` | Use [`listings_sort_reverse`][Tags configuration].                     |
+| `tags_file`                  | Add `<!-- material/tags -->` to the tag index page.                    |
+| `tags_extra_files`           | Add a `<!-- material/tags -->` directive to each extra tag index page. |
+| `export`                     | No replacement. Native tags do not export JSON.                        |
+| `export_file`                | No replacement. Native tags do not export JSON.                        |
+| `export_only`                | No replacement. Native tags do not export JSON.                        |
 
 Custom Python callables for `tags_slugify`, `tags_sort_by`, `listings_sort_by`, and `listings_tags_sort_by` are not supported. Use one of the built-in callables documented by Material for MkDocs.
 
@@ -319,7 +332,6 @@ do not imply release dates.
 
 ### In progress
 
-- [ ] [`blog`][blog]
 - [ ] [`social`][social]
 
 ### Planned
@@ -345,19 +357,21 @@ without using their original codebases.
 
 [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
 [0.0.22]: https://github.com/zensical/zensical/releases/tag/v0.0.22
-[0.0.30]: https://github.com/zensical/zensical/releases/tag/v0.0.30
 [0.0.3]: https://github.com/zensical/zensical/releases/tag/v0.0.3
+[0.0.30]: https://github.com/zensical/zensical/releases/tag/v0.0.30
 [0.0.35]: https://github.com/zensical/zensical/releases/tag/v0.0.35
 [0.0.40]: https://github.com/zensical/zensical/releases/tag/v0.0.40
 [0.0.41]: https://github.com/zensical/zensical/releases/tag/v0.0.41
 [0.0.47]: https://github.com/zensical/zensical/releases/tag/v0.0.47
 [0.0.58]: https://github.com/zensical/zensical/releases/tag/v0.0.58
 [0.0.62]: https://github.com/zensical/zensical/releases/tag/v0.0.62
+[0.0.64]: https://github.com/zensical/zensical/releases/tag/v0.0.64
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
 [blog]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
+[Blog]: ../../setup/blog.md
 [callouts]: https://github.com/sondregronas/mkdocs-callouts
 [compatibility roadmap]: #compatibility-roadmap
 [create a change request]: https://github.com/zensical/zensical/issues/new/choose
@@ -387,6 +401,6 @@ without using their original codebases.
 [table-reader]: https://timvink.github.io/mkdocs-table-reader-plugin/
 [tags]: https://squidfunk.github.io/mkdocs-material/plugins/tags/
 [Tags configuration]: ../../setup/tags.md#configuration
-[video]: https://github.com/soulless-viewer/mkdocs-video
 [Versioning with mike]: mike.md
+[video]: https://github.com/soulless-viewer/mkdocs-video
 [Zensical Studio]: https://zensical.org/studio/

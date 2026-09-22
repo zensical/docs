@@ -227,6 +227,7 @@ nav:
           - Validation: setup/validation.md
           - Site search: setup/search.md
           - Site analytics: setup/analytics.md
+          - Blog: setup/blog.md
           - Tags: setup/tags.md
           - Comment system: setup/comment-system.md
           - Offline usage: setup/offline.md
