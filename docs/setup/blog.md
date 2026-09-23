@@ -1,5 +1,6 @@
 ---
 icon: lucide/newspaper
+status: new
 tags:
   - Setup
   - Blog

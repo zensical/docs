@@ -3,7 +3,7 @@ icon: lucide/signpost
 tags:
   - Setup
   - Information architecture
-status: route
+status: new
 ---
 
 # Redirects
