@@ -217,7 +217,6 @@ See [plugin documentation][mkdocstrings] for usage and configuration.
 
 **Differences**:
 
-- Backlinks are not supported.
 - Sources outside the project directory are not watched during preview.
 - Zensical ignores `enable_inventory` and `watch`.
 
@@ -241,6 +240,21 @@ See [Redirects] for usage and configuration.
 
 - Zensical supports anchor-based redirects for moving sections and splitting
   pages.
+
+---
+
+### `rss`
+
+_Since [0.0.65]_
+
+See [plugin documentation][rss] for usage and configuration.
+
+**Differences**:
+
+- Zensical ignores `cache_dir` and does not fetch remote images for RSS
+  enclosures.
+- Zensical ignores `use_material_social_cards`; generated social cards are not
+  used.
 
 ---
 
@@ -336,7 +350,6 @@ do not imply release dates.
 
 ### Planned
 
-- [ ] [`rss`][rss]
 - [ ] [`optimize`][optimize]
 - [ ] [`exclude`][exclude]
 - [ ] [`privacy`][privacy]
@@ -366,6 +379,7 @@ without using their original codebases.
 [0.0.58]: https://github.com/zensical/zensical/releases/tag/v0.0.58
 [0.0.62]: https://github.com/zensical/zensical/releases/tag/v0.0.62
 [0.0.64]: https://github.com/zensical/zensical/releases/tag/v0.0.64
+[0.0.65]: https://github.com/zensical/zensical/releases/tag/v0.0.65
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
