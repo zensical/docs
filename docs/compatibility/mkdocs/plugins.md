@@ -72,10 +72,6 @@ _Since [0.0.22]_
 
 See [plugin documentation][autorefs] for usage and configuration.
 
-**Differences**:
-
-- Zensical ignores `resolve_closest`, `link_titles`, and `strip_title_tags`.
-
 ---
 
 ### `awesome-nav`
@@ -146,7 +142,6 @@ See [plugin documentation][macros] for usage and configuration.
 **Differences**:
 
 - Referenced Python and YAML files must be inside the project directory.
-- Zensical ignores `force_render_paths` and `verbose`.
 
 ---
 
@@ -218,7 +213,7 @@ See [plugin documentation][mkdocstrings] for usage and configuration.
 **Differences**:
 
 - Sources outside the project directory are not watched during preview.
-- Zensical ignores `enable_inventory` and `watch`.
+- Zensical ignores `watch`.
 
 ---
 
