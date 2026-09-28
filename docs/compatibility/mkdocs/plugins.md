@@ -289,6 +289,36 @@ For more information, see [plugin documentation][literate-nav].
 
 ---
 
+### `llmstxt`
+
+_Since [0.0.67]_
+
+An `llms.txt` index and Markdown copies of selected pages are generated.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable `llms.txt` generation. |
+| `sections` | Required | Named sections and source pages to include; page paths can contain glob patterns. |
+| `markdown_description` | `null` | Markdown description added after the site description. |
+| `base_url` | `site_url` | Base URL used for links to generated Markdown pages. |
+| `full_output` | `null` | Path of an optional file containing the full text of selected pages. |
+| `autoclean` | `true` | Clean generated HTML before conversion to Markdown. |
+
+</div>
+
+**Differences**:
+
+- With `content.action.copy` in the theme's `features` list, a "Copy as Markdown" button is shown on pages with a Markdown equivalent.
+- Zensical silently ignores `preprocess`. Custom Python preprocessing functions are not run.
+- mkdocstrings source listings and empty code elements are omitted, even with `autoclean: false`.
+- `full_output` must be a relative file path inside `site_dir`, different from `llms.txt`. Absolute paths and empty, `.` or `..` path components are rejected.
+
+For more information, see [plugin documentation][llmstxt].
+
+---
+
 ### `macros`
 
 _Since [0.0.40]_
@@ -709,6 +739,7 @@ without using their original codebases.
 [0.0.64]: https://github.com/zensical/zensical/releases/tag/v0.0.64
 [0.0.65]: https://github.com/zensical/zensical/releases/tag/v0.0.65
 [0.0.66]: https://github.com/zensical/zensical/releases/tag/v0.0.66
+[0.0.67]: https://github.com/zensical/zensical/releases/tag/v0.0.67
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autoapi]: https://mkdocs-autoapi.readthedocs.io/en/latest/usage/
@@ -728,6 +759,7 @@ without using their original codebases.
 [glightbox]: https://blueswen.github.io/mkdocs-glightbox/
 [glob patterns]: https://docs.rs/globset/latest/globset/#syntax
 [literate-nav]: https://oprypin.github.io/mkdocs-literate-nav/
+[llmstxt]: https://pawamoy.github.io/mkdocs-llmstxt/
 [macros]: https://mkdocs-macros-plugin.readthedocs.io/en/latest/
 [markdown-exec]: https://github.com/pawamoy/markdown-exec
 [meta]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
