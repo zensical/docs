@@ -239,6 +239,34 @@ For more information, see [plugin documentation][callouts].
 
 ---
 
+### `exclude`
+
+_Since [0.0.67]_
+
+Exclude files from the generated site by path pattern.
+
+Patterns match source paths relative to `docs_dir`. Exclusion also applies to generated API pages and theme assets. Regular expressions match from the start of each path.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable file exclusion. |
+| `glob` | `[]` | Glob patterns for paths to exclude. |
+| `regex` | `[]` | Regular expressions for paths to exclude. |
+
+</div>
+
+**Differences**:
+
+- Globs use [glob patterns] syntax, as in `awesome-nav`. `**` matches directories recursively, and `{a,b}` selects alternatives. As in the original exclude plugin, `*` also matches directory separators.
+- Backslashes escape glob characters. Use `/` as the directory separator.
+- Invalid glob patterns are rejected.
+
+For more information, see [plugin documentation][exclude].
+
+---
+
 ### `gh-admonitions`
 
 _Since [0.0.67]_
@@ -732,7 +760,6 @@ do not imply release dates.
 ### Planned
 
 - [ ] [`optimize`][optimize]
-- [ ] [`exclude`][exclude]
 - [ ] [`privacy`][privacy]
 - [ ] [`git-authors`][git-authors]
 - [ ] [`git-committers`][git-committers]
