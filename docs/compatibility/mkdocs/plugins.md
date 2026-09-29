@@ -74,6 +74,68 @@ documentation, and links to the Zensical release in which support was added.
     package where installation is required. If you encounter an issue when
     using these plugins with Zensical, [report it to us][report an issue].
 
+### `api-autonav`
+
+_Since [0.0.66]_
+
+Generate API reference pages and navigation for Python modules with
+[`mkdocstrings`](#mkdocstrings).
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable API reference generation. |
+| `modules` | `[]` | Python files or package directories, relative to the project root. |
+| `module_options` | `{}` | Handler options for modules matched by regular expressions. |
+| `exclude` | `[]` | Module names or patterns to exclude; prefix regular expressions with `re:`. |
+| `nav_section_title` | `API Reference` | Title of the generated navigation section. |
+| `api_root_uri` | `reference` | Directory for generated API reference pages. |
+| `exclude_private` | `true` | Exclude modules whose names start with an underscore. |
+| `show_full_namespace` | `false` | Show full module names in navigation. |
+
+</div>
+
+**Differences**:
+
+- `api_root_uri` must name a nonempty relative subdirectory. Empty strings, `.`, `./api`, absolute paths, and paths with `..` components are not supported.
+- Source discovery skips child symlinks. It always excludes `.git`, `.venv`, `venv`, `__pycache__`, and the output and cache directories, regardless of include settings.
+
+For more information, see the [plugin documentation][api-autonav].
+
+---
+
+### `autoapi`
+
+_Since [0.0.66]_
+
+Discover source files and generate API reference pages with
+[`mkdocstrings`](#mkdocstrings).
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable automatic API documentation. |
+| `autoapi_dir` | `.` | Source directory, relative to the project root. |
+| `autoapi_file_patterns` | `["*.py", "*.pyi"]` | File patterns to include. |
+| `autoapi_ignore` | `[]` | File patterns to exclude. |
+| `autoapi_root` | `autoapi` | Directory for generated API reference pages. |
+| `autoapi_add_nav_entry` | `true` | Add generated pages to navigation; a string sets the section title. |
+| `autoapi_generate_api_docs` | `true` | Generate API reference pages. |
+| `autoapi_keep_files` | `false` | Keep generated Markdown files in the documentation directory. |
+
+</div>
+
+**Differences**:
+
+- `autoapi_root` must name a nonempty relative subdirectory. Empty strings, `.`, `./api`, absolute paths, and paths with `..` components are not supported.
+- Source discovery skips child symlinks. It always excludes `.git`, `.venv`, `venv`, `__pycache__`, and the output and cache directories, regardless of include settings.
+
+For more information, see the [plugin documentation][autoapi].
+
+---
+
 ### `autorefs`
 
 _Since [0.0.22]_
@@ -90,10 +152,6 @@ Link to headings and API objects across pages with `[text][identifier]`.
 | `strip_title_tags` | `auto` | Strip HTML from tooltips: `true`, `false`, or `auto`. With `auto`, HTML is preserved when `content.tooltips` is enabled and stripped otherwise. |
 
 </div>
-
-**Differences**:
-
-- Zensical ignores `resolve_closest`, `link_titles`, and `strip_title_tags`.
 
 For more information, see the [plugin documentation][autorefs].
 
@@ -255,7 +313,6 @@ Use Jinja variables, filters, and Python macros in Markdown.
 **Differences**:
 
 - Referenced Python and YAML files must be inside the project directory.
-- Zensical ignores `force_render_paths` and `verbose`.
 
 For more information, see [plugin documentation][macros].
 
@@ -397,7 +454,7 @@ pip install mkdocstrings-python
 **Differences**:
 
 - Sources outside the project directory are not watched during preview.
-- Zensical ignores `enable_inventory` and `watch`.
+- Zensical ignores `watch`.
 
 For more information, see [plugin documentation][mkdocstrings].
 
@@ -592,11 +649,13 @@ For more information, see [Tags configuration] and the [plugin documentation][ta
 
 ## Unsupported plugins
 
-### `mkdocs-gen-files`
+### `gen-files`
 
-Zensical does not currently support [`mkdocs-gen-files`][mkdocs-gen-files]. Run
-the generation scripts separately from the Zensical build. You can run them once
-or regularly. Track the generated files in version control.
+Zensical does not currently support [`gen-files`][gen-files].
+
+To create API reference pages automatically, use [`autoapi`](#autoapi) or [`api-autonav`](#api-autonav). Both generate API reference pages and navigation with `mkdocstrings`.
+
+For other uses, run the generation scripts separately from the Zensical build. You can run them once or regularly. Track the generated files in version control.
 
 You do not need to add `mkdocs-gen-files` to your project dependencies. Use
 `uvx` to run a script:
@@ -649,7 +708,10 @@ without using their original codebases.
 [0.0.62]: https://github.com/zensical/zensical/releases/tag/v0.0.62
 [0.0.64]: https://github.com/zensical/zensical/releases/tag/v0.0.64
 [0.0.65]: https://github.com/zensical/zensical/releases/tag/v0.0.65
+[0.0.66]: https://github.com/zensical/zensical/releases/tag/v0.0.66
+[api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
+[autoapi]: https://mkdocs-autoapi.readthedocs.io/en/latest/usage/
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
@@ -659,6 +721,7 @@ without using their original codebases.
 [compatibility roadmap]: #compatibility-roadmap
 [create a change request]: https://github.com/zensical/zensical/issues/new/choose
 [exclude]: https://github.com/apenwarr/mkdocs-exclude
+[gen-files]: https://oprypin.github.io/mkdocs-gen-files/
 [git-authors]: https://timvink.github.io/mkdocs-git-authors-plugin/
 [git-committers]: https://github.com/byrnereese/mkdocs-git-committers-plugin
 [git-revision-date-localized]: https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
@@ -669,7 +732,6 @@ without using their original codebases.
 [markdown-exec]: https://github.com/pawamoy/markdown-exec
 [meta]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
 [minify]: https://github.com/byrnereese/mkdocs-minify-plugin
-[mkdocs-gen-files]: https://oprypin.github.io/mkdocs-gen-files/
 [mkdocstrings]: https://mkdocstrings.github.io/
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
