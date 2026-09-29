@@ -39,26 +39,26 @@ minify_html = true
 
 ### Validation and ignored settings
 
-Zensical silently ignores the configuration for plugins that are not listed under [Supported plugins](#supported-plugins). It does not import or run these plugins.
+- **Unsupported plugins:** Configuration for plugins not listed under
+  [Supported plugins](#supported-plugins) is silently ignored. Zensical does
+  not import or run them.
+- **Ignored settings:** Settings marked as ignored in a plugin's differences
+  are silently ignored, without value validation or warnings.
+- **Unknown settings:** Supported plugins reject other unknown settings
+  with a configuration error.
 
-For a supported plugin, Zensical also silently ignores the settings that its entry identifies as ignored. Zensical does not validate their values or print a warning. It rejects any other unknown setting during configuration parsing.
+Review each plugin's differences before migrating. Ignored settings can remain
+in a shared MkDocs configuration, but have no effect in Zensical.
 
-Review each ignored setting before migration. The setting can remain in a configuration that is shared with MkDocs, but it has no effect when Zensical builds the site.
-
-Unless an entry documents differences, the original plugin documentation
-(linked below) remains the reference for usage and configuration. We're working
-on shipping a growing list of supported plugins, as well as Zensical's own
-native public module API.
-
-If you're lazy like us, use [Zensical Studio] to get completions and validation
-for all supported plugins directly in your editor inside `zensical.toml` and
-`mkdocs.yml` configuration files.
+The tables below cover common settings; follow the documentation links for
+details. [Zensical Studio] provides completions and validation for supported
+plugins in both `zensical.toml` and `mkdocs.yml`.
 
 ## Supported plugins
 
 Plugins are listed alphabetically. Most implementations require no additional
-installation. Each entry links to the original plugin documentation, where
-applicable, and to the Zensical release in which support was added.
+installation. Each entry summarizes common settings, links to further
+documentation, and links to the Zensical release in which support was added.
 
 !!! question "The plugin I need isn't listed. What can I do?"
 
@@ -66,15 +66,36 @@ applicable, and to the Zensical release in which support was added.
     is already planned. If it isn't, [create a change request] for the missing
     plugin in Zensical's issue tracker.
 
+<div class="mdx-plugins" markdown>
+
+!!! info "Report issues to Zensical"
+
+    Zensical reimplements MkDocs plugin behavior natively or integrates the original
+    package where installation is required. If you encounter an issue when
+    using these plugins with Zensical, [report it to us][report an issue].
+
 ### `autorefs`
 
 _Since [0.0.22]_
 
-See [plugin documentation][autorefs] for usage and configuration.
+Link to headings and API objects across pages with `[text][identifier]`.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable automatic cross-references. |
+| `resolve_closest` | `false` | Resolve duplicate identifiers to the closest page. |
+| `link_titles` | `auto` | Link tooltips: `true`, `false`, `external`, or `auto`. With `auto`, only external links get tooltips when `navigation.instant.preview` is enabled; otherwise all links do. |
+| `strip_title_tags` | `auto` | Strip HTML from tooltips: `true`, `false`, or `auto`. With `auto`, HTML is preserved when `content.tooltips` is enabled and stripped otherwise. |
+
+</div>
 
 **Differences**:
 
 - Zensical ignores `resolve_closest`, `link_titles`, and `strip_title_tags`.
+
+For more information, see the [plugin documentation][autorefs].
 
 ---
 
@@ -82,12 +103,28 @@ See [plugin documentation][autorefs] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][awesome-nav] for usage and configuration.
+Customize navigation with a `.nav.yml` file in each documentation directory.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable directory-based navigation. |
+| `filename` | `.nav.yml` | Name of the navigation configuration files. |
+| `logs` | `{}` | Override message levels: `info`, `warning`, or `error`. Dotted settings below are nested here. |
+| `logs.nav_override` | `warning` | Message when generated navigation replaces `nav`. |
+| `logs.root_title` | `warning` | Message when `title` is set in the root navigation file. |
+| `logs.root_hide` | `warning` | Message when `hide` is set in the root navigation file. |
+| `logs.no_matches` | `warning` | Message when a glob pattern matches nothing. |
+
+</div>
 
 **Differences**:
 
 - Extglob expressions are not supported; regular [glob patterns] are supported.
 - MkDocs' [`not_in_nav`][not_in_nav] setting is not supported.
+
+For more information, see the [plugin documentation][awesome-nav].
 
 ---
 
@@ -95,12 +132,29 @@ See [plugin documentation][awesome-nav] for usage and configuration.
 
 _Since [0.0.64]_
 
-See [Blog] for setup and the [plugin documentation][blog] for all
-configuration options and post metadata.
+Publish posts with archives, categories, author profiles, and pagination.
+See [Blog] for setup and post metadata.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable the blog. |
+| `blog_dir` | `blog` | Blog directory, relative to `docs_dir`. |
+| `post_dir` | `{blog}/posts` | Posts directory, relative to `docs_dir`. |
+| `post_url_format` | `{date}/{slug}` | Post URL template: `{date}`, `{slug}`, `{categories}`, `{file}`. |
+| `post_excerpt_separator` | `<!-- more -->` | Marker separating the excerpt from the rest of a post. |
+| `authors_profiles` | `false` | Generate author profile pages. |
+| `pagination_per_page` | `10` | Posts per page. |
+| `draft_on_serve` | `true` | Include drafts during preview. |
+
+</div>
 
 **Differences**:
 
 - Custom Python callables aren't supported; built-in strategies are.
+
+For more information, see the [plugin documentation][blog].
 
 ---
 
@@ -108,12 +162,22 @@ configuration options and post metadata.
 
 _Since [0.0.62]_
 
-See [plugin documentation][callouts] for the supported callout syntax.
+Render Obsidian-style callouts as admonitions.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable callouts. |
+
+</div>
 
 **Differences**:
 
 - The plugin entry enables [`pymdownx.quotes`][pymdownx quotes] with `callouts: true`.
 - Zensical ignores all three plugin settings: `aliases`, `breakless_lists`, and `title_from_first_bold`.
+
+For more information, see [plugin documentation][callouts].
 
 ---
 
@@ -121,11 +185,27 @@ See [plugin documentation][callouts] for the supported callout syntax.
 
 _Since [0.0.35]_
 
-See [plugin documentation][glightbox] for usage and configuration.
+Open images in a lightbox.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable the lightbox. |
+| `auto` | `true` | Enable the lightbox for images automatically. |
+| `manual` | `null` | When `true`, only enable images marked with `on-glb`; overrides `auto`. |
+| `auto_themed` | `false` | Group images by their light or dark theme variant. |
+| `auto_caption` | `false` | Use image alt text as the caption. |
+| `caption_position` | `bottom` | Caption position: `bottom`, `top`, `left`, or `right`. |
+| `skip_classes` | `[]` | Additional image classes to exclude from the lightbox. |
+
+</div>
 
 **Differences**:
 
 - Zensical ignores `touchNavigation`, `loop`, `effect`, `slide_effect`, `zoomable`, `draggable`, `background`, and `shadow`.
+
+For more information, see [plugin documentation][glightbox].
 
 ---
 
@@ -133,7 +213,21 @@ See [plugin documentation][glightbox] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][literate-nav] for usage and configuration.
+Define navigation with Markdown lists of links.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable Markdown-based navigation. |
+| `nav_file` | `SUMMARY.md` | Name of the navigation file. |
+| `implicit_index` | `false` | Include each directory's index page automatically. |
+| `tab_length` | `4` | Spaces per indentation level in navigation lists. |
+| `markdown_extensions` | `[]` | Additional Markdown extensions for parsing navigation files. |
+
+</div>
+
+For more information, see [plugin documentation][literate-nav].
 
 ---
 
@@ -141,12 +235,29 @@ See [plugin documentation][literate-nav] for usage and configuration.
 
 _Since [0.0.40]_
 
-See [plugin documentation][macros] for usage and configuration.
+Use Jinja variables, filters, and Python macros in Markdown.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable macros. |
+| `module_name` | `main` | Local Python module defining macros. |
+| `modules` | `[]` | Importable packages providing additional macros. |
+| `include_yaml` | `[]` | YAML files providing variables. |
+| `include_dir` | `""` | Directory for Jinja includes, relative to the project root. |
+| `render_by_default` | `true` | Render Jinja on all pages unless their metadata overrides it. |
+| `on_error_fail` | `false` | Stop the build if rendering fails. |
+| `on_undefined` | `keep` | Undefined variables: `keep` preserves them; `strict` raises an error. |
+
+</div>
 
 **Differences**:
 
 - Referenced Python and YAML files must be inside the project directory.
 - Zensical ignores `force_render_paths` and `verbose`.
+
+For more information, see [plugin documentation][macros].
 
 ---
 
@@ -154,13 +265,25 @@ See [plugin documentation][macros] for usage and configuration.
 
 _Since [0.0.47]_
 
+Execute fenced code blocks and embed their output.
+
 Install with:
 
 ``` sh
 pip install "markdown-exec[ansi]"
 ```
 
-See [plugin documentation][markdown-exec] for usage and configuration.
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable code block execution. |
+| `ansi` | `false` | ANSI output support: `true`, `false`, `auto`, `off`, or `required`; enabled modes require `pygments-ansi-color`. |
+| `languages` | `null` | Languages to execute; unset enables all supported languages, `[]` disables execution. |
+
+</div>
+
+For more information, see [plugin documentation][markdown-exec].
 
 ---
 
@@ -168,11 +291,22 @@ See [plugin documentation][markdown-exec] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][meta] for usage and configuration.
+Apply shared front matter to pages in a directory and its subdirectories.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable shared metadata. |
+| `meta_file` | `.meta.yml` | Metadata file name. |
+
+</div>
 
 **Differences**:
 
 - Custom YAML tags are not supported in metadata files.
+
+For more information, see [plugin documentation][meta].
 
 ---
 
@@ -180,12 +314,27 @@ See [plugin documentation][meta] for usage and configuration.
 
 _Since [0.0.30]_
 
-See [Versioning with mike] for installation, usage, and configuration.
+Publish and switch between documentation versions.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable mike integration. |
+| `version_selector` | `true` | Show the version selector. |
+| `alias_type` | `symlink` | Alias type: `symlink`, `redirect`, or `copy`. |
+| `deploy_prefix` | `""` | Directory prefix for versioned deployments. |
+| `canonical_version` | `null` | Version used for canonical URLs. |
+| `redirect_template` | `null` | Custom template for redirect aliases. |
+
+</div>
 
 **Differences**:
 
 - Zensical requires the compatible fork described in the versioning guide.
 - Zensical ignores `css_dir` and `javascript_dir` because it provides the version selector assets.
+
+For more information, see [Versioning with mike] for installation and usage.
 
 ---
 
@@ -193,7 +342,22 @@ See [Versioning with mike] for installation, usage, and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][minify] for usage and configuration.
+Reduce the size of generated HTML, JavaScript, and CSS.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable minification. |
+| `minify_html` | `false` | Minify generated HTML. |
+| `minify_js` | `false` | Minify files listed in `js_files`. |
+| `minify_css` | `false` | Minify files listed in `css_files`. |
+| `js_files` | `[]` | JavaScript files to minify. |
+| `css_files` | `[]` | CSS files to minify. |
+| `minify_inline_js` | `false` | Minify JavaScript inside `<script>` elements. |
+| `minify_inline_css` | `false` | Minify CSS inside `<style>` elements. |
+
+</div>
 
 **Differences**:
 
@@ -201,24 +365,41 @@ See [plugin documentation][minify] for usage and configuration.
   the build.
 - `minify_inline_js` and `minify_inline_css` are Zensical-only options. They minify JavaScript in `<script>` elements and CSS in `<style>` elements.
 
+For more information, see [plugin documentation][minify].
+
 ---
 
 ### `mkdocstrings`
 
 _Since [0.0.11]_
 
-Install with:
+Generate API documentation from source code.
+
+Install the Python handler with:
 
 ``` sh
 pip install mkdocstrings-python
 ```
 
-See [plugin documentation][mkdocstrings] for usage and configuration.
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable API documentation. |
+| `default_handler` | `python` | Handler used when a directive does not specify one. |
+| `handlers` | `{}` | Handler configuration. |
+| `custom_templates` | `null` | Directory containing custom handler templates. |
+| `enable_inventory` | `null` | Generate `objects.inv`; unset follows the handlers' inventory settings. |
+| `locale` | `en` | Language used by handlers. |
+
+</div>
 
 **Differences**:
 
 - Sources outside the project directory are not watched during preview.
 - Zensical ignores `enable_inventory` and `watch`.
+
+For more information, see [plugin documentation][mkdocstrings].
 
 ---
 
@@ -226,7 +407,17 @@ See [plugin documentation][mkdocstrings] for usage and configuration.
 
 _Since [0.0.3]_
 
-See [plugin documentation][offline] for usage and configuration.
+Make the site searchable when opened directly from the file system.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable offline search support. |
+
+</div>
+
+For more information, see [plugin documentation][offline].
 
 ---
 
@@ -234,12 +425,23 @@ See [plugin documentation][offline] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [Redirects] for usage and configuration.
+Keep old links working when pages or sections move.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable redirects. |
+| `redirect_maps` | `{}` | Map old paths to new paths or URLs. |
+
+</div>
 
 **Differences**:
 
 - Zensical supports anchor-based redirects for moving sections and splitting
   pages.
+
+For more information, see [Redirects] for examples.
 
 ---
 
@@ -247,7 +449,20 @@ See [Redirects] for usage and configuration.
 
 _Since [0.0.65]_
 
-See [plugin documentation][rss] for usage and configuration.
+Generate RSS and JSON feeds for new and updated pages.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable feed generation. |
+| `feed_title` | `site_name` | Feed title; defaults to the site name. |
+| `length` | `20` | Maximum entries in each feed. |
+| `match_path` | `.*` | Regular expression selecting page paths to include. |
+| `abstract_chars_count` | `160` | Maximum summary length; `-1` includes the full content. |
+| `date_from_meta` | Git dates | Metadata fields and formats for creation and update dates. |
+
+</div>
 
 **Differences**:
 
@@ -256,15 +471,24 @@ See [plugin documentation][rss] for usage and configuration.
 - Zensical ignores `use_material_social_cards`; generated social cards are not
   used.
 
+For more information, see [plugin documentation][rss].
+
 ---
 
 ### `search`
 
 _Since [0.0.3]_
 
-Zensical doesn't load the search plugin provided by MkDocs or Material for
-MkDocs. Both `search` and `material/search` configure Zensical's built-in [site
-search] module.
+Add full-text search to your documentation.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable search. |
+| `separator` | Built-in pattern | Regular expression splitting text at whitespace and punctuation. |
+
+</div>
 
 **Differences**:
 
@@ -274,6 +498,8 @@ search] module.
 - Zensical ignores `pipeline`. It has no equivalent because Zensical's search engine does not use the Lunr pipeline.
 - Zensical ignores `fields`, `indexing`, `jieba_dict`, `jieba_dict_user`, `min_search_length`, and `prebuild_index`.
 
+For more information, see [site search].
+
 ---
 
 ### `section-index`
@@ -282,18 +508,42 @@ _Since [0.0.3]_
 
 Zensical provides section-index behavior natively. You can keep the `section-index` plugin entry in a shared configuration, but Zensical ignores the entry.
 
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| Configuration | — | No plugin settings are required. |
+
+</div>
+
+For more information, see [Section index pages].
+
 ---
 
 ### `table-reader`
 
 _Since [0.0.41]_
 
-See [plugin documentation][table-reader] for usage and configuration.
+Embed data files as Markdown tables with reader calls such as
+`{{ read_csv('table.csv') }}`.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable table readers. |
+| `data_path` | `.` | Base directory for data files. |
+| `allow_missing_files` | `false` | Continue building when a table file is missing. |
+| `select_readers` | All supported readers | Readers to enable. |
+
+</div>
 
 **Differences**:
 
 - `data_path` and all table files must be inside the project directory.
 - Reader call arguments must be Python literals. Names, expressions, and `**kwargs` expansion are not supported.
+
+For more information, see [plugin documentation][table-reader].
 
 ---
 
@@ -301,7 +551,22 @@ See [plugin documentation][table-reader] for usage and configuration.
 
 _Since [0.0.58]_
 
-See [plugin documentation][tags] for usage and configuration.
+Categorize pages and generate tag listings.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable tags. |
+| `tags` | `true` | Show tags on pages. |
+| `tags_allowed` | `[]` | Allowed tags; an empty list allows all. |
+| `tags_hierarchy` | `false` | Enable hierarchical tags. |
+| `tags_sort_by` | `tag_name` | Tag sorting strategy. |
+| `listings` | `true` | Generate listings where `<!-- material/tags -->` is placed. |
+| `listings_sort_by` | `item_title` | Sort pages within listings. |
+| `listings_toc` | `true` | Add listing tags to the table of contents. |
+
+</div>
 
 **Differences**:
 
@@ -320,6 +585,10 @@ Zensical silently ignores the legacy settings below. Rename or replace them so t
 | `export_only`                | No replacement. Native tags do not export JSON.                        |
 
 Custom Python callables for `tags_slugify`, `tags_sort_by`, `listings_sort_by`, and `listings_tags_sort_by` are not supported. Use one of the built-in callables documented by Material for MkDocs.
+
+For more information, see [Tags configuration] and the [plugin documentation][tags].
+
+</div>
 
 ## Unsupported plugins
 
@@ -408,7 +677,9 @@ without using their original codebases.
 [privacy]: https://squidfunk.github.io/mkdocs-material/plugins/privacy/
 [pymdownx quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
 [Redirects]: ../../setup/redirects.md
+[report an issue]: https://zensical.org/contributing/bug-reports/
 [rss]: https://guts.github.io/mkdocs-rss-plugin/
+[Section index pages]: ../../setup/navigation.md#section-index-pages
 [site language]: ../../setup/language.md#site-language
 [site search]: ../../setup/search.md
 [social]: https://squidfunk.github.io/mkdocs-material/plugins/social/
