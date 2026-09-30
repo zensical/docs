@@ -39,6 +39,7 @@ theme:
   custom_dir: overrides
   features:
     - announce.dismiss
+    - content.action.copy
     - content.action.edit
     - content.action.view
     - content.code.annotate
@@ -86,6 +87,24 @@ extra_css:
 plugins:
   - search
   - tags
+  - llmstxt:
+      sections:
+        Get started:
+          - get-started.md
+          - create-your-site.md
+          - publish-your-site.md
+          - customization.md
+          - upgrade.md
+          - browser-support.md
+          - guides/*.md
+        Usage:
+          - usage/*.md
+        Setup:
+          - setup/*.md
+        Authoring:
+          - authoring/*.md
+        Compatibility:
+          - compatibility/*.md
   - redirects:
       redirect_maps:
         community/contribute/code-of-conduct.md: https://zensical.org/community/code-of-conduct/
