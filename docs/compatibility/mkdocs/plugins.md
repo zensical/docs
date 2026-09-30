@@ -613,6 +613,35 @@ For more information, see [plugin documentation][rss].
 
 ---
 
+### `social`
+
+_Since [0.0.67]_
+
+Generate social cards and Open Graph metadata for pages. Set `site_url` to link
+the generated cards in page metadata. Page front matter can override `cards`,
+`cards_layout`, and `cards_layout_options` under `social`.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable social card generation. |
+| `cards` | `true` | Generate cards for pages by default. |
+| `cards_dir` | `assets/images/social` | Site directory for generated cards. |
+| `cards_layout` | `default` | Card layout to render. |
+| `cards_layout_dir` | `layouts` | Project directory for custom layouts. |
+| `cards_layout_options` | `{}` | Values passed to card layouts. |
+| `cards_include` | `[]` | Source path patterns selecting pages for cards. |
+| `cards_exclude` | `[]` | Source path patterns excluding pages from cards. |
+| `cache` | `true` | Cache generated cards between builds. |
+| `cache_dir` | `.cache/plugin/social` | Project directory for cached cards. |
+
+</div>
+
+For more information, see [plugin documentation][social].
+
+---
+
 ### `search`
 
 _Since [0.0.3]_
@@ -755,17 +784,16 @@ do not imply release dates.
 
 ### In progress
 
-- [ ] [`social`][social]
+- [ ] [`optimize`][optimize]
+- [ ] [`audio`][audio]
+- [ ] [`video`][video]
 
 ### Planned
 
-- [ ] [`optimize`][optimize]
 - [ ] [`privacy`][privacy]
 - [ ] [`git-authors`][git-authors]
 - [ ] [`git-committers`][git-committers]
 - [ ] [`git-revision-date-localized`][git-revision-date-localized]
-- [ ] [`audio`][audio]
-- [ ] [`video`][video]
 
 _Review our public [backlog] for additional plugins we may support later._
 
