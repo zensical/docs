@@ -239,6 +239,29 @@ For more information, see [plugin documentation][callouts].
 
 ---
 
+### `gh-admonitions`
+
+_Since [0.0.67]_
+
+Render GitHub-style alerts as admonitions. See [GitHub callouts] for the supported syntax.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable GitHub-style admonitions. |
+
+</div>
+
+**Differences**:
+
+- The plugin entry enables [`pymdownx.quotes`][pymdownx quotes] with `callouts: true`.
+- `important` and `caution` use the default admonition style. See [GitHub callouts] for custom styling.
+
+For more information, see [plugin documentation][gh-admonitions].
+
+---
+
 ### `glightbox`
 
 _Since [0.0.35]_
@@ -753,9 +776,11 @@ without using their original codebases.
 [create a change request]: https://github.com/zensical/zensical/issues/new/choose
 [exclude]: https://github.com/apenwarr/mkdocs-exclude
 [gen-files]: https://oprypin.github.io/mkdocs-gen-files/
+[gh-admonitions]: https://pypi.org/project/mkdocs-github-admonitions-plugin/
 [git-authors]: https://timvink.github.io/mkdocs-git-authors-plugin/
 [git-committers]: https://github.com/byrnereese/mkdocs-git-committers-plugin
 [git-revision-date-localized]: https://timvink.github.io/mkdocs-git-revision-date-localized-plugin/
+[GitHub callouts]: ../../authoring/admonitions.md#github-callouts
 [glightbox]: https://blueswen.github.io/mkdocs-glightbox/
 [glob patterns]: https://docs.rs/globset/latest/globset/#syntax
 [literate-nav]: https://oprypin.github.io/mkdocs-literate-nav/
