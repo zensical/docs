@@ -138,6 +138,18 @@
   break-inside: avoid;
 }
 
+.md-typeset .mdx-plugins > .admonition.info {
+  position: sticky;
+  top: 64px;
+  z-index: 1;
+  backdrop-filter: blur(10px);
+}
+
+.md-typeset .mdx-plugin-settings td:first-child,
+.md-typeset .mdx-plugin-settings td:first-child code {
+  white-space: nowrap;
+}
+
 .mdx-switch button {
   cursor: pointer;
 }
