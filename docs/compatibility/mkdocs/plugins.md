@@ -374,26 +374,31 @@ For more information, see [plugin documentation][llmstxt].
 
 _Since [0.0.40]_
 
-Use Jinja variables, filters, and Python macros in Markdown.
+Jinja variables, filters, and Python macros are supported in Markdown.
 
 <div class="mdx-plugin-settings" markdown>
 
 | Setting | Default | Description |
 | ------- | ------- | ----------- |
 | `enabled` | `true` | Enable macros. |
-| `module_name` | `main` | Local Python module defining macros. |
-| `modules` | `[]` | Importable packages providing additional macros. |
+| `module_name` | `main` | Local Python module, loaded after `modules`. Its definitions are given precedence. |
+| `modules` | `[]` | Importable packages, loaded in order. Failed imports are reported as errors. |
 | `include_yaml` | `[]` | YAML files providing variables. |
-| `include_dir` | `""` | Directory for Jinja includes, relative to the project root. |
+| `include_dir` | `""` | Directory for Jinja includes and imports, relative to the project root. If empty, `docs_dir` is used. |
 | `render_by_default` | `true` | Render Jinja on all pages unless their metadata overrides it. |
-| `on_error_fail` | `false` | Stop the build if rendering fails. |
-| `on_undefined` | `keep` | Undefined variables: `keep` preserves them; `strict` raises an error. |
+| `on_error_fail` | `false` | With `true`, the build is stopped on rendering errors. With `false`, error diagnostics are inserted into the page. |
+| `on_undefined` | `keep` | With `keep`, simple undefined expressions are preserved. With `silent`, undefined values are rendered as empty strings. With `strict`, errors are raised. With `lax`, missing attributes are also rendered as empty strings. |
 
 </div>
 
 **Differences**:
 
-- Referenced Python and YAML files must be inside the project directory.
+- **Environment lifetime:** A new macro environment is created for each page rendered, and `define_env(env)` is called for that page. Updates to `env.variables` are not carried over to another page. Counters initialized in `define_env` are reset for the next rendered page. In MkDocs Macros, the environment is initialized once per build.
+- **Macro context:** Limited page objects are provided through `env.page` and the Jinja `page` variable, with `url`, `path`, `title`, and `meta`. MkDocs attributes such as `page.file` are not provided. Plain dictionaries are supplied through `env.conf` and `env.config`. Empty lists are supplied for `navigation` and `files`.
+- **Module hooks and APIs:** Only `define_env` is called automatically. `on_pre_page_macros`, `on_post_page_macros`, and `on_post_build` are not called. APIs such as `env.markdown`, `env.render()`, `env.env`, and `env.register_variables()` are not provided.
+- **Generated navigation titles:** Titles assigned by [`awesome-nav`](#awesome-nav), [`literate-nav`](#literate-nav), or [`autoapi`](#autoapi) are resolved after macros. During macro rendering, `env.page.title` is derived from metadata, the source heading, or the filename.
+- **External files:** Local Python modules are resolved from the project directory. Included YAML files must be inside that directory and contain a mapping. Missing YAML files are silently ignored.
+- **YAML variables:** A list of file paths or a mapping such as `{data: data.yaml}` is accepted for `include_yaml`. MkDocs Macros' list entries such as `- data: data.yaml` are not accepted. Existing keys are replaced without recursive merging. Page-level `include_yaml` is also supported.
 
 For more information, see [plugin documentation][macros].
 
