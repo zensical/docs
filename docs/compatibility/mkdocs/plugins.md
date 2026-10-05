@@ -105,6 +105,50 @@ For more information, see the [plugin documentation][api-autonav].
 
 ---
 
+### `audio`
+
+_Since [0.0.68]_
+
+Embed audio files with native browser playback controls. Configure the plugin as
+`mkdocs-audio`:
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.plugins.mkdocs-audio]
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    plugins:
+      - mkdocs-audio
+    ```
+
+Use the configured marker as the image's alternative text:
+
+``` markdown
+![type:audio](assets/audio.mp3)
+```
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable audio embeds. |
+| `mark` | `type:audio` | Image alternative text that identifies an audio embed. |
+| `audio_type` | `mp3` | Audio MIME subtype, such as `mp3`, `wav`, or `ogg`. |
+| `audio_controls` | `true` | Show playback controls. |
+| `audio_autoplay` | `false` | Request automatic playback, subject to browser policies. |
+| `audio_loop` | `false` | Repeat playback. |
+| `css_style` | `{"width": "100%"}` | CSS properties applied to the audio element. |
+
+</div>
+
+For more information, see the [plugin documentation][audio].
+
+---
+
 ### `autoapi`
 
 _Since [0.0.66]_
@@ -760,6 +804,55 @@ Custom Python callables for `tags_slugify`, `tags_sort_by`, `listings_sort_by`, 
 
 For more information, see [Tags configuration] and the [plugin documentation][tags].
 
+---
+
+### `video`
+
+_Since [0.0.68]_
+
+Embed remote players using an iframe or video files with native browser playback
+controls. Configure the plugin as `mkdocs-video`; set `is_video` to `true` for
+native video playback:
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [project.plugins.mkdocs-video]
+    is_video = true
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    plugins:
+      - mkdocs-video:
+          is_video: true
+    ```
+
+Use the configured marker as the image's alternative text:
+
+``` markdown
+![type:video](assets/video.mp4)
+```
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Enable video embeds. |
+| `mark` | `type:video` | Image alternative text that identifies a video embed. |
+| `is_video` | `false` | Use a native video element instead of an iframe. |
+| `video_type` | `mp4` | Native video MIME subtype, such as `mp4`, `webm`, or `ogg`. |
+| `video_controls` | `true` | Show native video playback controls. |
+| `video_autoplay` | `false` | Request automatic native video playback, subject to browser policies. |
+| `video_loop` | `false` | Repeat native video playback. |
+| `video_muted` | `false` | Mute native video playback. |
+| `css_style` | `{"position": "relative", "width": "100%", "height": "22.172vw"}` | CSS properties applied to the iframe or video element. |
+
+</div>
+
+For more information, see the [plugin documentation][video].
+
 </div>
 
 ## Unsupported plugins
@@ -790,8 +883,6 @@ do not imply release dates.
 ### In progress
 
 - [ ] [`optimize`][optimize]
-- [ ] [`audio`][audio]
-- [ ] [`video`][video]
 
 ### Planned
 
@@ -823,6 +914,7 @@ without using their original codebases.
 [0.0.65]: https://github.com/zensical/zensical/releases/tag/v0.0.65
 [0.0.66]: https://github.com/zensical/zensical/releases/tag/v0.0.66
 [0.0.67]: https://github.com/zensical/zensical/releases/tag/v0.0.67
+[0.0.68]: https://github.com/zensical/zensical/releases/tag/v0.0.68
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autoapi]: https://mkdocs-autoapi.readthedocs.io/en/latest/usage/
