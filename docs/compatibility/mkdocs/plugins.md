@@ -474,6 +474,32 @@ For more information, see [plugin documentation][markdown-exec].
 
 ---
 
+### `markdownextradata`
+
+_Unreleased_
+
+Jinja templates are rendered in Markdown and page titles with project settings and `extra` variables.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Jinja rendering and data loading are enabled. |
+| `data` | `null` | Comma-separated data directories, relative to the project root. When unset or empty, `_data` and `<docs_dir>/_data` are searched. |
+| `jinja_options` | `{}` | Options passed to the Jinja environment, including template delimiters. |
+
+</div>
+
+**Differences**:
+
+- Data directories and files that resolve outside the project root are silently skipped, including symlink targets.
+- YAML data is loaded with `SafeLoader`. Python-specific tags such as `!!python/name` and `!!python/tuple` are rejected.
+- YAML dates are converted to strings for theme templates. Their original Python types are retained during Markdown rendering.
+
+For more information, see [plugin documentation][markdownextradata].
+
+---
+
 ### `meta`
 
 _Since [0.0.58]_
@@ -874,6 +900,12 @@ uvx --with mkdocs-gen-files python scripts/gen_ref_pages.py
 
 This method requires a `mkdocs.yml` file. It does not work with `zensical.toml`.
 
+### `open-in-new-tab`
+
+The [`open-in-new-tab`][open-in-new-tab] plugin is not supported by Zensical.
+
+Its [JavaScript code][open-in-new-tab JavaScript] can simply be added to your project with [`extra_javascript`][Additional JavaScript].
+
 ## Compatibility roadmap
 
 We are closing the remaining compatibility gaps for widely used MkDocs and
@@ -915,6 +947,7 @@ without using their original codebases.
 [0.0.66]: https://github.com/zensical/zensical/releases/tag/v0.0.66
 [0.0.67]: https://github.com/zensical/zensical/releases/tag/v0.0.67
 [0.0.68]: https://github.com/zensical/zensical/releases/tag/v0.0.68
+[Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
 [autoapi]: https://mkdocs-autoapi.readthedocs.io/en/latest/usage/
@@ -939,11 +972,14 @@ without using their original codebases.
 [llmstxt]: https://pawamoy.github.io/mkdocs-llmstxt/
 [macros]: https://mkdocs-macros-plugin.readthedocs.io/en/latest/
 [markdown-exec]: https://github.com/pawamoy/markdown-exec
+[markdownextradata]: https://github.com/rosscdh/mkdocs-markdownextradata-plugin
 [meta]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
 [minify]: https://github.com/byrnereese/mkdocs-minify-plugin
 [mkdocstrings]: https://mkdocstrings.github.io/
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
+[open-in-new-tab]: https://pypi.org/project/mkdocs-open-in-new-tab/
+[open-in-new-tab JavaScript]: https://github.com/JakubAndrysek/mkdocs-open-in-new-tab/blob/main/open_in_new_tab/js/open_in_new_tab.js
 [optimize]: https://squidfunk.github.io/mkdocs-material/plugins/optimize/
 [privacy]: https://squidfunk.github.io/mkdocs-material/plugins/privacy/
 [pymdownx quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
