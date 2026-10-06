@@ -476,7 +476,7 @@ For more information, see [plugin documentation][markdown-exec].
 
 ### `markdownextradata`
 
-_Unreleased_
+_Since [0.0.69]_
 
 Jinja templates are rendered in Markdown and page titles with project settings and `extra` variables.
 
@@ -613,6 +613,36 @@ pip install mkdocstrings-python
 - Zensical ignores `watch`.
 
 For more information, see [plugin documentation][mkdocstrings].
+
+---
+
+### `nav-weight`
+
+_Since [0.0.69]_
+
+Navigation order, section titles, and visibility are controlled through page metadata.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Weighted navigation is enabled. |
+| `section_renamed` | `false` | Section names are replaced with their index page titles. |
+| `index_weight` | `-10` | Weight assigned to index pages within their section. |
+| `default_page_weight` | `0` | Weight assigned to pages with missing or invalid `weight` metadata. |
+| `reverse` | `false` | Items are sorted from highest to lowest weight. |
+| `headless_included` | `false` | Hidden pages are included in `nav.pages`. Empty index pages remain excluded. |
+| `warning` | `true` | Warnings are emitted for invalid metadata values. |
+
+</div>
+
+**Differences**:
+
+- Weights are applied after other navigation plugins, regardless of their order in `plugins`.
+- Resolved page metadata is used, including values inherited through [`meta`](#meta) and changes made during Markdown rendering.
+- Previous and next page links within hidden sections are rebuilt after hidden children are removed.
+
+For more information, see [plugin documentation][mkdocs-nav-weight].
 
 ---
 
@@ -947,6 +977,7 @@ without using their original codebases.
 [0.0.66]: https://github.com/zensical/zensical/releases/tag/v0.0.66
 [0.0.67]: https://github.com/zensical/zensical/releases/tag/v0.0.67
 [0.0.68]: https://github.com/zensical/zensical/releases/tag/v0.0.68
+[0.0.69]: https://github.com/zensical/zensical/releases/tag/v0.0.69
 [Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
@@ -975,6 +1006,7 @@ without using their original codebases.
 [markdownextradata]: https://github.com/rosscdh/mkdocs-markdownextradata-plugin
 [meta]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
 [minify]: https://github.com/byrnereese/mkdocs-minify-plugin
+[mkdocs-nav-weight]: https://github.com/shu307/mkdocs-nav-weight
 [mkdocstrings]: https://mkdocstrings.github.io/
 [not_in_nav]: https://github.com/zensical/backlog/issues/63
 [offline]: https://squidfunk.github.io/mkdocs-material/plugins/offline/
