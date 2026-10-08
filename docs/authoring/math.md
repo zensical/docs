@@ -21,37 +21,6 @@ such as [LaTeX], [MathML], [AsciiMath], as well as various output formats like
 HTML, SVG, MathML. To use MathJax within your project, add the following lines
 to your configuration:
 
-=== "`docs/javascripts/mathjax.js`"
-
-    ``` js
-    window.MathJax = {
-      tex: {
-        inlineMath: [["\\(", "\\)"]],
-        displayMath: [["\\[", "\\]"]],
-        processEscapes: true,
-        processEnvironments: true
-      },
-      options: {
-        ignoreHtmlClass: ".*|",
-        processHtmlClass: "arithmatex"
-      }
-    };
-
-    document$.subscribe(() => { // (1)!
-      MathJax.startup.output.clearCache()
-      MathJax.typesetClear()
-      MathJax.texReset()
-      MathJax.typesetPromise()
-    })
-
-    component$.subscribe(({ ref }) => {
-      if (ref.classList.contains("md-annotation"))
-        MathJax.typesetPromise([ref])
-    })
-    ```
-
-    1. This integrates MathJax with [instant navigation].
-
 === "`zensical.toml`"
 
     ``` toml
@@ -76,6 +45,37 @@ to your configuration:
       - javascripts/mathjax.js
       - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
     ```
+
+And create the `docs/javascripts/mathjax.js` file:
+
+``` js
+window.MathJax = {
+  tex: {
+    inlineMath: [["\\(", "\\)"]],
+    displayMath: [["\\[", "\\]"]],
+    processEscapes: true,
+    processEnvironments: true
+  },
+  options: {
+    ignoreHtmlClass: ".*|",
+    processHtmlClass: "arithmatex"
+  }
+};
+
+document$.subscribe(() => { // (1)!
+  MathJax.startup.output.clearCache()
+  MathJax.typesetClear()
+  MathJax.texReset()
+  MathJax.typesetPromise()
+})
+
+component$.subscribe(({ ref }) => {
+  if (ref.classList.contains("md-annotation"))
+    MathJax.typesetPromise([ref])
+})
+```
+
+1. This integrates MathJax with [instant navigation].
 
 See additional configuration options:
 
