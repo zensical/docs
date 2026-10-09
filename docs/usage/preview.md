@@ -27,6 +27,8 @@ This starts a local web server that serves your documentation site on
 [localhost:8000][live preview]. As you make changes to source files, the browser
 will automatically reload the page you're on.
 
+Files matched by [`draft_docs`][draft_docs] are included during preview, and a draft notice is added to draft pages. Draft pages are omitted from the default navigation and can be opened by URL. Files matched by [`exclude_docs`][exclude_docs] are excluded from preview.
+
 ## Options
 
 The `serve` command accepts the following options:
@@ -38,4 +40,6 @@ The `serve` command accepts the following options:
 | `--dev-addr <IP:PORT>`    | `-a`  | IP address and port (default: localhost:8000) |
 | `--help`                  |       | Show a help message and exit.                 |
 
+[draft_docs]: ../setup/basics.md#draft_docs
+[exclude_docs]: ../setup/basics.md#exclude_docs
 [live preview]: http://localhost:8000

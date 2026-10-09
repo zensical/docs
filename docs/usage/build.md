@@ -17,6 +17,8 @@ zensical build [OPTIONS]
 This will generate the static site in the configured [`site_dir`][site_dir],
 with the default being `site`.
 
+Files matched by [`exclude_docs`][exclude_docs] or [`draft_docs`][draft_docs] are excluded from the generated site. Draft files can be included during [preview].
+
 ## Options
 
 You can run `zensical build --help` to get command-line help for the `build`
@@ -46,5 +48,8 @@ the near term.
 If the problem recurs after a clean build, please [create an issue].
 
 [create an issue]: https://zensical.org/contributing/bug-reports/
+[draft_docs]: ../setup/basics.md#draft_docs
+[exclude_docs]: ../setup/basics.md#exclude_docs
+[preview]: preview.md
 [site_dir]: ../setup/basics.md#site_dir
 [strict mode]: ../setup/validation.md#strict-mode
