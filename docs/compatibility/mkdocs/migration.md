@@ -64,9 +64,6 @@ The following `mkdocs.yml` settings are not yet supported in Zensical:
 
 - `remote_branch`
 - `remote_name`
-- [`exclude_docs`][draft_exclude_docs]
-- [`draft_docs`][draft_exclude_docs]
-- [`not_in_nav`][not_in_nav]
 - `hooks`
 
 ## Build and preview
@@ -137,15 +134,16 @@ When moving older or extensively customized overrides:
 [command-line reference]: ../../usage/cli.md
 [configuration reference]: ../../setup/basics.md
 [docs_dir]: ../../setup/basics.md#docs_dir
-[draft_exclude_docs]: https://github.com/zensical/backlog/issues/65
+[draft_docs]: ../../setup/basics.md#draft_docs
 [Editor]: ../../assets/screenshots/editor.png#gh-light-mode-only
 [Editor dark]: ../../assets/screenshots/editor-dark.png#gh-dark-mode-only
+[exclude_docs]: ../../setup/basics.md#exclude_docs
 [filters]: https://docs.rs/minijinja/latest/minijinja/filters/index.html#functions
 [MiniJinja]: https://docs.rs/minijinja/latest/minijinja/
 [MkDocs plugins]: plugins.md
 [Modern theme]: ../../assets/screenshots/theme-modern.png#gh-light-mode-only
 [Modern theme dark]: ../../assets/screenshots/theme-modern-dark.png#gh-dark-mode-only
-[not_in_nav]: https://github.com/zensical/backlog/issues/63
+[not_in_nav]: ../../setup/basics.md#not_in_nav
 [publishing method]: ../../publish-your-site.md
 [site_dir]: ../../setup/basics.md#site_dir
 [tests]: https://docs.rs/minijinja/latest/minijinja/tests/index.html#functions

@@ -21,6 +21,8 @@ By default, Zensical creates the navigation sidebar on the basis of the folder
 structure and content of the Markdown pages. Likewise, it uses a default layout
 that can be overridden using various feature flags described on this page.
 
+Pages can be omitted from the default navigation with [`not_in_nav`][not_in_nav]. They are still built and included in search and the sitemap. Pages matched by [`draft_docs`][draft_docs] are also omitted from the default navigation, including during preview.
+
 ### Explicit navigation
 
 If you want to exercise more control over the structure of your navigation, you
@@ -775,9 +777,11 @@ of CSS:
 
 [additional style sheet]: ../customization.md#additional-css
 [docs_dir]: basics.md#docs_dir
+[draft_docs]: basics.md#draft_docs
 [in the footer]: footer.md#navigation
 [instant navigation]: #instant-navigation
 [instant previews]: #instant-previews
+[not_in_nav]: basics.md#not_in_nav
 [Navigation expansion disabled]: ../assets/screenshots/navigation.png#gh-light-mode-only
 [Navigation expansion disabled dark]: ../assets/screenshots/navigation-dark.png#gh-dark-mode-only
 [Navigation expansion enabled]: ../assets/screenshots/navigation-expand.png#gh-light-mode-only
