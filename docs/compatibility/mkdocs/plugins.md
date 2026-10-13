@@ -362,6 +362,41 @@ For more information, see [plugin documentation][glightbox].
 
 ---
 
+### `include-markdown`
+
+_Since [0.0.71]_
+
+Include Markdown files and other text content in your documentation.
+
+The `{% include-markdown "file.md" %}` and `{% include "file.txt" %}` tags are converted to [Snippets][PyMdown Snippets] directives before Markdown processing. Tags must be placed on their own lines; multiline tags and tags inside fenced code blocks are supported.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Whether include tags are processed. |
+| `opening_tag` / `closing_tag` | `{%` / `%}` | Delimiters used around include tags. |
+| `directives` | `{}` | Directive names can be changed through the `include` and `include-markdown` keys. |
+| `encoding` | `utf-8` | Encoding used for included files. |
+| `include_from_url` | `true` | Whether content can be included from HTTP and HTTPS URLs. |
+| `preserve_includer_indent` | `true` | Whether included content is indented to match its tag. |
+| `dedent` | `false` | Whether common leading whitespace is removed from included content. |
+
+</div>
+
+**Differences**:
+
+- **Per-inclusion settings:** Per-inclusion arguments are accepted but ignored. Supported defaults must be configured globally under `plugins.include-markdown` or `markdown_extensions.pymdownx.snippets`.
+- **Snippets configuration:** Snippets is enabled automatically. Explicit Snippets settings are given precedence over mapped plugin settings, including path restrictions, encoding, dedenting, URL downloads, and missing-file handling.
+- **Paths and recursion:** Paths are resolved relative to `docs_dir`; paths beginning with `./` or `../` are resolved relative to the including file. Absolute paths and recursive includes are supported. Repeated files in an inclusion chain are skipped. Glob patterns are not supported, and `exclude`, `order`, and `recursive` are ignored. Relative paths in remote includes are resolved against the including URL.
+- **Content selection:** The `start` and `end` settings and arguments are ignored. Content sections and line ranges can be selected with native [Snippets notation][PyMdown Snippets].
+- **Content transformations:** Links are resolved relative to the including page, and heading levels are preserved. The `rewrite_relative_urls`, `heading_offset`, `comments`, and `trailing_newlines` settings are ignored. Include comments are not inserted, and trailing newlines are preserved by Snippets.
+- **Downloads and rebuilds:** The `cache` and `cache_dir` settings are ignored; downloads are cached by Snippets for each Markdown conversion. Included files outside `docs_dir` must be added to [`watch`](../../setup/basics.md#watch) for live rebuilding.
+
+For more information, see the [plugin documentation][include-markdown] and [PyMdown Snippets].
+
+---
+
 ### `literate-nav`
 
 _Since [0.0.58]_
@@ -979,6 +1014,7 @@ without using their original codebases.
 [0.0.67]: https://github.com/zensical/zensical/releases/tag/v0.0.67
 [0.0.68]: https://github.com/zensical/zensical/releases/tag/v0.0.68
 [0.0.69]: https://github.com/zensical/zensical/releases/tag/v0.0.69
+[0.0.71]: https://github.com/zensical/zensical/releases/tag/v0.0.71
 [Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
@@ -1001,6 +1037,7 @@ without using their original codebases.
 [GitHub callouts]: ../../authoring/admonitions.md#github-callouts
 [glightbox]: https://blueswen.github.io/mkdocs-glightbox/
 [glob patterns]: https://docs.rs/globset/latest/globset/#syntax
+[include-markdown]: https://pypi.org/project/mkdocs-include-markdown-plugin/7.3.0/
 [literate-nav]: https://oprypin.github.io/mkdocs-literate-nav/
 [llmstxt]: https://pawamoy.github.io/mkdocs-llmstxt/
 [macros]: https://mkdocs-macros-plugin.readthedocs.io/en/latest/
@@ -1016,6 +1053,7 @@ without using their original codebases.
 [open-in-new-tab JavaScript]: https://github.com/JakubAndrysek/mkdocs-open-in-new-tab/blob/main/open_in_new_tab/js/open_in_new_tab.js
 [optimize]: https://squidfunk.github.io/mkdocs-material/plugins/optimize/
 [privacy]: https://squidfunk.github.io/mkdocs-material/plugins/privacy/
+[PyMdown Snippets]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/
 [pymdownx quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
 [Redirects]: ../../setup/redirects.md
 [report an issue]: https://zensical.org/contributing/bug-reports/
