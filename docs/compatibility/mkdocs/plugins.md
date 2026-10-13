@@ -107,6 +107,8 @@ For more information, see the [plugin documentation][api-autonav].
 
 ### `audio`
 
+!!! note "The plugin must be configured as `mkdocs-audio`."
+
 _Since [0.0.68]_
 
 Embed audio files with native browser playback controls. Configure the plugin as
@@ -150,6 +152,8 @@ For more information, see the [plugin documentation][audio].
 ---
 
 ### `autoapi`
+
+!!! note "The plugin must be configured as `mkdocs-autoapi`."
 
 _Since [0.0.66]_
 
@@ -619,6 +623,8 @@ For more information, see [plugin documentation][mkdocstrings].
 
 ### `nav-weight`
 
+!!! note "The plugin must be configured as `mkdocs-nav-weight`."
+
 _Since [0.0.69]_
 
 Navigation order, section titles, and visibility are controlled through page metadata.
@@ -864,6 +870,8 @@ For more information, see [Tags configuration] and the [plugin documentation][ta
 ---
 
 ### `video`
+
+!!! note "The plugin must be configured as `mkdocs-video`."
 
 _Since [0.0.68]_
 
