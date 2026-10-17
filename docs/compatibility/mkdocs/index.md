@@ -14,6 +14,12 @@ Zensical can build existing MkDocs projects without requiring changes: It
 supports `mkdocs.yml`, preserves the standard project layout, renders Python
 Markdown content, and recognizes the configuration of supported MkDocs plugins.
 
+!!! info "Planning your organization’s transition"
+
+    Zensical Spark gives your organization a closer working relationship with
+    our team, with membership options for migration planning, ongoing support,
+    and collaboration. [Learn more about Zensical Spark.](https://zensical.org/spark/)
+
 ## Compatibility
 
 - [x] **Configuration and structure:** your existing `mkdocs.yml` configuration
