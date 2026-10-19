@@ -104,23 +104,6 @@ See additional configuration options:
 supports a subset of LaTeX syntax and can render math to HTML and SVG. To use
 [KaTeX] within your project, add the following lines to your configuration:
 
-=== "`docs/javascripts/katex.js`"
-
-    ``` js
-    document$.subscribe(({ body }) => { // (1)!
-      renderMathInElement(body, {
-        delimiters: [
-          { left: "$$",  right: "$$",  display: true },
-          { left: "$",   right: "$",   display: false },
-          { left: "\\(", right: "\\)", display: false },
-          { left: "\\[", right: "\\]", display: true }
-        ],
-      })
-    })
-    ```
-
-    1. This integrates KaTeX with [instant navigation].
-
 === "`zensical.toml`"
 
     ``` toml
@@ -154,6 +137,23 @@ supports a subset of LaTeX syntax and can render math to HTML and SVG. To use
     extra_css:
       - https://unpkg.com/katex@0/dist/katex.min.css
     ```
+
+And create the `docs/javascripts/katex.js` file:
+
+``` js
+document$.subscribe(({ body }) => { // (1)!
+    renderMathInElement(body, {
+    delimiters: [
+        { left: "$$",  right: "$$",  display: true },
+        { left: "$",   right: "$",   display: false },
+        { left: "\\(", right: "\\)", display: false },
+        { left: "\\[", right: "\\]", display: true }
+    ],
+    })
+})
+```
+
+1. This integrates KaTeX with [instant navigation].
 
 ## Usage
 
