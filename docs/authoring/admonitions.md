@@ -432,6 +432,13 @@ The following admonition types are available in Zensical. The default is `note`.
         euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo
         purus auctor massa, nec semper lorem quam in massa.
 
+## Custom admonitions
+
+For custom admonition types, see [Material for MkDocs' custom admonitions
+guide][custom admonitions]. Its CSS examples target the classic Material
+appearance and may need adaptation for Zensical's `modern` variant; see [theme
+variants] for details.
+
 ## GitHub callouts
 
 In addition to the [admonition syntax], [GitHub callouts], also known as
@@ -516,6 +523,7 @@ they are not supported by all GitHub Flavored Markdown parsers.
 [admonition syntax]: #usage
 [changing the title]: #change-the-title
 [collapsible blocks]: #collapsible-blocks
+[custom admonitions]: https://squidfunk.github.io/mkdocs-material/reference/admonitions/#custom-admonitions
 [custom icon]: ../setup/logo-and-icons.md#additional-icons
 [custom style]: ../customization.md#additional-css
 [Details]: ../compatibility/markdown/python-markdown-extensions.md#details
@@ -525,4 +533,5 @@ they are not supported by all GitHub Flavored Markdown parsers.
 [Quotes]: https://facelessuser.github.io/pymdown-extensions/extensions/quotes/
 [SuperFences]: ../compatibility/markdown/python-markdown-extensions.md#superfences
 [supported types]: #supported-types
+[theme variants]: ../compatibility/mkdocs/migration.md#theme-variant
 [type qualifier]: #supported-types
