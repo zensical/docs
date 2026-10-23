@@ -706,6 +706,43 @@ For more information, see [plugin documentation][offline].
 
 ---
 
+### `privacy`
+
+_Since [0.0.72]_
+
+Automatically self-host external assets and annotate external links.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Privacy processing is enabled. |
+| `assets` | `true` | External assets are processed. |
+| `assets_fetch` | `true` | External assets are downloaded; with `false`, warnings are emitted instead. |
+| `assets_fetch_dir` | `assets/external` | Site directory for downloaded assets. |
+| `assets_include` | `[]` | Asset path patterns selecting downloads; precedence is given over `assets_exclude` and `assets_fetch`. |
+| `assets_exclude` | `[]` | Asset path patterns excluding downloads when `assets_include` is empty. |
+| `links` | `true` | Absolute HTTP and HTTPS links are annotated, including protocol-relative links. |
+| `links_attr_map` | `{}` | Additional HTML attributes applied to those links. |
+| `links_noopener` | `true` | `rel="noopener"` is added to links with `target="_blank"`. |
+| `cache` | `true` | Downloaded assets are cached between builds. |
+| `cache_dir` | `.cache/plugin/privacy` | Project directory for cached downloads. |
+| `concurrency` | Available CPUs − 1, minimum `1` | Maximum number of concurrent downloads per instance. |
+
+</div>
+
+Asset patterns are matched against the hostname and path without the scheme, such as `example.com/*`, using Python's `fnmatch` rules.
+
+**Differences**:
+
+- Cache format: in Material for MkDocs, symbolic links are used when a file extension is added based on the content type. In Zensical, JSON metadata is used instead. Existing Material caches are not reused; assets are downloaded again on the first build.
+- Output directory: in Material for MkDocs, `assets_fetch_dir` is accepted as a string. In Zensical, a nonempty path relative to `site_dir` is required. Absolute paths and empty, `.` or `..` path components are rejected.
+- Logging: in Material for MkDocs, log settings are shared between plugin instances. In Zensical, `log` and `log_level` are applied separately to each instance.
+
+For more information, see the [plugin documentation][privacy].
+
+---
+
 ### `redirects`
 
 _Since [0.0.58]_
@@ -992,7 +1029,6 @@ do not imply release dates.
 
 ### Planned
 
-- [ ] [`privacy`][privacy]
 - [ ] [`git-authors`][git-authors]
 - [ ] [`git-committers`][git-committers]
 - [ ] [`git-revision-date-localized`][git-revision-date-localized]
@@ -1023,6 +1059,7 @@ without using their original codebases.
 [0.0.68]: https://github.com/zensical/zensical/releases/tag/v0.0.68
 [0.0.69]: https://github.com/zensical/zensical/releases/tag/v0.0.69
 [0.0.71]: https://github.com/zensical/zensical/releases/tag/v0.0.71
+[0.0.72]: https://github.com/zensical/zensical/releases/tag/v0.0.72
 [Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
