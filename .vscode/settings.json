@@ -12,6 +12,7 @@
   "yaml.schemas": {
     "docs/schema.json": "mkdocs.yml"
   },
+  //"zensical.studio.path": "/Users/squidfunk/.workspace/zensical/repos/studio-app/target/aarch64-apple-darwin/release/zensical-studio",
   "yaml.customTags": [
     "!ENV scalar",
     "!ENV sequence",

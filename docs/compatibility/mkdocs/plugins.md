@@ -66,6 +66,15 @@ documentation, and links to the Zensical release in which support was added.
     is already planned. If it isn't, [create a change request] for the missing
     plugin in Zensical's issue tracker.
 
+!!! question "Can I develop a custom plugin?"
+
+    Zensical does not currently run arbitrary MkDocs plugins or expose the
+    MkDocs plugin API. We're working on a separate
+    [Module API](https://zensical.org/roadmap/#module-api) so the community can
+    build native Zensical extensions, including replacements for MkDocs plugins.
+    It will first be available for early access through
+    [Zensical Spark] before its public release.
+
 <div class="mdx-plugins" markdown>
 
 !!! info "Report issues to Zensical"
@@ -83,16 +92,16 @@ Generate API reference pages and navigation for Python modules with
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable API reference generation. |
-| `modules` | `[]` | Python files or package directories, relative to the project root. |
-| `module_options` | `{}` | Handler options for modules matched by regular expressions. |
-| `exclude` | `[]` | Module names or patterns to exclude; prefix regular expressions with `re:`. |
-| `nav_section_title` | `API Reference` | Title of the generated navigation section. |
-| `api_root_uri` | `reference` | Directory for generated API reference pages. |
-| `exclude_private` | `true` | Exclude modules whose names start with an underscore. |
-| `show_full_namespace` | `false` | Show full module names in navigation. |
+| Setting               | Default         | Description                                                                 |
+| --------------------- | --------------- | --------------------------------------------------------------------------- |
+| `enabled`             | `true`          | Enable API reference generation.                                            |
+| `modules`             | `[]`            | Python files or package directories, relative to the project root.          |
+| `module_options`      | `{}`            | Handler options for modules matched by regular expressions.                 |
+| `exclude`             | `[]`            | Module names or patterns to exclude; prefix regular expressions with `re:`. |
+| `nav_section_title`   | `API Reference` | Title of the generated navigation section.                                  |
+| `api_root_uri`        | `reference`     | Directory for generated API reference pages.                                |
+| `exclude_private`     | `true`          | Exclude modules whose names start with an underscore.                       |
+| `show_full_namespace` | `false`         | Show full module names in navigation.                                       |
 
 </div>
 
@@ -135,15 +144,15 @@ Use the configured marker as the image's alternative text:
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable audio embeds. |
-| `mark` | `type:audio` | Image alternative text that identifies an audio embed. |
-| `audio_type` | `mp3` | Audio MIME subtype, such as `mp3`, `wav`, or `ogg`. |
-| `audio_controls` | `true` | Show playback controls. |
-| `audio_autoplay` | `false` | Request automatic playback, subject to browser policies. |
-| `audio_loop` | `false` | Repeat playback. |
-| `css_style` | `{"width": "100%"}` | CSS properties applied to the audio element. |
+| Setting          | Default             | Description                                              |
+| ---------------- | ------------------- | -------------------------------------------------------- |
+| `enabled`        | `true`              | Enable audio embeds.                                     |
+| `mark`           | `type:audio`        | Image alternative text that identifies an audio embed.   |
+| `audio_type`     | `mp3`               | Audio MIME subtype, such as `mp3`, `wav`, or `ogg`.      |
+| `audio_controls` | `true`              | Show playback controls.                                  |
+| `audio_autoplay` | `false`             | Request automatic playback, subject to browser policies. |
+| `audio_loop`     | `false`             | Repeat playback.                                         |
+| `css_style`      | `{"width": "100%"}` | CSS properties applied to the audio element.             |
 
 </div>
 
@@ -162,16 +171,16 @@ Discover source files and generate API reference pages with
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable automatic API documentation. |
-| `autoapi_dir` | `.` | Source directory, relative to the project root. |
-| `autoapi_file_patterns` | `["*.py", "*.pyi"]` | File patterns to include. |
-| `autoapi_ignore` | `[]` | File patterns to exclude. |
-| `autoapi_root` | `autoapi` | Directory for generated API reference pages. |
-| `autoapi_add_nav_entry` | `true` | Add generated pages to navigation; a string sets the section title. |
-| `autoapi_generate_api_docs` | `true` | Generate API reference pages. |
-| `autoapi_keep_files` | `false` | Keep generated Markdown files in the documentation directory. |
+| Setting                     | Default             | Description                                                         |
+| --------------------------- | ------------------- | ------------------------------------------------------------------- |
+| `enabled`                   | `true`              | Enable automatic API documentation.                                 |
+| `autoapi_dir`               | `.`                 | Source directory, relative to the project root.                     |
+| `autoapi_file_patterns`     | `["*.py", "*.pyi"]` | File patterns to include.                                           |
+| `autoapi_ignore`            | `[]`                | File patterns to exclude.                                           |
+| `autoapi_root`              | `autoapi`           | Directory for generated API reference pages.                        |
+| `autoapi_add_nav_entry`     | `true`              | Add generated pages to navigation; a string sets the section title. |
+| `autoapi_generate_api_docs` | `true`              | Generate API reference pages.                                       |
+| `autoapi_keep_files`        | `false`             | Keep generated Markdown files in the documentation directory.       |
 
 </div>
 
@@ -192,12 +201,12 @@ Link to headings and API objects across pages with `[text][identifier]`.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable automatic cross-references. |
-| `resolve_closest` | `false` | Resolve duplicate identifiers to the closest page. |
-| `link_titles` | `auto` | Link tooltips: `true`, `false`, `external`, or `auto`. With `auto`, only external links get tooltips when `navigation.instant.preview` is enabled; otherwise all links do. |
-| `strip_title_tags` | `auto` | Strip HTML from tooltips: `true`, `false`, or `auto`. With `auto`, HTML is preserved when `content.tooltips` is enabled and stripped otherwise. |
+| Setting            | Default | Description                                                                                                                                                                |
+| ------------------ | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enabled`          | `true`  | Enable automatic cross-references.                                                                                                                                         |
+| `resolve_closest`  | `false` | Resolve duplicate identifiers to the closest page.                                                                                                                         |
+| `link_titles`      | `auto`  | Link tooltips: `true`, `false`, `external`, or `auto`. With `auto`, only external links get tooltips when `navigation.instant.preview` is enabled; otherwise all links do. |
+| `strip_title_tags` | `auto`  | Strip HTML from tooltips: `true`, `false`, or `auto`. With `auto`, HTML is preserved when `content.tooltips` is enabled and stripped otherwise.                            |
 
 </div>
 
@@ -213,15 +222,15 @@ Customize navigation with a `.nav.yml` file in each documentation directory.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable directory-based navigation. |
-| `filename` | `.nav.yml` | Name of the navigation configuration files. |
-| `logs` | `{}` | Override message levels: `info`, `warning`, or `error`. Dotted settings below are nested here. |
-| `logs.nav_override` | `warning` | Message when generated navigation replaces `nav`. |
-| `logs.root_title` | `warning` | Message when `title` is set in the root navigation file. |
-| `logs.root_hide` | `warning` | Message when `hide` is set in the root navigation file. |
-| `logs.no_matches` | `warning` | Message when a glob pattern matches nothing. |
+| Setting             | Default    | Description                                                                                    |
+| ------------------- | ---------- | ---------------------------------------------------------------------------------------------- |
+| `enabled`           | `true`     | Enable directory-based navigation.                                                             |
+| `filename`          | `.nav.yml` | Name of the navigation configuration files.                                                    |
+| `logs`              | `{}`       | Override message levels: `info`, `warning`, or `error`. Dotted settings below are nested here. |
+| `logs.nav_override` | `warning`  | Message when generated navigation replaces `nav`.                                              |
+| `logs.root_title`   | `warning`  | Message when `title` is set in the root navigation file.                                       |
+| `logs.root_hide`    | `warning`  | Message when `hide` is set in the root navigation file.                                        |
+| `logs.no_matches`   | `warning`  | Message when a glob pattern matches nothing.                                                   |
 
 </div>
 
@@ -243,16 +252,16 @@ See [Blog] for setup and post metadata.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable the blog. |
-| `blog_dir` | `blog` | Blog directory, relative to `docs_dir`. |
-| `post_dir` | `{blog}/posts` | Posts directory, relative to `docs_dir`. |
-| `post_url_format` | `{date}/{slug}` | Post URL template: `{date}`, `{slug}`, `{categories}`, `{file}`. |
-| `post_excerpt_separator` | `<!-- more -->` | Marker separating the excerpt from the rest of a post. |
-| `authors_profiles` | `false` | Generate author profile pages. |
-| `pagination_per_page` | `10` | Posts per page. |
-| `draft_on_serve` | `true` | Include drafts during preview. |
+| Setting                  | Default         | Description                                                      |
+| ------------------------ | --------------- | ---------------------------------------------------------------- |
+| `enabled`                | `true`          | Enable the blog.                                                 |
+| `blog_dir`               | `blog`          | Blog directory, relative to `docs_dir`.                          |
+| `post_dir`               | `{blog}/posts`  | Posts directory, relative to `docs_dir`.                         |
+| `post_url_format`        | `{date}/{slug}` | Post URL template: `{date}`, `{slug}`, `{categories}`, `{file}`. |
+| `post_excerpt_separator` | `<!-- more -->` | Marker separating the excerpt from the rest of a post.           |
+| `authors_profiles`       | `false`         | Generate author profile pages.                                   |
+| `pagination_per_page`    | `10`            | Posts per page.                                                  |
+| `draft_on_serve`         | `true`          | Include drafts during preview.                                   |
 
 </div>
 
@@ -272,9 +281,9 @@ Render Obsidian-style callouts as admonitions.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable callouts. |
+| Setting   | Default | Description      |
+| --------- | ------- | ---------------- |
+| `enabled` | `true`  | Enable callouts. |
 
 </div>
 
@@ -297,11 +306,11 @@ Patterns match source paths relative to `docs_dir`. Exclusion also applies to ge
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable file exclusion. |
-| `glob` | `[]` | Glob patterns for paths to exclude. |
-| `regex` | `[]` | Regular expressions for paths to exclude. |
+| Setting   | Default | Description                               |
+| --------- | ------- | ----------------------------------------- |
+| `enabled` | `true`  | Enable file exclusion.                    |
+| `glob`    | `[]`    | Glob patterns for paths to exclude.       |
+| `regex`   | `[]`    | Regular expressions for paths to exclude. |
 
 </div>
 
@@ -323,9 +332,9 @@ Render GitHub-style alerts as admonitions. See [GitHub callouts] for the support
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable GitHub-style admonitions. |
+| Setting   | Default | Description                      |
+| --------- | ------- | -------------------------------- |
+| `enabled` | `true`  | Enable GitHub-style admonitions. |
 
 </div>
 
@@ -346,15 +355,15 @@ Open images in a lightbox.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable the lightbox. |
-| `auto` | `true` | Enable the lightbox for images automatically. |
-| `manual` | `null` | When `true`, only enable images marked with `on-glb`; overrides `auto`. |
-| `auto_themed` | `false` | Group images by their light or dark theme variant. |
-| `auto_caption` | `false` | Use image alt text as the caption. |
-| `caption_position` | `bottom` | Caption position: `bottom`, `top`, `left`, or `right`. |
-| `skip_classes` | `[]` | Additional image classes to exclude from the lightbox. |
+| Setting            | Default  | Description                                                             |
+| ------------------ | -------- | ----------------------------------------------------------------------- |
+| `enabled`          | `true`   | Enable the lightbox.                                                    |
+| `auto`             | `true`   | Enable the lightbox for images automatically.                           |
+| `manual`           | `null`   | When `true`, only enable images marked with `on-glb`; overrides `auto`. |
+| `auto_themed`      | `false`  | Group images by their light or dark theme variant.                      |
+| `auto_caption`     | `false`  | Use image alt text as the caption.                                      |
+| `caption_position` | `bottom` | Caption position: `bottom`, `top`, `left`, or `right`.                  |
+| `skip_classes`     | `[]`     | Additional image classes to exclude from the lightbox.                  |
 
 </div>
 
@@ -409,13 +418,13 @@ Define navigation with Markdown lists of links.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable Markdown-based navigation. |
-| `nav_file` | `SUMMARY.md` | Name of the navigation file. |
-| `implicit_index` | `false` | Include each directory's index page automatically. |
-| `tab_length` | `4` | Spaces per indentation level in navigation lists. |
-| `markdown_extensions` | `[]` | Additional Markdown extensions for parsing navigation files. |
+| Setting               | Default      | Description                                                  |
+| --------------------- | ------------ | ------------------------------------------------------------ |
+| `enabled`             | `true`       | Enable Markdown-based navigation.                            |
+| `nav_file`            | `SUMMARY.md` | Name of the navigation file.                                 |
+| `implicit_index`      | `false`      | Include each directory's index page automatically.           |
+| `tab_length`          | `4`          | Spaces per indentation level in navigation lists.            |
+| `markdown_extensions` | `[]`         | Additional Markdown extensions for parsing navigation files. |
 
 </div>
 
@@ -431,14 +440,14 @@ An `llms.txt` index and Markdown copies of selected pages are generated.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable `llms.txt` generation. |
-| `sections` | Required | Named sections and source pages to include; page paths can contain glob patterns. |
-| `markdown_description` | `null` | Markdown description added after the site description. |
-| `base_url` | `site_url` | Base URL used for links to generated Markdown pages. |
-| `full_output` | `null` | Path of an optional file containing the full text of selected pages. |
-| `autoclean` | `true` | Clean generated HTML before conversion to Markdown. |
+| Setting                | Default    | Description                                                                       |
+| ---------------------- | ---------- | --------------------------------------------------------------------------------- |
+| `enabled`              | `true`     | Enable `llms.txt` generation.                                                     |
+| `sections`             | Required   | Named sections and source pages to include; page paths can contain glob patterns. |
+| `markdown_description` | `null`     | Markdown description added after the site description.                            |
+| `base_url`             | `site_url` | Base URL used for links to generated Markdown pages.                              |
+| `full_output`          | `null`     | Path of an optional file containing the full text of selected pages.              |
+| `autoclean`            | `true`     | Clean generated HTML before conversion to Markdown.                               |
 
 </div>
 
@@ -461,17 +470,17 @@ Jinja variables, filters, and Python macros are supported in Markdown.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable macros. |
-| `module_name` | `main` | Local Python module, loaded after `modules`. Its definitions are given precedence. |
-| `modules` | `[]` | Importable packages, loaded in order. Failed imports are reported as errors. |
-| `include_yaml` | `[]` | YAML files providing variables. |
-| `include_dir` | `""` | Directory for Jinja includes and imports, relative to the project root. If empty, `docs_dir` is used. |
-| `render_by_default` | `true` | Render Jinja on all pages unless their metadata overrides it. |
-| `force_render_paths` | `""` | Additional pages selected for Jinja rendering with multiline [file patterns], relative to `docs_dir`. Page metadata takes precedence. |
-| `on_error_fail` | `false` | With `true`, the build is stopped on rendering errors. With `false`, error diagnostics are inserted into the page. |
-| `on_undefined` | `keep` | With `keep`, simple undefined expressions are preserved. With `silent`, undefined values are rendered as empty strings. With `strict`, errors are raised. With `lax`, missing attributes are also rendered as empty strings. |
+| Setting              | Default | Description                                                                                                                                                                                                                  |
+| -------------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `enabled`            | `true`  | Enable macros.                                                                                                                                                                                                               |
+| `module_name`        | `main`  | Local Python module, loaded after `modules`. Its definitions are given precedence.                                                                                                                                           |
+| `modules`            | `[]`    | Importable packages, loaded in order. Failed imports are reported as errors.                                                                                                                                                 |
+| `include_yaml`       | `[]`    | YAML files providing variables.                                                                                                                                                                                              |
+| `include_dir`        | `""`    | Directory for Jinja includes and imports, relative to the project root. If empty, `docs_dir` is used.                                                                                                                        |
+| `render_by_default`  | `true`  | Render Jinja on all pages unless their metadata overrides it.                                                                                                                                                                |
+| `force_render_paths` | `""`    | Additional pages selected for Jinja rendering with multiline [file patterns], relative to `docs_dir`. Page metadata takes precedence.                                                                                        |
+| `on_error_fail`      | `false` | With `true`, the build is stopped on rendering errors. With `false`, error diagnostics are inserted into the page.                                                                                                           |
+| `on_undefined`       | `keep`  | With `keep`, simple undefined expressions are preserved. With `silent`, undefined values are rendered as empty strings. With `strict`, errors are raised. With `lax`, missing attributes are also rendered as empty strings. |
 
 </div>
 
@@ -502,11 +511,11 @@ pip install "markdown-exec[ansi]"
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable code block execution. |
-| `ansi` | `false` | ANSI output support: `true`, `false`, `auto`, `off`, or `required`; enabled modes require `pygments-ansi-color`. |
-| `languages` | `null` | Languages to execute; unset enables all supported languages, `[]` disables execution. |
+| Setting     | Default | Description                                                                                                      |
+| ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
+| `enabled`   | `true`  | Enable code block execution.                                                                                     |
+| `ansi`      | `false` | ANSI output support: `true`, `false`, `auto`, `off`, or `required`; enabled modes require `pygments-ansi-color`. |
+| `languages` | `null`  | Languages to execute; unset enables all supported languages, `[]` disables execution.                            |
 
 </div>
 
@@ -522,11 +531,11 @@ Jinja templates are rendered in Markdown and page titles with project settings a
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Jinja rendering and data loading are enabled. |
-| `data` | `null` | Comma-separated data directories, relative to the project root. When unset or empty, `_data` and `<docs_dir>/_data` are searched. |
-| `jinja_options` | `{}` | Options passed to the Jinja environment, including template delimiters. |
+| Setting         | Default | Description                                                                                                                       |
+| --------------- | ------- | --------------------------------------------------------------------------------------------------------------------------------- |
+| `enabled`       | `true`  | Jinja rendering and data loading are enabled.                                                                                     |
+| `data`          | `null`  | Comma-separated data directories, relative to the project root. When unset or empty, `_data` and `<docs_dir>/_data` are searched. |
+| `jinja_options` | `{}`    | Options passed to the Jinja environment, including template delimiters.                                                           |
 
 </div>
 
@@ -548,10 +557,10 @@ Apply shared front matter to pages in a directory and its subdirectories.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable shared metadata. |
-| `meta_file` | `.meta.yml` | Metadata file name. |
+| Setting     | Default     | Description             |
+| ----------- | ----------- | ----------------------- |
+| `enabled`   | `true`      | Enable shared metadata. |
+| `meta_file` | `.meta.yml` | Metadata file name.     |
 
 </div>
 
@@ -571,14 +580,14 @@ Publish and switch between documentation versions.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable mike integration. |
-| `version_selector` | `true` | Show the version selector. |
-| `alias_type` | `symlink` | Alias type: `symlink`, `redirect`, or `copy`. |
-| `deploy_prefix` | `""` | Directory prefix for versioned deployments. |
-| `canonical_version` | `null` | Version used for canonical URLs. |
-| `redirect_template` | `null` | Custom template for redirect aliases. |
+| Setting             | Default   | Description                                   |
+| ------------------- | --------- | --------------------------------------------- |
+| `enabled`           | `true`    | Enable mike integration.                      |
+| `version_selector`  | `true`    | Show the version selector.                    |
+| `alias_type`        | `symlink` | Alias type: `symlink`, `redirect`, or `copy`. |
+| `deploy_prefix`     | `""`      | Directory prefix for versioned deployments.   |
+| `canonical_version` | `null`    | Version used for canonical URLs.              |
+| `redirect_template` | `null`    | Custom template for redirect aliases.         |
 
 </div>
 
@@ -599,16 +608,16 @@ Reduce the size of generated HTML, JavaScript, and CSS.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable minification. |
-| `minify_html` | `false` | Minify generated HTML. |
-| `minify_js` | `false` | Minify files listed in `js_files`. |
-| `minify_css` | `false` | Minify files listed in `css_files`. |
-| `js_files` | `[]` | JavaScript files to minify. |
-| `css_files` | `[]` | CSS files to minify. |
-| `minify_inline_js` | `false` | Minify JavaScript inside `<script>` elements. |
-| `minify_inline_css` | `false` | Minify CSS inside `<style>` elements. |
+| Setting             | Default | Description                                   |
+| ------------------- | ------- | --------------------------------------------- |
+| `enabled`           | `true`  | Enable minification.                          |
+| `minify_html`       | `false` | Minify generated HTML.                        |
+| `minify_js`         | `false` | Minify files listed in `js_files`.            |
+| `minify_css`        | `false` | Minify files listed in `css_files`.           |
+| `js_files`          | `[]`    | JavaScript files to minify.                   |
+| `css_files`         | `[]`    | CSS files to minify.                          |
+| `minify_inline_js`  | `false` | Minify JavaScript inside `<script>` elements. |
+| `minify_inline_css` | `false` | Minify CSS inside `<style>` elements.         |
 
 </div>
 
@@ -636,14 +645,14 @@ pip install mkdocstrings-python
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable API documentation. |
-| `default_handler` | `python` | Handler used when a directive does not specify one. |
-| `handlers` | `{}` | Handler configuration. |
-| `custom_templates` | `null` | Directory containing custom handler templates. |
-| `enable_inventory` | `null` | Generate `objects.inv`; unset follows the handlers' inventory settings. |
-| `locale` | `en` | Language used by handlers. |
+| Setting            | Default  | Description                                                             |
+| ------------------ | -------- | ----------------------------------------------------------------------- |
+| `enabled`          | `true`   | Enable API documentation.                                               |
+| `default_handler`  | `python` | Handler used when a directive does not specify one.                     |
+| `handlers`         | `{}`     | Handler configuration.                                                  |
+| `custom_templates` | `null`   | Directory containing custom handler templates.                          |
+| `enable_inventory` | `null`   | Generate `objects.inv`; unset follows the handlers' inventory settings. |
+| `locale`           | `en`     | Language used by handlers.                                              |
 
 </div>
 
@@ -666,15 +675,15 @@ Navigation order, section titles, and visibility are controlled through page met
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Weighted navigation is enabled. |
-| `section_renamed` | `false` | Section names are replaced with their index page titles. |
-| `index_weight` | `-10` | Weight assigned to index pages within their section. |
-| `default_page_weight` | `0` | Weight assigned to pages with missing or invalid `weight` metadata. |
-| `reverse` | `false` | Items are sorted from highest to lowest weight. |
-| `headless_included` | `false` | Hidden pages are included in `nav.pages`. Empty index pages remain excluded. |
-| `warning` | `true` | Warnings are emitted for invalid metadata values. |
+| Setting               | Default | Description                                                                  |
+| --------------------- | ------- | ---------------------------------------------------------------------------- |
+| `enabled`             | `true`  | Weighted navigation is enabled.                                              |
+| `section_renamed`     | `false` | Section names are replaced with their index page titles.                     |
+| `index_weight`        | `-10`   | Weight assigned to index pages within their section.                         |
+| `default_page_weight` | `0`     | Weight assigned to pages with missing or invalid `weight` metadata.          |
+| `reverse`             | `false` | Items are sorted from highest to lowest weight.                              |
+| `headless_included`   | `false` | Hidden pages are included in `nav.pages`. Empty index pages remain excluded. |
+| `warning`             | `true`  | Warnings are emitted for invalid metadata values.                            |
 
 </div>
 
@@ -696,9 +705,9 @@ Make the site searchable when opened directly from the file system.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable offline search support. |
+| Setting   | Default | Description                    |
+| --------- | ------- | ------------------------------ |
+| `enabled` | `true`  | Enable offline search support. |
 
 </div>
 
@@ -751,10 +760,10 @@ Keep old links working when pages or sections move.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable redirects. |
-| `redirect_maps` | `{}` | Map old paths to new paths or URLs. |
+| Setting         | Default | Description                         |
+| --------------- | ------- | ----------------------------------- |
+| `enabled`       | `true`  | Enable redirects.                   |
+| `redirect_maps` | `{}`    | Map old paths to new paths or URLs. |
 
 </div>
 
@@ -775,14 +784,14 @@ Generate RSS and JSON feeds for new and updated pages.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable feed generation. |
-| `feed_title` | `site_name` | Feed title; defaults to the site name. |
-| `length` | `20` | Maximum entries in each feed. |
-| `match_path` | `.*` | Regular expression selecting page paths to include. |
-| `abstract_chars_count` | `160` | Maximum summary length; `-1` includes the full content. |
-| `date_from_meta` | Git dates | Metadata fields and formats for creation and update dates. |
+| Setting                | Default     | Description                                                |
+| ---------------------- | ----------- | ---------------------------------------------------------- |
+| `enabled`              | `true`      | Enable feed generation.                                    |
+| `feed_title`           | `site_name` | Feed title; defaults to the site name.                     |
+| `length`               | `20`        | Maximum entries in each feed.                              |
+| `match_path`           | `.*`        | Regular expression selecting page paths to include.        |
+| `abstract_chars_count` | `160`       | Maximum summary length; `-1` includes the full content.    |
+| `date_from_meta`       | Git dates   | Metadata fields and formats for creation and update dates. |
 
 </div>
 
@@ -807,18 +816,18 @@ the generated cards in page metadata. Page front matter can override `cards`,
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable social card generation. |
-| `cards` | `true` | Generate cards for pages by default. |
-| `cards_dir` | `assets/images/social` | Site directory for generated cards. |
-| `cards_layout` | `default` | Card layout to render. |
-| `cards_layout_dir` | `layouts` | Project directory for custom layouts. |
-| `cards_layout_options` | `{}` | Values passed to card layouts. |
-| `cards_include` | `[]` | Source path patterns selecting pages for cards. |
-| `cards_exclude` | `[]` | Source path patterns excluding pages from cards. |
-| `cache` | `true` | Cache generated cards between builds. |
-| `cache_dir` | `.cache/plugin/social` | Project directory for cached cards. |
+| Setting                | Default                | Description                                      |
+| ---------------------- | ---------------------- | ------------------------------------------------ |
+| `enabled`              | `true`                 | Enable social card generation.                   |
+| `cards`                | `true`                 | Generate cards for pages by default.             |
+| `cards_dir`            | `assets/images/social` | Site directory for generated cards.              |
+| `cards_layout`         | `default`              | Card layout to render.                           |
+| `cards_layout_dir`     | `layouts`              | Project directory for custom layouts.            |
+| `cards_layout_options` | `{}`                   | Values passed to card layouts.                   |
+| `cards_include`        | `[]`                   | Source path patterns selecting pages for cards.  |
+| `cards_exclude`        | `[]`                   | Source path patterns excluding pages from cards. |
+| `cache`                | `true`                 | Cache generated cards between builds.            |
+| `cache_dir`            | `.cache/plugin/social` | Project directory for cached cards.              |
 
 </div>
 
@@ -834,9 +843,9 @@ Add full-text search to your documentation.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable search. |
+| Setting     | Default          | Description                                                      |
+| ----------- | ---------------- | ---------------------------------------------------------------- |
+| `enabled`   | `true`           | Enable search.                                                   |
 | `separator` | Built-in pattern | Regular expression splitting text at whitespace and punctuation. |
 
 </div>
@@ -861,9 +870,9 @@ Zensical provides section-index behavior natively. You can keep the `section-ind
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| Configuration | — | No plugin settings are required. |
+| Setting       | Default | Description                      |
+| ------------- | ------- | -------------------------------- |
+| Configuration | —       | No plugin settings are required. |
 
 </div>
 
@@ -880,12 +889,12 @@ Embed data files as Markdown tables with reader calls such as
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable table readers. |
-| `data_path` | `.` | Base directory for data files. |
-| `allow_missing_files` | `false` | Continue building when a table file is missing. |
-| `select_readers` | All supported readers | Readers to enable. |
+| Setting               | Default               | Description                                     |
+| --------------------- | --------------------- | ----------------------------------------------- |
+| `enabled`             | `true`                | Enable table readers.                           |
+| `data_path`           | `.`                   | Base directory for data files.                  |
+| `allow_missing_files` | `false`               | Continue building when a table file is missing. |
+| `select_readers`      | All supported readers | Readers to enable.                              |
 
 </div>
 
@@ -906,16 +915,16 @@ Categorize pages and generate tag listings.
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable tags. |
-| `tags` | `true` | Show tags on pages. |
-| `tags_allowed` | `[]` | Allowed tags; an empty list allows all. |
-| `tags_hierarchy` | `false` | Enable hierarchical tags. |
-| `tags_sort_by` | `tag_name` | Tag sorting strategy. |
-| `listings` | `true` | Generate listings where `<!-- material/tags -->` is placed. |
-| `listings_sort_by` | `item_title` | Sort pages within listings. |
-| `listings_toc` | `true` | Add listing tags to the table of contents. |
+| Setting            | Default      | Description                                                 |
+| ------------------ | ------------ | ----------------------------------------------------------- |
+| `enabled`          | `true`       | Enable tags.                                                |
+| `tags`             | `true`       | Show tags on pages.                                         |
+| `tags_allowed`     | `[]`         | Allowed tags; an empty list allows all.                     |
+| `tags_hierarchy`   | `false`      | Enable hierarchical tags.                                   |
+| `tags_sort_by`     | `tag_name`   | Tag sorting strategy.                                       |
+| `listings`         | `true`       | Generate listings where `<!-- material/tags -->` is placed. |
+| `listings_sort_by` | `item_title` | Sort pages within listings.                                 |
+| `listings_toc`     | `true`       | Add listing tags to the table of contents.                  |
 
 </div>
 
@@ -974,17 +983,17 @@ Use the configured marker as the image's alternative text:
 
 <div class="mdx-plugin-settings" markdown>
 
-| Setting | Default | Description |
-| ------- | ------- | ----------- |
-| `enabled` | `true` | Enable video embeds. |
-| `mark` | `type:video` | Image alternative text that identifies a video embed. |
-| `is_video` | `false` | Use a native video element instead of an iframe. |
-| `video_type` | `mp4` | Native video MIME subtype, such as `mp4`, `webm`, or `ogg`. |
-| `video_controls` | `true` | Show native video playback controls. |
-| `video_autoplay` | `false` | Request automatic native video playback, subject to browser policies. |
-| `video_loop` | `false` | Repeat native video playback. |
-| `video_muted` | `false` | Mute native video playback. |
-| `css_style` | `{"position": "relative", "width": "100%", "height": "22.172vw"}` | CSS properties applied to the iframe or video element. |
+| Setting          | Default                                                           | Description                                                           |
+| ---------------- | ----------------------------------------------------------------- | --------------------------------------------------------------------- |
+| `enabled`        | `true`                                                            | Enable video embeds.                                                  |
+| `mark`           | `type:video`                                                      | Image alternative text that identifies a video embed.                 |
+| `is_video`       | `false`                                                           | Use a native video element instead of an iframe.                      |
+| `video_type`     | `mp4`                                                             | Native video MIME subtype, such as `mp4`, `webm`, or `ogg`.           |
+| `video_controls` | `true`                                                            | Show native video playback controls.                                  |
+| `video_autoplay` | `false`                                                           | Request automatic native video playback, subject to browser policies. |
+| `video_loop`     | `false`                                                           | Repeat native video playback.                                         |
+| `video_muted`    | `false`                                                           | Mute native video playback.                                           |
+| `css_style`      | `{"position": "relative", "width": "100%", "height": "22.172vw"}` | CSS properties applied to the iframe or video element.                |
 
 </div>
 
@@ -1041,6 +1050,74 @@ We thank all plugin authors and contributors for building and maintaining the
 MkDocs plugin ecosystem. Where Zensical provides native implementations, they
 are bottom-up rewrites that reproduce the plugins' configuration and behavior
 without using their original codebases.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
 [0.0.22]: https://github.com/zensical/zensical/releases/tag/v0.0.22
@@ -1113,3 +1190,4 @@ without using their original codebases.
 [Versioning with mike]: mike.md
 [video]: https://github.com/soulless-viewer/mkdocs-video
 [Zensical Studio]: https://zensical.org/studio/
+[Zensical Spark]: https://zensical.org/spark/
