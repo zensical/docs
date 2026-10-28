@@ -572,6 +572,36 @@ For more information, see [plugin documentation][meta].
 
 ---
 
+### `meta-descriptions`
+
+_Since [0.1.1]_
+
+Page descriptions are generated from the first introductory paragraph before any level 2–6 heading. Explicit descriptions, including inherited metadata, are preserved.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Whether automatic description generation is enabled. |
+| `export_csv` | `false` | Rendered descriptions are exported to `<site_dir>/meta-descriptions.csv`. |
+| `quiet` | `false` | Informational messages are suppressed. |
+| `enable_checks` | `false` | Warnings are emitted for missing descriptions and length violations. |
+| `min_length` | `50` | Minimum character count used by `enable_checks` and `fallback_if_short`. |
+| `max_length` | `160` | Maximum character count used by `enable_checks` and `trim`. |
+| `trim` | `false` | Generated descriptions are shortened to `max_length`; whitespace is collapsed. |
+| `fallback_if_short` | `false` | When a paragraph is shorter than `min_length`, `site_description` is used. |
+
+</div>
+
+**Differences**:
+
+- `min_length` and `max_length` must be non-negative integers. With `trim: true`, `max_length` must be positive.
+- CSV rows are ordered by source path.
+
+For more information, see the [plugin documentation][meta-descriptions].
+
+---
+
 ### `mike`
 
 _Since [0.0.30]_
@@ -1091,74 +1121,6 @@ MkDocs plugin ecosystem. Where Zensical provides native implementations, they
 are bottom-up rewrites that reproduce the plugins' configuration and behavior
 without using their original codebases.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 [0.0.11]: https://github.com/zensical/zensical/releases/tag/v0.0.11
 [0.0.22]: https://github.com/zensical/zensical/releases/tag/v0.0.22
 [0.0.3]: https://github.com/zensical/zensical/releases/tag/v0.0.3
@@ -1178,6 +1140,7 @@ without using their original codebases.
 [0.0.71]: https://github.com/zensical/zensical/releases/tag/v0.0.71
 [0.0.72]: https://github.com/zensical/zensical/releases/tag/v0.0.72
 [0.0.74]: https://github.com/zensical/zensical/releases/tag/v0.0.74
+[0.1.1]: https://github.com/zensical/zensical/releases/tag/v0.1.1
 [Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
@@ -1207,6 +1170,7 @@ without using their original codebases.
 [markdown-exec]: https://github.com/pawamoy/markdown-exec
 [markdownextradata]: https://github.com/rosscdh/mkdocs-markdownextradata-plugin
 [meta]: https://squidfunk.github.io/mkdocs-material/plugins/meta/
+[meta-descriptions]: https://pypi.org/project/mkdocs-meta-descriptions-plugin/
 [minify]: https://github.com/byrnereese/mkdocs-minify-plugin
 [mkdocs-nav-weight]: https://github.com/shu307/mkdocs-nav-weight
 [mkdocstrings]: https://mkdocstrings.github.io/
