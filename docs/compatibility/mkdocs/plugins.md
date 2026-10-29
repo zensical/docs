@@ -715,6 +715,50 @@ For more information, see [plugin documentation][offline].
 
 ---
 
+### `optimize`
+
+_Since [0.0.72]_
+
+Optimize PNG and JPEG images during builds, including unreferenced local images and assets downloaded by [`privacy`](#privacy). Image URLs are preserved.
+
+The plugin can be configured as `optimize` or `material/optimize`. JPEG images are optimized natively. For PNG optimization, `pngquant` must be installed and available on `PATH`.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Image optimization is enabled. |
+| `optimize` | `true` | Images are processed; with `false`, original bytes are copied. |
+| `optimize_png` | `true` | PNG images are optimized. |
+| `optimize_png_speed` | `3` | PNG encoding speed, from `1` (slowest) to `10` (fastest). |
+| `optimize_png_strip` | `true` | Optional PNG metadata is removed. |
+| `optimize_jpg` | `true` | JPEG images are optimized. |
+| `optimize_jpg_quality` | `60` | JPEG quality, from `0` to `100`. |
+| `optimize_jpg_progressive` | `true` | Progressive JPEG encoding is used. |
+| `optimize_include` | `[]` | Image path patterns selecting optimization; precedence is given over `optimize_exclude`. |
+| `optimize_exclude` | `[]` | Image path patterns excluding optimization when `optimize_include` is empty. |
+| `cache` | `true` | Optimized images are cached between builds. |
+| `cache_dir` | `.cache/plugin/optimize` | Cache directory; relative paths are resolved from the project directory. |
+| `concurrency` | Available CPUs − 1, minimum `1` | Maximum number of concurrent image encoders per instance. |
+| `print_gain` | `true` | Savings are reported for each image. |
+| `print_gain_summary` | `true` | Total savings are reported after the build. |
+
+</div>
+
+Image path patterns, such as `images/*`, are matched using Python's `fnmatch` rules. With multiple plugin instances, each image is processed by the first matching instance.
+
+**Differences**:
+
+- JPEG encoding: native codecs are used instead of Pillow. Identical encoded bytes and compression ratios are not guaranteed at the same settings.
+- File size: original image bytes are retained when optimization would not reduce the file size.
+- Cache format: cached images are keyed by source bytes and encoder settings. Existing Material caches are not reused.
+- File extensions: uppercase image file extensions are also recognized.
+- Preview: images are copied without optimization during `zensical serve`.
+
+For more information, see the [plugin documentation][optimize].
+
+---
+
 ### `privacy`
 
 _Since [0.0.72]_
@@ -1031,10 +1075,6 @@ Its [JavaScript code][open-in-new-tab JavaScript] can simply be added to your pr
 We are closing the remaining compatibility gaps for widely used MkDocs and
 Material for MkDocs plugins. These statuses reflect our current priorities and
 do not imply release dates.
-
-### In progress
-
-- [ ] [`optimize`][optimize]
 
 ### Planned
 
