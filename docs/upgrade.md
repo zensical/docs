@@ -47,10 +47,11 @@ installed Zensical:
 
 ## Versioning
 
-Zensical follows [semantic versioning] and currently uses **0.0.x versioning**
-(alpha / development releases). We're approaching a **beta release**, after
-which we'll transition to **0.x** versioning. Once we reach a stable 1.0 release,
-the standard semantic versioning rules will apply more strictly.
+Zensical follows [semantic versioning] and is currently on the **0.x release
+line**, starting with version 0.1.0. Public APIs may evolve as we develop the
+module system and ecosystem. When an interface must change, we will provide a
+clear migration path. Once we reach version 1.0, the standard semantic versioning
+rules will apply more strictly.
 
 [changelog]: https://github.com/zensical/zensical/releases
 [semantic versioning]: https://semver.org/
