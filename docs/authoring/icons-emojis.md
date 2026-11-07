@@ -46,11 +46,11 @@ See additional configuration options:
 The following icon sets are bundled with Zensical (links lead to search page for
 each):
 
-- :simple-lucide: - [Lucide]
-- :material-material-design: – [Material Design]
-- :fontawesome-brands-font-awesome: – [FontAwesome]
-- :octicons-mark-github-16: – [Octicons]
-- :simple-simpleicons: – [Simple Icons]
+- :simple-lucide: (`lucide/<icon-name>`) - [Lucide]
+- :material-material-design: (`material/<icon-name>`) – [Material Design]
+- :fontawesome-brands-font-awesome: (`fontawesome/<icon-name>`) – [FontAwesome]
+- :octicons-mark-github-16: (`octicons/<icon-name>`) – [Octicons]
+- :simple-simpleicons: (`simple/<icon-name>`) – [Simple Icons]
 
 Note that you are not limited to these icons as you can [add your own icons].
 
