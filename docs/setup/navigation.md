@@ -575,78 +575,78 @@ For example:
 
 In this configuration, the nested `index.md` under `Overview` is not treated as the global homepage. Consequently, it does not contribute to the homepage depth used when rendering breadcrumbs.
 
-### How <small>Breadcrumbs</small> work?
+??? note "How Breadcrumbs work?"
 
-Zensical renders breadcrumb markup only when the following condition is satisfied:
+    Zensical renders breadcrumb markup only when the following condition is satisfied:
 
-```python
-D = A + H
+    ```python
+    D = A + H
 
-D > 1
-```
+    D > 1
+    ```
 
-Where:
+    Where:
 
-- `D` is the resulting navigation depth.
-- `A` is the number of ancestors of the current page in the navigation hierarchy.
-- `H` is `1` if Zensical has resolved a homepage (`nav.homepage`), otherwise `0`.
+    - `D` is the resulting navigation depth.
+    - `A` is the number of ancestors of the current page in the navigation hierarchy.
+    - `H` is `1` if Zensical has resolved a homepage (`nav.homepage`), otherwise `0`.
 
-Consider the following examples.
+    Consider the following examples.
 
-**With a resolved homepage**
+    **With a resolved homepage**
 
-For `runtime/setup.md` in the first configuration:
+    For `runtime/setup.md` in the first configuration:
 
-```python
-D = A + H
-D = 2 + 1
-D = 3
+    ```python
+    D = A + H
+    D = 2 + 1
+    D = 3
 
-# A = 2, because the page is nested under Setup and Runtime.
-# H = 1, because a homepage is resolved.
-```
+    # A = 2, because the page is nested under Setup and Runtime.
+    # H = 1, because a homepage is resolved.
+    ```
 
-The resulting breadcrumb is:
+    The resulting breadcrumb is:
 
-```text
-Home > Setup > Runtime
-```
+    ```text
+    Home > Setup > Runtime
+    ```
 
-**Without a resolved homepage**
+    **Without a resolved homepage**
 
-If the root-level `index.md` is absent and no other homepage is resolved:
+    If the root-level `index.md` is absent and no other homepage is resolved:
 
-```python
-D = A + H
-D = 2 + 0
-D = 2
+    ```python
+    D = A + H
+    D = 2 + 0
+    D = 2
 
-# A = 2, because the page is nested under Setup and Runtime.
-# H = 0, because no homepage is resolved.
-```
+    # A = 2, because the page is nested under Setup and Runtime.
+    # H = 0, because no homepage is resolved.
+    ```
 
-The resulting breadcrumb is:
+    The resulting breadcrumb is:
 
-```text
-Setup > Runtime
-```
+    ```text
+    Setup > Runtime
+    ```
 
-**When the resulting depth is 1**
+    **When the resulting depth is 1**
 
-Consider `get-started.md` in the second configuration:
+    Consider `get-started.md` in the second configuration:
 
-```python
-D = A + H
-D = 1 + 0
-D = 1
+    ```python
+    D = A + H
+    D = 1 + 0
+    D = 1
 
-# A = 1, because the page is nested under Setup.
-# H = 0, because the nested index.md is not resolved as the homepage.
-```
+    # A = 1, because the page is nested under Setup.
+    # H = 0, because the nested index.md is not resolved as the homepage.
+    ```
 
-Since the resulting depth is not greater than `1`, Zensical does not render breadcrumb markup for this page.
+    Since the resulting depth is not greater than `1`, Zensical does not render breadcrumb markup for this page.
 
-This depth condition determines whether breadcrumb markup is rendered. It does not, by itself, describe the complete process used to generate the breadcrumb labels.
+    This depth condition determines whether breadcrumb markup is rendered. It does not, by itself, describe the complete process used to generate the breadcrumb labels.
 
 ### Navigation pruning
 
