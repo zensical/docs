@@ -507,6 +507,147 @@ your configuration:
     ![Navigation path disabled]
     ![Navigation path disabled dark]
 
+#### Homepage resolution
+
+Zensical uses the root-level `index.md` file as the documentation homepage. It can resolve this file as the homepage even when it is not explicitly listed in the navigation configuration.
+
+For example, the following configuration defines `index.md` as the homepage:
+
+=== "`zensical.toml`"
+
+    ```toml
+    [project]
+    nav = [
+      { "Home" = "index.md" },
+      "concepts.md",
+      { "Setup" = [
+        { "Requirements" = "requirements.md" },
+        { "Runtime" = [
+          "runtime/setup.md",
+        ]},
+      ]},
+    ]
+    ```
+
+=== "`mkdocs.yml`"
+
+    ```yaml
+    nav:
+      - Home: index.md
+      - concepts.md
+      - Setup:
+          - Requirements: requirements.md
+          - Runtime:
+              - runtime/setup.md
+    ```
+
+However, an `index.md` file nested inside a navigation section is not resolved as the global homepage. It remains at its configured position in the navigation hierarchy.
+
+For example:
+
+=== "`zensical.toml`"
+
+    ```toml
+    [project]
+    nav = [
+      { "Overview" = [
+        "index.md",
+        "concepts.md",
+      ]},
+      { "Setup" = [
+        "get-started.md",
+        "runtime/ollama.md",
+      ]},
+    ]
+    ```
+
+=== "`mkdocs.yml`"
+
+    ```yaml
+    nav:
+      - Overview:
+          - index.md
+          - concepts.md
+      - Setup:
+          - get-started.md
+          - runtime/ollama.md
+    ```
+
+In this configuration, the nested `index.md` under `Overview` is not treated as the global homepage. Consequently, it does not contribute to the homepage depth used when rendering breadcrumbs.
+
+??? note "How Breadcrumbs work?"
+
+    Zensical renders breadcrumb markup only when the following condition is satisfied:
+
+    ```python
+    D = A + H
+
+    D > 1
+    ```
+
+    Where:
+
+    - `D` is the resulting navigation depth.
+    - `A` is the number of ancestors of the current page in the navigation hierarchy.
+    - `H` is `1` if Zensical has resolved a homepage (`nav.homepage`), otherwise `0`.
+
+    Consider the following examples.
+
+    **With a resolved homepage**
+
+    For `runtime/setup.md` in the first configuration:
+
+    ```python
+    D = A + H
+    D = 2 + 1
+    D = 3
+
+    # A = 2, because the page is nested under Setup and Runtime.
+    # H = 1, because a homepage is resolved.
+    ```
+
+    The resulting breadcrumb is:
+
+    ```text
+    Home > Setup > Runtime
+    ```
+
+    **Without a resolved homepage**
+
+    If the root-level `index.md` is absent and no other homepage is resolved:
+
+    ```python
+    D = A + H
+    D = 2 + 0
+    D = 2
+
+    # A = 2, because the page is nested under Setup and Runtime.
+    # H = 0, because no homepage is resolved.
+    ```
+
+    The resulting breadcrumb is:
+
+    ```text
+    Setup > Runtime
+    ```
+
+    **When the resulting depth is 1**
+
+    Consider `get-started.md` in the second configuration:
+
+    ```python
+    D = A + H
+    D = 1 + 0
+    D = 1
+
+    # A = 1, because the page is nested under Setup.
+    # H = 0, because the nested index.md is not resolved as the homepage.
+    ```
+
+    Since the resulting depth is not greater than `1`, Zensical does not render breadcrumb markup for this page.
+
+    This depth condition determines whether breadcrumb markup is rendered. It does not, by itself, describe the complete process used to generate the breadcrumb labels.
+
 ### Navigation pruning
 
 When pruning is enabled, only the visible navigation items are included in the
