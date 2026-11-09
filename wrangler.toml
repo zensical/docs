@@ -29,7 +29,3 @@ binding = "ASSETS"
 [[routes]]
 pattern = "zensical.org/docs/*"
 zone_name = "zensical.org"
-
-[[routes]]
-pattern = "www.zensical.org/docs/*"
-zone_name = "zensical.org"
