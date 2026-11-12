@@ -64,7 +64,7 @@ each):
 
 === "Icon/Emoji syntax"
 
-    - :simple-lucide: – `:simple-<icon-name>:`
+    - :simple-lucide: – `:lucide-<icon-name>:`
     - :material-material-design: – `:material-<icon-name>:`
     - :fontawesome-brands-font-awesome: – `:fontawesome-<icon-name>:`
     - :octicons-mark-github-16: – `:octicons-<icon-name>:`
