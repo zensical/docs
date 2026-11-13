@@ -269,7 +269,7 @@ See [Blog] for setup and post metadata.
 
 - Custom Python callables aren't supported; built-in strategies are.
 
-For more information, see the [plugin documentation][blog].
+For more information, see the [plugin documentation][blog plugin].
 
 ---
 
@@ -1148,7 +1148,7 @@ without using their original codebases.
 [autorefs]: https://mkdocstrings.github.io/autorefs/
 [awesome-nav]: https://lukasgeiter.github.io/mkdocs-awesome-nav/
 [backlog]: https://github.com/orgs/zensical/projects/2/views/1
-[blog]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
+[blog plugin]: https://squidfunk.github.io/mkdocs-material/plugins/blog/
 [Blog]: ../../setup/blog.md
 [callouts]: https://github.com/sondregronas/mkdocs-callouts
 [compatibility roadmap]: #compatibility-roadmap
