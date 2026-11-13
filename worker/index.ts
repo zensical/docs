@@ -38,11 +38,6 @@ interface Env {
 export default {
   async fetch(req: Request, env: Env): Promise<Response> {
     const url = new URL(req.url);
-    if (url.hostname === "www.zensical.org") {
-      url.hostname = "zensical.org"
-      return Response.redirect(url.toString(), 301)
-    }
-
     // Strip docs prefix for asset fetching
     const pathname = url.pathname.replace(/^\/docs/, '')
     const res = await env.ASSETS.fetch(`${url.origin}${pathname || "/"}`)
