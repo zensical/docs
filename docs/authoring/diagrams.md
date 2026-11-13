@@ -269,53 +269,65 @@ good choice, mostly as they don't work well on mobile.
 
 ## Customization
 
-If you want to customize Mermaid.js, e.g. to bring in support for [ELK layouts],
-you can do so by adding a custom JavaScript file to your configuration:
+You can customize a diagram with [Mermaid.js frontmatter][Mermaid configuration]
+inside its code block. For example, Zensical doesn't adjust the colors of
+[other diagram types][other diagrams] such as pie charts. This example sets the
+slice colors and moves the legend below the chart:
 
-=== "`docs/javascripts/mermaid.mjs`"
+=== "Result"
 
-    ``` js
-    import mermaid from 'https://unpkg.com/mermaid@11/dist/mermaid.esm.min.mjs';
-    import elkLayouts from 'https://unpkg.com/@mermaid-js/layout-elk@0.2/dist/mermaid-layout-elk.esm.min.mjs';
-
-    mermaid.registerLayoutLoaders(elkLayouts);
-    mermaid.initialize({
-      startOnLoad: false,
-      securityLevel: "loose",
-      layout: "elk",
-    });
-
-    // Important: necessary to make it visible to Zensical
-    window.mermaid = mermaid;
+    ``` mermaid
+    ---
+    config:
+      theme: base
+      themeVariables:
+        pie1: "#4051b5"
+        pie2: "#00897b"
+        pie3: "#d81b60"
+      pie:
+        legendPosition: bottom
+    ---
+    pie showData
+      "Reference" : 50
+      "Guides" : 35
+      "Examples" : 15
     ```
 
-=== "`zensical.toml`"
+=== "Source"
 
-    ``` toml
-    [project]
-    extra_javascript = [
-      "javascripts/mermaid.mjs",
-    ]
+    ```` markdown
+    ``` mermaid
+    ---
+    config:
+      theme: base
+      themeVariables:
+        pie1: "#4051b5"
+        pie2: "#00897b"
+        pie3: "#d81b60"
+      pie:
+        legendPosition: bottom
+    ---
+    pie showData
+      "Reference" : 50
+      "Guides" : 35
+      "Examples" : 15
     ```
+    ````
 
-=== "`mkdocs.yml`"
-
-    ``` yaml
-    extra_javascript:
-      - javascripts/mermaid.mjs
-    ```
+The `base` theme is required for custom colors. Choose colors that remain
+readable in both light and dark mode.
 
 [^1]: While all [Mermaid.js] features should work out-of-the-box, Zensical will currently only adjust the fonts and colors for flowcharts, sequence diagrams, class diagrams, state diagrams and entity relationship diagrams. See the section on [other diagrams] for more information why this is currently not implemented for all diagrams.
 
 [additional style sheets]: ../customization.md#additional-css
 [Class diagrams]: https://mermaid.js.org/syntax/classDiagram.html
-[ELK layouts]: https://www.npmjs.com/package/@mermaid-js/layout-elk
 [entity-relationship diagram]: https://mermaid.js.org/syntax/entityRelationshipDiagram.html
 [Flowcharts]: https://mermaid.js.org/syntax/flowchart.html
 [gantt charts]: https://mermaid.js.org/syntax/gantt.html
 [git graphs]: https://mermaid.js.org/syntax/gitgraph.html
 [instant navigation]: ../setup/navigation.md#instant-navigation
 [Mermaid.js]: https://mermaid.js.org/
+[Mermaid configuration]: https://mermaid.js.org/config/theming.html#customizing-themes-with-themevariables
 [other diagrams]: #other-diagram-types
 [pie charts]: https://mermaid.js.org/syntax/pie.html
 [requirement diagrams]: https://mermaid.js.org/syntax/requirementDiagram.html
