@@ -349,7 +349,7 @@ For more information, see [plugin documentation][gh-admonitions].
 
 ### `git-revision-date-localized`
 
-_Since [0.1.2]_
+_Since [0.1.3]_
 
 Display localized revision and creation dates from Git history.
 
@@ -1178,7 +1178,7 @@ without using their original codebases.
 [0.0.72]: https://github.com/zensical/zensical/releases/tag/v0.0.72
 [0.0.74]: https://github.com/zensical/zensical/releases/tag/v0.0.74
 [0.1.1]: https://github.com/zensical/zensical/releases/tag/v0.1.1
-[0.1.2]: https://github.com/zensical/zensical/releases/tag/v0.1.2
+[0.1.3]: https://github.com/zensical/zensical/releases/tag/v0.1.3
 [Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
