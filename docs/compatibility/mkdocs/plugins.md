@@ -347,6 +347,44 @@ For more information, see [plugin documentation][gh-admonitions].
 
 ---
 
+### `git-revision-date-localized`
+
+_Since [0.1.2]_
+
+Display localized revision and creation dates from Git history.
+
+<div class="mdx-plugin-settings" markdown>
+
+| Setting | Default | Description |
+| ------- | ------- | ----------- |
+| `enabled` | `true` | Whether Git dates are added to pages. |
+| `type` | `date` | Display format: `date`, `datetime`, `iso_date`, `iso_datetime`, `timeago`, or `custom`. |
+| `locale` | `null` | Locale used when no page-level `locale` is set; the theme language is used when omitted. |
+| `timezone` | `UTC` | IANA time zone used for date display. |
+| `custom_format` | `%d. %B %Y` | Localized strftime pattern used by `type: custom`. |
+| `enable_creation_date` | `false` | Whether the original creation date is included. |
+| `enable_git_follow` | `true` | Whether file history is followed across renames and moves. |
+| `ignored_commits_file` | `null` | File containing revision commits to ignore, relative to the configuration directory; creation history is preserved. |
+| `exclude` | `[]` | Source paths or glob patterns excluded from date processing, relative to `docs_dir`. |
+| `fallback_to_build_date` | `false` | Whether Git errors are replaced with the build timestamp. |
+| `strict` | `true` | Fallback diagnostics are emitted as warnings; with `false`, informational messages are used. |
+| `enable_parallel_processing` | `true` | Whether per-page history queries are run concurrently. |
+
+</div>
+
+**Differences**:
+
+- **Localization:** ICU is used instead of Babel. Small differences in localized wording, punctuation, and custom formats are possible.
+- **Relative dates:** Browser-relative dates are formatted with `Intl.RelativeTimeFormat` instead of timeago.js. Relative wording and rounding can differ. An ISO date is provided for printing.
+- **Shallow clones:** Available history is used with a warning. Revision and creation dates may be incomplete. Full history must be fetched through the checkout configuration; repositories are never fetched or modified by Zensical.
+- **Fallback timestamps:** One build timestamp is shared by creation and revision fallbacks. Warnings caused by separate fallback clock reads upstream are avoided.
+- **Caching and preview:** Raw history results are cached between builds. Git state is refreshed on the next content rebuild during `zensical serve`; Git metadata is not watched separately.
+- **Parallel processing:** History queries are bounded by the available CPU count, with at most ten concurrent queries. With `enable_parallel_processing: false`, queries are run serially.
+
+For more information, see the [plugin documentation][git-revision-date-localized].
+
+---
+
 ### `glightbox`
 
 _Since [0.0.35]_
@@ -1110,7 +1148,6 @@ do not imply release dates.
 
 - [ ] [`git-authors`][git-authors]
 - [ ] [`git-committers`][git-committers]
-- [ ] [`git-revision-date-localized`][git-revision-date-localized]
 
 _Review our public [backlog] for additional plugins we may support later._
 
@@ -1141,6 +1178,7 @@ without using their original codebases.
 [0.0.72]: https://github.com/zensical/zensical/releases/tag/v0.0.72
 [0.0.74]: https://github.com/zensical/zensical/releases/tag/v0.0.74
 [0.1.1]: https://github.com/zensical/zensical/releases/tag/v0.1.1
+[0.1.2]: https://github.com/zensical/zensical/releases/tag/v0.1.2
 [Additional JavaScript]: ../../customization.md#additional-javascript
 [api-autonav]: https://github.com/tlambert03/mkdocs-api-autonav#configuration
 [audio]: https://github.com/jfcmontmorency/mkdocs-audio
