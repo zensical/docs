@@ -448,13 +448,14 @@ An `llms.txt` index and Markdown copies of selected pages are generated.
 | `base_url`             | `site_url` | Base URL used for links to generated Markdown pages.                              |
 | `full_output`          | `null`     | Path of an optional file containing the full text of selected pages.              |
 | `autoclean`            | `true`     | Clean generated HTML before conversion to Markdown.                               |
+| `preprocess`           | `null`     | Python function called before HTML is converted to Markdown.                      |
 
 </div>
 
 **Differences**:
 
 - With `content.action.copy` in the theme's `features` list, a "Copy as Markdown" button is shown on pages with a Markdown equivalent.
-- Zensical silently ignores `preprocess`. Custom Python preprocessing functions are not run.
+- An HTML string is passed to `preprocess` instead of a `BeautifulSoup` instance. Any HTML manipulation library, such as `beautifulsoup4` or `lxml`, must be added to the project's dependencies and used within the function.
 - mkdocstrings source listings and empty code elements are omitted, even with `autoclean: false`.
 - `full_output` must be a relative file path inside `site_dir`, different from `llms.txt`. Absolute paths and empty, `.` or `..` path components are rejected.
 
