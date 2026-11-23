@@ -27,10 +27,10 @@
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(71, 122, 132, 0.28),
+      rgba(120, 90, 128, 0.28),
       transparent 70%
     ),
-    #1c2429;
+    #1b1b29;
 }
 
 [data-md-component="announce"] .md-banner {
@@ -47,10 +47,10 @@
   background:
     radial-gradient(
       ellipse at 50% 0%,
-      rgba(71, 122, 132, 0.28),
+      rgba(120, 90, 128, 0.28),
       transparent 70%
     ),
-    #1c2429;
+    #1b1b29;
 }
 
 .mdx-announcement {
@@ -90,31 +90,20 @@
 .mdx-announcement__message {
   min-width: 0;
   white-space: normal;
-}
-
-.mdx-announcement__action {
-  flex: 0 0 auto;
-  font-weight: 700;
   text-decoration: underline;
   text-decoration-color: transparent;
   text-underline-offset: 0.1rem;
   transition: text-decoration-color 150ms ease;
-  white-space: nowrap;
 }
 
-.mdx-announcement:focus-visible .mdx-announcement__action,
-.mdx-announcement:hover .mdx-announcement__action {
+.mdx-announcement:focus-visible .mdx-announcement__message,
+.mdx-announcement:hover .mdx-announcement__message {
   text-decoration-color: currentcolor;
 }
 
 @media (max-width: 600px) {
   .mdx-announcement {
     gap: 0.4rem;
-  }
-
-  .mdx-announcement__content,
-  .mdx-announcement__separator {
-    display: none;
   }
 }
 
