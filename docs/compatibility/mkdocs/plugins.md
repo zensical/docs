@@ -37,6 +37,42 @@ If your project already uses `zensical.toml`:
 minify_html = true
 ```
 
+### Multiple instances
+
+Multiple instances can be configured for plugins such as [`blog`](#blog) and [`optimize`](#optimize). Each instance is configured separately. For example, two blogs can be configured with different directories:
+
+=== "`zensical.toml`"
+
+    ``` toml
+    [[project.plugins]]
+    blog = { blog_dir = "blog1" }
+
+    [[project.plugins]]
+    blog = { blog_dir = "blog2" }
+    ```
+
+=== "`mkdocs.yml`"
+
+    ``` yaml
+    plugins:
+      - blog:
+          blog_dir: blog1
+      - blog:
+          blog_dir: blog2
+    ```
+
+In TOML, `plugins` must be defined as an array because duplicate keys are not allowed in a table. An array item is defined by each `[[project.plugins]]` entry. Other plugins must also be included in this array, instead of being configured under `[project.plugins.<name>]`.
+
+Alternatively, the same array can be defined inline under `[project]`:
+
+``` toml
+[project]
+plugins = [
+  { blog = { blog_dir = "blog1" } },
+  { blog = { blog_dir = "blog2" } },
+]
+```
+
 ### Validation and ignored settings
 
 - **Unsupported plugins:** Configuration for plugins not listed under
